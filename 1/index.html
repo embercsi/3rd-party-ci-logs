@@ -1,0 +1,10 @@
+<html><head></head><body><script>
+var files = ['0-worker_preparation.html', '1-Retrieve code.html', '2-Send custom-pre-run.html', '3-Write custom-post-run.html', '4-Write driver-cfg.html', '5-Build image.html', '6-Pre-run script.html', '7-Run tests.html', '7-Run tests-ember-csi.html', '8-Post-run script.html'];
+var body = "";
+var url = window.location.href;
+if (url.endsWith(".html"))
+    url = url.substring(0, url.lastIndexOf("/"));
+for (var i = 0; i < files.length; i++)
+    body += "<a href=\"" + url + "/" + files[i] + "\">" + files[i] + "<\a><br>";
+document.write(body);
+</script></body></html>
