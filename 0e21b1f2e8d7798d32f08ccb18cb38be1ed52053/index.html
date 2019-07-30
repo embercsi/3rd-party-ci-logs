@@ -1,0 +1,12 @@
+<html><head></head><body><p>pull request: https://github.com/embercsi/ember-csi/pull/130</p><p>result: -1</p><p>started at: 2019-07-30 12:34:36+00:00</p><p>completed at: 2019-07-30 12:35:30.720885+00:00</p><p>revision: 0e21b1f2e8d7798d32f08ccb18cb38be1ed52053</p><p>got_revision: 865f10e238c7729ed50f8606fa5eaa736f16585b</p>
+<script>
+var files = ['0-worker_preparation.html', '1-Retrieve code.html', '2-Send custom-pre-run.html', '3-Write driver-cfg.html', '4-Build image.html'];
+var sizes = [39, 7416, 39, 39, 1906];
+var body = "";
+var url = window.location.href;
+if (url.endsWith(".html"))
+    url = url.substring(0, url.lastIndexOf("/"));
+for (var i = 0; i < files.length; i++)
+    body += "<a href=\"" + url + "/" + files[i] + "\">"+ files[i] +"<\a> "+ sizes[i] +" bytes<br>";
+document.write(body);
+</script></body></html>
