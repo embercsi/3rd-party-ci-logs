@@ -42,43 +42,43 @@ Digest: sha256:a799dd8a2ded4a83484bbae769d97655392b3f86533ceb7dd96bbac929809f3c
 Status: Downloaded newer image for docker.io/centos:7
  ---&gt; 9f38484d220f
 Step 2/13 : ARG RELEASE=master
- ---&gt; Running in cd1f53bdb1d5
- ---&gt; 736aed4b81a4
-Removing intermediate container cd1f53bdb1d5
+ ---&gt; Running in d568d54df7ae
+ ---&gt; 0b09a391286d
+Removing intermediate container d568d54df7ae
 Step 3/13 : ARG VERSION=master
- ---&gt; Running in 174445a34300
- ---&gt; bca73b92812b
-Removing intermediate container 174445a34300
+ ---&gt; Running in 29bfac6c96ce
+ ---&gt; 964e0bf347c7
+Removing intermediate container 29bfac6c96ce
 Step 4/13 : ARG BUILD_DATE
- ---&gt; Running in 21b483199c7b
- ---&gt; aae303ae032e
-Removing intermediate container 21b483199c7b
+ ---&gt; Running in 652d476062e3
+ ---&gt; 0b3d1bdc2586
+Removing intermediate container 652d476062e3
 Step 5/13 : ARG VCS_REF
- ---&gt; Running in 1c9a4794b569
- ---&gt; 4681f6f3449a
-Removing intermediate container 1c9a4794b569
+ ---&gt; Running in 8a0aff1cca2e
+ ---&gt; f99a44e64c49
+Removing intermediate container 8a0aff1cca2e
 Step 6/13 : ARG TAG
- ---&gt; Running in 16ee0c2b39ff
- ---&gt; b774f0e3d972
-Removing intermediate container 16ee0c2b39ff
+ ---&gt; Running in bf246d11ab72
+ ---&gt; 14afff6da749
+Removing intermediate container bf246d11ab72
 Step 7/13 : LABEL maintainers "Gorka Eguileor &lt;geguileo@redhat.com&gt;" openstack_release ${RELEASE} version ${VERSION} description "Ember CSI Plugin" org.label-schema.schema-version "1.0" org.label-schema.name "ember-csi" org.label-schema.description "Ember CSI Plugin" org.label-schema.url "<a href="https://ember-csi.io">https://ember-csi.io</a>" org.label-schema.build-date ${BUILD_DATE} org.label-schema.vcs-url "<a href="https://github.com/embercsi/ember-csi">https://github.com/embercsi/ember-csi</a>" org.label-schema.vcs-ref ${VCS_REF}
- ---&gt; Running in f31489a54298
- ---&gt; 259dcfbeb194
-Removing intermediate container f31489a54298
+ ---&gt; Running in 74dd443db60c
+ ---&gt; a4d83a18a989
+Removing intermediate container 74dd443db60c
 Step 8/13 : ENV X_CSI_DEBUG_MODE rpdb PYTHONUNBUFFERED true
- ---&gt; Running in 3062255c8f6f
- ---&gt; 145a0f21b3c6
-Removing intermediate container 3062255c8f6f
+ ---&gt; Running in 08f5344864c3
+ ---&gt; 2272ea3c38b2
+Removing intermediate container 08f5344864c3
 Step 9/13 : EXPOSE 50051 4444
- ---&gt; Running in f0be28924b90
- ---&gt; bdfe6626a570
-Removing intermediate container f0be28924b90
+ ---&gt; Running in caca141d7df4
+ ---&gt; 5f295f3edffb
+Removing intermediate container caca141d7df4
 Step 10/13 : RUN yum -y install targetcli iscsi-initiator-utils device-mapper-multipath epel-release lvm2 which &amp;&amp;     yum -y install python2-pip pywbem python2-kubernetes &amp;&amp;     yum -y install xfsprogs e2fsprogs btrfs-progs nmap-ncat &amp;&amp;     pip install --no-cache-dir --upgrade 'pyasn1&lt;0.5.0,&gt;=0.4.1' future &amp;&amp;     if [ "$RELEASE" = "master" ]; then curl -o /etc/yum.repos.d/rdo-trunk-runtime-deps.repo <a href="https://trunk.rdoproject.org/centos7-master/rdo-trunk-runtime-deps.repo;">https://trunk.rdoproject.org/centos7-master/rdo-trunk-runtime-deps.repo;</a> curl -o /etc/yum.repos.d/delorean.repo <a href="https://trunk.rdoproject.org/centos7-master/current/delorean.repo;">https://trunk.rdoproject.org/centos7-master/current/delorean.repo;</a> else yum -y install centos-release-openstack-${RELEASE}; fi &amp;&amp;     yum -y install python-cinderlib &amp;&amp;     yum -y install python-rbd ceph-common pyOpenSSL &amp;&amp;     pip install --no-cache-dir krest purestorage pyxcli &amp;&amp;     yum clean all &amp;&amp;     rm -rf /var/cache/yum
- ---&gt; Running in b00c33860345
+ ---&gt; Running in 468b3fb43e24
 
 <span class="ansi91"></span>Loaded plugins: fastestmirror, ovl
 Determining fastest mirrors
- * base: linuxmirror.es
+ * base: mirror.uv.es
  * extras: mirror.airenetworks.es
  * updates: mirror.airenetworks.es
 Resolving Dependencies
@@ -216,12 +216,12 @@ Upgrade             (  4 Dependent packages)
 Total download size: 13 M
 Downloading packages:
 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
-<span class="ansi91">warning: /var/cache/yum/x86_64/7/updates/packages/device-mapper-event-1.02.149-10.el7_6.8.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
-</span>Public key for device-mapper-event-1.02.149-10.el7_6.8.x86_64.rpm is not installed
-Public key for device-mapper-multipath-0.4.9-123.el7.x86_64.rpm is not installed
+<span class="ansi91">warning: /var/cache/yum/x86_64/7/updates/packages/device-mapper-1.02.149-10.el7_6.8.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+</span>Public key for device-mapper-1.02.149-10.el7_6.8.x86_64.rpm is not installed
+Public key for device-mapper-multipath-libs-0.4.9-123.el7.x86_64.rpm is not installed
 Public key for epel-release-7-11.noarch.rpm is not installed
 --------------------------------------------------------------------------------
-Total                                              8.8 MB/s |  13 MB  00:01     
+Total                                               18 MB/s |  13 MB  00:00     
 Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 <span class="ansi91">Importing GPG key 0xF4A80EB5:
  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) &lt;security@centos.org&gt;"
@@ -362,7 +362,7 @@ Dependency Updated:
 Complete!
 Loaded plugins: fastestmirror, ovl
 Loading mirror speeds from cached hostfile
- * base: linuxmirror.es
+ * base: mirror.uv.es
  * epel: mirror.airenetworks.es
  * extras: mirror.airenetworks.es
  * updates: mirror.airenetworks.es
@@ -492,10 +492,10 @@ Upgrade             (  1 Dependent package)
 Total download size: 8.0 M
 Downloading packages:
 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+Public key for python-cachetools-1.0.3-1.el7.noarch.rpm is not installed
 <span class="ansi91">warning: /var/cache/yum/x86_64/7/epel/packages/python-cachetools-1.0.3-1.el7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
-</span>Public key for python-cachetools-1.0.3-1.el7.noarch.rpm is not installed
---------------------------------------------------------------------------------
-Total                                              6.8 MB/s | 8.0 MB  00:01     
+</span>--------------------------------------------------------------------------------
+Total                                               16 MB/s | 8.0 MB  00:00     
 Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 <span class="ansi91">Importing GPG key 0x352C64E5:
  Userid     : "Fedora EPEL (7) &lt;epel@fedoraproject.org&gt;"
@@ -616,7 +616,7 @@ Dependency Updated:
 Complete!
 Loaded plugins: fastestmirror, ovl
 Loading mirror speeds from cached hostfile
- * base: linuxmirror.es
+ * base: mirror.uv.es
  * epel: mirror.airenetworks.es
  * extras: mirror.airenetworks.es
  * updates: mirror.airenetworks.es
@@ -662,7 +662,7 @@ Total download size: 2.8 M
 Installed size: 12 M
 Downloading packages:
 --------------------------------------------------------------------------------
-Total                                              3.5 MB/s | 2.8 MB  00:00     
+Total                                               12 MB/s | 2.8 MB  00:00     
 Running transaction check
 Running transaction test
 Transaction test succeeded
@@ -708,18 +708,18 @@ Successfully installed future-0.17.1 pyasn1-0.4.5
 You should consider upgrading via the 'pip install --upgrade pip' command.
 </span><span class="ansi91">  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-
+</span><span class="ansi91">
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0</span><span class="ansi91">
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0</span><span class="ansi91">
-100   307  100   307    0     0    450      0 --:--:-- --:--:-- --:--:--   450
+100   307  100   307    0     0    498      0 --:--:-- --:--:-- --:--:--   498
 </span><span class="ansi91">  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 </span><span class="ansi91">
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0</span><span class="ansi91">
-100   213  100   213    0     0    380      0 --:--:-- --:--:-- --:--:--   380
+100   223  100   223    0     0    397      0 --:--:-- --:--:-- --:--:--   398
 </span>Loaded plugins: fastestmirror, ovl
 Loading mirror speeds from cached hostfile
- * base: linuxmirror.es
+ * base: mirror.uv.es
  * epel: mirror.airenetworks.es
  * extras: mirror.airenetworks.es
  * updates: mirror.airenetworks.es
@@ -1968,7 +1968,7 @@ Total download size: 144 M
 Downloading packages:
 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
 --------------------------------------------------------------------------------
-Total                                              2.6 MB/s | 144 MB  00:55     
+Total                                              2.9 MB/s | 144 MB  00:50     
 Running transaction check
 Running transaction test
 Transaction test succeeded
@@ -3057,7 +3057,7 @@ Replaced:
 Complete!
 Loaded plugins: fastestmirror, ovl
 Loading mirror speeds from cached hostfile
- * base: linuxmirror.es
+ * base: mirror.uv.es
  * epel: mirror.airenetworks.es
  * extras: mirror.airenetworks.es
  * updates: mirror.airenetworks.es
@@ -3186,7 +3186,7 @@ Total download size: 22 M
 Installed size: 79 M
 Downloading packages:
 --------------------------------------------------------------------------------
-Total                                              6.2 MB/s |  22 MB  00:03     
+Total                                               38 MB/s |  22 MB  00:00     
 Running transaction check
 Running transaction test
 Transaction test succeeded
@@ -3319,13 +3319,13 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 Cleaning repos: base delorean delorean-master-testing epel extras rdo-qemu-ev
               : updates
 Cleaning up list of fastest mirrors
- ---&gt; 6601eea1fde9
-Removing intermediate container b00c33860345
+ ---&gt; 21712e465d78
+Removing intermediate container 468b3fb43e24
 Step 11/13 : COPY . /ember-csi
- ---&gt; 71d672484a96
-Removing intermediate container 26b4f9a2130f
+ ---&gt; 21305303c2b7
+Removing intermediate container bcc5553bbba7
 Step 12/13 : RUN pip install --no-cache-dir -e /ember-csi
- ---&gt; Running in 200fd337b15e
+ ---&gt; Running in 36a41d56c78d
 
 <span class="ansi91"></span>Obtaining file:///ember-csi
 Requirement already satisfied (use --upgrade to upgrade): cinderlib&gt;=0.9.0 in /usr/lib/python2.7/site-packages (from ember-csi==0.9.0)
@@ -3360,15 +3360,15 @@ Installing collected packages: grpcio, protobuf, ember-csi
 Successfully installed ember-csi grpcio-1.15.0 protobuf-3.9.0
 <span class="ansi91">You are using pip version 8.1.2, however version 19.2.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
-</span> ---&gt; f30bffd983c8
-Removing intermediate container 200fd337b15e
+</span> ---&gt; 8f7ce9b9bd29
+Removing intermediate container 36a41d56c78d
 Step 13/13 : CMD ember-csi
- ---&gt; Running in 0efccebb439d
- ---&gt; 2df00a19890d
-Removing intermediate container 0efccebb439d
-Successfully built 2df00a19890d
+ ---&gt; Running in edb23f6596d4
+ ---&gt; 1f5bc7ef5451
+Removing intermediate container edb23f6596d4
+Successfully built 1f5bc7ef5451
 <span class="ansi36">program finished with exit code 0</span>
-<span class="ansi36">elapsedTime=527.543031</span>
+<span class="ansi36">elapsedTime=515.648968</span>
 
 </pre>
 </body>

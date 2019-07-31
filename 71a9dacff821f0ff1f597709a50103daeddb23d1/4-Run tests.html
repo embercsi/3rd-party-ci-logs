@@ -39,16 +39,16 @@
 <span class="ansi31"></span><span class="ansi1 ansi31">                                 Dload  Upload   Total   Spent    Left  Speed</span>
 <span class="ansi31"></span><span class="ansi1 ansi31"></span>
 <span class="ansi31"></span><span class="ansi1 ansi31">  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0</span>
-<span class="ansi31"></span><span class="ansi1 ansi31">  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0</span>
 <span class="ansi31"></span><span class="ansi1 ansi31">  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0</span>
-<span class="ansi31"></span><span class="ansi1 ansi31">  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0</span>
-<span class="ansi31"></span><span class="ansi1 ansi31">100  121k    0  121k    0     0  40776      0 --:--:--  0:00:03 --:--:-- 40791</span>
+<span class="ansi31"></span><span class="ansi1 ansi31">  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0</span>
+<span class="ansi31"></span><span class="ansi1 ansi31">100  103k    0  103k    0     0  36870      0 --:--:--  0:00:02 --:--:-- 36869</span>
+<span class="ansi31"></span><span class="ansi1 ansi31">100  121k    0  121k    0     0  43115      0 --:--:--  0:00:02 --:--:-- 43111</span>
 lib/python2.7/site-packages/cinder/volume/driver.py
-b5a2e7e8168cc444607fe67eacdde64bc6dd593020fa8c797e0563a875badb78
+656ac76d7c860a7e6cc9612678096d2a02651550cd18b47ea73e7d4680e9ac46
 === RUN   TestSanity
 Running Suite: CSI Driver Test Suite
 ====================================
-Random Seed: <span class="ansi1">1564583481</span>
+Random Seed: <span class="ansi1">1564586003</span>
 Will run <span class="ansi1">72</span> of <span class="ansi1">72</span> specs
 
 Controller Service <span class="ansi90">ControllerGetCapabilities</span> 
@@ -68,7 +68,7 @@ Controller Service <span class="ansi90">ControllerGetCapabilities</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:9.434 seconds]</span>
+<span class="ansi32">• [SLOW TEST:9.099 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   ControllerGetCapabilities
@@ -153,7 +153,7 @@ Controller Service <span class="ansi90">ListVolumes</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:12.039 seconds]</span>
+<span class="ansi32">• [SLOW TEST:12.027 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   ListVolumes
@@ -179,11 +179,11 @@ Controller Service <span class="ansi90">ListVolumes</span>
 <span class="ansi1">STEP</span>: creating a new volume
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:114
-cleanup: deleting c601166c-30a2-4c69-86db-bcd9d336874f = c601166c-30a2-4c69-86db-bcd9d336874f
+cleanup: deleting 7f554931-a152-4727-925a-fca0060a7172 = 7f554931-a152-4727-925a-fca0060a7172
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:51.879 seconds]</span>
+<span class="ansi32">• [SLOW TEST:51.951 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   ListVolumes
@@ -249,7 +249,7 @@ Controller Service <span class="ansi90">CreateVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:13.113 seconds]</span>
+<span class="ansi32">• [SLOW TEST:13.080 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   CreateVolume
@@ -277,7 +277,7 @@ Controller Service <span class="ansi90">CreateVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:13.021 seconds]</span>
+<span class="ansi32">• [SLOW TEST:13.042 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   CreateVolume
@@ -305,7 +305,7 @@ Controller Service <span class="ansi90">CreateVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:12.962 seconds]</span>
+<span class="ansi32">• [SLOW TEST:13.120 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   CreateVolume
@@ -333,7 +333,7 @@ Controller Service <span class="ansi90">CreateVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:13.046 seconds]</span>
+<span class="ansi32">• [SLOW TEST:13.041 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   CreateVolume
@@ -361,7 +361,7 @@ Controller Service <span class="ansi90">CreateVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:13.072 seconds]</span>
+<span class="ansi32">• [SLOW TEST:13.112 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   CreateVolume
@@ -393,7 +393,7 @@ Controller Service <span class="ansi90">CreateVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:30.663 seconds]</span>
+<span class="ansi32">• [SLOW TEST:30.692 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   CreateVolume
@@ -443,7 +443,7 @@ Controller Service <span class="ansi90">CreateVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:27.986 seconds]</span>
+<span class="ansi32">• [SLOW TEST:27.966 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   CreateVolume
@@ -529,7 +529,7 @@ Controller Service <span class="ansi90">DeleteVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:13.366 seconds]</span>
+<span class="ansi32">• [SLOW TEST:13.594 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   DeleteVolume
@@ -572,7 +572,7 @@ Controller Service <span class="ansi90">ValidateVolumeCapabilities</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:13.060 seconds]</span>
+<span class="ansi32">• [SLOW TEST:13.163 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   ValidateVolumeCapabilities
@@ -599,7 +599,7 @@ Controller Service <span class="ansi90">ValidateVolumeCapabilities</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:13.160 seconds]</span>
+<span class="ansi32">• [SLOW TEST:13.073 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   ValidateVolumeCapabilities
@@ -704,7 +704,7 @@ Controller Service <span class="ansi90">ControllerPublishVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:22.724 seconds]</span>
+<span class="ansi32">• [SLOW TEST:22.436 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   ControllerPublishVolume
@@ -730,7 +730,7 @@ Controller Service <span class="ansi90">ControllerPublishVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi36"></span><span class="ansi1 ansi36">S [SKIPPING] [0.003 seconds]</span>
+<span class="ansi36"></span><span class="ansi1 ansi36">S [SKIPPING] [0.005 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   ControllerPublishVolume
@@ -783,7 +783,7 @@ Controller Service <span class="ansi90">ControllerPublishVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:13.257 seconds]</span>
+<span class="ansi32">• [SLOW TEST:12.980 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   ControllerPublishVolume
@@ -814,7 +814,7 @@ Controller Service <span class="ansi90">ControllerPublishVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:22.525 seconds]</span>
+<span class="ansi32">• [SLOW TEST:22.586 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   ControllerPublishVolume
@@ -864,7 +864,7 @@ Controller Service <span class="ansi90">ControllerUnpublishVolume</span>
 [AfterEach] Controller Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:20.219 seconds]</span>
+<span class="ansi32">• [SLOW TEST:20.574 seconds]</span>
 Controller Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   ControllerUnpublishVolume
@@ -920,217 +920,59 @@ Identity Service <span class="ansi90">GetPluginInfo</span>
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 <span class="ansi32">•</span>
 <span class="ansi90">------------------------------</span>
-ListSnapshots [Controller Server] 
+DeleteSnapshot [Controller Server] 
+  <span class="ansi1">should fail when no snapshot id is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1875</span>
+[BeforeEach] DeleteSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] DeleteSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1867
+[It] should fail when no snapshot id is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1875
+[AfterEach] DeleteSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+DeleteSnapshot [Controller Server] 
+  <span class="ansi1">should succeed when an invalid snapshot id is used</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1891</span>
+[BeforeEach] DeleteSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] DeleteSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1867
+[It] should succeed when an invalid snapshot id is used
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1891
+[AfterEach] DeleteSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+DeleteSnapshot [Controller Server] 
   <span class="ansi1">should return appropriate values (no optional values added)</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1622</span>
-[BeforeEach] ListSnapshots [Controller Server]
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1898</span>
+[BeforeEach] DeleteSnapshot [Controller Server]
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
 <span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
 <span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
+[BeforeEach] DeleteSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1867
 [It] should return appropriate values (no optional values added)
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1622
-[AfterEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
-<span class="ansi32">•</span>
-<span class="ansi90">------------------------------</span>
-ListSnapshots [Controller Server] 
-  <span class="ansi1">should return snapshots that match the specified snapshot id</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1634</span>
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
-<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
-<span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
-[It] should return snapshots that match the specified snapshot id
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1634
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1898
 <span class="ansi1">STEP</span>: creating a volume
 <span class="ansi1">STEP</span>: creating a snapshot
 <span class="ansi1">STEP</span>: cleaning up deleting the snapshot
 <span class="ansi1">STEP</span>: cleaning up deleting the volume
-[AfterEach] ListSnapshots [Controller Server]
+[AfterEach] DeleteSnapshot [Controller Server]
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:22.187 seconds]</span>
-ListSnapshots [Controller Server]
+<span class="ansi32">• [SLOW TEST:22.396 seconds]</span>
+DeleteSnapshot [Controller Server]
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
-  should return snapshots that match the specified snapshot id
-  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1634</span>
-<span class="ansi90">------------------------------</span>
-ListSnapshots [Controller Server] 
-  <span class="ansi1">should return empty when the specified snapshot id does not exist</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1666</span>
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
-<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
-<span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
-[It] should return empty when the specified snapshot id does not exist
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1666
-[AfterEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
-<span class="ansi32">•</span>
-<span class="ansi90">------------------------------</span>
-ListSnapshots [Controller Server] 
-  <span class="ansi1">should return snapshots that match the specified source volume id)</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1676</span>
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
-<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
-<span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
-[It] should return snapshots that match the specified source volume id)
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1676
-<span class="ansi1">STEP</span>: creating a volume
-<span class="ansi1">STEP</span>: creating a snapshot
-<span class="ansi1">STEP</span>: cleaning up deleting the snapshot
-<span class="ansi1">STEP</span>: cleaning up deleting the volume
-[AfterEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
-
-<span class="ansi32">• [SLOW TEST:22.425 seconds]</span>
-ListSnapshots [Controller Server]
-<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
-  should return snapshots that match the specified source volume id)
-  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1676</span>
-<span class="ansi90">------------------------------</span>
-ListSnapshots [Controller Server] 
-  <span class="ansi1">should return empty when the specified source volume id does not exist</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1709</span>
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
-<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
-<span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
-[It] should return empty when the specified source volume id does not exist
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1709
-[AfterEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
-<span class="ansi32">•</span>
-<span class="ansi90">------------------------------</span>
-ListSnapshots [Controller Server] 
-  <span class="ansi1">check the presence of new snapshots in the snapshot list</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1719</span>
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
-<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
-<span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
-[It] check the presence of new snapshots in the snapshot list
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1719
-<span class="ansi1">STEP</span>: creating a volume
-<span class="ansi1">STEP</span>: creating a snapshot
-<span class="ansi1">STEP</span>: cleaning up deleting the snapshot
-<span class="ansi1">STEP</span>: cleaning up deleting the volume
-[AfterEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
-
-<span class="ansi32">• [SLOW TEST:22.325 seconds]</span>
-ListSnapshots [Controller Server]
-<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
-  check the presence of new snapshots in the snapshot list
-  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1719</span>
-<span class="ansi90">------------------------------</span>
-ListSnapshots [Controller Server] 
-  <span class="ansi1">should return next token when a limited number of entries are requested</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1767</span>
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
-<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
-<span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
-[It] should return next token when a limited number of entries are requested
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1767
-<span class="ansi1">STEP</span>: creating required new volumes
-<span class="ansi1">STEP</span>: cleaning up deleting the snapshots
-<span class="ansi1">STEP</span>: cleaning up deleting the volumes
-[AfterEach] ListSnapshots [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
-
-<span class="ansi32">• [SLOW TEST:112.176 seconds]</span>
-ListSnapshots [Controller Server]
-<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
-  should return next token when a limited number of entries are requested
-  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1767</span>
-<span class="ansi90">------------------------------</span>
-ExpandVolume [Controller Server] 
-  <span class="ansi1">should fail if no volume id is given</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2093</span>
-[BeforeEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
-<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
-<span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2080
-[AfterEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2090
-[AfterEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
-
-<span class="ansi36"></span><span class="ansi1 ansi36">S [SKIPPING] in Spec Setup (BeforeEach) [0.006 seconds]</span>
-ExpandVolume [Controller Server]
-<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
-  <span class="ansi36"></span><span class="ansi1 ansi36">should fail if no volume id is given [BeforeEach]</span>
-  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2093</span>
-
-  <span class="ansi36">ControllerExpandVolume not supported</span>
-
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2083
-<span class="ansi90">------------------------------</span>
-ExpandVolume [Controller Server] 
-  <span class="ansi1">should fail if no capacity range is given</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2109</span>
-[BeforeEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
-<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
-<span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2080
-[AfterEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2090
-[AfterEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
-
-<span class="ansi36"></span><span class="ansi1 ansi36">S [SKIPPING] in Spec Setup (BeforeEach) [0.003 seconds]</span>
-ExpandVolume [Controller Server]
-<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
-  <span class="ansi36"></span><span class="ansi1 ansi36">should fail if no capacity range is given [BeforeEach]</span>
-  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2109</span>
-
-  <span class="ansi36">ControllerExpandVolume not supported</span>
-
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2083
-<span class="ansi90">------------------------------</span>
-ExpandVolume [Controller Server] 
-  <span class="ansi1">should work</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2122</span>
-[BeforeEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
-<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
-<span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2080
-[AfterEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2090
-[AfterEach] ExpandVolume [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
-
-<span class="ansi36"></span><span class="ansi1 ansi36">S [SKIPPING] in Spec Setup (BeforeEach) [0.003 seconds]</span>
-ExpandVolume [Controller Server]
-<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
-  <span class="ansi36"></span><span class="ansi1 ansi36">should work [BeforeEach]</span>
-  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2122</span>
-
-  <span class="ansi36">ControllerExpandVolume not supported</span>
-
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2083
+  should return appropriate values (no optional values added)
+  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1898</span>
 <span class="ansi90">------------------------------</span>
 CreateSnapshot [Controller Server] 
   <span class="ansi1">should fail when no name is provided</span>
@@ -1180,7 +1022,7 @@ CreateSnapshot [Controller Server]
 [AfterEach] CreateSnapshot [Controller Server]
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:25.459 seconds]</span>
+<span class="ansi32">• [SLOW TEST:22.548 seconds]</span>
 CreateSnapshot [Controller Server]
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   should not fail when requesting to create a snapshot with already existing name and same SourceVolumeId.
@@ -1205,7 +1047,7 @@ CreateSnapshot [Controller Server]
 [AfterEach] CreateSnapshot [Controller Server]
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:35.437 seconds]</span>
+<span class="ansi32">• [SLOW TEST:35.511 seconds]</span>
 CreateSnapshot [Controller Server]
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   should fail when requesting to create a snapshot with already existing name and different SourceVolumeId.
@@ -1229,65 +1071,151 @@ CreateSnapshot [Controller Server]
 [AfterEach] CreateSnapshot [Controller Server]
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:10.243 seconds]</span>
+<span class="ansi32">• [SLOW TEST:10.690 seconds]</span>
 CreateSnapshot [Controller Server]
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   should not fail when creating snapshot with maximum-length name
   <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2037</span>
 <span class="ansi90">------------------------------</span>
-DeleteSnapshot [Controller Server] 
-  <span class="ansi1">should fail when no snapshot id is provided</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1875</span>
-[BeforeEach] DeleteSnapshot [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
-<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
-<span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] DeleteSnapshot [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1867
-[It] should fail when no snapshot id is provided
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1875
-[AfterEach] DeleteSnapshot [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
-<span class="ansi32">•</span>
-<span class="ansi90">------------------------------</span>
-DeleteSnapshot [Controller Server] 
-  <span class="ansi1">should succeed when an invalid snapshot id is used</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1891</span>
-[BeforeEach] DeleteSnapshot [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
-<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
-<span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] DeleteSnapshot [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1867
-[It] should succeed when an invalid snapshot id is used
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1891
-[AfterEach] DeleteSnapshot [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
-<span class="ansi32">•</span>
-<span class="ansi90">------------------------------</span>
-DeleteSnapshot [Controller Server] 
+ListSnapshots [Controller Server] 
   <span class="ansi1">should return appropriate values (no optional values added)</span>
-  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1898</span>
-[BeforeEach] DeleteSnapshot [Controller Server]
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1622</span>
+[BeforeEach] ListSnapshots [Controller Server]
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
 <span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
 <span class="ansi1">STEP</span>: creating mount and staging directories
-[BeforeEach] DeleteSnapshot [Controller Server]
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1867
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
 [It] should return appropriate values (no optional values added)
-  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1898
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1622
+[AfterEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+ListSnapshots [Controller Server] 
+  <span class="ansi1">should return snapshots that match the specified snapshot id</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1634</span>
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
+[It] should return snapshots that match the specified snapshot id
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1634
 <span class="ansi1">STEP</span>: creating a volume
 <span class="ansi1">STEP</span>: creating a snapshot
 <span class="ansi1">STEP</span>: cleaning up deleting the snapshot
 <span class="ansi1">STEP</span>: cleaning up deleting the volume
-[AfterEach] DeleteSnapshot [Controller Server]
+[AfterEach] ListSnapshots [Controller Server]
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:22.171 seconds]</span>
-DeleteSnapshot [Controller Server]
+<span class="ansi32">• [SLOW TEST:22.838 seconds]</span>
+ListSnapshots [Controller Server]
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
-  should return appropriate values (no optional values added)
-  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1898</span>
+  should return snapshots that match the specified snapshot id
+  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1634</span>
+<span class="ansi90">------------------------------</span>
+ListSnapshots [Controller Server] 
+  <span class="ansi1">should return empty when the specified snapshot id does not exist</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1666</span>
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
+[It] should return empty when the specified snapshot id does not exist
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1666
+[AfterEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+ListSnapshots [Controller Server] 
+  <span class="ansi1">should return snapshots that match the specified source volume id)</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1676</span>
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
+[It] should return snapshots that match the specified source volume id)
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1676
+<span class="ansi1">STEP</span>: creating a volume
+<span class="ansi1">STEP</span>: creating a snapshot
+<span class="ansi1">STEP</span>: cleaning up deleting the snapshot
+<span class="ansi1">STEP</span>: cleaning up deleting the volume
+[AfterEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+
+<span class="ansi32">• [SLOW TEST:22.470 seconds]</span>
+ListSnapshots [Controller Server]
+<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
+  should return snapshots that match the specified source volume id)
+  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1676</span>
+<span class="ansi90">------------------------------</span>
+ListSnapshots [Controller Server] 
+  <span class="ansi1">should return empty when the specified source volume id does not exist</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1709</span>
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
+[It] should return empty when the specified source volume id does not exist
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1709
+[AfterEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+ListSnapshots [Controller Server] 
+  <span class="ansi1">check the presence of new snapshots in the snapshot list</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1719</span>
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
+[It] check the presence of new snapshots in the snapshot list
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1719
+<span class="ansi1">STEP</span>: creating a volume
+<span class="ansi1">STEP</span>: creating a snapshot
+<span class="ansi1">STEP</span>: cleaning up deleting the snapshot
+<span class="ansi1">STEP</span>: cleaning up deleting the volume
+[AfterEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+
+<span class="ansi32">• [SLOW TEST:22.492 seconds]</span>
+ListSnapshots [Controller Server]
+<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
+  check the presence of new snapshots in the snapshot list
+  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1719</span>
+<span class="ansi90">------------------------------</span>
+ListSnapshots [Controller Server] 
+  <span class="ansi1">should return next token when a limited number of entries are requested</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1767</span>
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1614
+[It] should return next token when a limited number of entries are requested
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1767
+<span class="ansi1">STEP</span>: creating required new volumes
+<span class="ansi1">STEP</span>: cleaning up deleting the snapshots
+<span class="ansi1">STEP</span>: cleaning up deleting the volumes
+[AfterEach] ListSnapshots [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+
+<span class="ansi32">• [SLOW TEST:114.865 seconds]</span>
+ListSnapshots [Controller Server]
+<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
+  should return next token when a limited number of entries are requested
+  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1767</span>
 <span class="ansi90">------------------------------</span>
 Node Service <span class="ansi90">NodeGetCapabilities</span> 
   <span class="ansi1">should return appropriate capabilities</span>
@@ -1469,7 +1397,7 @@ Node Service <span class="ansi90">NodeStageVolume</span>
 [AfterEach] Node Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi32">• [SLOW TEST:13.171 seconds]</span>
+<span class="ansi32">• [SLOW TEST:16.696 seconds]</span>
 Node Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   NodeStageVolume
@@ -1591,7 +1519,7 @@ Node Service <span class="ansi90">NodeGetVolumeStats</span>
 <span class="ansi1">STEP</span>: node staging volume
 [AfterEach] Node Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
-cleanup: deleting sanity-node-get-volume-stats-BF4DB3E8-D1186822 = 25b7400c-57d2-4b5c-9b47-46dbda62c589
+cleanup: deleting sanity-node-get-volume-stats-EDE9D03D-E621353D = b31d468d-5537-4c7b-960d-494ed9dda433
 cleanup: warning: NodeUnpublishVolume: rpc error: code = Unavailable desc = all SubConns are in TransientFailure, latest connection error: connection error: desc = "transport: Error while dialing dial tcp 127.0.0.1:50051: connect: connection refused"
 cleanup: warning: NodeUnstageVolume: rpc error: code = Unavailable desc = all SubConns are in TransientFailure, latest connection error: connection error: desc = "transport: Error while dialing dial tcp 127.0.0.1:50051: connect: connection refused"
 cleanup: warning: ControllerUnpublishVolume: rpc error: code = Unavailable desc = all SubConns are in TransientFailure, latest connection error: connection error: desc = "transport: Error while dialing dial tcp 127.0.0.1:50051: connect: connection refused"
@@ -1599,7 +1527,7 @@ cleanup: error: DeleteVolume: rpc error: code = Unavailable desc = all SubConns 
 [AfterEach] Node Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi91"></span><span class="ansi1 ansi91">• Failure [126.090 seconds]</span>
+<span class="ansi91"></span><span class="ansi1 ansi91">• Failure [130.763 seconds]</span>
 Node Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   NodeGetVolumeStats
@@ -1608,7 +1536,7 @@ Node Service
     <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:442</span>
 
     <span class="ansi91">Unexpected error:
-        &lt;*status.statusError | 0xc4201b0050&gt;: {
+        &lt;*status.statusError | 0xc4203e0050&gt;: {
             Code: 14,
             Message: "Too many pings",
             Details: nil,
@@ -1633,7 +1561,7 @@ Node Service
 [AfterEach] Node Service
   /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
 
-<span class="ansi91"></span><span class="ansi1 ansi91">• Failure in Spec Setup (BeforeEach) [0.002 seconds]</span>
+<span class="ansi91"></span><span class="ansi1 ansi91">• Failure in Spec Setup (BeforeEach) [0.001 seconds]</span>
 Node Service
 <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
   <span class="ansi91"></span><span class="ansi1 ansi91">should work [BeforeEach]</span>
@@ -1641,7 +1569,97 @@ Node Service
 
   <span class="ansi91">failed to create staging directory 
   Unexpected error:
-      &lt;*os.PathError | 0xc42014f170&gt;: {
+      &lt;*os.PathError | 0xc42048a5a0&gt;: {
+          Op: "mkdir",
+          Path: "/tmp/csi-staging",
+          Err: 0x11,
+      }
+      mkdir /tmp/csi-staging: file exists
+  occurred</span>
+
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/sanity.go:230
+<span class="ansi90">------------------------------</span>
+ExpandVolume [Controller Server] 
+  <span class="ansi1">should fail if no volume id is given</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2093</span>
+[BeforeEach] ExpandVolume [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[AfterEach] ExpandVolume [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2090
+[AfterEach] ExpandVolume [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+
+<span class="ansi91"></span><span class="ansi1 ansi91">• Failure in Spec Setup (BeforeEach) [0.001 seconds]</span>
+ExpandVolume [Controller Server]
+<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
+  <span class="ansi91"></span><span class="ansi1 ansi91">should fail if no volume id is given [BeforeEach]</span>
+  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2093</span>
+
+  <span class="ansi91">failed to create staging directory 
+  Unexpected error:
+      &lt;*os.PathError | 0xc42048a7e0&gt;: {
+          Op: "mkdir",
+          Path: "/tmp/csi-staging",
+          Err: 0x11,
+      }
+      mkdir /tmp/csi-staging: file exists
+  occurred</span>
+
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/sanity.go:230
+<span class="ansi90">------------------------------</span>
+ExpandVolume [Controller Server] 
+  <span class="ansi1">should fail if no capacity range is given</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2109</span>
+[BeforeEach] ExpandVolume [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[AfterEach] ExpandVolume [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2090
+[AfterEach] ExpandVolume [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+
+<span class="ansi91"></span><span class="ansi1 ansi91">• Failure in Spec Setup (BeforeEach) [0.001 seconds]</span>
+ExpandVolume [Controller Server]
+<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
+  <span class="ansi91"></span><span class="ansi1 ansi91">should fail if no capacity range is given [BeforeEach]</span>
+  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2109</span>
+
+  <span class="ansi91">failed to create staging directory 
+  Unexpected error:
+      &lt;*os.PathError | 0xc42048aa80&gt;: {
+          Op: "mkdir",
+          Path: "/tmp/csi-staging",
+          Err: 0x11,
+      }
+      mkdir /tmp/csi-staging: file exists
+  occurred</span>
+
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/sanity.go:230
+<span class="ansi90">------------------------------</span>
+ExpandVolume [Controller Server] 
+  <span class="ansi1">should work</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2122</span>
+[BeforeEach] ExpandVolume [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[AfterEach] ExpandVolume [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2090
+[AfterEach] ExpandVolume [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+
+<span class="ansi91"></span><span class="ansi1 ansi91">• Failure in Spec Setup (BeforeEach) [0.002 seconds]</span>
+ExpandVolume [Controller Server]
+<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
+  <span class="ansi91"></span><span class="ansi1 ansi91">should work [BeforeEach]</span>
+  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2122</span>
+
+  <span class="ansi91">failed to create staging directory 
+  Unexpected error:
+      &lt;*os.PathError | 0xc42048adb0&gt;: {
           Op: "mkdir",
           Path: "/tmp/csi-staging",
           Err: 0x11,
@@ -1653,7 +1671,7 @@ Node Service
 <span class="ansi90">------------------------------</span>
 
 
-<span class="ansi91"></span><span class="ansi1 ansi91">Summarizing 2 Failures:</span>
+<span class="ansi91"></span><span class="ansi1 ansi91">Summarizing 5 Failures:</span>
 
 <span class="ansi91"></span><span class="ansi1 ansi91">[Fail] </span><span class="ansi90">Node Service </span>NodeGetVolumeStats <span class="ansi91"></span><span class="ansi1 ansi91">[It] should fail when volume does not exist on the specified path </span>
 <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:525</span>
@@ -1661,13 +1679,22 @@ Node Service
 <span class="ansi91"></span><span class="ansi1 ansi91">[Fail] </span><span class="ansi90">Node Service </span><span class="ansi91"></span><span class="ansi1 ansi91">[BeforeEach] should work </span>
 <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/sanity.go:230</span>
 
-<span class="ansi1"></span><span class="ansi1 ansi91">Ran 68 of 72 Specs in 729.468 seconds</span>
-<span class="ansi1"></span><span class="ansi1 ansi91">FAIL!</span> -- <span class="ansi32"></span><span class="ansi1 ansi32">66 Passed</span> | <span class="ansi91"></span><span class="ansi1 ansi91">2 Failed</span> | <span class="ansi33"></span><span class="ansi1 ansi33">0 Pending</span> | <span class="ansi36"></span><span class="ansi1 ansi36">4 Skipped</span>
---- FAIL: TestSanity (729.48s)
+<span class="ansi91"></span><span class="ansi1 ansi91">[Fail] </span><span class="ansi90">ExpandVolume [Controller Server] </span><span class="ansi91"></span><span class="ansi1 ansi91">[BeforeEach] should fail if no volume id is given </span>
+<span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/sanity.go:230</span>
+
+<span class="ansi91"></span><span class="ansi1 ansi91">[Fail] </span><span class="ansi90">ExpandVolume [Controller Server] </span><span class="ansi91"></span><span class="ansi1 ansi91">[BeforeEach] should fail if no capacity range is given </span>
+<span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/sanity.go:230</span>
+
+<span class="ansi91"></span><span class="ansi1 ansi91">[Fail] </span><span class="ansi90">ExpandVolume [Controller Server] </span><span class="ansi91"></span><span class="ansi1 ansi91">[BeforeEach] should work </span>
+<span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/sanity.go:230</span>
+
+<span class="ansi1"></span><span class="ansi1 ansi91">Ran 71 of 72 Specs in 739.125 seconds</span>
+<span class="ansi1"></span><span class="ansi1 ansi91">FAIL!</span> -- <span class="ansi32"></span><span class="ansi1 ansi32">66 Passed</span> | <span class="ansi91"></span><span class="ansi1 ansi91">5 Failed</span> | <span class="ansi33"></span><span class="ansi1 ansi33">0 Pending</span> | <span class="ansi36"></span><span class="ansi1 ansi36">1 Skipped</span>
+--- FAIL: TestSanity (739.14s)
 FAIL
 ember-csi
 <span class="ansi36">program finished with exit code 1</span>
-<span class="ansi36">elapsedTime=733.317200</span>
+<span class="ansi36">elapsedTime=742.803869</span>
 
 </pre>
 </body>
