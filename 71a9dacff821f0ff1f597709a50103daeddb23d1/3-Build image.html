@@ -42,43 +42,43 @@ Digest: sha256:a799dd8a2ded4a83484bbae769d97655392b3f86533ceb7dd96bbac929809f3c
 Status: Downloaded newer image for docker.io/centos:7
  ---&gt; 9f38484d220f
 Step 2/13 : ARG RELEASE=master
- ---&gt; Running in ea209187125e
- ---&gt; 90d973a7d359
-Removing intermediate container ea209187125e
+ ---&gt; Running in cd1f53bdb1d5
+ ---&gt; 736aed4b81a4
+Removing intermediate container cd1f53bdb1d5
 Step 3/13 : ARG VERSION=master
- ---&gt; Running in 36d4477ca3f2
- ---&gt; cfa86c495368
-Removing intermediate container 36d4477ca3f2
+ ---&gt; Running in 174445a34300
+ ---&gt; bca73b92812b
+Removing intermediate container 174445a34300
 Step 4/13 : ARG BUILD_DATE
- ---&gt; Running in c5b04a04969c
- ---&gt; 65574560860f
-Removing intermediate container c5b04a04969c
+ ---&gt; Running in 21b483199c7b
+ ---&gt; aae303ae032e
+Removing intermediate container 21b483199c7b
 Step 5/13 : ARG VCS_REF
- ---&gt; Running in c0a50cf6823a
- ---&gt; ff7de8a380bd
-Removing intermediate container c0a50cf6823a
+ ---&gt; Running in 1c9a4794b569
+ ---&gt; 4681f6f3449a
+Removing intermediate container 1c9a4794b569
 Step 6/13 : ARG TAG
- ---&gt; Running in a87217b51687
- ---&gt; 8da320a13776
-Removing intermediate container a87217b51687
+ ---&gt; Running in 16ee0c2b39ff
+ ---&gt; b774f0e3d972
+Removing intermediate container 16ee0c2b39ff
 Step 7/13 : LABEL maintainers "Gorka Eguileor &lt;geguileo@redhat.com&gt;" openstack_release ${RELEASE} version ${VERSION} description "Ember CSI Plugin" org.label-schema.schema-version "1.0" org.label-schema.name "ember-csi" org.label-schema.description "Ember CSI Plugin" org.label-schema.url "<a href="https://ember-csi.io">https://ember-csi.io</a>" org.label-schema.build-date ${BUILD_DATE} org.label-schema.vcs-url "<a href="https://github.com/embercsi/ember-csi">https://github.com/embercsi/ember-csi</a>" org.label-schema.vcs-ref ${VCS_REF}
- ---&gt; Running in d0cb464af820
- ---&gt; 3bdbe0d3013c
-Removing intermediate container d0cb464af820
+ ---&gt; Running in f31489a54298
+ ---&gt; 259dcfbeb194
+Removing intermediate container f31489a54298
 Step 8/13 : ENV X_CSI_DEBUG_MODE rpdb PYTHONUNBUFFERED true
- ---&gt; Running in ef2bfd2e8ac8
- ---&gt; d50db45ebdd5
-Removing intermediate container ef2bfd2e8ac8
+ ---&gt; Running in 3062255c8f6f
+ ---&gt; 145a0f21b3c6
+Removing intermediate container 3062255c8f6f
 Step 9/13 : EXPOSE 50051 4444
- ---&gt; Running in 0b049d3aba2b
- ---&gt; d4a23c61eaea
-Removing intermediate container 0b049d3aba2b
+ ---&gt; Running in f0be28924b90
+ ---&gt; bdfe6626a570
+Removing intermediate container f0be28924b90
 Step 10/13 : RUN yum -y install targetcli iscsi-initiator-utils device-mapper-multipath epel-release lvm2 which &amp;&amp;     yum -y install python2-pip pywbem python2-kubernetes &amp;&amp;     yum -y install xfsprogs e2fsprogs btrfs-progs nmap-ncat &amp;&amp;     pip install --no-cache-dir --upgrade 'pyasn1&lt;0.5.0,&gt;=0.4.1' future &amp;&amp;     if [ "$RELEASE" = "master" ]; then curl -o /etc/yum.repos.d/rdo-trunk-runtime-deps.repo <a href="https://trunk.rdoproject.org/centos7-master/rdo-trunk-runtime-deps.repo;">https://trunk.rdoproject.org/centos7-master/rdo-trunk-runtime-deps.repo;</a> curl -o /etc/yum.repos.d/delorean.repo <a href="https://trunk.rdoproject.org/centos7-master/current/delorean.repo;">https://trunk.rdoproject.org/centos7-master/current/delorean.repo;</a> else yum -y install centos-release-openstack-${RELEASE}; fi &amp;&amp;     yum -y install python-cinderlib &amp;&amp;     yum -y install python-rbd ceph-common pyOpenSSL &amp;&amp;     pip install --no-cache-dir krest purestorage pyxcli &amp;&amp;     yum clean all &amp;&amp;     rm -rf /var/cache/yum
- ---&gt; Running in 40dcc08ede09
+ ---&gt; Running in b00c33860345
 
 <span class="ansi91"></span>Loaded plugins: fastestmirror, ovl
 Determining fastest mirrors
- * base: mirror.airenetworks.es
+ * base: linuxmirror.es
  * extras: mirror.airenetworks.es
  * updates: mirror.airenetworks.es
 Resolving Dependencies
@@ -128,8 +128,8 @@ Resolving Dependencies
 ---&gt; Package python-rtslib.noarch 0:2.1.fb63-13.el7 will be installed
 --&gt; Processing Dependency: python-pyudev for package: python-rtslib-2.1.fb63-13.el7.noarch
 --&gt; Processing Dependency: python-kmod for package: python-rtslib-2.1.fb63-13.el7.noarch
----&gt; Package systemd-sysv.x86_64 0:219-62.el7_6.7 will be installed
---&gt; Processing Dependency: systemd = 219-62.el7_6.7 for package: systemd-sysv-219-62.el7_6.7.x86_64
+---&gt; Package systemd-sysv.x86_64 0:219-62.el7_6.9 will be installed
+--&gt; Processing Dependency: systemd = 219-62.el7_6.9 for package: systemd-sysv-219-62.el7_6.9.x86_64
 --&gt; Running transaction check
 ---&gt; Package device-mapper-event.x86_64 7:1.02.149-10.el7_6.8 will be installed
 --&gt; Processing Dependency: device-mapper = 7:1.02.149-10.el7_6.8 for package: 7:device-mapper-event-1.02.149-10.el7_6.8.x86_64
@@ -144,8 +144,8 @@ Resolving Dependencies
 ---&gt; Package python-six.noarch 0:1.9.0-2.el7 will be installed
 ---&gt; Package python-urwid.x86_64 0:1.1.1-3.el7 will be installed
 ---&gt; Package systemd.x86_64 0:219-62.el7_6.5 will be updated
----&gt; Package systemd.x86_64 0:219-62.el7_6.7 will be an update
---&gt; Processing Dependency: systemd-libs = 219-62.el7_6.7 for package: systemd-219-62.el7_6.7.x86_64
+---&gt; Package systemd.x86_64 0:219-62.el7_6.9 will be an update
+--&gt; Processing Dependency: systemd-libs = 219-62.el7_6.9 for package: systemd-219-62.el7_6.9.x86_64
 ---&gt; Package sysvinit-tools.x86_64 0:2.88-14.dsf.el7 will be installed
 --&gt; Running transaction check
 ---&gt; Package device-mapper.x86_64 7:1.02.149-10.el7_6.3 will be updated
@@ -156,7 +156,7 @@ Resolving Dependencies
 --&gt; Processing Dependency: libnetfilter_conntrack.so.3()(64bit) for package: iptables-1.4.21-28.el7.x86_64
 ---&gt; Package libmnl.x86_64 0:1.0.3-7.el7 will be installed
 ---&gt; Package systemd-libs.x86_64 0:219-62.el7_6.5 will be updated
----&gt; Package systemd-libs.x86_64 0:219-62.el7_6.7 will be an update
+---&gt; Package systemd-libs.x86_64 0:219-62.el7_6.9 will be an update
 --&gt; Running transaction check
 ---&gt; Package device-mapper-libs.x86_64 7:1.02.149-10.el7_6.3 will be updated
 ---&gt; Package device-mapper-libs.x86_64 7:1.02.149-10.el7_6.8 will be an update
@@ -200,13 +200,13 @@ Installing for dependencies:
  python-rtslib                   noarch  2.1.fb63-13.el7         base     100 k
  python-six                      noarch  1.9.0-2.el7             base      29 k
  python-urwid                    x86_64  1.1.1-3.el7             base     654 k
- systemd-sysv                    x86_64  219-62.el7_6.7          updates   84 k
+ systemd-sysv                    x86_64  219-62.el7_6.9          updates   84 k
  sysvinit-tools                  x86_64  2.88-14.dsf.el7         base      63 k
 Updating for dependencies:
  device-mapper                   x86_64  7:1.02.149-10.el7_6.8   updates  293 k
  device-mapper-libs              x86_64  7:1.02.149-10.el7_6.8   updates  321 k
- systemd                         x86_64  219-62.el7_6.7          updates  5.1 M
- systemd-libs                    x86_64  219-62.el7_6.7          updates  407 k
+ systemd                         x86_64  219-62.el7_6.9          updates  5.1 M
+ systemd-libs                    x86_64  219-62.el7_6.9          updates  408 k
 
 Transaction Summary
 ================================================================================
@@ -216,12 +216,12 @@ Upgrade             (  4 Dependent packages)
 Total download size: 13 M
 Downloading packages:
 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
-Public key for device-mapper-1.02.149-10.el7_6.8.x86_64.rpm is not installed
-<span class="ansi91">warning: /var/cache/yum/x86_64/7/updates/packages/device-mapper-1.02.149-10.el7_6.8.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
-</span>Public key for epel-release-7-11.noarch.rpm is not installed
-Public key for device-mapper-persistent-data-0.7.3-3.el7.x86_64.rpm is not installed
+<span class="ansi91">warning: /var/cache/yum/x86_64/7/updates/packages/device-mapper-event-1.02.149-10.el7_6.8.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+</span>Public key for device-mapper-event-1.02.149-10.el7_6.8.x86_64.rpm is not installed
+Public key for device-mapper-multipath-0.4.9-123.el7.x86_64.rpm is not installed
+Public key for epel-release-7-11.noarch.rpm is not installed
 --------------------------------------------------------------------------------
-Total                                               16 MB/s |  13 MB  00:00     
+Total                                              8.8 MB/s |  13 MB  00:01     
 Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 <span class="ansi91">Importing GPG key 0xF4A80EB5:
  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) &lt;security@centos.org&gt;"
@@ -232,8 +232,8 @@ Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 Running transaction test
 Transaction test succeeded
 Running transaction
-  Updating   : systemd-libs-219-62.el7_6.7.x86_64                          1/38 
-  Updating   : systemd-219-62.el7_6.7.x86_64                               2/38 
+  Updating   : systemd-libs-219-62.el7_6.9.x86_64                          1/38 
+  Updating   : systemd-219-62.el7_6.9.x86_64                               2/38 
 Failed to get D-Bus connection: Operation not permitted
   Installing : libaio-0.3.109-13.el7.x86_64                                3/38 
   Updating   : 7:device-mapper-1.02.149-10.el7_6.8.x86_64                  4/38 
@@ -252,7 +252,7 @@ warning: %post(device-mapper-event-7:1.02.149-10.el7_6.8.x86_64) scriptlet faile
 </span>  Installing : 7:lvm2-libs-2.02.180-10.el7_6.8.x86_64                     14/38 
   Installing : device-mapper-multipath-libs-0.4.9-123.el7.x86_64          15/38 
   Installing : device-mapper-persistent-data-0.7.3-3.el7.x86_64           16/38 
-  Installing : systemd-sysv-219-62.el7_6.7.x86_64                         17/38 
+  Installing : systemd-sysv-219-62.el7_6.9.x86_64                         17/38 
   Installing : iscsi-initiator-utils-6.2.0.874-10.el7.x86_64              18/38 
   Installing : iscsi-initiator-utils-iscsiuio-6.2.0.874-10.el7.x86_64     19/38 
   Installing : python-pyudev-0.15-9.el7.noarch                            20/38 
@@ -293,24 +293,24 @@ install-info: No such file or directory for /usr/share/info/which.info.gz
   Verifying  : targetcli-2.1.fb46-7.el7.noarch                            11/38 
   Verifying  : which-2.20-7.el7.x86_64                                    12/38 
   Verifying  : iscsi-initiator-utils-iscsiuio-6.2.0.874-10.el7.x86_64     13/38 
-  Verifying  : systemd-219-62.el7_6.7.x86_64                              14/38 
-  Verifying  : device-mapper-multipath-libs-0.4.9-123.el7.x86_64          15/38 
-  Verifying  : python-six-1.9.0-2.el7.noarch                              16/38 
-  Verifying  : libaio-0.3.109-13.el7.x86_64                               17/38 
-  Verifying  : device-mapper-multipath-0.4.9-123.el7.x86_64               18/38 
-  Verifying  : python-urwid-1.1.1-3.el7.x86_64                            19/38 
+  Verifying  : device-mapper-multipath-libs-0.4.9-123.el7.x86_64          14/38 
+  Verifying  : python-six-1.9.0-2.el7.noarch                              15/38 
+  Verifying  : libaio-0.3.109-13.el7.x86_64                               16/38 
+  Verifying  : device-mapper-multipath-0.4.9-123.el7.x86_64               17/38 
+  Verifying  : python-urwid-1.1.1-3.el7.x86_64                            18/38 
+  Verifying  : systemd-sysv-219-62.el7_6.9.x86_64                         19/38 
   Verifying  : 7:device-mapper-1.02.149-10.el7_6.8.x86_64                 20/38 
   Verifying  : libnfnetlink-1.0.1-4.el7.x86_64                            21/38 
-  Verifying  : python-ethtool-0.8-7.el7.x86_64                            22/38 
-  Verifying  : python-kmod-0.9-4.el7.x86_64                               23/38 
-  Verifying  : iptables-1.4.21-28.el7.x86_64                              24/38 
-  Verifying  : 7:device-mapper-event-libs-1.02.149-10.el7_6.8.x86_64      25/38 
-  Verifying  : 1:python-configshell-1.1.fb23-5.el7.noarch                 26/38 
-  Verifying  : libnl-1.1.4-3.el7.x86_64                                   27/38 
-  Verifying  : python-rtslib-2.1.fb63-13.el7.noarch                       28/38 
-  Verifying  : python-pyudev-0.15-9.el7.noarch                            29/38 
-  Verifying  : systemd-sysv-219-62.el7_6.7.x86_64                         30/38 
-  Verifying  : systemd-libs-219-62.el7_6.7.x86_64                         31/38 
+  Verifying  : systemd-219-62.el7_6.9.x86_64                              22/38 
+  Verifying  : python-ethtool-0.8-7.el7.x86_64                            23/38 
+  Verifying  : python-kmod-0.9-4.el7.x86_64                               24/38 
+  Verifying  : systemd-libs-219-62.el7_6.9.x86_64                         25/38 
+  Verifying  : iptables-1.4.21-28.el7.x86_64                              26/38 
+  Verifying  : 7:device-mapper-event-libs-1.02.149-10.el7_6.8.x86_64      27/38 
+  Verifying  : 1:python-configshell-1.1.fb23-5.el7.noarch                 28/38 
+  Verifying  : libnl-1.1.4-3.el7.x86_64                                   29/38 
+  Verifying  : python-rtslib-2.1.fb63-13.el7.noarch                       30/38 
+  Verifying  : python-pyudev-0.15-9.el7.noarch                            31/38 
   Verifying  : iscsi-initiator-utils-6.2.0.874-10.el7.x86_64              32/38 
   Verifying  : 7:lvm2-libs-2.02.180-10.el7_6.8.x86_64                     33/38 
   Verifying  : 7:device-mapper-event-1.02.149-10.el7_6.8.x86_64           34/38 
@@ -350,19 +350,19 @@ Dependency Installed:
   python-rtslib.noarch 0:2.1.fb63-13.el7                                        
   python-six.noarch 0:1.9.0-2.el7                                               
   python-urwid.x86_64 0:1.1.1-3.el7                                             
-  systemd-sysv.x86_64 0:219-62.el7_6.7                                          
+  systemd-sysv.x86_64 0:219-62.el7_6.9                                          
   sysvinit-tools.x86_64 0:2.88-14.dsf.el7                                       
 
 Dependency Updated:
   device-mapper.x86_64 7:1.02.149-10.el7_6.8                                    
   device-mapper-libs.x86_64 7:1.02.149-10.el7_6.8                               
-  systemd.x86_64 0:219-62.el7_6.7                                               
-  systemd-libs.x86_64 0:219-62.el7_6.7                                          
+  systemd.x86_64 0:219-62.el7_6.9                                               
+  systemd-libs.x86_64 0:219-62.el7_6.9                                          
 
 Complete!
 Loaded plugins: fastestmirror, ovl
 Loading mirror speeds from cached hostfile
- * base: mirror.airenetworks.es
+ * base: linuxmirror.es
  * epel: mirror.airenetworks.es
  * extras: mirror.airenetworks.es
  * updates: mirror.airenetworks.es
@@ -495,7 +495,7 @@ Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
 <span class="ansi91">warning: /var/cache/yum/x86_64/7/epel/packages/python-cachetools-1.0.3-1.el7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
 </span>Public key for python-cachetools-1.0.3-1.el7.noarch.rpm is not installed
 --------------------------------------------------------------------------------
-Total                                              7.9 MB/s | 8.0 MB  00:01     
+Total                                              6.8 MB/s | 8.0 MB  00:01     
 Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 <span class="ansi91">Importing GPG key 0x352C64E5:
  Userid     : "Fedora EPEL (7) &lt;epel@fedoraproject.org&gt;"
@@ -616,7 +616,7 @@ Dependency Updated:
 Complete!
 Loaded plugins: fastestmirror, ovl
 Loading mirror speeds from cached hostfile
- * base: mirror.airenetworks.es
+ * base: linuxmirror.es
  * epel: mirror.airenetworks.es
  * extras: mirror.airenetworks.es
  * updates: mirror.airenetworks.es
@@ -662,7 +662,7 @@ Total download size: 2.8 M
 Installed size: 12 M
 Downloading packages:
 --------------------------------------------------------------------------------
-Total                                              9.2 MB/s | 2.8 MB  00:00     
+Total                                              3.5 MB/s | 2.8 MB  00:00     
 Running transaction check
 Running transaction test
 Transaction test succeeded
@@ -710,16 +710,16 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
                                  Dload  Upload   Total   Spent    Left  Speed
 
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0</span><span class="ansi91">
-  0   307    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100   307  100   307    0     0    452      0 --:--:-- --:--:-- --:--:--   452
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0</span><span class="ansi91">
+100   307  100   307    0     0    450      0 --:--:-- --:--:-- --:--:--   450
 </span><span class="ansi91">  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-
+</span><span class="ansi91">
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0</span><span class="ansi91">
-100   213  100   213    0     0    380      0 --:--:-- --:--:-- --:--:--   381
+100   213  100   213    0     0    380      0 --:--:-- --:--:-- --:--:--   380
 </span>Loaded plugins: fastestmirror, ovl
 Loading mirror speeds from cached hostfile
- * base: mirror.airenetworks.es
+ * base: linuxmirror.es
  * epel: mirror.airenetworks.es
  * extras: mirror.airenetworks.es
  * updates: mirror.airenetworks.es
@@ -1968,7 +1968,7 @@ Total download size: 144 M
 Downloading packages:
 Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
 --------------------------------------------------------------------------------
-Total                                              2.9 MB/s | 144 MB  00:49     
+Total                                              2.6 MB/s | 144 MB  00:55     
 Running transaction check
 Running transaction test
 Transaction test succeeded
@@ -3057,7 +3057,7 @@ Replaced:
 Complete!
 Loaded plugins: fastestmirror, ovl
 Loading mirror speeds from cached hostfile
- * base: mirror.airenetworks.es
+ * base: linuxmirror.es
  * epel: mirror.airenetworks.es
  * extras: mirror.airenetworks.es
  * updates: mirror.airenetworks.es
@@ -3186,7 +3186,7 @@ Total download size: 22 M
 Installed size: 79 M
 Downloading packages:
 --------------------------------------------------------------------------------
-Total                                               18 MB/s |  22 MB  00:01     
+Total                                              6.2 MB/s |  22 MB  00:03     
 Running transaction check
 Running transaction test
 Transaction test succeeded
@@ -3319,13 +3319,13 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 Cleaning repos: base delorean delorean-master-testing epel extras rdo-qemu-ev
               : updates
 Cleaning up list of fastest mirrors
- ---&gt; deb183d1fabe
-Removing intermediate container 40dcc08ede09
+ ---&gt; 6601eea1fde9
+Removing intermediate container b00c33860345
 Step 11/13 : COPY . /ember-csi
- ---&gt; e5cce0655e5f
-Removing intermediate container 5f907b6a090e
+ ---&gt; 71d672484a96
+Removing intermediate container 26b4f9a2130f
 Step 12/13 : RUN pip install --no-cache-dir -e /ember-csi
- ---&gt; Running in 8895ba19565d
+ ---&gt; Running in 200fd337b15e
 
 <span class="ansi91"></span>Obtaining file:///ember-csi
 Requirement already satisfied (use --upgrade to upgrade): cinderlib&gt;=0.9.0 in /usr/lib/python2.7/site-packages (from ember-csi==0.9.0)
@@ -3360,15 +3360,15 @@ Installing collected packages: grpcio, protobuf, ember-csi
 Successfully installed ember-csi grpcio-1.15.0 protobuf-3.9.0
 <span class="ansi91">You are using pip version 8.1.2, however version 19.2.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
-</span> ---&gt; 33d9670548cb
-Removing intermediate container 8895ba19565d
+</span> ---&gt; f30bffd983c8
+Removing intermediate container 200fd337b15e
 Step 13/13 : CMD ember-csi
- ---&gt; Running in 94f073415289
- ---&gt; 0303a66a1a23
-Removing intermediate container 94f073415289
-Successfully built 0303a66a1a23
+ ---&gt; Running in 0efccebb439d
+ ---&gt; 2df00a19890d
+Removing intermediate container 0efccebb439d
+Successfully built 2df00a19890d
 <span class="ansi36">program finished with exit code 0</span>
-<span class="ansi36">elapsedTime=619.565669</span>
+<span class="ansi36">elapsedTime=527.543031</span>
 
 </pre>
 </body>
