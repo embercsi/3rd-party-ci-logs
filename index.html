@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Ember-CSI Third Party CI logs</title></head>
+<h1>Ember-CSI Third Party CI logs</h1>
+<p>This site contains the logs for the Third Party CI jobs that run for the Ember-CSI repository.</p>
+<p>Existing 3rd party CI systems are:</p>
+<ul id='existing_cis'></ul>
+<script>
+	fetch('https://api.github.com/repos/embercsi/3rd-party-ci-logs/branches')
+	.then(res => res.json())
+	.then((out) => {
+		let result = '';
+		for (let i = 0; i < out.length; i++) {
+			let branch = out[i]['name'];
+			if (branch != 'master') {
+				result += '<li><a href="https://ci-logs.ember-csi.io/' + branch + '/index.html">'+ branch + '</a></li>'
+			}
+		}
+		document.getElementById('existing_cis').innerHTML = result;
+	})
+	.catch(err => { throw err });
+</script>
+</body>
+</html>
