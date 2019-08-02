@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><title>QNAP iSCSI CI logs</title></head>
+<h1>Ember-CSI QNAP iSCSI CI logs</h1>
+<p>QNAP iSCSI logs:</p>
+<ul id='logs'></ul>
+<script>
+	var branch= location.pathname.split('/')[1];
+
+	fetch('https://api.github.com/repos/embercsi/3rd-party-ci-logs/branches/' + branch)
+	.then(res => res.json())
+	.then((out) => out['commit']['commit']['tree']['url'])
+    .then((url) => {
+		fetch(url)
+		.then(res => res.json())
+		.then((out) => {
+			console.log(out);
+			let result = '';
+			for (let i = 0; i < out['tree'].length; i++) {
+				let directory = out['tree'][i]['path'];
+				if (['README.md', 'index.html'].indexOf(directory ) == -1) {
+					result += '<li><a href="https://ci-logs.ember-csi.io/' + branch + '/' + directory + '/index.html">'+ directory + '</a></li>';
+				}
+			}
+			document.getElementById('logs').innerHTML = result;
+		})
+		.catch(err => { throw err });
+	})
+	.catch(err => { throw err });
+</script>
+</body>
+</html>
