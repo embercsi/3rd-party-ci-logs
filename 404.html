@@ -13,70 +13,28 @@
 <body>
     <p id="preview"></p>
 	<script>
-		// Customized version from htmlpreview
 		(function () {
-			var github_raw_url = 'https://raw.githubusercontent.com/embercsi/3rd-party-ci-logs'
-			var preview_element = document.getElementById('preview');
+			let github_raw_url = 'https://raw.githubusercontent.com/embercsi/3rd-party-ci-logs';
 
-			var replaceAssets = function () {
-				var frame, a, link, links = [], script, scripts = [], i, href, src;
-				//Framesets
-				if (document.querySelectorAll('frameset').length)
-					return; //Don't replace CSS/JS if it's a frameset, because it will be erased by document.write()
-				//Scripts
-				script = document.querySelectorAll('script[type="text/htmlpreview"]');
-				for (i = 0; i < script.length; ++i) {
-					script[i].removeAttribute('type');
-					scripts.push(script[i].innerHTML); //Add inline script to queue to eval in order
-				}
-				Promise.all(scripts).then(function (res) {
-					for (i = 0; i < res.length; ++i) {
-						loadJS(res[i]);
-					}
-				});
-			};
-
-			var loadHTML = function (data) {
+			let render = function (data) {
 				if (data) {
-					data = data.replace(/<head([^>]*)>/i, '<head$1><base href="' + github_raw_url + '">').replace(/<script(\s*src=["'][^"']*["'])?(\s*type=["'](text|application)\/javascript["'])?/gi, '<script type="text/htmlpreview"$1'); //Add <base> just after <head> and replace <script type="text/javascript"> with <script type="text/htmlpreview">
 					setTimeout(function () {
-						document.open();
+						document.open('text/html', 'replace');
 						document.write(data);
 						document.close();
-						replaceAssets();
 					}, 10); //Delay updating document to have it cleared before
 				}
 			};
 
-			var loadJS = function (data) {
-				if (data) {
-					var script = document.createElement('script');
-					script.innerHTML = data;
-					document.body.appendChild(script);
-				}
-			};
-
-			var fetchProxy = function (url, pathname, options, i) {
-				var proxy = [
-					'https://jsonp.afeld.me/?url=',
-					'https://cors-anywhere.herokuapp.com/'
-				];
-				return fetch(proxy[i] + url + pathname, options).then(function (res) {
-					if (!res.ok)
-						throw new Error('Cannot load ' + pathname + ': ' + res.status + ' ' + res.statusText);
+			let handleError = function (res) {
+				if (res.ok)
 					return res.text();
-				}).catch(function (error) {
-					if (i === proxy.length - 1)
-						throw error;
-					return fetchProxy(url, pathname, options, i + 1);
-				})
+				let preview_element = document.getElementById('preview');
+				preview_element.style.display = 'block';
+				preview_element.innerText = 'Cannot load ' + location.href + ': ' + res.status + ' ' + res.statusText;
 			};
 
-			fetchProxy(github_raw_url, location.pathname, null, 0).then(loadHTML).catch(function (error) {
-				console.error(error);
-				preview_element.style.display = 'block';
-				preview_element.innerText = error;
-			});
+			fetch(github_raw_url + location.pathname).then(handleError).then(render);
 		})()
     </script>
 </body>
