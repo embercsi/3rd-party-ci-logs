@@ -1,0 +1,1471 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+2019-08-06 09:33:40 default INFO cinder.volume.drivers.hpe.hpe_3par_common [-] HPE3PARCommon 4.0.13,hpe3parclient 4.2.9
+2019-08-06 09:33:40 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:404
+2019-08-06 09:33:41 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Disconnect from 3PAR REST and SSH 01d34039-edff-4e0a-90b3-7b7d71e47253 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:428
+2019-08-06 09:33:41 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:404
+2019-08-06 09:33:42 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Disconnect from 3PAR REST and SSH 01d34039-edff-4e0a-90b3-7b7d71e47253 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:428
+2019-08-06 09:33:42 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:404
+2019-08-06 09:33:43.983 1 DEBUG paramiko.transport [-] starting thread (client mode): 0x78327f10L _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:43.984 1 DEBUG paramiko.transport [-] Local version/idstring: SSH-2.0-paramiko_2.4.2 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.224 1 DEBUG paramiko.transport [-] Remote version/idstring: SSH-2.0-OpenSSH_6.6.1p1 Debian-4~bpo70+1 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.225 1 INFO paramiko.transport [-] Connected (version 2.0, client OpenSSH_6.6.1p1)
+2019-08-06 09:33:44.329 1 DEBUG paramiko.transport [-] kex algos:[u'diffie-hellman-group-exchange-sha256'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'chacha20-poly1305@openssh.com', u'aes256-gcm@openssh.com', u'aes128-gcm@openssh.com', u'aes256-ctr', u'aes192-ctr', u'aes128-ctr'] server encrypt:[u'chacha20-poly1305@openssh.com', u'aes256-gcm@openssh.com', u'aes128-gcm@openssh.com', u'aes256-ctr', u'aes192-ctr', u'aes128-ctr'] client mac:[u'hmac-sha2-512-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-512', u'hmac-sha2-256', u'hmac-ripemd160', u'umac-128@openssh.com'] server mac:[u'hmac-sha2-512-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-512', u'hmac-sha2-256', u'hmac-ripemd160', u'umac-128@openssh.com'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.329 1 DEBUG paramiko.transport [-] Kex agreed: diffie-hellman-group-exchange-sha256 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.329 1 DEBUG paramiko.transport [-] HostKey agreed: ssh-rsa _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.330 1 DEBUG paramiko.transport [-] Cipher agreed: aes128-ctr _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.330 1 DEBUG paramiko.transport [-] MAC agreed: hmac-sha2-256 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.331 1 DEBUG paramiko.transport [-] Compression agreed: none _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.436 1 DEBUG paramiko.transport [-] Got server p (2048 bits) _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.601 1 DEBUG paramiko.transport [-] kex engine KexGexSHA256 specified hash_algo &lt;built-in function openssl_sha256&gt; _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.602 1 DEBUG paramiko.transport [-] Switch to new keys ... _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44 default DEBUG paramiko.transport [-] Adding ssh-rsa host key for 10.35.84.12: 68a6c960a1cb12e2761aee47b08bf9ee _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.846 1 DEBUG paramiko.transport [-] userauth is OK _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:44.980 1 INFO paramiko.transport [-] Authentication (password) successful!
+2019-08-06 09:33:45 default DEBUG paramiko.transport [-] [chan 0] Max packet in: 32768 bytes _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:45.108 1 DEBUG paramiko.transport [-] [chan 0] Max packet out: 32768 bytes _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:45.109 1 DEBUG paramiko.transport [-] Secsh channel 0 opened. _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:45.217 1 DEBUG paramiko.transport [-] [chan 0] Sesch channel 0 request ok _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:45.321 1 DEBUG paramiko.transport [-] [chan 0] Sesch channel 0 request ok _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:45.739 1 DEBUG paramiko.transport [-] [chan 0] EOF received (0) _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:45.740 1 DEBUG paramiko.transport [-] [chan 0] EOF sent (0) _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Disconnect from 3PAR REST and SSH 01d34039-edff-4e0a-90b3-7b7d71e47253 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:428
+2019-08-06 09:33:46.242 1 DEBUG paramiko.transport [-] EOF in transport thread _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:46 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [-] ==&gt; get_volume_stats: call u"{'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f8278327b10&gt;, 'refresh': True}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:916
+2019-08-06 09:33:47 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:404
+2019-08-06 09:33:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Disconnect from 3PAR REST and SSH 6afee035-1501-4848-8fb7-8d6a5bf7404b client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:428
+2019-08-06 09:33:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:404
+2019-08-06 09:33:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] 'Replication' requires a 'Remote Copy' license which is not installed. _check_license_enabled /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:1664
+2019-08-06 09:33:50.173 1 DEBUG paramiko.transport [-] starting thread (client mode): 0x782d0890L _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.173 1 DEBUG paramiko.transport [-] Local version/idstring: SSH-2.0-paramiko_2.4.2 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.289 1 DEBUG paramiko.transport [-] Remote version/idstring: SSH-2.0-OpenSSH_6.6.1p1 Debian-4~bpo70+1 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.289 1 INFO paramiko.transport [-] Connected (version 2.0, client OpenSSH_6.6.1p1)
+2019-08-06 09:33:50.392 1 DEBUG paramiko.transport [-] kex algos:[u'diffie-hellman-group-exchange-sha256'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'chacha20-poly1305@openssh.com', u'aes256-gcm@openssh.com', u'aes128-gcm@openssh.com', u'aes256-ctr', u'aes192-ctr', u'aes128-ctr'] server encrypt:[u'chacha20-poly1305@openssh.com', u'aes256-gcm@openssh.com', u'aes128-gcm@openssh.com', u'aes256-ctr', u'aes192-ctr', u'aes128-ctr'] client mac:[u'hmac-sha2-512-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-512', u'hmac-sha2-256', u'hmac-ripemd160', u'umac-128@openssh.com'] server mac:[u'hmac-sha2-512-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-512', u'hmac-sha2-256', u'hmac-ripemd160', u'umac-128@openssh.com'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.392 1 DEBUG paramiko.transport [-] Kex agreed: diffie-hellman-group-exchange-sha256 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.393 1 DEBUG paramiko.transport [-] HostKey agreed: ssh-rsa _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.393 1 DEBUG paramiko.transport [-] Cipher agreed: aes128-ctr _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.394 1 DEBUG paramiko.transport [-] MAC agreed: hmac-sha2-256 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.394 1 DEBUG paramiko.transport [-] Compression agreed: none _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.537 1 DEBUG paramiko.transport [-] Got server p (2048 bits) _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.701 1 DEBUG paramiko.transport [-] kex engine KexGexSHA256 specified hash_algo &lt;built-in function openssl_sha256&gt; _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.702 1 DEBUG paramiko.transport [-] Switch to new keys ... _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:50.946 1 DEBUG paramiko.transport [-] userauth is OK _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:51.078 1 INFO paramiko.transport [-] Authentication (password) successful!
+2019-08-06 09:33:51 default DEBUG paramiko.transport [-] [chan 0] Max packet in: 32768 bytes _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:51.206 1 DEBUG paramiko.transport [-] [chan 0] Max packet out: 32768 bytes _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:51.207 1 DEBUG paramiko.transport [-] Secsh channel 0 opened. _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:51.314 1 DEBUG paramiko.transport [-] [chan 0] Sesch channel 0 request ok _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:51.418 1 DEBUG paramiko.transport [-] [chan 0] Sesch channel 0 request ok _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:52.025 1 DEBUG paramiko.transport [-] [chan 0] EOF received (0) _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:52.026 1 DEBUG paramiko.transport [-] [chan 0] EOF sent (0) _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-08-06 09:33:52 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Disconnect from 3PAR REST and SSH 6afee035-1501-4848-8fb7-8d6a5bf7404b client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:428
+2019-08-06 09:33:53.028 1 DEBUG paramiko.transport [-] EOF in transport thread _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-08-06 09:33:53 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [-] &lt;== get_volume_stats: return (6769ms) {'array_id': 139115, 'vendor_name': u'Hewlett Packard Enterprise', 'volume_backend_name': u'3par', 'driver_version': u'4.0.2', 'replication_targets': [], 'pools': [{'thick_provisioning_support': True, 'bandwidth': 43005.5, 'consistent_group_snapshot_enabled': True, 'latency': 0.39, 'filter_function': None, 'compression': True, 'total_volumes': 138, 'consistent_group_replication_enabled': False, 'free_capacity_gb': 1855, 'queue_length': 1.4, 'backend_state': 'up', 'pool_name': 'SSD_r5', 'goodness_function': None, 'multiattach': True, 'provisioned_capacity_gb': 6435, 'thin_provisioning_support': True, 'io_size': 13.6, 'reserved_percentage': 0, 'QoS_support': True, 'capacity_utilization': 77.2699424090185, 'total_capacity_gb': 8161, 'location_info': u'HPE3PARDriver:CZ3836C3RB:SSD_r5', 'avg_busy_perc': 0.8, 'throughput': 3167.1, 'max_over_subscription_ratio': '20.0'}], 'replication_enabled': False, 'storage_protocol': u'iSCSI'} trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:941
+2019-08-06 09:33:53 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [-] ==&gt; _init_vendor_properties: call u"{'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f8278327b10&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:916
+2019-08-06 09:33:53 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [-] &lt;== _init_vendor_properties: return (0ms) ({'HPE:3PAR:replication:retention_count': {'default': 5, 'type': 'integer', 'description': u'Sets the number of snapshots that will be  saved on the primary array.', 'title': 'Retention Count for Replication Extra-specs.'}, 'HPE:3PAR:replication:remote_retention_count': {'default': 5, 'type': 'integer', 'description': u'Sets the number of snapshots that will be  saved on the secondary array.', 'title': 'Remote Retention Count for Replication Extra-specs.'}, 'HPE:3PAR:hpe3par:persona': {'default': '2 - Generic-ALUA', 'enum': ['2 - Generic-ALUA', '1 - Generic', '3 - Generic-legacy', '4 - HPEUX-legacy', '5 - AIX-legacy', '6 - EGENERA', '7 - ONTAP-legacy', '8 - VMware', '9 - OpenVMS', '10 - HPEUX', '11 - WindowsServer'], 'type': 'string', 'description': u'Specifies the host persona property for a volume type. It overrides the hpe3par_cpg_snap setting. Defaults to the hpe3par_cpg_snap setting in the cinder.conf file. If hpe3par_cpg_snap is not set, it defaults to the hpe3par_cpg setting.', 'title': 'Host Persona Extra-specs.'}, 'HPE:3PAR:minBWS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue bandwidth minimum goal. If not specified, there is no limit on I/O issue bandwidth rate.', 'title': 'Minimum Bandwidth QoS.'}, 'HPE:3PAR:hpe3par:provisioning': {'default': 'thin', 'enum': ['thin', 'full', 'dedup'], 'type': 'string', 'description': u'Specifies the provisioning for a volume type.', 'title': 'Storage Provisioning Extra-specs.'}, 'HPE:3PAR:hpe3par:compression': {'default': False, 'type': 'boolean', 'description': u'Enables compression for a volume type. Minimum requirement of 3par OS version is 3.3.1 with SSD drives only. Volume size must have &gt; 16 GB to enable compression on volume. A full provisioned volume cannot be compressed.', 'title': 'Storage Provisioning Extra-specs.'}, 'HPE:3PAR:maxBWS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue bandwidth rate limit. If not specified, there is no limit on I/O issue bandwidth rate.', 'title': 'Maximum Bandwidth QoS.'}, 'HPE:3PAR:latency': {'type': 'integer', 'description': u'Sets the latency goal in milliseconds.', 'title': 'Latency QoS.'}, 'HPE:3PAR:priority': {'default': 'normal', 'enum': ['low', 'normal', 'high'], 'type': 'string', 'description': u'Sets the priority of the QoS rule over other rules.', 'title': 'Priority QoS.'}, 'HPE:3PAR:hpe3par:vvs': {'type': 'string', 'description': u'The virtual volume set name that has been set up by the administrator that would have predefined QoS rules associated with it. If you specify extra_specs hpe3par:vvs, the qos_specs minIOPS, maxIOPS, minBWS, and maxBWS settings are ignored.', 'title': 'Virtual Volume Set Extra-specs.'}, 'HPE:3PAR:hpe3par:snap_cpg': {'type': 'string', 'description': u'Specifies the Snap CPG for a volume type. It overrides the hpe3par_cpg_snap setting. Defaults to the hpe3par_cpg_snap setting in the cinder.conf file. If hpe3par_cpg_snap is not set, it defaults to the hpe3par_cpg setting.', 'title': 'Snap CPG Extra-specs.'}, 'HPE:3PAR:hpe3par:flash_cache': {'default': False, 'type': 'boolean', 'description': u'Enables Flash cache setting for a volume type.', 'title': 'Flash cache Extra-specs.'}, 'HPE:3PAR:maxIOPS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue count rate limit. If not specified, there is no limit on I/O issue count.', 'title': 'Maximum IOPS QoS.'}, 'HPE:3PAR:replication:mode': {'default': 'periodic', 'enum': ['sync', 'periodic'], 'type': 'string', 'description': u'Sets the replication mode for 3par.', 'title': 'Replication Mode Extra-specs.'}, 'HPE:3PAR:replication:sync_period': {'default': 900, 'type': 'integer', 'description': u'Sets the time interval for synchronization. Only needed if replication:mode is periodic.', 'title': 'Sync Period for Volume Replication Extra-specs.'}, 'HPE:3PAR:minIOPS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue count minimum goal. If not specified, there is no limit on I/O issue count.', 'title': 'Minimum IOPS QoS.'}, 'HPE:3PAR:replication_enabled': {'default': False, 'enum': ['&lt;is&gt; True'], 'type': 'string', 'description': u'The valid value is: &lt;is&gt; True If True, the volume is to be replicated, if supported, by the backend driver. If the option is not specified or false, then replication is not enabled. This option is required to enable replication.', 'title': 'Volume Replication Extra-specs.'}}, 'HPE:3PAR') trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:941
+2019-08-06 09:33:53 default WARNING cinder.volume.driver [-] The colon in vendor name was replaced by underscore. Updated vendor name is HPE_3PAR".
+2019-08-06 09:33:53 default DEBUG cinder.volume.driver [-] Initialized capabilities list: {'array_id': 139115, 'vendor_name': 'Hewlett Packard Enterprise', 'vendor_prefix': 'HPE_3PAR', 'volume_backend_name': '3par', 'driver_version': '4.0.2', 'replication_targets': [], 'pools': [{'thick_provisioning_support': True, 'bandwidth': 43005.5, 'consistent_group_snapshot_enabled': True, 'latency': 0.39, 'filter_function': None, 'compression': True, 'total_volumes': 138, 'consistent_group_replication_enabled': False, 'free_capacity_gb': 1855, 'queue_length': 1.4, 'backend_state': 'up', 'pool_name': 'SSD_r5', 'goodness_function': None, 'multiattach': True, 'provisioned_capacity_gb': 6435, 'thin_provisioning_support': True, 'io_size': 13.6, 'reserved_percentage': 0, 'QoS_support': True, 'capacity_utilization': 77.2699424090185, 'total_capacity_gb': 8161, 'location_info': u'HPE3PARDriver:CZ3836C3RB:SSD_r5', 'avg_busy_perc': 0.8, 'throughput': 3167.1, 'max_over_subscription_ratio': '20.0'}], 'replication_enabled': False, 'properties': {'HPE_3PAR:replication:remote_retention_count': {'default': 5, 'type': 'integer', 'description': u'Sets the number of snapshots that will be  saved on the secondary array.', 'title': 'Remote Retention Count for Replication Extra-specs.'}, 'HPE_3PAR:minIOPS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue count minimum goal. If not specified, there is no limit on I/O issue count.', 'title': 'Minimum IOPS QoS.'}, 'HPE_3PAR:hpe3par:snap_cpg': {'type': 'string', 'description': u'Specifies the Snap CPG for a volume type. It overrides the hpe3par_cpg_snap setting. Defaults to the hpe3par_cpg_snap setting in the cinder.conf file. If hpe3par_cpg_snap is not set, it defaults to the hpe3par_cpg setting.', 'title': 'Snap CPG Extra-specs.'}, 'qos': {'type': 'boolean', 'description': u'Enables QoS.', 'title': 'QoS'}, 'HPE_3PAR:hpe3par:provisioning': {'default': 'thin', 'enum': ['thin', 'full', 'dedup'], 'type': 'string', 'description': u'Specifies the provisioning for a volume type.', 'title': 'Storage Provisioning Extra-specs.'}, 'HPE_3PAR:replication:retention_count': {'default': 5, 'type': 'integer', 'description': u'Sets the number of snapshots that will be  saved on the primary array.', 'title': 'Retention Count for Replication Extra-specs.'}, 'HPE_3PAR:maxIOPS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue count rate limit. If not specified, there is no limit on I/O issue count.', 'title': 'Maximum IOPS QoS.'}, 'HPE_3PAR:replication:sync_period': {'default': 900, 'type': 'integer', 'description': u'Sets the time interval for synchronization. Only needed if replication:mode is periodic.', 'title': 'Sync Period for Volume Replication Extra-specs.'}, 'HPE_3PAR:hpe3par:persona': {'default': '2 - Generic-ALUA', 'enum': ['2 - Generic-ALUA', '1 - Generic', '3 - Generic-legacy', '4 - HPEUX-legacy', '5 - AIX-legacy', '6 - EGENERA', '7 - ONTAP-legacy', '8 - VMware', '9 - OpenVMS', '10 - HPEUX', '11 - WindowsServer'], 'type': 'string', 'description': u'Specifies the host persona property for a volume type. It overrides the hpe3par_cpg_snap setting. Defaults to the hpe3par_cpg_snap setting in the cinder.conf file. If hpe3par_cpg_snap is not set, it defaults to the hpe3par_cpg setting.', 'title': 'Host Persona Extra-specs.'}, 'thin_provisioning': {'type': 'boolean', 'description': u'Sets thin provisioning.', 'title': 'Thin Provisioning'}, 'HPE_3PAR:latency': {'type': 'integer', 'description': u'Sets the latency goal in milliseconds.', 'title': 'Latency QoS.'}, 'HPE_3PAR:maxBWS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue bandwidth rate limit. If not specified, there is no limit on I/O issue bandwidth rate.', 'title': 'Maximum Bandwidth QoS.'}, 'compression': {'type': 'boolean', 'description': u'Enables compression.', 'title': 'Compression'}, 'HPE_3PAR:hpe3par:vvs': {'type': 'string', 'description': u'The virtual volume set name that has been set up by the administrator that would have predefined QoS rules associated with it. If you specify extra_specs hpe3par:vvs, the qos_specs minIOPS, maxIOPS, minBWS, and maxBWS settings are ignored.', 'title': 'Virtual Volume Set Extra-specs.'}, 'HPE_3PAR:hpe3par:compression': {'default': False, 'type': 'boolean', 'description': u'Enables compression for a volume type. Minimum requirement of 3par OS version is 3.3.1 with SSD drives only. Volume size must have &gt; 16 GB to enable compression on volume. A full provisioned volume cannot be compressed.', 'title': 'Storage Provisioning Extra-specs.'}, 'HPE_3PAR:hpe3par:flash_cache': {'default': False, 'type': 'boolean', 'description': u'Enables Flash cache setting for a volume type.', 'title': 'Flash cache Extra-specs.'}, 'HPE_3PAR:minBWS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue bandwidth minimum goal. If not specified, there is no limit on I/O issue bandwidth rate.', 'title': 'Minimum Bandwidth QoS.'}, 'HPE_3PAR:priority': {'default': 'normal', 'enum': ['low', 'normal', 'high'], 'type': 'string', 'description': u'Sets the priority of the QoS rule over other rules.', 'title': 'Priority QoS.'}, 'HPE_3PAR:replication:mode': {'default': 'periodic', 'enum': ['sync', 'periodic'], 'type': 'string', 'description': u'Sets the replication mode for 3par.', 'title': 'Replication Mode Extra-specs.'}, 'replication_enabled': {'type': 'boolean', 'description': u'Enables replication.', 'title': 'Replication'}, 'HPE_3PAR:replication_enabled': {'default': False, 'enum': ['&lt;is&gt; True'], 'type': 'string', 'description': u'The valid value is: &lt;is&gt; True If True, the volume is to be replicated, if supported, by the backend driver. If the option is not specified or false, then replication is not enabled. This option is required to enable replication.', 'title': 'Volume Replication Extra-specs.'}}, 'storage_protocol': 'iSCSI'}. init_capabilities /usr/lib/python2.7/site-packages/cinder/volume/driver.py:791
+2019-08-06 09:33:53 default DEBUG os_brick.utils [-] ==&gt; get_connector_properties: call u"{'execute': &lt;function _execute at 0x7f827a3ae7d0&gt;, 'my_ip': '192.168.122.19', 'enforce_multipath': False, 'host': None, 'root_helper': 'sudo', 'multipath': True}" trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:146
+2019-08-06 09:33:53 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): multipathd show status execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:33:53 default DEBUG oslo_concurrency.processutils [-] CMD "multipathd show status" returned: 0 in 0.262s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:33:53 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): cat /etc/iscsi/initiatorname.iscsi execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:33:53 default DEBUG oslo_concurrency.processutils [-] CMD "cat /etc/iscsi/initiatorname.iscsi" returned: 0 in 0.244s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:33:53 default DEBUG os_brick.initiator.linuxfc [-] No Fibre Channel support detected on system. get_fc_hbas /usr/lib/python2.7/site-packages/os_brick/initiator/linuxfc.py:134
+2019-08-06 09:33:53 default DEBUG os_brick.initiator.linuxfc [-] No Fibre Channel support detected on system. get_fc_hbas /usr/lib/python2.7/site-packages/os_brick/initiator/linuxfc.py:134
+2019-08-06 09:33:53 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): cat /sys/class/dmi/id/product_uuid execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:33:53 default DEBUG oslo_concurrency.processutils [-] CMD "cat /sys/class/dmi/id/product_uuid" returned: 0 in 0.243s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:33:53 default DEBUG os_brick.utils [-] &lt;== get_connector_properties: return (752ms) {'initiator': u'iqn.1994-05.com.redhat:libvirt0', 'ip': u'192.168.122.19', 'system uuid': u'15B637A5-2AD6-4325-823A-17D9510147D8', 'platform': u'x86_64', 'host': u'libvirt0', 'do_local_attach': False, 'os_type': u'linux2', 'multipath': True} trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:170
+2019-08-06 09:33:53 default INFO ember_csi.ember_csi [-] Ember CSI v0.9.0 with 30 workers (CSI spec: v1.0.0, cinderlib: v0.9.1.dev10, cinder: v14.1.0.dev368)
+2019-08-06 09:33:53 default INFO ember_csi.ember_csi [-] Persistence module: MemoryPersistence
+2019-08-06 09:33:53 default INFO ember_csi.ember_csi [-] Running as all with backend HPE3PARISCSIDriver v4.0.2
+2019-08-06 09:33:53 default INFO ember_csi.ember_csi [-] Plugin name: ember-csi.io
+2019-08-06 09:33:53 default INFO ember_csi.ember_csi [-] Debugging feature is ENABLED with ember_csi.rpdb and OFF. Toggle it with SIGUSR1.
+2019-08-06 09:33:53 default INFO ember_csi.ember_csi [-] Supported filesystems: cramfs, minix, btrfs, ext2, ext3, ext4, xfs
+2019-08-06 09:33:53 default INFO ember_csi.ember_csi [-] Now serving on [::]:50051...
+2019-08-06 09:34:02 default INFO ember_csi.common [req-e9b088b5-95ed-4bea-9dff-e65bdfda7dab] =&gt; GRPC GetPluginCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-e9b088b5-95ed-4bea-9dff-e65bdfda7dab] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-e9b088b5-95ed-4bea-9dff-e65bdfda7dab] &lt;= GRPC GetPluginCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-e9b088b5-95ed-4bea-9dff-e65bdfda7dab] Returns:
+		capabilities {
+		  service {
+		    type: CONTROLLER_SERVICE
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-10596943-65a3-4570-941d-9781c49dce64] =&gt; GRPC Probe
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-10596943-65a3-4570-941d-9781c49dce64] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-10596943-65a3-4570-941d-9781c49dce64] &lt;= GRPC Probe served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-10596943-65a3-4570-941d-9781c49dce64] Returns:
+		ready {
+		  value: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-87b4e761-9d63-4b2b-a272-50e9ae7ebe7e] =&gt; GRPC GetPluginInfo
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-87b4e761-9d63-4b2b-a272-50e9ae7ebe7e] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-87b4e761-9d63-4b2b-a272-50e9ae7ebe7e] &lt;= GRPC GetPluginInfo served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-87b4e761-9d63-4b2b-a272-50e9ae7ebe7e] Returns:
+		name: "ember-csi.io"
+		vendor_version: "0.9.0"
+		manifest {
+		  key: "cinder-driver"
+		  value: "HPE3PARISCSIDriver"
+		}
+		manifest {
+		  key: "cinder-driver-supported"
+		  value: "True"
+		}
+		manifest {
+		  key: "cinder-driver-version"
+		  value: "4.0.2"
+		}
+		manifest {
+		  key: "cinder-version"
+		  value: "14.1.0.dev368"
+		}
+		manifest {
+		  key: "cinderlib-version"
+		  value: "0.9.1.dev10"
+		}
+		manifest {
+		  key: "mode"
+		  value: "all"
+		}
+		manifest {
+		  key: "persistence"
+		  value: "MemoryPersistence"
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-268b7469-36e6-4274-ba97-8e5b75e7b854] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-268b7469-36e6-4274-ba97-8e5b75e7b854] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-268b7469-36e6-4274-ba97-8e5b75e7b854] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-268b7469-36e6-4274-ba97-8e5b75e7b854] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-7ba19415-4876-4e0d-b185-5c6b93d1745d] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-7ba19415-4876-4e0d-b185-5c6b93d1745d] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-7ba19415-4876-4e0d-b185-5c6b93d1745d] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-7ba19415-4876-4e0d-b185-5c6b93d1745d] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-ce80a389-7a9f-4dc0-a07b-d67b6b6cdbf3] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-ce80a389-7a9f-4dc0-a07b-d67b6b6cdbf3] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-ce80a389-7a9f-4dc0-a07b-d67b6b6cdbf3] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-ce80a389-7a9f-4dc0-a07b-d67b6b6cdbf3] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-24888683-52ff-4137-82e0-4fbf199614de] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-24888683-52ff-4137-82e0-4fbf199614de] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-24888683-52ff-4137-82e0-4fbf199614de] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-24888683-52ff-4137-82e0-4fbf199614de] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-50b3c5a8-ede6-4cdf-b346-05866e53c0ce] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-50b3c5a8-ede6-4cdf-b346-05866e53c0ce] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-50b3c5a8-ede6-4cdf-b346-05866e53c0ce] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-50b3c5a8-ede6-4cdf-b346-05866e53c0ce] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-71cb62c9-6db6-46e8-ade5-76b63921b9cb] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-71cb62c9-6db6-46e8-ade5-76b63921b9cb] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-71cb62c9-6db6-46e8-ade5-76b63921b9cb] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-71cb62c9-6db6-46e8-ade5-76b63921b9cb] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-ab30ad41-1de3-47ec-aa51-335e825f7575] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-ab30ad41-1de3-47ec-aa51-335e825f7575] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-ab30ad41-1de3-47ec-aa51-335e825f7575] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-ab30ad41-1de3-47ec-aa51-335e825f7575] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-b5f81c6b-6810-4f24-9570-71d217154c9e] =&gt; GRPC GetPluginCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-b5f81c6b-6810-4f24-9570-71d217154c9e] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-b5f81c6b-6810-4f24-9570-71d217154c9e] &lt;= GRPC GetPluginCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-b5f81c6b-6810-4f24-9570-71d217154c9e] Returns:
+		capabilities {
+		  service {
+		    type: CONTROLLER_SERVICE
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-7f1c84a8-b309-407f-b9a9-18691ed54f82] =&gt; GRPC NodeGetInfo
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-7f1c84a8-b309-407f-b9a9-18691ed54f82] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-7f1c84a8-b309-407f-b9a9-18691ed54f82] &lt;= GRPC NodeGetInfo served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-7f1c84a8-b309-407f-b9a9-18691ed54f82] Returns:
+		node_id: "ember-csi.io.libvirt0" dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-8f9de84e-8a76-4c54-8885-a5cb9cab2e72] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-8f9de84e-8a76-4c54-8885-a5cb9cab2e72] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-8f9de84e-8a76-4c54-8885-a5cb9cab2e72] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-8f9de84e-8a76-4c54-8885-a5cb9cab2e72] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-d4c3cc92-4241-4453-8db4-c7a95afdad40] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-d4c3cc92-4241-4453-8db4-c7a95afdad40] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-d4c3cc92-4241-4453-8db4-c7a95afdad40] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-d4c3cc92-4241-4453-8db4-c7a95afdad40] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-ff74d602-6a8e-4216-b136-5393eca608ab] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-ff74d602-6a8e-4216-b136-5393eca608ab] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-ff74d602-6a8e-4216-b136-5393eca608ab] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-ff74d602-6a8e-4216-b136-5393eca608ab] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-fb800f17-709b-4f01-ab31-ad231061f7af] =&gt; GRPC NodePublishVolume 
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-fb800f17-709b-4f01-ab31-ad231061f7af] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default ERROR ember_csi.common [req-fb800f17-709b-4f01-ab31-ad231061f7af] !! GRPC NodePublishVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: target_path, staging_target_path, volume_capability, volume_id): Exception
+2019-08-06 09:34:02 default INFO ember_csi.common [req-a08a0cb8-3fec-4f90-a748-43d125d26191] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-a08a0cb8-3fec-4f90-a748-43d125d26191] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-a08a0cb8-3fec-4f90-a748-43d125d26191] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-a08a0cb8-3fec-4f90-a748-43d125d26191] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-3c8f6b17-33d6-4bc7-95cc-2a11eb32d78a] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-3c8f6b17-33d6-4bc7-95cc-2a11eb32d78a] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-3c8f6b17-33d6-4bc7-95cc-2a11eb32d78a] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-3c8f6b17-33d6-4bc7-95cc-2a11eb32d78a] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-b5544c3d-4b83-4d0d-a75d-ad033c76582f] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-b5544c3d-4b83-4d0d-a75d-ad033c76582f] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-b5544c3d-4b83-4d0d-a75d-ad033c76582f] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-b5544c3d-4b83-4d0d-a75d-ad033c76582f] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-e79513ec-5701-448c-a43a-09aac5c5f1ef] =&gt; GRPC NodePublishVolume id
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-e79513ec-5701-448c-a43a-09aac5c5f1ef] With params:
+	volume_id: "id" dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default ERROR ember_csi.common [req-e79513ec-5701-448c-a43a-09aac5c5f1ef] !! GRPC NodePublishVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: target_path, staging_target_path, volume_capability): Exception
+2019-08-06 09:34:02 default INFO ember_csi.common [req-0258d540-2d8d-41eb-9871-4126379d9021] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-0258d540-2d8d-41eb-9871-4126379d9021] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-0258d540-2d8d-41eb-9871-4126379d9021] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-0258d540-2d8d-41eb-9871-4126379d9021] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-9c05313f-050c-43c6-bf79-c2e4e12ed4f8] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-9c05313f-050c-43c6-bf79-c2e4e12ed4f8] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-9c05313f-050c-43c6-bf79-c2e4e12ed4f8] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-9c05313f-050c-43c6-bf79-c2e4e12ed4f8] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-f8a38b74-df98-498e-b218-79b77f2a7204] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-f8a38b74-df98-498e-b218-79b77f2a7204] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-f8a38b74-df98-498e-b218-79b77f2a7204] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-f8a38b74-df98-498e-b218-79b77f2a7204] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-128b3c97-f180-4061-a282-a1e55a8275a3] =&gt; GRPC NodePublishVolume id
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-128b3c97-f180-4061-a282-a1e55a8275a3] With params:
+	volume_id: "id"
+	target_path: "/tmp/csi-mount/target" dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default ERROR ember_csi.common [req-128b3c97-f180-4061-a282-a1e55a8275a3] !! GRPC NodePublishVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: staging_target_path, volume_capability): Exception
+2019-08-06 09:34:02 default INFO ember_csi.common [req-022ea8bb-55da-4c00-b898-391cd8be691c] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-022ea8bb-55da-4c00-b898-391cd8be691c] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-022ea8bb-55da-4c00-b898-391cd8be691c] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-022ea8bb-55da-4c00-b898-391cd8be691c] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-c82922c3-d4a5-48c0-878c-4b16dbb57332] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-c82922c3-d4a5-48c0-878c-4b16dbb57332] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-c82922c3-d4a5-48c0-878c-4b16dbb57332] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-c82922c3-d4a5-48c0-878c-4b16dbb57332] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-28488fc3-abb8-488f-a680-4abccfd5191f] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-28488fc3-abb8-488f-a680-4abccfd5191f] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-28488fc3-abb8-488f-a680-4abccfd5191f] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-28488fc3-abb8-488f-a680-4abccfd5191f] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-53a98227-fc7f-44bf-824d-4e7953997231] =&gt; GRPC NodeUnpublishVolume 
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-53a98227-fc7f-44bf-824d-4e7953997231] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default ERROR ember_csi.common [req-53a98227-fc7f-44bf-824d-4e7953997231] !! GRPC NodeUnpublishVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: target_path, volume_id): Exception
+2019-08-06 09:34:02 default INFO ember_csi.common [req-8ffd686c-9540-405c-be25-908b974c0fa5] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-8ffd686c-9540-405c-be25-908b974c0fa5] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-8ffd686c-9540-405c-be25-908b974c0fa5] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-8ffd686c-9540-405c-be25-908b974c0fa5] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-aaf5cbb1-025a-4023-8eaa-c38a0dbb0bf4] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-aaf5cbb1-025a-4023-8eaa-c38a0dbb0bf4] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-aaf5cbb1-025a-4023-8eaa-c38a0dbb0bf4] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-aaf5cbb1-025a-4023-8eaa-c38a0dbb0bf4] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-682a5f0f-c2a4-48bf-b767-950229276a48] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-682a5f0f-c2a4-48bf-b767-950229276a48] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-682a5f0f-c2a4-48bf-b767-950229276a48] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-682a5f0f-c2a4-48bf-b767-950229276a48] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-975db761-0b8a-4346-99e5-c0ae5723252e] =&gt; GRPC NodeUnpublishVolume id
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-975db761-0b8a-4346-99e5-c0ae5723252e] With params:
+	volume_id: "id" dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default ERROR ember_csi.common [req-975db761-0b8a-4346-99e5-c0ae5723252e] !! GRPC NodeUnpublishVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: target_path): Exception
+2019-08-06 09:34:02 default INFO ember_csi.common [req-2b6a5494-c2dd-4a02-bfa6-67ae3bb9e465] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-2b6a5494-c2dd-4a02-bfa6-67ae3bb9e465] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-2b6a5494-c2dd-4a02-bfa6-67ae3bb9e465] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-2b6a5494-c2dd-4a02-bfa6-67ae3bb9e465] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-24337f65-905e-4ea7-a168-7a0ad4d35ebe] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-24337f65-905e-4ea7-a168-7a0ad4d35ebe] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-24337f65-905e-4ea7-a168-7a0ad4d35ebe] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-24337f65-905e-4ea7-a168-7a0ad4d35ebe] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-c5dd54e5-54b1-48d0-848a-ae6d28d44a7d] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-c5dd54e5-54b1-48d0-848a-ae6d28d44a7d] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-c5dd54e5-54b1-48d0-848a-ae6d28d44a7d] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-c5dd54e5-54b1-48d0-848a-ae6d28d44a7d] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-7880eae5-2095-4626-b1d8-121e26ec450b] =&gt; GRPC NodeStageVolume 
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-7880eae5-2095-4626-b1d8-121e26ec450b] With params:
+	publish_context {
+	  key: "device"
+	  value: "/dev/mock"
+	}
+	staging_target_path: "/tmp/csi-staging"
+	volume_capability {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default ERROR ember_csi.common [req-7880eae5-2095-4626-b1d8-121e26ec450b] !! GRPC NodeStageVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: volume_id): Exception
+2019-08-06 09:34:02 default INFO ember_csi.common [req-e56aaab9-e532-43ec-ab6c-23a8ddccb4c3] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-e56aaab9-e532-43ec-ab6c-23a8ddccb4c3] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-e56aaab9-e532-43ec-ab6c-23a8ddccb4c3] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-e56aaab9-e532-43ec-ab6c-23a8ddccb4c3] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-6d78def3-eddb-4b88-aa99-4167f8d5e9f2] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-6d78def3-eddb-4b88-aa99-4167f8d5e9f2] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-6d78def3-eddb-4b88-aa99-4167f8d5e9f2] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-6d78def3-eddb-4b88-aa99-4167f8d5e9f2] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-c991f2a2-1009-4915-afc8-a80d57cfaaeb] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-c991f2a2-1009-4915-afc8-a80d57cfaaeb] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-c991f2a2-1009-4915-afc8-a80d57cfaaeb] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-c991f2a2-1009-4915-afc8-a80d57cfaaeb] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-a1fedb95-a6d0-4d9a-a66d-4c6f8295b048] =&gt; GRPC NodeStageVolume id
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-a1fedb95-a6d0-4d9a-a66d-4c6f8295b048] With params:
+	volume_id: "id"
+	publish_context {
+	  key: "device"
+	  value: "/dev/mock"
+	}
+	volume_capability {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default ERROR ember_csi.common [req-a1fedb95-a6d0-4d9a-a66d-4c6f8295b048] !! GRPC NodeStageVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: staging_target_path): Exception
+2019-08-06 09:34:02 default INFO ember_csi.common [req-c33138a4-46f6-4cb3-b549-76aa5ac17a2b] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-c33138a4-46f6-4cb3-b549-76aa5ac17a2b] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-c33138a4-46f6-4cb3-b549-76aa5ac17a2b] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-c33138a4-46f6-4cb3-b549-76aa5ac17a2b] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-7f334dd7-f6c4-40d0-913b-baff710185df] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-7f334dd7-f6c4-40d0-913b-baff710185df] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-7f334dd7-f6c4-40d0-913b-baff710185df] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-7f334dd7-f6c4-40d0-913b-baff710185df] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-95039a8b-6ab1-459d-8239-6e7c9a66ee78] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-95039a8b-6ab1-459d-8239-6e7c9a66ee78] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default INFO ember_csi.common [req-95039a8b-6ab1-459d-8239-6e7c9a66ee78] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-95039a8b-6ab1-459d-8239-6e7c9a66ee78] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:02 default INFO ember_csi.common [req-e61ca681-fcf0-44c3-b94f-4d9dd294301c] =&gt; GRPC CreateVolume sanity-node-stage-nocaps-CC0830AA-27939F73
+2019-08-06 09:34:02 default DEBUG ember_csi.common [req-e61ca681-fcf0-44c3-b94f-4d9dd294301c] With params:
+	name: "sanity-node-stage-nocaps-CC0830AA-27939F73"
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:02 default DEBUG ember_csi.base [req-e61ca681-fcf0-44c3-b94f-4d9dd294301c] Creating volume sanity-node-stage-nocaps-CC0830AA-27939F73 CreateVolume /ember-csi/ember_csi/base.py:345
+2019-08-06 09:34:02 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-e61ca681-fcf0-44c3-b94f-4d9dd294301c] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-08-06T09:34:02Z,deleted=False,deleted_at=None,display_description='',display_name='sanity-node-stage-nocaps-CC0830AA-27939F73',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=83bc9da3-e45e-4526-bef3-30af1ae08041,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=1,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f8278327b10&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:916
+2019-08-06 09:34:03 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-e61ca681-fcf0-44c3-b94f-4d9dd294301c] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:404
+2019-08-06 09:34:04 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-e61ca681-fcf0-44c3-b94f-4d9dd294301c] CREATE VOLUME (sanity-node-stage-nocaps-CC0830AA-27939F73: volume-83bc9da3-e45e-4526-bef3-30af1ae08041 osv-g7ydo.ReRSa.8zCvGuCAQQ on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2194
+2019-08-06 09:34:04 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-e61ca681-fcf0-44c3-b94f-4d9dd294301c] Disconnect from 3PAR REST and SSH 605ca8c4-0aea-42be-87fd-935b341318d7 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:428
+2019-08-06 09:34:05 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-e61ca681-fcf0-44c3-b94f-4d9dd294301c] &lt;== create_volume: return (2412ms) None trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:941
+2019-08-06 09:34:05 default INFO ember_csi.common [req-e61ca681-fcf0-44c3-b94f-4d9dd294301c] &lt;= GRPC CreateVolume (id = 83bc9da3-e45e-4526-bef3-30af1ae08041) served in 2s
+2019-08-06 09:34:05 default DEBUG ember_csi.common [req-e61ca681-fcf0-44c3-b94f-4d9dd294301c] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "83bc9da3-e45e-4526-bef3-30af1ae08041"
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:05 default INFO ember_csi.common [req-a45fbbae-00ae-49ce-8aa2-725036e5b35a] =&gt; GRPC NodeStageVolume 83bc9da3-e45e-4526-bef3-30af1ae08041
+2019-08-06 09:34:05 default DEBUG ember_csi.common [req-a45fbbae-00ae-49ce-8aa2-725036e5b35a] With params:
+	volume_id: "83bc9da3-e45e-4526-bef3-30af1ae08041"
+	publish_context {
+	  key: "device"
+	  value: "/dev/mock"
+	}
+	staging_target_path: "/tmp/csi-staging" dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:05 default ERROR ember_csi.common [req-a45fbbae-00ae-49ce-8aa2-725036e5b35a] !! GRPC NodeStageVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: volume_capability): Exception
+2019-08-06 09:34:05 default INFO ember_csi.common [req-d4deabd9-828e-4261-baf9-229e94b6d74b] =&gt; GRPC DeleteVolume 83bc9da3-e45e-4526-bef3-30af1ae08041
+2019-08-06 09:34:05 default DEBUG ember_csi.common [req-d4deabd9-828e-4261-baf9-229e94b6d74b] With params:
+	volume_id: "83bc9da3-e45e-4526-bef3-30af1ae08041" dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:05 default DEBUG ember_csi.base [req-d4deabd9-828e-4261-baf9-229e94b6d74b] Deleting volume 83bc9da3-e45e-4526-bef3-30af1ae08041 DeleteVolume /ember-csi/ember_csi/base.py:401
+2019-08-06 09:34:05 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-d4deabd9-828e-4261-baf9-229e94b6d74b] ==&gt; delete_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-08-06T09:34:02Z,deleted=False,deleted_at=None,display_description='',display_name='sanity-node-stage-nocaps-CC0830AA-27939F73',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=83bc9da3-e45e-4526-bef3-30af1ae08041,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=1,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='available',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f8278327b10&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:916
+2019-08-06 09:34:06 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-d4deabd9-828e-4261-baf9-229e94b6d74b] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:404
+2019-08-06 09:34:07 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-d4deabd9-828e-4261-baf9-229e94b6d74b] Disconnect from 3PAR REST and SSH 3c7e7e91-cbdd-4e31-bc81-e304b5c96e75 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:428
+2019-08-06 09:34:07 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-d4deabd9-828e-4261-baf9-229e94b6d74b] &lt;== delete_volume: return (2341ms) None trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:941
+2019-08-06 09:34:07 default INFO ember_csi.common [req-d4deabd9-828e-4261-baf9-229e94b6d74b] &lt;= GRPC DeleteVolume served in 2s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-d4deabd9-828e-4261-baf9-229e94b6d74b] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-e74d547e-21cd-4c11-afe2-2de3ca4b606e] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-e74d547e-21cd-4c11-afe2-2de3ca4b606e] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-e74d547e-21cd-4c11-afe2-2de3ca4b606e] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-e74d547e-21cd-4c11-afe2-2de3ca4b606e] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-3d63ec54-863a-439a-9169-b7b6582ccfd8] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-3d63ec54-863a-439a-9169-b7b6582ccfd8] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-3d63ec54-863a-439a-9169-b7b6582ccfd8] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-3d63ec54-863a-439a-9169-b7b6582ccfd8] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-74ecfb24-4343-4bf2-b73d-8a7b7fc8db7d] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-74ecfb24-4343-4bf2-b73d-8a7b7fc8db7d] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-74ecfb24-4343-4bf2-b73d-8a7b7fc8db7d] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-74ecfb24-4343-4bf2-b73d-8a7b7fc8db7d] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-0a289cd0-c31d-4b0e-81c2-e34841555bc8] =&gt; GRPC NodeUnstageVolume 
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-0a289cd0-c31d-4b0e-81c2-e34841555bc8] With params:
+	staging_target_path: "/tmp/csi-staging" dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default ERROR ember_csi.common [req-0a289cd0-c31d-4b0e-81c2-e34841555bc8] !! GRPC NodeUnstageVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: volume_id): Exception
+2019-08-06 09:34:07 default INFO ember_csi.common [req-6fe6f1a3-404d-4a97-9987-78b970705ad2] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-6fe6f1a3-404d-4a97-9987-78b970705ad2] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-6fe6f1a3-404d-4a97-9987-78b970705ad2] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-6fe6f1a3-404d-4a97-9987-78b970705ad2] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-ece770d8-c869-4b3c-86ee-368a5a3d7130] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-ece770d8-c869-4b3c-86ee-368a5a3d7130] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-ece770d8-c869-4b3c-86ee-368a5a3d7130] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-ece770d8-c869-4b3c-86ee-368a5a3d7130] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-01fe9ddf-cc0d-48f4-b1be-8089bd47598f] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-01fe9ddf-cc0d-48f4-b1be-8089bd47598f] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-01fe9ddf-cc0d-48f4-b1be-8089bd47598f] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-01fe9ddf-cc0d-48f4-b1be-8089bd47598f] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-cc87d21f-d087-4a78-ac36-aec978703bd2] =&gt; GRPC NodeUnstageVolume id
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-cc87d21f-d087-4a78-ac36-aec978703bd2] With params:
+	volume_id: "id" dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default ERROR ember_csi.common [req-cc87d21f-d087-4a78-ac36-aec978703bd2] !! GRPC NodeUnstageVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: staging_target_path): Exception
+2019-08-06 09:34:07 default INFO ember_csi.common [req-8fe09dd1-cddf-4ef5-a21e-c22149425d3c] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-8fe09dd1-cddf-4ef5-a21e-c22149425d3c] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-8fe09dd1-cddf-4ef5-a21e-c22149425d3c] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-8fe09dd1-cddf-4ef5-a21e-c22149425d3c] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-51ee6aac-aefa-4fd4-907b-5e7c45aca3ba] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-51ee6aac-aefa-4fd4-907b-5e7c45aca3ba] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-51ee6aac-aefa-4fd4-907b-5e7c45aca3ba] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-51ee6aac-aefa-4fd4-907b-5e7c45aca3ba] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-d503d38a-7788-492c-abc1-4a16b9cd588f] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-d503d38a-7788-492c-abc1-4a16b9cd588f] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-d503d38a-7788-492c-abc1-4a16b9cd588f] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-d503d38a-7788-492c-abc1-4a16b9cd588f] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-70e7f7f4-237e-412d-8613-c758f8779144] =&gt; GRPC NodeGetVolumeStats 
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-70e7f7f4-237e-412d-8613-c758f8779144] With params:
+	volume_path: "some/path" dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default ERROR ember_csi.common [req-70e7f7f4-237e-412d-8613-c758f8779144] !! GRPC NodeGetVolumeStats failed in 0s with INVALID_ARGUMENT (Missing required fields: volume_id): Exception
+2019-08-06 09:34:07 default INFO ember_csi.common [req-1660be18-5709-40d2-b84e-9eec3fa15fa2] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-1660be18-5709-40d2-b84e-9eec3fa15fa2] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-1660be18-5709-40d2-b84e-9eec3fa15fa2] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-1660be18-5709-40d2-b84e-9eec3fa15fa2] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-f276ffed-a11c-4edf-910b-c11005a83d8b] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-f276ffed-a11c-4edf-910b-c11005a83d8b] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-f276ffed-a11c-4edf-910b-c11005a83d8b] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-f276ffed-a11c-4edf-910b-c11005a83d8b] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-832df440-84a0-4390-a136-42402913e848] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-832df440-84a0-4390-a136-42402913e848] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-832df440-84a0-4390-a136-42402913e848] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-832df440-84a0-4390-a136-42402913e848] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-bfac586b-7e81-493c-b9d6-dcbd1ec30b3f] =&gt; GRPC NodeGetVolumeStats id
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-bfac586b-7e81-493c-b9d6-dcbd1ec30b3f] With params:
+	volume_id: "id" dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default ERROR ember_csi.common [req-bfac586b-7e81-493c-b9d6-dcbd1ec30b3f] !! GRPC NodeGetVolumeStats failed in 0s with INVALID_ARGUMENT (Missing required fields: volume_path): Exception
+2019-08-06 09:34:07 default INFO ember_csi.common [req-5b0d95c4-04f2-4e9d-9bbf-3ca10274ba83] =&gt; GRPC ControllerGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-5b0d95c4-04f2-4e9d-9bbf-3ca10274ba83] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-5b0d95c4-04f2-4e9d-9bbf-3ca10274ba83] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-5b0d95c4-04f2-4e9d-9bbf-3ca10274ba83] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:07 default INFO ember_csi.common [req-1ea5939a-37cb-4fb5-96ff-d29a538dcbf2] =&gt; GRPC NodeGetCapabilities
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-1ea5939a-37cb-4fb5-96ff-d29a538dcbf2] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-08-06 09:34:07 default INFO ember_csi.common [req-1ea5939a-37cb-4fb5-96ff-d29a538dcbf2] &lt;= GRPC NodeGetCapabilities served in 0s
+2019-08-06 09:34:07 default DEBUG ember_csi.common [req-1ea5939a-37cb-4fb5-96ff-d29a538dcbf2] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-08-06 09:34:32 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsiadm ('--login',): stdout=Logging in to [iface: default, target: iqn.2000-05.com.3pardata:20220002ac021f6b, portal: 10.35.146.3,3260] (multiple)
+Login to [iface: default, target: iqn.2000-05.com.3pardata:20220002ac021f6b, portal: 10.35.146.3,3260] successful.
+ stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:994
+2019-08-06 09:34:32 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): iscsiadm -m node -T iqn.2000-05.com.3pardata:20220002ac021f6b -p 10.35.146.3:3260 --op update -n node.startup -v automatic execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:33 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsiadm ('--login',): stdout=Logging in to [iface: default, target: iqn.2000-05.com.3pardata:21220002ac021f6b, portal: 10.35.146.4,3260] (multiple)
+Login to [iface: default, target: iqn.2000-05.com.3pardata:21220002ac021f6b, portal: 10.35.146.4,3260] successful.
+ stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:994
+2019-08-06 09:34:33 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): iscsiadm -m node -T iqn.2000-05.com.3pardata:21220002ac021f6b -p 10.35.146.4:3260 --op update -n node.startup -v automatic execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:33 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "iscsiadm -m node -T iqn.2000-05.com.3pardata:20210002ac021f6b -p 10.35.146.1:3260 --op update -n node.startup -v automatic" returned: 0 in 0.979s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:33 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "iscsiadm -m node -T iqn.2000-05.com.3pardata:20220002ac021f6b -p 10.35.146.3:3260 --op update -n node.startup -v automatic" returned: 0 in 0.486s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:33 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "iscsiadm -m node -T iqn.2000-05.com.3pardata:21210002ac021f6b -p 10.35.146.2:3260 --op update -n node.startup -v automatic" returned: 0 in 0.730s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:33 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsiadm ('--op', 'update', '-n', 'node.startup', '-v', 'automatic'): stdout= stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:994
+2019-08-06 09:34:33 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): iscsiadm -m session execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:33 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsiadm ('--op', 'update', '-n', 'node.startup', '-v', 'automatic'): stdout= stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:994
+2019-08-06 09:34:33 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): iscsiadm -m session execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:33 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsiadm ('--op', 'update', '-n', 'node.startup', '-v', 'automatic'): stdout= stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:994
+2019-08-06 09:34:33 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): iscsiadm -m session execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:34 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "iscsiadm -m node -T iqn.2000-05.com.3pardata:21220002ac021f6b -p 10.35.146.4:3260 --op update -n node.startup -v automatic" returned: 0 in 0.971s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsiadm ('--op', 'update', '-n', 'node.startup', '-v', 'automatic'): stdout= stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:994
+2019-08-06 09:34:34 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): iscsiadm -m session execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:34 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "iscsiadm -m session" returned: 0 in 0.970s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:34 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "iscsiadm -m session" returned: 0 in 0.728s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsiadm ('-m', 'session'): stdout=tcp: [1] 10.35.146.1:3260,21 iqn.2000-05.com.3pardata:20210002ac021f6b (non-flash)
+tcp: [2] 10.35.146.2:3260,121 iqn.2000-05.com.3pardata:21210002ac021f6b (non-flash)
+tcp: [3] 10.35.146.4:3260,122 iqn.2000-05.com.3pardata:21220002ac021f6b (non-flash)
+tcp: [4] 10.35.146.3:3260,22 iqn.2000-05.com.3pardata:20220002ac021f6b (non-flash)
+ stderr= _run_iscsiadm_bare /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1121
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsi session list stdout=tcp: [1] 10.35.146.1:3260,21 iqn.2000-05.com.3pardata:20210002ac021f6b (non-flash)
+tcp: [2] 10.35.146.2:3260,121 iqn.2000-05.com.3pardata:21210002ac021f6b (non-flash)
+tcp: [3] 10.35.146.4:3260,122 iqn.2000-05.com.3pardata:21220002ac021f6b (non-flash)
+tcp: [4] 10.35.146.3:3260,22 iqn.2000-05.com.3pardata:20220002ac021f6b (non-flash)
+ stderr= _run_iscsi_session /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1110
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Connected to 10.35.146.1:3260 _connect_vol /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:636
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] HCTL (u'2', '-', '-', 0) found on session 1 with lun 0 get_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:624
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Scanning host 2 c: -, t: -, l: 0) scan_iscsi /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:652
+2019-08-06 09:34:34 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): tee -a /sys/class/scsi_host/host2/scan execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsiadm ('-m', 'session'): stdout=tcp: [1] 10.35.146.1:3260,21 iqn.2000-05.com.3pardata:20210002ac021f6b (non-flash)
+tcp: [2] 10.35.146.2:3260,121 iqn.2000-05.com.3pardata:21210002ac021f6b (non-flash)
+tcp: [3] 10.35.146.4:3260,122 iqn.2000-05.com.3pardata:21220002ac021f6b (non-flash)
+tcp: [4] 10.35.146.3:3260,22 iqn.2000-05.com.3pardata:20220002ac021f6b (non-flash)
+ stderr= _run_iscsiadm_bare /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1121
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsi session list stdout=tcp: [1] 10.35.146.1:3260,21 iqn.2000-05.com.3pardata:20210002ac021f6b (non-flash)
+tcp: [2] 10.35.146.2:3260,121 iqn.2000-05.com.3pardata:21210002ac021f6b (non-flash)
+tcp: [3] 10.35.146.4:3260,122 iqn.2000-05.com.3pardata:21220002ac021f6b (non-flash)
+tcp: [4] 10.35.146.3:3260,22 iqn.2000-05.com.3pardata:20220002ac021f6b (non-flash)
+ stderr= _run_iscsi_session /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1110
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Connected to 10.35.146.3:3260 _connect_vol /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:636
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] HCTL (u'5', '-', '-', 0) found on session 4 with lun 0 get_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:624
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Scanning host 5 c: -, t: -, l: 0) scan_iscsi /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:652
+2019-08-06 09:34:34 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): tee -a /sys/class/scsi_host/host5/scan execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:34 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "iscsiadm -m session" returned: 0 in 0.979s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsiadm ('-m', 'session'): stdout=tcp: [1] 10.35.146.1:3260,21 iqn.2000-05.com.3pardata:20210002ac021f6b (non-flash)
+tcp: [2] 10.35.146.2:3260,121 iqn.2000-05.com.3pardata:21210002ac021f6b (non-flash)
+tcp: [3] 10.35.146.4:3260,122 iqn.2000-05.com.3pardata:21220002ac021f6b (non-flash)
+tcp: [4] 10.35.146.3:3260,22 iqn.2000-05.com.3pardata:20220002ac021f6b (non-flash)
+ stderr= _run_iscsiadm_bare /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1121
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsi session list stdout=tcp: [1] 10.35.146.1:3260,21 iqn.2000-05.com.3pardata:20210002ac021f6b (non-flash)
+tcp: [2] 10.35.146.2:3260,121 iqn.2000-05.com.3pardata:21210002ac021f6b (non-flash)
+tcp: [3] 10.35.146.4:3260,122 iqn.2000-05.com.3pardata:21220002ac021f6b (non-flash)
+tcp: [4] 10.35.146.3:3260,22 iqn.2000-05.com.3pardata:20220002ac021f6b (non-flash)
+ stderr= _run_iscsi_session /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1110
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Connected to 10.35.146.2:3260 _connect_vol /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:636
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] HCTL (u'3', '-', '-', 0) found on session 2 with lun 0 get_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:624
+2019-08-06 09:34:34 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Scanning host 3 c: -, t: -, l: 0) scan_iscsi /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:652
+2019-08-06 09:34:34 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): tee -a /sys/class/scsi_host/host3/scan execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:35 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "iscsiadm -m session" returned: 0 in 0.981s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:35 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsiadm ('-m', 'session'): stdout=tcp: [1] 10.35.146.1:3260,21 iqn.2000-05.com.3pardata:20210002ac021f6b (non-flash)
+tcp: [2] 10.35.146.2:3260,121 iqn.2000-05.com.3pardata:21210002ac021f6b (non-flash)
+tcp: [3] 10.35.146.4:3260,122 iqn.2000-05.com.3pardata:21220002ac021f6b (non-flash)
+tcp: [4] 10.35.146.3:3260,22 iqn.2000-05.com.3pardata:20220002ac021f6b (non-flash)
+ stderr= _run_iscsiadm_bare /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1121
+2019-08-06 09:34:35 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] iscsi session list stdout=tcp: [1] 10.35.146.1:3260,21 iqn.2000-05.com.3pardata:20210002ac021f6b (non-flash)
+tcp: [2] 10.35.146.2:3260,121 iqn.2000-05.com.3pardata:21210002ac021f6b (non-flash)
+tcp: [3] 10.35.146.4:3260,122 iqn.2000-05.com.3pardata:21220002ac021f6b (non-flash)
+tcp: [4] 10.35.146.3:3260,22 iqn.2000-05.com.3pardata:20220002ac021f6b (non-flash)
+ stderr= _run_iscsi_session /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1110
+2019-08-06 09:34:35 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Connected to 10.35.146.4:3260 _connect_vol /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:636
+2019-08-06 09:34:35 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] HCTL (u'4', '-', '-', 0) found on session 3 with lun 0 get_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:624
+2019-08-06 09:34:35 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Scanning host 4 c: -, t: -, l: 0) scan_iscsi /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:652
+2019-08-06 09:34:35 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): tee -a /sys/class/scsi_host/host4/scan execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:35 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "tee -a /sys/class/scsi_host/host2/scan" returned: 0 in 1.041s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:35 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 1 and hctl [u'2', '*', '*', 0] yield: None device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:35 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "tee -a /sys/class/scsi_host/host5/scan" returned: 0 in 0.817s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:35 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 4 and hctl [u'5', '*', '*', 0] yield: None device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:35 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "tee -a /sys/class/scsi_host/host3/scan" returned: 0 in 0.804s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:35 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 2 and hctl [u'3', '*', '*', 0] yield: None device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:35 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "tee -a /sys/class/scsi_host/host4/scan" returned: 0 in 0.821s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:35 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 3 and hctl [u'4', '*', '*', 0] yield: None device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:36 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 1 and hctl [u'2', '*', '*', 0] yield: None device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:36 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 4 and hctl [u'5', '*', '*', 0] yield: None device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:36 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 2 and hctl [u'3', '*', '*', 0] yield: None device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:36 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 3 and hctl [u'4', '*', '*', 0] yield: None device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:37 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 1 and hctl [u'2', '*', '*', 0] yield: sdb device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:37 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Connected to sdb using {'target_discovered': True, 'encrypted': False, 'target_iqn': u'iqn.2000-05.com.3pardata:20210002ac021f6b', 'target_lun': 0, 'target_portal': '10.35.146.1:3260'} _connect_vol /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:665
+2019-08-06 09:34:37 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 4 and hctl [u'5', '*', '*', 0] yield: sda device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:37 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Connected to sda using {'target_discovered': True, 'encrypted': False, 'target_iqn': u'iqn.2000-05.com.3pardata:20220002ac021f6b', 'target_lun': 0, 'target_portal': '10.35.146.3:3260'} _connect_vol /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:665
+2019-08-06 09:34:37 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 2 and hctl [u'3', '*', '*', 0] yield: sdc device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:37 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Connected to sdc using {'target_discovered': True, 'encrypted': False, 'target_iqn': u'iqn.2000-05.com.3pardata:21210002ac021f6b', 'target_lun': 0, 'target_portal': '10.35.146.2:3260'} _connect_vol /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:665
+2019-08-06 09:34:37 default DEBUG os_brick.initiator.linuxscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Searching for a device in session 3 and hctl [u'4', '*', '*', 0] yield: sdd device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2019-08-06 09:34:37 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] Connected to sdd using {'target_discovered': True, 'encrypted': False, 'target_iqn': u'iqn.2000-05.com.3pardata:21220002ac021f6b', 'target_lun': 0, 'target_portal': '10.35.146.4:3260'} _connect_vol /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:665
+2019-08-06 09:34:38 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] All connection threads finished, giving 10 seconds for dm to appear. _connect_multipath_volume /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:757
+2019-08-06 09:34:43 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): multipath -a 360002ac000000000000006ec00021f6b execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:44 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "multipath -a 360002ac000000000000006ec00021f6b" returned: 1 in 0.273s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:44 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): multipathd add path /dev/sdb execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:46 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "multipathd add path /dev/sdb" returned: 0 in 2.648s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:47 default DEBUG oslo_concurrency.lockutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Lock "connect_volume" released by "os_brick.initiator.connectors.iscsi.connect_volume" :: held 21.392s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:339
+2019-08-06 09:34:47 default DEBUG os_brick.initiator.connectors.iscsi [req-f12408e2-81b3-4edb-8352-63469c978c9f] &lt;== connect_volume: return (21394ms) {'path': u'/dev/dm-0', 'scsi_wwn': u'360002ac000000000000006ec00021f6b', 'type': u'block', 'multipath_id': u'360002ac000000000000006ec00021f6b'} trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:170
+2019-08-06 09:34:47 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): dd if=/dev/dm-0 of=/dev/null count=1 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:47 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "dd if=/dev/dm-0 of=/dev/null count=1" returned: 0 in 0.252s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:47 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): mount --bind /dev/dm-0 /var/lib/ember-csi/vols/b329b776-441d-4c31-8914-cdf1b6a027c1 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:48 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "mount --bind /dev/dm-0 /var/lib/ember-csi/vols/b329b776-441d-4c31-8914-cdf1b6a027c1" returned: 0 in 0.251s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:48 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): lsblk -nlfoFSTYPE /var/lib/ember-csi/vols/b329b776-441d-4c31-8914-cdf1b6a027c1 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:48 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "lsblk -nlfoFSTYPE /var/lib/ember-csi/vols/b329b776-441d-4c31-8914-cdf1b6a027c1" returned: 1 in 0.264s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:48 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] u'lsblk -nlfoFSTYPE /var/lib/ember-csi/vols/b329b776-441d-4c31-8914-cdf1b6a027c1' failed. Not Retrying. execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:457
+2019-08-06 09:34:50 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): lsblk -nlfoFSTYPE /var/lib/ember-csi/vols/b329b776-441d-4c31-8914-cdf1b6a027c1 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-08-06 09:34:50 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] CMD "lsblk -nlfoFSTYPE /var/lib/ember-csi/vols/b329b776-441d-4c31-8914-cdf1b6a027c1" returned: 0 in 0.250s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-08-06 09:34:50 default DEBUG oslo_concurrency.processutils [req-f12408e2-81b3-4edb-8352-63469c978c9f] Running cmd (subprocess): /sbin/mkfs.ext4 -F /var/lib/ember-csi/vols/b329b776-441d-4c31-8914-cdf1b6a027c1 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+
+</pre>
+</body>
+
+</html>
