@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi36 { color: #00aaaa; }
+.ansi91 { color: #ea4040; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi36">sudo docker build -t ember-csi:test -f Dockerfile .</span>
+<span class="ansi36"> in dir /root/buildbot/LVM/build (timeout 1200 secs)</span>
+<span class="ansi36"> watching logfiles {}</span>
+<span class="ansi36"> argv: b'sudo docker build -t ember-csi:test -f Dockerfile .'</span>
+<span class="ansi36"> environment:</span>
+<span class="ansi36">  HOME=/root</span>
+<span class="ansi36">  LANG=en_US.UTF-8</span>
+<span class="ansi36">  LOGNAME=root</span>
+<span class="ansi36">  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin</span>
+<span class="ansi36">  PWD=/root/buildbot/LVM/build</span>
+<span class="ansi36">  SHELL=/bin/sh</span>
+<span class="ansi36">  USER=root</span>
+<span class="ansi36"> using PTY: False</span>
+Sending build context to Docker daemon 781.8 kB
+
+Step 1/13 : FROM centos:7
+Trying to pull repository docker.io/library/centos ... 
+7: Pulling from docker.io/library/centos
+ab5ef0e58194: Pulling fs layer
+ab5ef0e58194: Verifying Checksum
+ab5ef0e58194: Download complete
+ab5ef0e58194: Pull complete
+Digest: sha256:4a701376d03f6b39b8c2a8f4a8e499441b0d567f9ab9d58e4991de4472fb813c
+Status: Downloaded newer image for docker.io/centos:7
+ ---&gt; 5e35e350aded
+Step 2/13 : ARG RELEASE=master
+ ---&gt; Running in 90715c6cfd1c
+ ---&gt; 4ec13fb3a616
+Removing intermediate container 90715c6cfd1c
+Step 3/13 : ARG VERSION=master
+ ---&gt; Running in 7c1b67f6346f
+ ---&gt; 211c24ad9131
+Removing intermediate container 7c1b67f6346f
+Step 4/13 : ARG BUILD_DATE
+ ---&gt; Running in 55bb50eb8c2e
+ ---&gt; 7ff751e29220
+Removing intermediate container 55bb50eb8c2e
+Step 5/13 : ARG VCS_REF
+ ---&gt; Running in b3ba6b27cebf
+ ---&gt; d9a75802a102
+Removing intermediate container b3ba6b27cebf
+Step 6/13 : ARG TAG
+ ---&gt; Running in 0f5293c7ed82
+ ---&gt; 46e29ad2690d
+Removing intermediate container 0f5293c7ed82
+Step 7/13 : LABEL maintainers "Gorka Eguileor &lt;geguileo@redhat.com&gt;" openstack_release ${RELEASE} version ${VERSION} description "Ember CSI Plugin" org.label-schema.schema-version "1.0" org.label-schema.name "ember-csi" org.label-schema.description "Ember CSI Plugin" org.label-schema.url "<a href="https://ember-csi.io">https://ember-csi.io</a>" org.label-schema.build-date ${BUILD_DATE} org.label-schema.vcs-url "<a href="https://github.com/embercsi/ember-csi">https://github.com/embercsi/ember-csi</a>" org.label-schema.vcs-ref ${VCS_REF}
+ ---&gt; Running in 7c372a1e3b24
+ ---&gt; dfd1b5030e6e
+Removing intermediate container 7c372a1e3b24
+Step 8/13 : ENV X_CSI_DEBUG_MODE rpdb PYTHONUNBUFFERED true
+ ---&gt; Running in 2c3101217e70
+ ---&gt; 0236a16fda41
+Removing intermediate container 2c3101217e70
+Step 9/13 : EXPOSE 50051 4444
+ ---&gt; Running in af1d5f7af531
+ ---&gt; da9f56bb207a
+Removing intermediate container af1d5f7af531
+Step 10/13 : RUN yum -y install targetcli iscsi-initiator-utils device-mapper-multipath epel-release lvm2 which &amp;&amp;     yum -y install python2-pip pywbem python2-kubernetes &amp;&amp;     yum -y install xfsprogs e2fsprogs btrfs-progs nmap-ncat &amp;&amp;     pip install --no-cache-dir --upgrade 'pyasn1&lt;0.5.0,&gt;=0.4.1' future &amp;&amp;     if [ "$RELEASE" = "master" ]; then curl -o /etc/yum.repos.d/rdo-trunk-runtime-deps.repo <a href="https://trunk.rdoproject.org/centos7-master/rdo-trunk-runtime-deps.repo;">https://trunk.rdoproject.org/centos7-master/rdo-trunk-runtime-deps.repo;</a> curl -o /etc/yum.repos.d/delorean.repo <a href="https://trunk.rdoproject.org/centos7-master/current/delorean.repo;">https://trunk.rdoproject.org/centos7-master/current/delorean.repo;</a> else yum -y install centos-release-openstack-${RELEASE}; fi &amp;&amp;     yum -y install python-cinderlib &amp;&amp;     yum -y install python-rbd ceph-common pyOpenSSL &amp;&amp;     pip install --no-cache-dir krest purestorage pyxcli python-3parclient &amp;&amp;     yum clean all &amp;&amp;     rm -rf /var/cache/yum
+ ---&gt; Running in 96ff5a11615d
+
+<span class="ansi91"></span>Loaded plugins: fastestmirror, ovl
+Determining fastest mirrors
+ * base: centos.mirror.minorisa.net
+ * extras: ftp.rediris.es
+ * updates: ftp.rediris.es
+Resolving Dependencies
+--&gt; Running transaction check
+---&gt; Package device-mapper-multipath.x86_64 0:0.4.9-127.el7 will be installed
+--&gt; Processing Dependency: device-mapper-multipath-libs = 0.4.9-127.el7 for package: device-mapper-multipath-0.4.9-127.el7.x86_64
+--&gt; Processing Dependency: systemd-sysv for package: device-mapper-multipath-0.4.9-127.el7.x86_64
+--&gt; Processing Dependency: initscripts for package: device-mapper-multipath-0.4.9-127.el7.x86_64
+--&gt; Processing Dependency: libmultipath.so.0()(64bit) for package: device-mapper-multipath-0.4.9-127.el7.x86_64
+--&gt; Processing Dependency: libmpathpersist.so.0()(64bit) for package: device-mapper-multipath-0.4.9-127.el7.x86_64
+--&gt; Processing Dependency: libmpathcmd.so.0()(64bit) for package: device-mapper-multipath-0.4.9-127.el7.x86_64
+---&gt; Package epel-release.noarch 0:7-11 will be installed
+---&gt; Package iscsi-initiator-utils.x86_64 0:6.2.0.874-11.el7 will be installed
+--&gt; Processing Dependency: iscsi-initiator-utils-iscsiuio &gt;= 6.2.0.874-11.el7 for package: iscsi-initiator-utils-6.2.0.874-11.el7.x86_64
+---&gt; Package lvm2.x86_64 7:2.02.185-2.el7_7.2 will be installed
+--&gt; Processing Dependency: lvm2-libs = 7:2.02.185-2.el7_7.2 for package: 7:lvm2-2.02.185-2.el7_7.2.x86_64
+--&gt; Processing Dependency: device-mapper-persistent-data &gt;= 0.7.0-0.1.rc6 for package: 7:lvm2-2.02.185-2.el7_7.2.x86_64
+--&gt; Processing Dependency: liblvm2app.so.2.2(Base)(64bit) for package: 7:lvm2-2.02.185-2.el7_7.2.x86_64
+--&gt; Processing Dependency: libdevmapper-event.so.1.02(Base)(64bit) for package: 7:lvm2-2.02.185-2.el7_7.2.x86_64
+--&gt; Processing Dependency: libaio.so.1(LIBAIO_0.4)(64bit) for package: 7:lvm2-2.02.185-2.el7_7.2.x86_64
+--&gt; Processing Dependency: libaio.so.1(LIBAIO_0.1)(64bit) for package: 7:lvm2-2.02.185-2.el7_7.2.x86_64
+--&gt; Processing Dependency: liblvm2app.so.2.2()(64bit) for package: 7:lvm2-2.02.185-2.el7_7.2.x86_64
+--&gt; Processing Dependency: libdevmapper-event.so.1.02()(64bit) for package: 7:lvm2-2.02.185-2.el7_7.2.x86_64
+--&gt; Processing Dependency: libaio.so.1()(64bit) for package: 7:lvm2-2.02.185-2.el7_7.2.x86_64
+---&gt; Package targetcli.noarch 0:2.1.fb49-1.el7 will be installed
+--&gt; Processing Dependency: python-rtslib &gt;= 2.1.fb41 for package: targetcli-2.1.fb49-1.el7.noarch
+--&gt; Processing Dependency: python-ethtool for package: targetcli-2.1.fb49-1.el7.noarch
+--&gt; Processing Dependency: python-configshell for package: targetcli-2.1.fb49-1.el7.noarch
+---&gt; Package which.x86_64 0:2.20-7.el7 will be installed
+--&gt; Running transaction check
+---&gt; Package device-mapper-event-libs.x86_64 7:1.02.158-2.el7_7.2 will be installed
+---&gt; Package device-mapper-multipath-libs.x86_64 0:0.4.9-127.el7 will be installed
+---&gt; Package device-mapper-persistent-data.x86_64 0:0.8.5-1.el7 will be installed
+---&gt; Package initscripts.x86_64 0:9.49.47-1.el7 will be installed
+--&gt; Processing Dependency: sysvinit-tools &gt;= 2.87-5 for package: initscripts-9.49.47-1.el7.x86_64
+--&gt; Processing Dependency: iproute for package: initscripts-9.49.47-1.el7.x86_64
+---&gt; Package iscsi-initiator-utils-iscsiuio.x86_64 0:6.2.0.874-11.el7 will be installed
+---&gt; Package libaio.x86_64 0:0.3.109-13.el7 will be installed
+---&gt; Package lvm2-libs.x86_64 7:2.02.185-2.el7_7.2 will be installed
+--&gt; Processing Dependency: device-mapper-event = 7:1.02.158-2.el7_7.2 for package: 7:lvm2-libs-2.02.185-2.el7_7.2.x86_64
+---&gt; Package python-configshell.noarch 1:1.1.fb25-1.el7 will be installed
+--&gt; Processing Dependency: python-urwid for package: 1:python-configshell-1.1.fb25-1.el7.noarch
+--&gt; Processing Dependency: python-six for package: 1:python-configshell-1.1.fb25-1.el7.noarch
+--&gt; Processing Dependency: pyparsing for package: 1:python-configshell-1.1.fb25-1.el7.noarch
+---&gt; Package python-ethtool.x86_64 0:0.8-8.el7 will be installed
+--&gt; Processing Dependency: libnl.so.1()(64bit) for package: python-ethtool-0.8-8.el7.x86_64
+---&gt; Package python-rtslib.noarch 0:2.1.fb69-3.el7 will be installed
+--&gt; Processing Dependency: python-pyudev for package: python-rtslib-2.1.fb69-3.el7.noarch
+--&gt; Processing Dependency: python-kmod for package: python-rtslib-2.1.fb69-3.el7.noarch
+---&gt; Package systemd-sysv.x86_64 0:219-67.el7_7.2 will be installed
+--&gt; Processing Dependency: systemd = 219-67.el7_7.2 for package: systemd-sysv-219-67.el7_7.2.x86_64
+--&gt; Running transaction check
+---&gt; Package device-mapper-event.x86_64 7:1.02.158-2.el7_7.2 will be installed
+--&gt; Processing Dependency: device-mapper = 7:1.02.158-2.el7_7.2 for package: 7:device-mapper-event-1.02.158-2.el7_7.2.x86_64
+---&gt; Package iproute.x86_64 0:4.11.0-25.el7 will be installed
+--&gt; Processing Dependency: libmnl.so.0(LIBMNL_1.0)(64bit) for package: iproute-4.11.0-25.el7.x86_64
+--&gt; Processing Dependency: libxtables.so.10()(64bit) for package: iproute-4.11.0-25.el7.x86_64
+--&gt; Processing Dependency: libmnl.so.0()(64bit) for package: iproute-4.11.0-25.el7.x86_64
+---&gt; Package libnl.x86_64 0:1.1.4-3.el7 will be installed
+---&gt; Package pyparsing.noarch 0:1.5.6-9.el7 will be installed
+---&gt; Package python-kmod.x86_64 0:0.9-4.el7 will be installed
+---&gt; Package python-pyudev.noarch 0:0.15-9.el7 will be installed
+---&gt; Package python-six.noarch 0:1.9.0-2.el7 will be installed
+---&gt; Package python-urwid.x86_64 0:1.1.1-3.el7 will be installed
+---&gt; Package systemd.x86_64 0:219-67.el7_7.1 will be updated
+---&gt; Package systemd.x86_64 0:219-67.el7_7.2 will be an update
+--&gt; Processing Dependency: systemd-libs = 219-67.el7_7.2 for package: systemd-219-67.el7_7.2.x86_64
+---&gt; Package sysvinit-tools.x86_64 0:2.88-14.dsf.el7 will be installed
+--&gt; Running transaction check
+---&gt; Package device-mapper.x86_64 7:1.02.158-2.el7 will be updated
+--&gt; Processing Dependency: device-mapper = 7:1.02.158-2.el7 for package: 7:device-mapper-libs-1.02.158-2.el7.x86_64
+---&gt; Package device-mapper.x86_64 7:1.02.158-2.el7_7.2 will be an update
+---&gt; Package iptables.x86_64 0:1.4.21-33.el7 will be installed
+--&gt; Processing Dependency: libnfnetlink.so.0()(64bit) for package: iptables-1.4.21-33.el7.x86_64
+--&gt; Processing Dependency: libnetfilter_conntrack.so.3()(64bit) for package: iptables-1.4.21-33.el7.x86_64
+---&gt; Package libmnl.x86_64 0:1.0.3-7.el7 will be installed
+---&gt; Package systemd-libs.x86_64 0:219-67.el7_7.1 will be updated
+---&gt; Package systemd-libs.x86_64 0:219-67.el7_7.2 will be an update
+--&gt; Running transaction check
+---&gt; Package device-mapper-libs.x86_64 7:1.02.158-2.el7 will be updated
+---&gt; Package device-mapper-libs.x86_64 7:1.02.158-2.el7_7.2 will be an update
+---&gt; Package libnetfilter_conntrack.x86_64 0:1.0.6-1.el7_3 will be installed
+---&gt; Package libnfnetlink.x86_64 0:1.0.1-4.el7 will be installed
+--&gt; Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                         Arch    Version                 Repository
+                                                                           Size
+================================================================================
+Installing:
+ device-mapper-multipath         x86_64  0.4.9-127.el7           base     143 k
+ epel-release                    noarch  7-11                    extras    15 k
+ iscsi-initiator-utils           x86_64  6.2.0.874-11.el7        base     422 k
+ lvm2                            x86_64  7:2.02.185-2.el7_7.2    updates  1.3 M
+ targetcli                       noarch  2.1.fb49-1.el7          base      68 k
+ which                           x86_64  2.20-7.el7              base      41 k
+Installing for dependencies:
+ device-mapper-event             x86_64  7:1.02.158-2.el7_7.2    updates  190 k
+ device-mapper-event-libs        x86_64  7:1.02.158-2.el7_7.2    updates  189 k
+ device-mapper-multipath-libs    x86_64  0.4.9-127.el7           base     265 k
+ device-mapper-persistent-data   x86_64  0.8.5-1.el7             base     423 k
+ initscripts                     x86_64  9.49.47-1.el7           base     439 k
+ iproute                         x86_64  4.11.0-25.el7           base     803 k
+ iptables                        x86_64  1.4.21-33.el7           base     433 k
+ iscsi-initiator-utils-iscsiuio  x86_64  6.2.0.874-11.el7        base      92 k
+ libaio                          x86_64  0.3.109-13.el7          base      24 k
+ libmnl                          x86_64  1.0.3-7.el7             base      23 k
+ libnetfilter_conntrack          x86_64  1.0.6-1.el7_3           base      55 k
+ libnfnetlink                    x86_64  1.0.1-4.el7             base      26 k
+ libnl                           x86_64  1.1.4-3.el7             base     128 k
+ lvm2-libs                       x86_64  7:2.02.185-2.el7_7.2    updates  1.1 M
+ pyparsing                       noarch  1.5.6-9.el7             base      94 k
+ python-configshell              noarch  1:1.1.fb25-1.el7        base      68 k
+ python-ethtool                  x86_64  0.8-8.el7               base      34 k
+ python-kmod                     x86_64  0.9-4.el7               base      57 k
+ python-pyudev                   noarch  0.15-9.el7              base      55 k
+ python-rtslib                   noarch  2.1.fb69-3.el7          base     102 k
+ python-six                      noarch  1.9.0-2.el7             base      29 k
+ python-urwid                    x86_64  1.1.1-3.el7             base     654 k
+ systemd-sysv                    x86_64  219-67.el7_7.2          updates   88 k
+ sysvinit-tools                  x86_64  2.88-14.dsf.el7         base      63 k
+Updating for dependencies:
+ device-mapper                   x86_64  7:1.02.158-2.el7_7.2    updates  294 k
+ device-mapper-libs              x86_64  7:1.02.158-2.el7_7.2    updates  322 k
+ systemd                         x86_64  219-67.el7_7.2          updates  5.1 M
+ systemd-libs                    x86_64  219-67.el7_7.2          updates  411 k
+
+Transaction Summary
+================================================================================
+Install  6 Packages (+24 Dependent packages)
+Upgrade             (  4 Dependent packages)
+
+Total download size: 13 M
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+<span class="ansi91">warning: /var/cache/yum/x86_64/7/updates/packages/device-mapper-event-1.02.158-2.el7_7.2.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+</span>Public key for device-mapper-event-1.02.158-2.el7_7.2.x86_64.rpm is not installed
+Public key for device-mapper-multipath-0.4.9-127.el7.x86_64.rpm is not installed
+Public key for epel-release-7-11.noarch.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                              4.6 MB/s |  13 MB  00:02     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+<span class="ansi91">Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) &lt;security@centos.org&gt;"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-7.1908.0.el7.centos.x86_64 (@CentOS)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+</span>Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : systemd-libs-219-67.el7_7.2.x86_64                          1/38 
+  Updating   : systemd-219-67.el7_7.2.x86_64                               2/38 
+Failed to get D-Bus connection: Operation not permitted
+  Installing : libaio-0.3.109-13.el7.x86_64                                3/38 
+  Updating   : 7:device-mapper-libs-1.02.158-2.el7_7.2.x86_64              4/38 
+  Updating   : 7:device-mapper-1.02.158-2.el7_7.2.x86_64                   5/38 
+  Installing : 7:device-mapper-event-libs-1.02.158-2.el7_7.2.x86_64        6/38 
+  Installing : libnfnetlink-1.0.1-4.el7.x86_64                             7/38 
+  Installing : python-six-1.9.0-2.el7.noarch                               8/38 
+  Installing : libmnl-1.0.3-7.el7.x86_64                                   9/38 
+  Installing : libnetfilter_conntrack-1.0.6-1.el7_3.x86_64                10/38 
+  Installing : iptables-1.4.21-33.el7.x86_64                              11/38 
+  Installing : iproute-4.11.0-25.el7.x86_64                               12/38 
+  Installing : 7:device-mapper-event-1.02.158-2.el7_7.2.x86_64            13/38 
+Failed to get D-Bus connection: Operation not permitted
+warning: %post(device-mapper-event-7:1.02.158-2.el7_7.2.x86_64) scriptlet failed, exit status 1
+<span class="ansi91">Non-fatal POSTIN scriptlet failure in rpm package 7:device-mapper-event-1.02.158-2.el7_7.2.x86_64
+</span>  Installing : 7:lvm2-libs-2.02.185-2.el7_7.2.x86_64                      14/38 
+  Installing : device-mapper-multipath-libs-0.4.9-127.el7.x86_64          15/38 
+  Installing : device-mapper-persistent-data-0.8.5-1.el7.x86_64           16/38 
+  Installing : iscsi-initiator-utils-iscsiuio-6.2.0.874-11.el7.x86_64     17/38 
+  Installing : iscsi-initiator-utils-6.2.0.874-11.el7.x86_64              18/38 
+  Installing : systemd-sysv-219-67.el7_7.2.x86_64                         19/38 
+  Installing : python-pyudev-0.15-9.el7.noarch                            20/38 
+  Installing : libnl-1.1.4-3.el7.x86_64                                   21/38 
+  Installing : python-ethtool-0.8-8.el7.x86_64                            22/38 
+  Installing : python-kmod-0.9-4.el7.x86_64                               23/38 
+  Installing : python-rtslib-2.1.fb69-3.el7.noarch                        24/38 
+  Installing : python-urwid-1.1.1-3.el7.x86_64                            25/38 
+  Installing : pyparsing-1.5.6-9.el7.noarch                               26/38 
+  Installing : 1:python-configshell-1.1.fb25-1.el7.noarch                 27/38 
+  Installing : sysvinit-tools-2.88-14.dsf.el7.x86_64                      28/38 
+  Installing : initscripts-9.49.47-1.el7.x86_64                           29/38 
+  Installing : device-mapper-multipath-0.4.9-127.el7.x86_64               30/38 
+  Installing : targetcli-2.1.fb49-1.el7.noarch                            31/38 
+  Installing : 7:lvm2-2.02.185-2.el7_7.2.x86_64                           32/38 
+Failed to get D-Bus connection: Operation not permitted
+Failed to get D-Bus connection: Operation not permitted
+Failed to get D-Bus connection: Operation not permitted
+warning: %post(lvm2-7:2.02.185-2.el7_7.2.x86_64) scriptlet failed, exit status 1
+<span class="ansi91">Non-fatal POSTIN scriptlet failure in rpm package 7:lvm2-2.02.185-2.el7_7.2.x86_64
+</span>  Installing : which-2.20-7.el7.x86_64                                    33/38 
+install-info: No such file or directory for /usr/share/info/which.info.gz
+  Installing : epel-release-7-11.noarch                                   34/38 
+  Cleanup    : 7:device-mapper-libs-1.02.158-2.el7.x86_64                 35/38 
+  Cleanup    : 7:device-mapper-1.02.158-2.el7.x86_64                      36/38 
+  Cleanup    : systemd-219-67.el7_7.1.x86_64                              37/38 
+  Cleanup    : systemd-libs-219-67.el7_7.1.x86_64                         38/38 
+  Verifying  : iscsi-initiator-utils-6.2.0.874-11.el7.x86_64               1/38 
+  Verifying  : 7:device-mapper-1.02.158-2.el7_7.2.x86_64                   2/38 
+  Verifying  : libmnl-1.0.3-7.el7.x86_64                                   3/38 
+  Verifying  : python-ethtool-0.8-8.el7.x86_64                             4/38 
+  Verifying  : systemd-sysv-219-67.el7_7.2.x86_64                          5/38 
+  Verifying  : device-mapper-persistent-data-0.8.5-1.el7.x86_64            6/38 
+  Verifying  : systemd-libs-219-67.el7_7.2.x86_64                          7/38 
+  Verifying  : initscripts-9.49.47-1.el7.x86_64                            8/38 
+  Verifying  : libnetfilter_conntrack-1.0.6-1.el7_3.x86_64                 9/38 
+  Verifying  : systemd-219-67.el7_7.2.x86_64                              10/38 
+  Verifying  : sysvinit-tools-2.88-14.dsf.el7.x86_64                      11/38 
+  Verifying  : pyparsing-1.5.6-9.el7.noarch                               12/38 
+  Verifying  : iptables-1.4.21-33.el7.x86_64                              13/38 
+  Verifying  : 7:device-mapper-event-libs-1.02.158-2.el7_7.2.x86_64       14/38 
+  Verifying  : device-mapper-multipath-libs-0.4.9-127.el7.x86_64          15/38 
+  Verifying  : epel-release-7-11.noarch                                   16/38 
+  Verifying  : which-2.20-7.el7.x86_64                                    17/38 
+  Verifying  : 7:lvm2-libs-2.02.185-2.el7_7.2.x86_64                      18/38 
+  Verifying  : 7:device-mapper-event-1.02.158-2.el7_7.2.x86_64            19/38 
+  Verifying  : targetcli-2.1.fb49-1.el7.noarch                            20/38 
+  Verifying  : iscsi-initiator-utils-iscsiuio-6.2.0.874-11.el7.x86_64     21/38 
+  Verifying  : python-six-1.9.0-2.el7.noarch                              22/38 
+  Verifying  : libaio-0.3.109-13.el7.x86_64                               23/38 
+  Verifying  : python-urwid-1.1.1-3.el7.x86_64                            24/38 
+  Verifying  : 7:device-mapper-libs-1.02.158-2.el7_7.2.x86_64             25/38 
+  Verifying  : iproute-4.11.0-25.el7.x86_64                               26/38 
+  Verifying  : 1:python-configshell-1.1.fb25-1.el7.noarch                 27/38 
+  Verifying  : device-mapper-multipath-0.4.9-127.el7.x86_64               28/38 
+  Verifying  : python-kmod-0.9-4.el7.x86_64                               29/38 
+  Verifying  : libnfnetlink-1.0.1-4.el7.x86_64                            30/38 
+  Verifying  : libnl-1.1.4-3.el7.x86_64                                   31/38 
+  Verifying  : 7:lvm2-2.02.185-2.el7_7.2.x86_64                           32/38 
+  Verifying  : python-pyudev-0.15-9.el7.noarch                            33/38 
+  Verifying  : python-rtslib-2.1.fb69-3.el7.noarch                        34/38 
+  Verifying  : systemd-libs-219-67.el7_7.1.x86_64                         35/38 
+  Verifying  : 7:device-mapper-1.02.158-2.el7.x86_64                      36/38 
+  Verifying  : systemd-219-67.el7_7.1.x86_64                              37/38 
+  Verifying  : 7:device-mapper-libs-1.02.158-2.el7.x86_64                 38/38 
+
+Installed:
+  device-mapper-multipath.x86_64 0:0.4.9-127.el7                                
+  epel-release.noarch 0:7-11                                                    
+  iscsi-initiator-utils.x86_64 0:6.2.0.874-11.el7                               
+  lvm2.x86_64 7:2.02.185-2.el7_7.2                                              
+  targetcli.noarch 0:2.1.fb49-1.el7                                             
+  which.x86_64 0:2.20-7.el7                                                     
+
+Dependency Installed:
+  device-mapper-event.x86_64 7:1.02.158-2.el7_7.2                               
+  device-mapper-event-libs.x86_64 7:1.02.158-2.el7_7.2                          
+  device-mapper-multipath-libs.x86_64 0:0.4.9-127.el7                           
+  device-mapper-persistent-data.x86_64 0:0.8.5-1.el7                            
+  initscripts.x86_64 0:9.49.47-1.el7                                            
+  iproute.x86_64 0:4.11.0-25.el7                                                
+  iptables.x86_64 0:1.4.21-33.el7                                               
+  iscsi-initiator-utils-iscsiuio.x86_64 0:6.2.0.874-11.el7                      
+  libaio.x86_64 0:0.3.109-13.el7                                                
+  libmnl.x86_64 0:1.0.3-7.el7                                                   
+  libnetfilter_conntrack.x86_64 0:1.0.6-1.el7_3                                 
+  libnfnetlink.x86_64 0:1.0.1-4.el7                                             
+  libnl.x86_64 0:1.1.4-3.el7                                                    
+  lvm2-libs.x86_64 7:2.02.185-2.el7_7.2                                         
+  pyparsing.noarch 0:1.5.6-9.el7                                                
+  python-configshell.noarch 1:1.1.fb25-1.el7                                    
+  python-ethtool.x86_64 0:0.8-8.el7                                             
+  python-kmod.x86_64 0:0.9-4.el7                                                
+  python-pyudev.noarch 0:0.15-9.el7                                             
+  python-rtslib.noarch 0:2.1.fb69-3.el7                                         
+  python-six.noarch 0:1.9.0-2.el7                                               
+  python-urwid.x86_64 0:1.1.1-3.el7                                             
+  systemd-sysv.x86_64 0:219-67.el7_7.2                                          
+  sysvinit-tools.x86_64 0:2.88-14.dsf.el7                                       
+
+Dependency Updated:
+  device-mapper.x86_64 7:1.02.158-2.el7_7.2                                     
+  device-mapper-libs.x86_64 7:1.02.158-2.el7_7.2                                
+  systemd.x86_64 0:219-67.el7_7.2                                               
+  systemd-libs.x86_64 0:219-67.el7_7.2                                          
+
+Complete!
+Loaded plugins: fastestmirror, ovl
+Loading mirror speeds from cached hostfile
+<span class="ansi91">
+
+ One of the configured repositories failed (Unknown),
+ and yum doesn't have enough cached data to continue. At this point the only
+ safe thing yum can do is fail. There are a few ways to work "fix" this:
+
+     1. Contact the upstream for the repository and get them to fix the problem.
+
+     2. Reconfigure the baseurl/etc. for the repository, to point to a working
+        upstream. This is most often useful if you are using a newer
+        distribution release than is supported by the repository (and the
+        packages for the previous distribution release still work).
+
+     3. Run the command with the repository temporarily disabled
+            yum --disablerepo=&lt;repoid&gt; ...
+
+     4. Disable the repository permanently, so yum won't use it by default. Yum
+        will then just ignore the repository until you permanently enable it
+        again or use --enablerepo for temporary usage:
+
+            yum-config-manager --disable &lt;repoid&gt;
+        or
+            subscription-manager repos --disable=&lt;repoid&gt;
+
+     5. Configure the failing repository to be skipped, if it is unavailable.
+        Note that yum will try to contact the repo. when it runs most commands,
+        so will have to try and fail each time (and thus. yum will be be much
+        slower). If it is a very temporary problem though, this is often a nice
+        compromise:
+
+            yum-config-manager --save --setopt=&lt;repoid&gt;.skip_if_unavailable=true
+
+Cannot retrieve metalink for repository: epel/x86_64. Please verify its path and try again
+</span><span class="ansi31"></span><span class="ansi1 ansi31">The command '/bin/sh -c yum -y install targetcli iscsi-initiator-utils device-mapper-multipath epel-release lvm2 which &amp;&amp;     yum -y install python2-pip pywbem python2-kubernetes &amp;&amp;     yum -y install xfsprogs e2fsprogs btrfs-progs nmap-ncat &amp;&amp;     pip install --no-cache-dir --upgrade 'pyasn1&lt;0.5.0,&gt;=0.4.1' future &amp;&amp;     if [ "$RELEASE" = "master" ]; then curl -o /etc/yum.repos.d/rdo-trunk-runtime-deps.repo <a href="https://trunk.rdoproject.org/centos7-master/rdo-trunk-runtime-deps.repo;">https://trunk.rdoproject.org/centos7-master/rdo-trunk-runtime-deps.repo;</a> curl -o /etc/yum.repos.d/delorean.repo <a href="https://trunk.rdoproject.org/centos7-master/current/delorean.repo;">https://trunk.rdoproject.org/centos7-master/current/delorean.repo;</a> else yum -y install centos-release-openstack-${RELEASE}; fi &amp;&amp;     yum -y install python-cinderlib &amp;&amp;     yum -y install python-rbd ceph-common pyOpenSSL &amp;&amp;     pip install --no-cache-dir krest purestorage pyxcli python-3parclient &amp;&amp;     yum clean all &amp;&amp;     rm -rf /var/cache/yum' returned a non-zero code: 1</span>
+<span class="ansi36">program finished with exit code 1</span>
+<span class="ansi36">elapsedTime=113.132618</span>
+
+
+</pre>
+</body>
+
+</html>
