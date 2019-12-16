@@ -1,0 +1,2370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+2019-12-16 17:08:37 default INFO cinder.volume.drivers.hpe.hpe_3par_common [-] HPE3PARCommon 4.0.14,hpe3parclient 4.2.11
+2019-12-16 17:08:37 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:37 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Disconnect from 3PAR REST and SSH 587c5c78-c4f9-48e2-803e-340ff4c290eb client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:38 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:38 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Disconnect from 3PAR REST and SSH 587c5c78-c4f9-48e2-803e-340ff4c290eb client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:38 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:38.312 1 DEBUG paramiko.transport [-] starting thread (client mode): 0x8c2a810L _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.313 1 DEBUG paramiko.transport [-] Local version/idstring: SSH-2.0-paramiko_2.4.2 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.324 1 DEBUG paramiko.transport [-] Remote version/idstring: SSH-2.0-OpenSSH_6.6.1p1 Debian-4~bpo70+1 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.324 1 INFO paramiko.transport [-] Connected (version 2.0, client OpenSSH_6.6.1p1)
+2019-12-16 17:08:38.326 1 DEBUG paramiko.transport [-] kex algos:[u'diffie-hellman-group-exchange-sha256'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'chacha20-poly1305@openssh.com', u'aes256-gcm@openssh.com', u'aes128-gcm@openssh.com', u'aes256-ctr', u'aes192-ctr', u'aes128-ctr'] server encrypt:[u'chacha20-poly1305@openssh.com', u'aes256-gcm@openssh.com', u'aes128-gcm@openssh.com', u'aes256-ctr', u'aes192-ctr', u'aes128-ctr'] client mac:[u'hmac-sha2-512-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-512', u'hmac-sha2-256', u'hmac-ripemd160', u'umac-128@openssh.com'] server mac:[u'hmac-sha2-512-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-512', u'hmac-sha2-256', u'hmac-ripemd160', u'umac-128@openssh.com'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.326 1 DEBUG paramiko.transport [-] Kex agreed: diffie-hellman-group-exchange-sha256 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.326 1 DEBUG paramiko.transport [-] HostKey agreed: ssh-rsa _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.327 1 DEBUG paramiko.transport [-] Cipher agreed: aes128-ctr _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.327 1 DEBUG paramiko.transport [-] MAC agreed: hmac-sha2-256 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.327 1 DEBUG paramiko.transport [-] Compression agreed: none _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.368 1 DEBUG paramiko.transport [-] Got server p (2048 bits) _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.498 1 DEBUG paramiko.transport [-] kex engine KexGexSHA256 specified hash_algo &lt;built-in function openssl_sha256&gt; _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.499 1 DEBUG paramiko.transport [-] Switch to new keys ... _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38 default DEBUG paramiko.transport [-] Adding ssh-rsa host key for 10.35.84.12: 68a6c960a1cb12e2761aee47b08bf9ee _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.540 1 DEBUG paramiko.transport [-] userauth is OK _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.569 1 INFO paramiko.transport [-] Authentication (password) successful!
+2019-12-16 17:08:38 default DEBUG paramiko.transport [-] [chan 0] Max packet in: 32768 bytes _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:38.605 1 DEBUG paramiko.transport [-] [chan 0] Max packet out: 32768 bytes _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:38.605 1 DEBUG paramiko.transport [-] Secsh channel 0 opened. _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:38.611 1 DEBUG paramiko.transport [-] [chan 0] Sesch channel 0 request ok _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:38.613 1 DEBUG paramiko.transport [-] [chan 0] Sesch channel 0 request ok _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:39.035 1 DEBUG paramiko.transport [-] [chan 0] EOF received (0) _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:39.036 1 DEBUG paramiko.transport [-] [chan 0] EOF sent (0) _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:39 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Disconnect from 3PAR REST and SSH 587c5c78-c4f9-48e2-803e-340ff4c290eb client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:39.137 1 DEBUG paramiko.transport [-] EOF in transport thread _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [-] ==&gt; get_volume_stats: call u"{'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;, 'refresh': True}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:39 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:39 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Disconnect from 3PAR REST and SSH eb2caf4d-041a-4b6a-a3df-3e61411b44a1 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:39 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:39 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] 'Replication' requires a 'Remote Copy' license which is not installed. _check_license_enabled /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:1692
+2019-12-16 17:08:39.687 1 DEBUG paramiko.transport [-] starting thread (client mode): 0x8c2a410L _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.688 1 DEBUG paramiko.transport [-] Local version/idstring: SSH-2.0-paramiko_2.4.2 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.697 1 DEBUG paramiko.transport [-] Remote version/idstring: SSH-2.0-OpenSSH_6.6.1p1 Debian-4~bpo70+1 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.697 1 INFO paramiko.transport [-] Connected (version 2.0, client OpenSSH_6.6.1p1)
+2019-12-16 17:08:39.700 1 DEBUG paramiko.transport [-] kex algos:[u'diffie-hellman-group-exchange-sha256'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'chacha20-poly1305@openssh.com', u'aes256-gcm@openssh.com', u'aes128-gcm@openssh.com', u'aes256-ctr', u'aes192-ctr', u'aes128-ctr'] server encrypt:[u'chacha20-poly1305@openssh.com', u'aes256-gcm@openssh.com', u'aes128-gcm@openssh.com', u'aes256-ctr', u'aes192-ctr', u'aes128-ctr'] client mac:[u'hmac-sha2-512-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-512', u'hmac-sha2-256', u'hmac-ripemd160', u'umac-128@openssh.com'] server mac:[u'hmac-sha2-512-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-512', u'hmac-sha2-256', u'hmac-ripemd160', u'umac-128@openssh.com'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.700 1 DEBUG paramiko.transport [-] Kex agreed: diffie-hellman-group-exchange-sha256 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.701 1 DEBUG paramiko.transport [-] HostKey agreed: ssh-rsa _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.701 1 DEBUG paramiko.transport [-] Cipher agreed: aes128-ctr _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.701 1 DEBUG paramiko.transport [-] MAC agreed: hmac-sha2-256 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.702 1 DEBUG paramiko.transport [-] Compression agreed: none _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.741 1 DEBUG paramiko.transport [-] Got server p (2048 bits) _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.826 1 DEBUG paramiko.transport [-] kex engine KexGexSHA256 specified hash_algo &lt;built-in function openssl_sha256&gt; _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.826 1 DEBUG paramiko.transport [-] Switch to new keys ... _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.866 1 DEBUG paramiko.transport [-] userauth is OK _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.893 1 INFO paramiko.transport [-] Authentication (password) successful!
+2019-12-16 17:08:39 default DEBUG paramiko.transport [-] [chan 0] Max packet in: 32768 bytes _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:39.930 1 DEBUG paramiko.transport [-] [chan 0] Max packet out: 32768 bytes _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:39.930 1 DEBUG paramiko.transport [-] Secsh channel 0 opened. _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:39.935 1 DEBUG paramiko.transport [-] [chan 0] Sesch channel 0 request ok _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:39.937 1 DEBUG paramiko.transport [-] [chan 0] Sesch channel 0 request ok _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:40.717 1 DEBUG paramiko.transport [-] [chan 0] EOF received (0) _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:40.717 1 DEBUG paramiko.transport [-] [chan 0] EOF sent (0) _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:40 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [-] Disconnect from 3PAR REST and SSH eb2caf4d-041a-4b6a-a3df-3e61411b44a1 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:40.924 1 DEBUG paramiko.transport [-] EOF in transport thread _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:40 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [-] &lt;== get_volume_stats: return (1796ms) {'array_id': 139115, 'vendor_name': u'Hewlett Packard Enterprise', 'volume_backend_name': u'3par', 'driver_version': u'4.0.5', 'replication_targets': [], 'pools': [{'thick_provisioning_support': True, 'bandwidth': 26045.4, 'consistent_group_snapshot_enabled': True, 'latency': 0.58, 'filter_function': None, 'compression': True, 'total_volumes': 128, 'consistent_group_replication_enabled': False, 'free_capacity_gb': 5, 'queue_length': 0.0, 'backend_state': 'up', 'pool_name': 'SSD_r5', 'goodness_function': None, 'multiattach': True, 'provisioned_capacity_gb': 8418, 'thin_provisioning_support': True, 'io_size': 32.3, 'reserved_percentage': 0, 'QoS_support': True, 'capacity_utilization': 99.93986047630503, 'total_capacity_gb': 8314, 'location_info': u'HPE3PARDriver:CZ3836C3RB:SSD_r5', 'avg_busy_perc': 0.3, 'throughput': 806.8, 'max_over_subscription_ratio': '20.0'}], 'replication_enabled': False, 'storage_protocol': u'iSCSI'} trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:819
+2019-12-16 17:08:40 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [-] ==&gt; _init_vendor_properties: call u"{'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:40 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [-] &lt;== _init_vendor_properties: return (0ms) ({'HPE:3PAR:replication:retention_count': {'default': 5, 'type': 'integer', 'description': u'Sets the number of snapshots that will be  saved on the primary array.', 'title': 'Retention Count for Replication Extra-specs.'}, 'HPE:3PAR:replication:remote_retention_count': {'default': 5, 'type': 'integer', 'description': u'Sets the number of snapshots that will be  saved on the secondary array.', 'title': 'Remote Retention Count for Replication Extra-specs.'}, 'HPE:3PAR:hpe3par:persona': {'default': '2 - Generic-ALUA', 'enum': ['2 - Generic-ALUA', '1 - Generic', '3 - Generic-legacy', '4 - HPEUX-legacy', '5 - AIX-legacy', '6 - EGENERA', '7 - ONTAP-legacy', '8 - VMware', '9 - OpenVMS', '10 - HPEUX', '11 - WindowsServer'], 'type': 'string', 'description': u'Specifies the host persona property for a volume type. It overrides the hpe3par_cpg_snap setting. Defaults to the hpe3par_cpg_snap setting in the cinder.conf file. If hpe3par_cpg_snap is not set, it defaults to the hpe3par_cpg setting.', 'title': 'Host Persona Extra-specs.'}, 'HPE:3PAR:minBWS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue bandwidth minimum goal. If not specified, there is no limit on I/O issue bandwidth rate.', 'title': 'Minimum Bandwidth QoS.'}, 'HPE:3PAR:hpe3par:provisioning': {'default': 'thin', 'enum': ['thin', 'full', 'dedup'], 'type': 'string', 'description': u'Specifies the provisioning for a volume type.', 'title': 'Storage Provisioning Extra-specs.'}, 'HPE:3PAR:hpe3par:compression': {'default': False, 'type': 'boolean', 'description': u'Enables compression for a volume type. Minimum requirement of 3par OS version is 3.3.1 with SSD drives only. Volume size must have &gt; 16 GB to enable compression on volume. A full provisioned volume cannot be compressed.', 'title': 'Storage Provisioning Extra-specs.'}, 'HPE:3PAR:maxBWS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue bandwidth rate limit. If not specified, there is no limit on I/O issue bandwidth rate.', 'title': 'Maximum Bandwidth QoS.'}, 'HPE:3PAR:latency': {'type': 'integer', 'description': u'Sets the latency goal in milliseconds.', 'title': 'Latency QoS.'}, 'HPE:3PAR:priority': {'default': 'normal', 'enum': ['low', 'normal', 'high'], 'type': 'string', 'description': u'Sets the priority of the QoS rule over other rules.', 'title': 'Priority QoS.'}, 'HPE:3PAR:hpe3par:vvs': {'type': 'string', 'description': u'The virtual volume set name that has been set up by the administrator that would have predefined QoS rules associated with it. If you specify extra_specs hpe3par:vvs, the qos_specs minIOPS, maxIOPS, minBWS, and maxBWS settings are ignored.', 'title': 'Virtual Volume Set Extra-specs.'}, 'HPE:3PAR:hpe3par:snap_cpg': {'type': 'string', 'description': u'Specifies the Snap CPG for a volume type. It overrides the hpe3par_cpg_snap setting. Defaults to the hpe3par_cpg_snap setting in the cinder.conf file. If hpe3par_cpg_snap is not set, it defaults to the hpe3par_cpg setting.', 'title': 'Snap CPG Extra-specs.'}, 'HPE:3PAR:hpe3par:flash_cache': {'default': False, 'type': 'boolean', 'description': u'Enables Flash cache setting for a volume type.', 'title': 'Flash cache Extra-specs.'}, 'HPE:3PAR:maxIOPS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue count rate limit. If not specified, there is no limit on I/O issue count.', 'title': 'Maximum IOPS QoS.'}, 'HPE:3PAR:replication:mode': {'default': 'periodic', 'enum': ['sync', 'periodic'], 'type': 'string', 'description': u'Sets the replication mode for 3par.', 'title': 'Replication Mode Extra-specs.'}, 'HPE:3PAR:replication:sync_period': {'default': 900, 'type': 'integer', 'description': u'Sets the time interval for synchronization. Only needed if replication:mode is periodic.', 'title': 'Sync Period for Volume Replication Extra-specs.'}, 'HPE:3PAR:minIOPS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue count minimum goal. If not specified, there is no limit on I/O issue count.', 'title': 'Minimum IOPS QoS.'}, 'HPE:3PAR:replication_enabled': {'default': False, 'enum': ['&lt;is&gt; True'], 'type': 'string', 'description': u'The valid value is: &lt;is&gt; True If True, the volume is to be replicated, if supported, by the backend driver. If the option is not specified or false, then replication is not enabled. This option is required to enable replication.', 'title': 'Volume Replication Extra-specs.'}}, 'HPE:3PAR') trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:819
+2019-12-16 17:08:40 default WARNING cinder.volume.driver [-] The colon in vendor name was replaced by underscore. Updated vendor name is HPE_3PAR".
+2019-12-16 17:08:40 default DEBUG cinder.volume.driver [-] Initialized capabilities list: {'array_id': 139115, 'vendor_name': 'Hewlett Packard Enterprise', 'vendor_prefix': 'HPE_3PAR', 'volume_backend_name': '3par', 'driver_version': '4.0.5', 'replication_targets': [], 'pools': [{'thick_provisioning_support': True, 'bandwidth': 26045.4, 'consistent_group_snapshot_enabled': True, 'latency': 0.58, 'filter_function': None, 'compression': True, 'total_volumes': 128, 'consistent_group_replication_enabled': False, 'free_capacity_gb': 5, 'queue_length': 0.0, 'backend_state': 'up', 'pool_name': 'SSD_r5', 'goodness_function': None, 'multiattach': True, 'provisioned_capacity_gb': 8418, 'thin_provisioning_support': True, 'io_size': 32.3, 'reserved_percentage': 0, 'QoS_support': True, 'capacity_utilization': 99.93986047630503, 'total_capacity_gb': 8314, 'location_info': u'HPE3PARDriver:CZ3836C3RB:SSD_r5', 'avg_busy_perc': 0.3, 'throughput': 806.8, 'max_over_subscription_ratio': '20.0'}], 'replication_enabled': False, 'properties': {'HPE_3PAR:replication:remote_retention_count': {'default': 5, 'type': 'integer', 'description': u'Sets the number of snapshots that will be  saved on the secondary array.', 'title': 'Remote Retention Count for Replication Extra-specs.'}, 'HPE_3PAR:minIOPS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue count minimum goal. If not specified, there is no limit on I/O issue count.', 'title': 'Minimum IOPS QoS.'}, 'HPE_3PAR:hpe3par:snap_cpg': {'type': 'string', 'description': u'Specifies the Snap CPG for a volume type. It overrides the hpe3par_cpg_snap setting. Defaults to the hpe3par_cpg_snap setting in the cinder.conf file. If hpe3par_cpg_snap is not set, it defaults to the hpe3par_cpg setting.', 'title': 'Snap CPG Extra-specs.'}, 'qos': {'type': 'boolean', 'description': u'Enables QoS.', 'title': 'QoS'}, 'HPE_3PAR:hpe3par:provisioning': {'default': 'thin', 'enum': ['thin', 'full', 'dedup'], 'type': 'string', 'description': u'Specifies the provisioning for a volume type.', 'title': 'Storage Provisioning Extra-specs.'}, 'HPE_3PAR:replication:retention_count': {'default': 5, 'type': 'integer', 'description': u'Sets the number of snapshots that will be  saved on the primary array.', 'title': 'Retention Count for Replication Extra-specs.'}, 'HPE_3PAR:maxIOPS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue count rate limit. If not specified, there is no limit on I/O issue count.', 'title': 'Maximum IOPS QoS.'}, 'HPE_3PAR:replication:sync_period': {'default': 900, 'type': 'integer', 'description': u'Sets the time interval for synchronization. Only needed if replication:mode is periodic.', 'title': 'Sync Period for Volume Replication Extra-specs.'}, 'HPE_3PAR:hpe3par:persona': {'default': '2 - Generic-ALUA', 'enum': ['2 - Generic-ALUA', '1 - Generic', '3 - Generic-legacy', '4 - HPEUX-legacy', '5 - AIX-legacy', '6 - EGENERA', '7 - ONTAP-legacy', '8 - VMware', '9 - OpenVMS', '10 - HPEUX', '11 - WindowsServer'], 'type': 'string', 'description': u'Specifies the host persona property for a volume type. It overrides the hpe3par_cpg_snap setting. Defaults to the hpe3par_cpg_snap setting in the cinder.conf file. If hpe3par_cpg_snap is not set, it defaults to the hpe3par_cpg setting.', 'title': 'Host Persona Extra-specs.'}, 'thin_provisioning': {'type': 'boolean', 'description': u'Sets thin provisioning.', 'title': 'Thin Provisioning'}, 'HPE_3PAR:latency': {'type': 'integer', 'description': u'Sets the latency goal in milliseconds.', 'title': 'Latency QoS.'}, 'HPE_3PAR:maxBWS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue bandwidth rate limit. If not specified, there is no limit on I/O issue bandwidth rate.', 'title': 'Maximum Bandwidth QoS.'}, 'compression': {'type': 'boolean', 'description': u'Enables compression.', 'title': 'Compression'}, 'HPE_3PAR:hpe3par:vvs': {'type': 'string', 'description': u'The virtual volume set name that has been set up by the administrator that would have predefined QoS rules associated with it. If you specify extra_specs hpe3par:vvs, the qos_specs minIOPS, maxIOPS, minBWS, and maxBWS settings are ignored.', 'title': 'Virtual Volume Set Extra-specs.'}, 'HPE_3PAR:hpe3par:compression': {'default': False, 'type': 'boolean', 'description': u'Enables compression for a volume type. Minimum requirement of 3par OS version is 3.3.1 with SSD drives only. Volume size must have &gt; 16 GB to enable compression on volume. A full provisioned volume cannot be compressed.', 'title': 'Storage Provisioning Extra-specs.'}, 'HPE_3PAR:hpe3par:flash_cache': {'default': False, 'type': 'boolean', 'description': u'Enables Flash cache setting for a volume type.', 'title': 'Flash cache Extra-specs.'}, 'HPE_3PAR:minBWS': {'type': 'integer', 'description': u'Sets the QoS, I/O issue bandwidth minimum goal. If not specified, there is no limit on I/O issue bandwidth rate.', 'title': 'Minimum Bandwidth QoS.'}, 'HPE_3PAR:priority': {'default': 'normal', 'enum': ['low', 'normal', 'high'], 'type': 'string', 'description': u'Sets the priority of the QoS rule over other rules.', 'title': 'Priority QoS.'}, 'HPE_3PAR:replication:mode': {'default': 'periodic', 'enum': ['sync', 'periodic'], 'type': 'string', 'description': u'Sets the replication mode for 3par.', 'title': 'Replication Mode Extra-specs.'}, 'replication_enabled': {'type': 'boolean', 'description': u'Enables replication.', 'title': 'Replication'}, 'HPE_3PAR:replication_enabled': {'default': False, 'enum': ['&lt;is&gt; True'], 'type': 'string', 'description': u'The valid value is: &lt;is&gt; True If True, the volume is to be replicated, if supported, by the backend driver. If the option is not specified or false, then replication is not enabled. This option is required to enable replication.', 'title': 'Volume Replication Extra-specs.'}}, 'storage_protocol': 'iSCSI'}. init_capabilities /usr/lib/python2.7/site-packages/cinder/volume/driver.py:791
+2019-12-16 17:08:40 default DEBUG os_brick.utils [-] ==&gt; get_connector_properties: call u"{'execute': &lt;function _execute at 0x7f5f0b5b1a28&gt;, 'my_ip': '192.168.122.82', 'enforce_multipath': False, 'host': None, 'root_helper': 'sudo', 'multipath': True}" trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:146
+2019-12-16 17:08:40 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): multipathd show status execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-12-16 17:08:42 default DEBUG oslo_concurrency.processutils [-] CMD "multipathd show status" returned: 0 in 1.333s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-12-16 17:08:42 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): cat /etc/iscsi/initiatorname.iscsi execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-12-16 17:08:43 default DEBUG oslo_concurrency.processutils [-] CMD "cat /etc/iscsi/initiatorname.iscsi" returned: 0 in 1.108s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-12-16 17:08:43 default DEBUG os_brick.initiator.linuxfc [-] No Fibre Channel support detected on system. get_fc_hbas /usr/lib/python2.7/site-packages/os_brick/initiator/linuxfc.py:134
+2019-12-16 17:08:43 default DEBUG os_brick.initiator.linuxfc [-] No Fibre Channel support detected on system. get_fc_hbas /usr/lib/python2.7/site-packages/os_brick/initiator/linuxfc.py:134
+2019-12-16 17:08:43 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): cat /sys/class/dmi/id/product_uuid execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2019-12-16 17:08:44 default DEBUG oslo_concurrency.processutils [-] CMD "cat /sys/class/dmi/id/product_uuid" returned: 0 in 1.105s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2019-12-16 17:08:44 default DEBUG os_brick.utils [-] &lt;== get_connector_properties: return (3554ms) {'initiator': u'iqn.1994-05.com.redhat:libvirt0', 'ip': u'192.168.122.82', 'system uuid': u'EABE5F81-D526-428D-821A-FBAF16C1DE6D', 'platform': u'x86_64', 'host': u'libvirt0', 'do_local_attach': False, 'os_type': u'linux2', 'multipath': True} trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:170
+2019-12-16 17:08:44 default INFO ember_csi.ember_csi [-] Ember CSI vmaster+16122019170815235019945 with 30 workers (CSI spec: v1.0.0, cinderlib: v1.0.1.dev2, cinder: v15.1.0.dev116)
+2019-12-16 17:08:44 default INFO ember_csi.ember_csi [-] Persistence module: MemoryPersistence
+2019-12-16 17:08:44 default INFO ember_csi.ember_csi [-] Running as all with backend HPE3PARISCSIDriver v4.0.5
+2019-12-16 17:08:44 default INFO ember_csi.ember_csi [-] Plugin name: ember-csi.io
+2019-12-16 17:08:44 default INFO ember_csi.ember_csi [-] Debugging feature is ENABLED with ember_csi.rpdb and OFF. Toggle it with SIGUSR1.
+2019-12-16 17:08:44 default INFO ember_csi.ember_csi [-] Supported filesystems: cramfs, minix, btrfs, ext2, ext3, ext4, xfs
+2019-12-16 17:08:44 default INFO ember_csi.ember_csi [-] Now serving on [::]:50051...
+2019-12-16 17:08:44 default INFO ember_csi.common [req-82225c37-0a78-4fc6-8c62-d9dc407710db] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:44 default DEBUG ember_csi.common [req-82225c37-0a78-4fc6-8c62-d9dc407710db] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:44 default INFO ember_csi.common [req-82225c37-0a78-4fc6-8c62-d9dc407710db] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:44 default DEBUG ember_csi.common [req-82225c37-0a78-4fc6-8c62-d9dc407710db] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:44 default INFO ember_csi.common [req-657a320b-d290-4c42-bd11-9183ad745075] =&gt; GRPC DeleteSnapshot 
+2019-12-16 17:08:44 default DEBUG ember_csi.common [req-657a320b-d290-4c42-bd11-9183ad745075] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:44 default ERROR ember_csi.common [req-657a320b-d290-4c42-bd11-9183ad745075] !! GRPC DeleteSnapshot failed in 0s with INVALID_ARGUMENT (Missing required fields: snapshot_id): Exception
+2019-12-16 17:08:44 default INFO ember_csi.common [req-1f49f8b1-c2a5-4891-a5d0-ed32beda0528] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:44 default DEBUG ember_csi.common [req-1f49f8b1-c2a5-4891-a5d0-ed32beda0528] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:44 default INFO ember_csi.common [req-1f49f8b1-c2a5-4891-a5d0-ed32beda0528] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:44 default DEBUG ember_csi.common [req-1f49f8b1-c2a5-4891-a5d0-ed32beda0528] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:44 default INFO ember_csi.common [req-cccd80aa-a720-4f1b-b84c-11ed5dbabb7d] =&gt; GRPC DeleteSnapshot reallyfakesnapshotid
+2019-12-16 17:08:44 default DEBUG ember_csi.common [req-cccd80aa-a720-4f1b-b84c-11ed5dbabb7d] With params:
+	snapshot_id: "reallyfakesnapshotid" dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:44 default INFO ember_csi.common [req-cccd80aa-a720-4f1b-b84c-11ed5dbabb7d] &lt;= GRPC DeleteSnapshot served in 0s
+2019-12-16 17:08:44 default DEBUG ember_csi.common [req-cccd80aa-a720-4f1b-b84c-11ed5dbabb7d] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:44 default INFO ember_csi.common [req-cc643007-dca9-4b1a-b308-f5603efddcde] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:44 default DEBUG ember_csi.common [req-cc643007-dca9-4b1a-b308-f5603efddcde] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:44 default INFO ember_csi.common [req-cc643007-dca9-4b1a-b308-f5603efddcde] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:44 default DEBUG ember_csi.common [req-cc643007-dca9-4b1a-b308-f5603efddcde] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:44 default INFO ember_csi.common [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] =&gt; GRPC CreateVolume DeleteSnapshot-volume-1
+2019-12-16 17:08:44 default DEBUG ember_csi.common [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] With params:
+	name: "DeleteSnapshot-volume-1"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:44 default DEBUG ember_csi.base [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] Creating volume DeleteSnapshot-volume-1 CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:44 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:44Z,deleted=False,deleted_at=None,display_description='',display_name='DeleteSnapshot-volume-1',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=68bdb5a9-8866-478e-b37c-5ba422058cb9,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=10,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] CREATE VOLUME (DeleteSnapshot-volume-1: volume-68bdb5a9-8866-478e-b37c-5ba422058cb9 osv-aL21qYhmR46zfFukIgWMuQ on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:45 default DEBUG hpe3parclient.client [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] Parameters passed for create volume {'comment': '{"display_name": "DeleteSnapshot-volume-1", "type": "OpenStack", "name": "volume-68bdb5a9-8866-478e-b37c-5ba422058cb9", "volume_id": "68bdb5a9-8866-478e-b37c-5ba422058cb9"}', 'sizeMiB': 10240, 'tpvv': True, 'name': u'osv-aL21qYhmR46zfFukIgWMuQ', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:45 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] Disconnect from 3PAR REST and SSH 80fb8f94-6678-48c3-8317-1960d90d6238 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] &lt;== create_volume: exception (264ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:45 default ERROR ember_csi.common [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45 default ERROR grpc._server [req-5bd3ce90-d237-4f4f-bb5e-3e72f379b718] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45.170 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:45.170 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:45.170 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:45.170 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:45.170 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:45.170 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:45.170 1 ERROR grpc._server     **params)
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:45.170 1 ERROR grpc._server     **params)
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:45.170 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:45.170 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:45.170 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:45.170 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:45.170 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:45.170 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:45.170 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:45.170 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:45.170 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:45.170 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45.170 1 ERROR grpc._server 
+2019-12-16 17:08:45 default INFO ember_csi.common [req-b2d983dd-d642-49d6-9f32-16455ab516f7] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-b2d983dd-d642-49d6-9f32-16455ab516f7] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default INFO ember_csi.common [req-b2d983dd-d642-49d6-9f32-16455ab516f7] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-b2d983dd-d642-49d6-9f32-16455ab516f7] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:45 default INFO ember_csi.common [req-d74ecc7c-a570-4f0c-bbb7-7ef1140b3368] =&gt; GRPC ListSnapshots 
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-d74ecc7c-a570-4f0c-bbb7-7ef1140b3368] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default INFO ember_csi.common [req-d74ecc7c-a570-4f0c-bbb7-7ef1140b3368] &lt;= GRPC ListSnapshots served in 0s
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-d74ecc7c-a570-4f0c-bbb7-7ef1140b3368] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:45 default INFO ember_csi.common [req-4a6ee7f1-1aa3-4fd3-92eb-628995367d5b] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-4a6ee7f1-1aa3-4fd3-92eb-628995367d5b] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default INFO ember_csi.common [req-4a6ee7f1-1aa3-4fd3-92eb-628995367d5b] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-4a6ee7f1-1aa3-4fd3-92eb-628995367d5b] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:45 default INFO ember_csi.common [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] =&gt; GRPC CreateVolume listSnapshots-volume-1
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] With params:
+	name: "listSnapshots-volume-1"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default DEBUG ember_csi.base [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] Creating volume listSnapshots-volume-1 CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:45Z,deleted=False,deleted_at=None,display_description='',display_name='listSnapshots-volume-1',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=2862bdc7-46fe-4018-9a0e-2771c03b16b5,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=10,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] CREATE VOLUME (listSnapshots-volume-1: volume-2862bdc7-46fe-4018-9a0e-2771c03b16b5 osv-KGK9x0b.QBiaDidxwDsWtQ on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:45 default DEBUG hpe3parclient.client [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] Parameters passed for create volume {'comment': '{"display_name": "listSnapshots-volume-1", "type": "OpenStack", "name": "volume-2862bdc7-46fe-4018-9a0e-2771c03b16b5", "volume_id": "2862bdc7-46fe-4018-9a0e-2771c03b16b5"}', 'sizeMiB': 10240, 'tpvv': True, 'name': u'osv-KGK9x0b.QBiaDidxwDsWtQ', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:45 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] Disconnect from 3PAR REST and SSH a48f2a7a-1094-403d-afb8-13a3ea0f61bd client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] &lt;== create_volume: exception (260ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:45 default ERROR ember_csi.common [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45 default ERROR grpc._server [req-a823be4c-ad3a-4c7b-92b2-0afebae6fe6a] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45.479 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:45.479 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:45.479 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:45.479 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:45.479 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:45.479 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:45.479 1 ERROR grpc._server     **params)
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:45.479 1 ERROR grpc._server     **params)
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:45.479 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:45.479 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:45.479 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:45.479 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:45.479 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:45.479 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:45.479 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:45.479 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:45.479 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:45.479 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45.479 1 ERROR grpc._server 
+2019-12-16 17:08:45 default INFO ember_csi.common [req-8e10ec01-16d4-4399-b678-6b648c8f13b8] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-8e10ec01-16d4-4399-b678-6b648c8f13b8] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default INFO ember_csi.common [req-8e10ec01-16d4-4399-b678-6b648c8f13b8] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-8e10ec01-16d4-4399-b678-6b648c8f13b8] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:45 default INFO ember_csi.common [req-cc07a391-02a6-4000-8811-f7746b80861b] =&gt; GRPC ListSnapshots none-exist-id
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-cc07a391-02a6-4000-8811-f7746b80861b] With params:
+	snapshot_id: "none-exist-id" dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default INFO ember_csi.common [req-cc07a391-02a6-4000-8811-f7746b80861b] &lt;= GRPC ListSnapshots served in 0s
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-cc07a391-02a6-4000-8811-f7746b80861b] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:45 default INFO ember_csi.common [req-769fbff3-3570-4a44-82e7-1ad320acdb38] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-769fbff3-3570-4a44-82e7-1ad320acdb38] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default INFO ember_csi.common [req-769fbff3-3570-4a44-82e7-1ad320acdb38] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-769fbff3-3570-4a44-82e7-1ad320acdb38] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:45 default INFO ember_csi.common [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] =&gt; GRPC CreateVolume listSnapshots-volume-2
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] With params:
+	name: "listSnapshots-volume-2"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default DEBUG ember_csi.base [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] Creating volume listSnapshots-volume-2 CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:45Z,deleted=False,deleted_at=None,display_description='',display_name='listSnapshots-volume-2',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=7ef1c960-e54a-4780-8b11-2c8b0cb6f8d8,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=10,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] CREATE VOLUME (listSnapshots-volume-2: volume-7ef1c960-e54a-4780-8b11-2c8b0cb6f8d8 osv-fvHJYOVKR4CLESyLDLb42A on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:45 default DEBUG hpe3parclient.client [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] Parameters passed for create volume {'comment': '{"display_name": "listSnapshots-volume-2", "type": "OpenStack", "name": "volume-7ef1c960-e54a-4780-8b11-2c8b0cb6f8d8", "volume_id": "7ef1c960-e54a-4780-8b11-2c8b0cb6f8d8"}', 'sizeMiB': 10240, 'tpvv': True, 'name': u'osv-fvHJYOVKR4CLESyLDLb42A', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:45 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] Disconnect from 3PAR REST and SSH 9b9321a5-31f3-43f8-ba8d-b2919dc684f7 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] &lt;== create_volume: exception (257ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:45 default ERROR ember_csi.common [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45 default ERROR grpc._server [req-dd4b0db5-dae1-4a78-9bfd-6ad457de729b] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45.769 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:45.769 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:45.769 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:45.769 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:45.769 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:45.769 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:45.769 1 ERROR grpc._server     **params)
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:45.769 1 ERROR grpc._server     **params)
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:45.769 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:45.769 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:45.769 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:45.769 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:45.769 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:45.769 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:45.769 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:45.769 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:45.769 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:45.769 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:45.769 1 ERROR grpc._server 
+2019-12-16 17:08:45 default INFO ember_csi.common [req-47e99031-ca65-46cb-946c-65a25cb7a59a] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-47e99031-ca65-46cb-946c-65a25cb7a59a] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default INFO ember_csi.common [req-47e99031-ca65-46cb-946c-65a25cb7a59a] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-47e99031-ca65-46cb-946c-65a25cb7a59a] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:45 default INFO ember_csi.common [req-73dffe3b-693f-4f1b-9283-3b41e157de49] =&gt; GRPC ListSnapshots 
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-73dffe3b-693f-4f1b-9283-3b41e157de49] With params:
+	source_volume_id: "none-exist-volume-id" dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default INFO ember_csi.common [req-73dffe3b-693f-4f1b-9283-3b41e157de49] &lt;= GRPC ListSnapshots served in 0s
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-73dffe3b-693f-4f1b-9283-3b41e157de49] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:45 default INFO ember_csi.common [req-ef5bcf80-1516-4332-97a2-65ae1828f17f] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-ef5bcf80-1516-4332-97a2-65ae1828f17f] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default INFO ember_csi.common [req-ef5bcf80-1516-4332-97a2-65ae1828f17f] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-ef5bcf80-1516-4332-97a2-65ae1828f17f] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:45 default INFO ember_csi.common [req-6a069cf3-56d4-45b3-bc19-ed054948b6e3] =&gt; GRPC ListSnapshots 
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-6a069cf3-56d4-45b3-bc19-ed054948b6e3] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default INFO ember_csi.common [req-6a069cf3-56d4-45b3-bc19-ed054948b6e3] &lt;= GRPC ListSnapshots served in 0s
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-6a069cf3-56d4-45b3-bc19-ed054948b6e3] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:45 default INFO ember_csi.common [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] =&gt; GRPC CreateVolume listSnapshots-volume-3
+2019-12-16 17:08:45 default DEBUG ember_csi.common [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] With params:
+	name: "listSnapshots-volume-3"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:45 default DEBUG ember_csi.base [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] Creating volume listSnapshots-volume-3 CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:45Z,deleted=False,deleted_at=None,display_description='',display_name='listSnapshots-volume-3',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=bb8c5017-2c90-42ab-bc45-628bbeb271f4,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=10,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:45 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] CREATE VOLUME (listSnapshots-volume-3: volume-bb8c5017-2c90-42ab-bc45-628bbeb271f4 osv-u4xQFyyQQqu8RWKLvrJx9A on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:45 default DEBUG hpe3parclient.client [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] Parameters passed for create volume {'comment': '{"display_name": "listSnapshots-volume-3", "type": "OpenStack", "name": "volume-bb8c5017-2c90-42ab-bc45-628bbeb271f4", "volume_id": "bb8c5017-2c90-42ab-bc45-628bbeb271f4"}', 'sizeMiB': 10240, 'tpvv': True, 'name': u'osv-u4xQFyyQQqu8RWKLvrJx9A', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:46 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:46 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] Disconnect from 3PAR REST and SSH 7207ef24-0daa-45bf-aa04-a53e50ef1978 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:46 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] &lt;== create_volume: exception (254ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:46 default ERROR ember_csi.common [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:46 default ERROR grpc._server [req-80b4cc3c-9ff8-4948-8211-3d8ff1e7e8b5] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:46.078 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:46.078 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:46.078 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:46.078 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:46.078 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:46.078 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:46.078 1 ERROR grpc._server     **params)
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:46.078 1 ERROR grpc._server     **params)
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:46.078 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:46.078 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:46.078 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:46.078 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:46.078 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:46.078 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:46.078 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:46.078 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:46.078 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:46.078 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:46.078 1 ERROR grpc._server 
+2019-12-16 17:08:46 default INFO ember_csi.common [req-522db90c-6fe7-4c9a-9965-7ba0ef6ebdb5] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:46 default DEBUG ember_csi.common [req-522db90c-6fe7-4c9a-9965-7ba0ef6ebdb5] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:46 default INFO ember_csi.common [req-522db90c-6fe7-4c9a-9965-7ba0ef6ebdb5] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:46 default DEBUG ember_csi.common [req-522db90c-6fe7-4c9a-9965-7ba0ef6ebdb5] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:46 default INFO ember_csi.common [req-bd3dabd6-f044-45bc-9d6c-b974528fe8bc] =&gt; GRPC ListSnapshots 
+2019-12-16 17:08:46 default DEBUG ember_csi.common [req-bd3dabd6-f044-45bc-9d6c-b974528fe8bc] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:46 default INFO ember_csi.common [req-bd3dabd6-f044-45bc-9d6c-b974528fe8bc] &lt;= GRPC ListSnapshots served in 0s
+2019-12-16 17:08:46 default DEBUG ember_csi.common [req-bd3dabd6-f044-45bc-9d6c-b974528fe8bc] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:46 default INFO ember_csi.common [req-534db6a6-7105-4f75-887c-38a84be4d1d5] =&gt; GRPC CreateVolume volume1
+2019-12-16 17:08:46 default DEBUG ember_csi.common [req-534db6a6-7105-4f75-887c-38a84be4d1d5] With params:
+	name: "volume1"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:46 default DEBUG ember_csi.base [req-534db6a6-7105-4f75-887c-38a84be4d1d5] Creating volume volume1 CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:46 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-534db6a6-7105-4f75-887c-38a84be4d1d5] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:46Z,deleted=False,deleted_at=None,display_description='',display_name='volume1',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=1e70dcc8-0a62-4b7f-963f-ffbd646afcab,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=10,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:46 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-534db6a6-7105-4f75-887c-38a84be4d1d5] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:46 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-534db6a6-7105-4f75-887c-38a84be4d1d5] CREATE VOLUME (volume1: volume-1e70dcc8-0a62-4b7f-963f-ffbd646afcab osv-HnDcyApiS3.WP-.9ZGr8qw on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:46 default DEBUG hpe3parclient.client [req-534db6a6-7105-4f75-887c-38a84be4d1d5] Parameters passed for create volume {'comment': '{"display_name": "volume1", "type": "OpenStack", "name": "volume-1e70dcc8-0a62-4b7f-963f-ffbd646afcab", "volume_id": "1e70dcc8-0a62-4b7f-963f-ffbd646afcab"}', 'sizeMiB': 10240, 'tpvv': True, 'name': u'osv-HnDcyApiS3.WP-.9ZGr8qw', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:46 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-534db6a6-7105-4f75-887c-38a84be4d1d5] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:46 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-534db6a6-7105-4f75-887c-38a84be4d1d5] Disconnect from 3PAR REST and SSH 65112ca0-2498-4d03-95fa-d46a158494cb client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:46 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-534db6a6-7105-4f75-887c-38a84be4d1d5] &lt;== create_volume: exception (251ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:46 default ERROR ember_csi.common [req-534db6a6-7105-4f75-887c-38a84be4d1d5] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:46 default ERROR grpc._server [req-534db6a6-7105-4f75-887c-38a84be4d1d5] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:46.360 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:46.360 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:46.360 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:46.360 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:46.360 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:46.360 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:46.360 1 ERROR grpc._server     **params)
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:46.360 1 ERROR grpc._server     **params)
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:46.360 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:46.360 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:46.360 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:46.360 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:46.360 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:46.360 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:46.360 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:46.360 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:46.360 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:46.360 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:46.360 1 ERROR grpc._server 
+2019-12-16 17:08:46 default INFO ember_csi.common [req-51fc35bc-bd89-4bfb-bdc7-dbc4d93256aa] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:46 default DEBUG ember_csi.common [req-51fc35bc-bd89-4bfb-bdc7-dbc4d93256aa] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:46 default INFO ember_csi.common [req-51fc35bc-bd89-4bfb-bdc7-dbc4d93256aa] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:46 default DEBUG ember_csi.common [req-51fc35bc-bd89-4bfb-bdc7-dbc4d93256aa] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:46 default INFO ember_csi.common [req-ec042ec3-9c00-47ea-8e60-cffe93bf5967] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:46 default DEBUG ember_csi.common [req-ec042ec3-9c00-47ea-8e60-cffe93bf5967] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:46 default INFO ember_csi.common [req-ec042ec3-9c00-47ea-8e60-cffe93bf5967] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:46 default DEBUG ember_csi.common [req-ec042ec3-9c00-47ea-8e60-cffe93bf5967] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:46 default INFO ember_csi.common [req-a50e6b72-b745-4f50-a1a7-c13256c8f5d0] =&gt; GRPC GetCapacity
+2019-12-16 17:08:46 default DEBUG ember_csi.common [req-a50e6b72-b745-4f50-a1a7-c13256c8f5d0] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:46 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-a50e6b72-b745-4f50-a1a7-c13256c8f5d0] ==&gt; get_volume_stats: call u"{'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;, 'refresh': True}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:46 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-a50e6b72-b745-4f50-a1a7-c13256c8f5d0] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:46 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-a50e6b72-b745-4f50-a1a7-c13256c8f5d0] 'Replication' requires a 'Remote Copy' license which is not installed. _check_license_enabled /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:1692
+2019-12-16 17:08:46.704 1 DEBUG paramiko.transport [-] starting thread (client mode): 0x4720dd0L _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.704 1 DEBUG paramiko.transport [-] Local version/idstring: SSH-2.0-paramiko_2.4.2 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.714 1 DEBUG paramiko.transport [-] Remote version/idstring: SSH-2.0-OpenSSH_6.6.1p1 Debian-4~bpo70+1 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.714 1 INFO paramiko.transport [-] Connected (version 2.0, client OpenSSH_6.6.1p1)
+2019-12-16 17:08:46.715 1 DEBUG paramiko.transport [-] kex algos:[u'diffie-hellman-group-exchange-sha256'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'chacha20-poly1305@openssh.com', u'aes256-gcm@openssh.com', u'aes128-gcm@openssh.com', u'aes256-ctr', u'aes192-ctr', u'aes128-ctr'] server encrypt:[u'chacha20-poly1305@openssh.com', u'aes256-gcm@openssh.com', u'aes128-gcm@openssh.com', u'aes256-ctr', u'aes192-ctr', u'aes128-ctr'] client mac:[u'hmac-sha2-512-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-512', u'hmac-sha2-256', u'hmac-ripemd160', u'umac-128@openssh.com'] server mac:[u'hmac-sha2-512-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-512', u'hmac-sha2-256', u'hmac-ripemd160', u'umac-128@openssh.com'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.716 1 DEBUG paramiko.transport [-] Kex agreed: diffie-hellman-group-exchange-sha256 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.716 1 DEBUG paramiko.transport [-] HostKey agreed: ssh-rsa _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.717 1 DEBUG paramiko.transport [-] Cipher agreed: aes128-ctr _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.717 1 DEBUG paramiko.transport [-] MAC agreed: hmac-sha2-256 _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.717 1 DEBUG paramiko.transport [-] Compression agreed: none _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.757 1 DEBUG paramiko.transport [-] Got server p (2048 bits) _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.843 1 DEBUG paramiko.transport [-] kex engine KexGexSHA256 specified hash_algo &lt;built-in function openssl_sha256&gt; _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.844 1 DEBUG paramiko.transport [-] Switch to new keys ... _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.885 1 DEBUG paramiko.transport [-] userauth is OK _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.912 1 INFO paramiko.transport [-] Authentication (password) successful!
+2019-12-16 17:08:46 default DEBUG paramiko.transport [req-a50e6b72-b745-4f50-a1a7-c13256c8f5d0] [chan 0] Max packet in: 32768 bytes _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:46.948 1 DEBUG paramiko.transport [-] [chan 0] Max packet out: 32768 bytes _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:46.948 1 DEBUG paramiko.transport [-] Secsh channel 0 opened. _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:46.953 1 DEBUG paramiko.transport [-] [chan 0] Sesch channel 0 request ok _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:46.955 1 DEBUG paramiko.transport [-] [chan 0] Sesch channel 0 request ok _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:47.565 1 DEBUG paramiko.transport [-] [chan 0] EOF received (0) _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:47.565 1 DEBUG paramiko.transport [-] [chan 0] EOF sent (0) _log /usr/lib/python2.7/site-packages/paramiko/channel.py:1194
+2019-12-16 17:08:47 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-a50e6b72-b745-4f50-a1a7-c13256c8f5d0] Disconnect from 3PAR REST and SSH 69673cad-ef47-419a-b7ac-7615b5cb0e2e client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:47.769 1 DEBUG paramiko.transport [-] EOF in transport thread _log /usr/lib/python2.7/site-packages/paramiko/transport.py:1746
+2019-12-16 17:08:47 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-a50e6b72-b745-4f50-a1a7-c13256c8f5d0] &lt;== get_volume_stats: return (1401ms) {'array_id': 139115, 'vendor_name': u'Hewlett Packard Enterprise', 'volume_backend_name': u'3par', 'driver_version': u'4.0.5', 'replication_targets': [], 'pools': [{'thick_provisioning_support': True, 'bandwidth': 26045.4, 'consistent_group_snapshot_enabled': True, 'latency': 0.58, 'filter_function': None, 'compression': True, 'total_volumes': 128, 'consistent_group_replication_enabled': False, 'free_capacity_gb': 5, 'queue_length': 0.0, 'backend_state': 'up', 'pool_name': 'SSD_r5', 'goodness_function': None, 'multiattach': True, 'provisioned_capacity_gb': 8418, 'thin_provisioning_support': True, 'io_size': 32.3, 'reserved_percentage': 0, 'QoS_support': True, 'capacity_utilization': 99.93986047630503, 'total_capacity_gb': 8314, 'location_info': u'HPE3PARDriver:CZ3836C3RB:SSD_r5', 'avg_busy_perc': 0.3, 'throughput': 806.8, 'max_over_subscription_ratio': '20.0'}], 'replication_enabled': False, 'storage_protocol': u'iSCSI'} trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:819
+2019-12-16 17:08:47 default INFO ember_csi.common [req-a50e6b72-b745-4f50-a1a7-c13256c8f5d0] &lt;= GRPC GetCapacity served in 1s
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-a50e6b72-b745-4f50-a1a7-c13256c8f5d0] Returns:
+		available_capacity: 5368709120 dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:47 default INFO ember_csi.common [req-dae18980-4361-45d5-8dad-8755748aa39e] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-dae18980-4361-45d5-8dad-8755748aa39e] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:47 default INFO ember_csi.common [req-dae18980-4361-45d5-8dad-8755748aa39e] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-dae18980-4361-45d5-8dad-8755748aa39e] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:47 default INFO ember_csi.common [req-c6b04ce4-9ed2-4849-9c1d-b6140411876e] =&gt; GRPC ListVolumes
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-c6b04ce4-9ed2-4849-9c1d-b6140411876e] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:47 default INFO ember_csi.common [req-c6b04ce4-9ed2-4849-9c1d-b6140411876e] &lt;= GRPC ListVolumes served in 0s
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-c6b04ce4-9ed2-4849-9c1d-b6140411876e] Returns:
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "68bdb5a9-8866-478e-b37c-5ba422058cb9"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "2862bdc7-46fe-4018-9a0e-2771c03b16b5"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "7ef1c960-e54a-4780-8b11-2c8b0cb6f8d8"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "bb8c5017-2c90-42ab-bc45-628bbeb271f4"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "1e70dcc8-0a62-4b7f-963f-ffbd646afcab"
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:47 default INFO ember_csi.common [req-8485b32f-acfc-438d-8c70-7071804dd185] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-8485b32f-acfc-438d-8c70-7071804dd185] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:47 default INFO ember_csi.common [req-8485b32f-acfc-438d-8c70-7071804dd185] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-8485b32f-acfc-438d-8c70-7071804dd185] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:47 default INFO ember_csi.common [req-687879b9-2e4a-4ad4-b817-25384dfcb1f1] =&gt; GRPC ListVolumes
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-687879b9-2e4a-4ad4-b817-25384dfcb1f1] With params:
+	starting_token: "invalid-token" dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:47 default ERROR ember_csi.common [req-687879b9-2e4a-4ad4-b817-25384dfcb1f1] !! GRPC ListVolumes failed in 0s with ABORTED (Invalid starting_token): Exception
+2019-12-16 17:08:47 default INFO ember_csi.common [req-c24db7f8-6ad6-4c46-9926-4b9a295c3f8b] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-c24db7f8-6ad6-4c46-9926-4b9a295c3f8b] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:47 default INFO ember_csi.common [req-c24db7f8-6ad6-4c46-9926-4b9a295c3f8b] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-c24db7f8-6ad6-4c46-9926-4b9a295c3f8b] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:47 default INFO ember_csi.common [req-67aae8f4-465a-4abe-b901-8e7ca48de148] =&gt; GRPC ListVolumes
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-67aae8f4-465a-4abe-b901-8e7ca48de148] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:47 default INFO ember_csi.common [req-67aae8f4-465a-4abe-b901-8e7ca48de148] &lt;= GRPC ListVolumes served in 0s
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-67aae8f4-465a-4abe-b901-8e7ca48de148] Returns:
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "68bdb5a9-8866-478e-b37c-5ba422058cb9"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "2862bdc7-46fe-4018-9a0e-2771c03b16b5"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "7ef1c960-e54a-4780-8b11-2c8b0cb6f8d8"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "bb8c5017-2c90-42ab-bc45-628bbeb271f4"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "1e70dcc8-0a62-4b7f-963f-ffbd646afcab"
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:47 default INFO ember_csi.common [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] =&gt; GRPC CreateVolume sanity
+2019-12-16 17:08:47 default DEBUG ember_csi.common [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] With params:
+	name: "sanity"
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:47 default DEBUG ember_csi.base [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] Creating volume sanity CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:47 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:47Z,deleted=False,deleted_at=None,display_description='',display_name='sanity',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=a52283af-6d2d-41e7-95b4-e2148e7f072e,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=1,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:47 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] CREATE VOLUME (sanity: volume-a52283af-6d2d-41e7-95b4-e2148e7f072e osv-pSKDr20tQeeVtOIUjn8HLg on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:48 default DEBUG hpe3parclient.client [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] Parameters passed for create volume {'comment': '{"display_name": "sanity", "type": "OpenStack", "name": "volume-a52283af-6d2d-41e7-95b4-e2148e7f072e", "volume_id": "a52283af-6d2d-41e7-95b4-e2148e7f072e"}', 'sizeMiB': 1024, 'tpvv': True, 'name': u'osv-pSKDr20tQeeVtOIUjn8HLg', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:48 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] Disconnect from 3PAR REST and SSH ab72441d-bf9d-4896-bc09-3584f72d09a2 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] &lt;== create_volume: exception (252ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:48 default ERROR ember_csi.common [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:48 default ERROR grpc._server [req-5a823c17-9b79-4cc9-bf51-d65ee47bc9e9] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:48.112 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:48.112 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:48.112 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:48.112 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:48.112 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:48.112 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:48.112 1 ERROR grpc._server     **params)
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:48.112 1 ERROR grpc._server     **params)
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:48.112 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:48.112 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:48.112 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:48.112 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:48.112 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:48.112 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:48.112 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:48.112 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:48.112 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:48.112 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:48.112 1 ERROR grpc._server 
+2019-12-16 17:08:48 default INFO ember_csi.common [req-e8a53034-7196-4ec7-a826-675ae6c2f353] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-e8a53034-7196-4ec7-a826-675ae6c2f353] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default INFO ember_csi.common [req-e8a53034-7196-4ec7-a826-675ae6c2f353] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-e8a53034-7196-4ec7-a826-675ae6c2f353] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:48 default INFO ember_csi.common [req-a10ac3f1-990e-4b04-a739-185d91ae5687] =&gt; GRPC ListVolumes
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-a10ac3f1-990e-4b04-a739-185d91ae5687] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default INFO ember_csi.common [req-a10ac3f1-990e-4b04-a739-185d91ae5687] &lt;= GRPC ListVolumes served in 0s
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-a10ac3f1-990e-4b04-a739-185d91ae5687] Returns:
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "68bdb5a9-8866-478e-b37c-5ba422058cb9"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "2862bdc7-46fe-4018-9a0e-2771c03b16b5"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "7ef1c960-e54a-4780-8b11-2c8b0cb6f8d8"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "bb8c5017-2c90-42ab-bc45-628bbeb271f4"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "1e70dcc8-0a62-4b7f-963f-ffbd646afcab"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 1073741824
+		    volume_id: "a52283af-6d2d-41e7-95b4-e2148e7f072e"
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:48 default INFO ember_csi.common [req-f7ab6f2b-d174-4af4-9451-f366b3789fdc] =&gt; GRPC ListVolumes
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-f7ab6f2b-d174-4af4-9451-f366b3789fdc] With params:
+	max_entries: 2 dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default INFO ember_csi.common [req-f7ab6f2b-d174-4af4-9451-f366b3789fdc] &lt;= GRPC ListVolumes served in 0s
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-f7ab6f2b-d174-4af4-9451-f366b3789fdc] Returns:
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "68bdb5a9-8866-478e-b37c-5ba422058cb9"
+		  }
+		}
+		entries {
+		  volume {
+		    capacity_bytes: 10737418240
+		    volume_id: "2862bdc7-46fe-4018-9a0e-2771c03b16b5"
+		  }
+		}
+		next_token: "1576516125213760000" dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:48 default INFO ember_csi.common [req-cb5f77fc-9690-4af4-be99-b9a7009970ec] =&gt; GRPC DeleteVolume 68bdb5a9-8866-478e-b37c-5ba422058cb9
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-cb5f77fc-9690-4af4-be99-b9a7009970ec] With params:
+	volume_id: "68bdb5a9-8866-478e-b37c-5ba422058cb9" dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default DEBUG ember_csi.base [req-cb5f77fc-9690-4af4-be99-b9a7009970ec] Deleting volume 68bdb5a9-8866-478e-b37c-5ba422058cb9 DeleteVolume /ember-csi/ember_csi/base.py:453
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-cb5f77fc-9690-4af4-be99-b9a7009970ec] ==&gt; delete_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:44Z,deleted=False,deleted_at=None,display_description='',display_name='DeleteSnapshot-volume-1',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=68bdb5a9-8866-478e-b37c-5ba422058cb9,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=10,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='error',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-cb5f77fc-9690-4af4-be99-b9a7009970ec] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:48 default WARNING cinder.volume.drivers.hpe.hpe_3par_common [req-cb5f77fc-9690-4af4-be99-b9a7009970ec] Delete volume id not found. Removing from cinder: 68bdb5a9-8866-478e-b37c-5ba422058cb9 Ex: Not found (HTTP 404) 23 - volume does not exist: HTTPNotFound: Not found (HTTP 404) 23 - volume does not exist
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-cb5f77fc-9690-4af4-be99-b9a7009970ec] Disconnect from 3PAR REST and SSH 8a33a3da-5ea9-4773-b282-397906fe4535 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-cb5f77fc-9690-4af4-be99-b9a7009970ec] &lt;== delete_volume: return (236ms) None trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:819
+2019-12-16 17:08:48 default INFO ember_csi.common [req-cb5f77fc-9690-4af4-be99-b9a7009970ec] &lt;= GRPC DeleteVolume served in 0s
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-cb5f77fc-9690-4af4-be99-b9a7009970ec] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:48 default INFO ember_csi.common [req-cbcb517a-29a3-4a2e-a866-3e3fbdb79187] =&gt; GRPC DeleteVolume 2862bdc7-46fe-4018-9a0e-2771c03b16b5
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-cbcb517a-29a3-4a2e-a866-3e3fbdb79187] With params:
+	volume_id: "2862bdc7-46fe-4018-9a0e-2771c03b16b5" dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default DEBUG ember_csi.base [req-cbcb517a-29a3-4a2e-a866-3e3fbdb79187] Deleting volume 2862bdc7-46fe-4018-9a0e-2771c03b16b5 DeleteVolume /ember-csi/ember_csi/base.py:453
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-cbcb517a-29a3-4a2e-a866-3e3fbdb79187] ==&gt; delete_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:45Z,deleted=False,deleted_at=None,display_description='',display_name='listSnapshots-volume-1',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=2862bdc7-46fe-4018-9a0e-2771c03b16b5,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=10,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='error',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-cbcb517a-29a3-4a2e-a866-3e3fbdb79187] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:48 default WARNING cinder.volume.drivers.hpe.hpe_3par_common [req-cbcb517a-29a3-4a2e-a866-3e3fbdb79187] Delete volume id not found. Removing from cinder: 2862bdc7-46fe-4018-9a0e-2771c03b16b5 Ex: Not found (HTTP 404) 23 - volume does not exist: HTTPNotFound: Not found (HTTP 404) 23 - volume does not exist
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-cbcb517a-29a3-4a2e-a866-3e3fbdb79187] Disconnect from 3PAR REST and SSH dfe08c9d-7c4d-451a-9c0b-363d6485fde2 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-cbcb517a-29a3-4a2e-a866-3e3fbdb79187] &lt;== delete_volume: return (229ms) None trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:819
+2019-12-16 17:08:48 default INFO ember_csi.common [req-cbcb517a-29a3-4a2e-a866-3e3fbdb79187] &lt;= GRPC DeleteVolume served in 0s
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-cbcb517a-29a3-4a2e-a866-3e3fbdb79187] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:48 default INFO ember_csi.common [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] =&gt; GRPC CreateVolume new-addition
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] With params:
+	name: "new-addition"
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default DEBUG ember_csi.base [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] Creating volume new-addition CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:48Z,deleted=False,deleted_at=None,display_description='',display_name='new-addition',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=83050f6d-b60b-4ce7-8963-558ab7b007fe,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=1,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] CREATE VOLUME (new-addition: volume-83050f6d-b60b-4ce7-8963-558ab7b007fe osv-gwUPbbYLTOeJY1WKt7AH-g on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:48 default DEBUG hpe3parclient.client [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] Parameters passed for create volume {'comment': '{"display_name": "new-addition", "type": "OpenStack", "name": "volume-83050f6d-b60b-4ce7-8963-558ab7b007fe", "volume_id": "83050f6d-b60b-4ce7-8963-558ab7b007fe"}', 'sizeMiB': 1024, 'tpvv': True, 'name': u'osv-gwUPbbYLTOeJY1WKt7AH-g', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:48 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] Disconnect from 3PAR REST and SSH 4dd772f2-9690-4ae4-9790-a0a44df87a22 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] &lt;== create_volume: exception (247ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:48 default ERROR ember_csi.common [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:48 default ERROR grpc._server [req-869614eb-34d4-4cf4-8fe2-b626ce611b08] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:48.875 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:48.875 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:48.875 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:48.875 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:48.875 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:48.875 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:48.875 1 ERROR grpc._server     **params)
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:48.875 1 ERROR grpc._server     **params)
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:48.875 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:48.875 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:48.875 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:48.875 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:48.875 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:48.875 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:48.875 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:48.875 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:48.875 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:48.875 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:48.875 1 ERROR grpc._server 
+2019-12-16 17:08:48 default INFO ember_csi.common [req-02c5ca25-503b-4bed-9514-3a23b78fbdee] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-02c5ca25-503b-4bed-9514-3a23b78fbdee] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default INFO ember_csi.common [req-02c5ca25-503b-4bed-9514-3a23b78fbdee] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-02c5ca25-503b-4bed-9514-3a23b78fbdee] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:48 default INFO ember_csi.common [req-b9557d5e-6078-443e-a25f-55820fd294fa] =&gt; GRPC CreateVolume 
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-b9557d5e-6078-443e-a25f-55820fd294fa] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default ERROR ember_csi.common [req-b9557d5e-6078-443e-a25f-55820fd294fa] !! GRPC CreateVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: volume_capabilities, name): Exception
+2019-12-16 17:08:48 default INFO ember_csi.common [req-c1a6fd4f-4ff3-48ab-a80a-55a7aa8ba265] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-c1a6fd4f-4ff3-48ab-a80a-55a7aa8ba265] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default INFO ember_csi.common [req-c1a6fd4f-4ff3-48ab-a80a-55a7aa8ba265] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-c1a6fd4f-4ff3-48ab-a80a-55a7aa8ba265] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:48 default INFO ember_csi.common [req-d6269fd4-33d0-4e1f-a185-d4168ca4f087] =&gt; GRPC CreateVolume sanity-controller-create-no-volume-capabilities-44F4D0CD-572615E8
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-d6269fd4-33d0-4e1f-a185-d4168ca4f087] With params:
+	name: "sanity-controller-create-no-volume-capabilities-44F4D0CD-572615E8" dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default ERROR ember_csi.common [req-d6269fd4-33d0-4e1f-a185-d4168ca4f087] !! GRPC CreateVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: volume_capabilities): Exception
+2019-12-16 17:08:48 default INFO ember_csi.common [req-be73e81f-ec0b-48e9-a5d3-e7a85f2064f7] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-be73e81f-ec0b-48e9-a5d3-e7a85f2064f7] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default INFO ember_csi.common [req-be73e81f-ec0b-48e9-a5d3-e7a85f2064f7] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-be73e81f-ec0b-48e9-a5d3-e7a85f2064f7] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:48 default INFO ember_csi.common [req-c03ef4b9-411e-4605-862a-8ecc712060df] =&gt; GRPC CreateVolume sanity-controller-create-single-no-capacity-44F4D0CD-572615E8
+2019-12-16 17:08:48 default DEBUG ember_csi.common [req-c03ef4b9-411e-4605-862a-8ecc712060df] With params:
+	name: "sanity-controller-create-single-no-capacity-44F4D0CD-572615E8"
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:48 default DEBUG ember_csi.base [req-c03ef4b9-411e-4605-862a-8ecc712060df] Creating volume sanity-controller-create-single-no-capacity-44F4D0CD-572615E8 CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:48 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-c03ef4b9-411e-4605-862a-8ecc712060df] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:48Z,deleted=False,deleted_at=None,display_description='',display_name='sanity-controller-create-single-no-capacity-44F4D0CD-572615E8',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=72aa0b45-8b39-4cd5-a7c3-2818f34b3613,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=1,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-c03ef4b9-411e-4605-862a-8ecc712060df] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-c03ef4b9-411e-4605-862a-8ecc712060df] CREATE VOLUME (sanity-controller-create-single-no-capacity-44F4D0CD-572615E8: volume-72aa0b45-8b39-4cd5-a7c3-2818f34b3613 osv-cqoLRYs5TNWnwygY80s2Ew on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:49 default DEBUG hpe3parclient.client [req-c03ef4b9-411e-4605-862a-8ecc712060df] Parameters passed for create volume {'comment': '{"display_name": "sanity-controller-create-single-no-capacity-44F4D0CD-572615E8", "type": "OpenStack", "name": "volume-72aa0b45-8b39-4cd5-a7c3-2818f34b3613", "volume_id": "72aa0b45-8b39-4cd5-a7c3-2818f34b3613"}', 'sizeMiB': 1024, 'tpvv': True, 'name': u'osv-cqoLRYs5TNWnwygY80s2Ew', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:49 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-c03ef4b9-411e-4605-862a-8ecc712060df] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-c03ef4b9-411e-4605-862a-8ecc712060df] Disconnect from 3PAR REST and SSH 28c28d5a-2dde-4f78-ac7c-21d2e80c648e client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-c03ef4b9-411e-4605-862a-8ecc712060df] &lt;== create_volume: exception (256ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:49 default ERROR ember_csi.common [req-c03ef4b9-411e-4605-862a-8ecc712060df] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49 default ERROR grpc._server [req-c03ef4b9-411e-4605-862a-8ecc712060df] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49.181 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:49.181 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:49.181 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:49.181 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:49.181 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:49.181 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:49.181 1 ERROR grpc._server     **params)
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:49.181 1 ERROR grpc._server     **params)
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:49.181 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:49.181 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:49.181 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:49.181 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:49.181 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:49.181 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:49.181 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:49.181 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:49.181 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:49.181 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49.181 1 ERROR grpc._server 
+2019-12-16 17:08:49 default INFO ember_csi.common [req-752c8ef3-fdf0-47db-98f7-fa1a2e545b9b] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:49 default DEBUG ember_csi.common [req-752c8ef3-fdf0-47db-98f7-fa1a2e545b9b] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:49 default INFO ember_csi.common [req-752c8ef3-fdf0-47db-98f7-fa1a2e545b9b] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:49 default DEBUG ember_csi.common [req-752c8ef3-fdf0-47db-98f7-fa1a2e545b9b] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:49 default INFO ember_csi.common [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] =&gt; GRPC CreateVolume sanity-controller-create-single-with-capacity-44F4D0CD-572615E8
+2019-12-16 17:08:49 default DEBUG ember_csi.common [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] With params:
+	name: "sanity-controller-create-single-with-capacity-44F4D0CD-572615E8"
+	capacity_range {
+	  required_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:49 default DEBUG ember_csi.base [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] Creating volume sanity-controller-create-single-with-capacity-44F4D0CD-572615E8 CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:49Z,deleted=False,deleted_at=None,display_description='',display_name='sanity-controller-create-single-with-capacity-44F4D0CD-572615E8',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=97973c9d-1f89-4a7b-8a8f-7b992ee9d586,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=10,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] CREATE VOLUME (sanity-controller-create-single-with-capacity-44F4D0CD-572615E8: volume-97973c9d-1f89-4a7b-8a8f-7b992ee9d586 osv-l5c8nR.JSnuKj3uZLunVhg on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:49 default DEBUG hpe3parclient.client [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] Parameters passed for create volume {'comment': '{"display_name": "sanity-controller-create-single-with-capacity-44F4D0CD-572615E8", "type": "OpenStack", "name": "volume-97973c9d-1f89-4a7b-8a8f-7b992ee9d586", "volume_id": "97973c9d-1f89-4a7b-8a8f-7b992ee9d586"}', 'sizeMiB': 10240, 'tpvv': True, 'name': u'osv-l5c8nR.JSnuKj3uZLunVhg', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:49 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] Disconnect from 3PAR REST and SSH f34de5d7-137b-4cfd-80db-a3d4f0d9db4c client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] &lt;== create_volume: exception (255ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:49 default ERROR ember_csi.common [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49 default ERROR grpc._server [req-90ec1f7c-4f56-47a6-8774-84f6de26a8fc] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49.465 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:49.465 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:49.465 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:49.465 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:49.465 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:49.465 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:49.465 1 ERROR grpc._server     **params)
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:49.465 1 ERROR grpc._server     **params)
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:49.465 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:49.465 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:49.465 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:49.465 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:49.465 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:49.465 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:49.465 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:49.465 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:49.465 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:49.465 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49.465 1 ERROR grpc._server 
+2019-12-16 17:08:49 default INFO ember_csi.common [req-e70ce9c0-0042-40a1-9e35-8075203de890] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:49 default DEBUG ember_csi.common [req-e70ce9c0-0042-40a1-9e35-8075203de890] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:49 default INFO ember_csi.common [req-e70ce9c0-0042-40a1-9e35-8075203de890] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:49 default DEBUG ember_csi.common [req-e70ce9c0-0042-40a1-9e35-8075203de890] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:49 default INFO ember_csi.common [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] =&gt; GRPC CreateVolume sanity-controller-create-twice-44F4D0CD-572615E8
+2019-12-16 17:08:49 default DEBUG ember_csi.common [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] With params:
+	name: "sanity-controller-create-twice-44F4D0CD-572615E8"
+	capacity_range {
+	  required_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:49 default DEBUG ember_csi.base [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] Creating volume sanity-controller-create-twice-44F4D0CD-572615E8 CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:49Z,deleted=False,deleted_at=None,display_description='',display_name='sanity-controller-create-twice-44F4D0CD-572615E8',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=d786dc98-935d-4179-adb1-77dda3adfd04,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=10,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] CREATE VOLUME (sanity-controller-create-twice-44F4D0CD-572615E8: volume-d786dc98-935d-4179-adb1-77dda3adfd04 osv-14bcmJNdQXmtsXfdo639BA on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:49 default DEBUG hpe3parclient.client [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] Parameters passed for create volume {'comment': '{"display_name": "sanity-controller-create-twice-44F4D0CD-572615E8", "type": "OpenStack", "name": "volume-d786dc98-935d-4179-adb1-77dda3adfd04", "volume_id": "d786dc98-935d-4179-adb1-77dda3adfd04"}', 'sizeMiB': 10240, 'tpvv': True, 'name': u'osv-14bcmJNdQXmtsXfdo639BA', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:49 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] Disconnect from 3PAR REST and SSH 91805d07-4d3c-4ec4-81a3-bb60c265c4ff client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] &lt;== create_volume: exception (257ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:49 default ERROR ember_csi.common [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49 default ERROR grpc._server [req-9ecb28b8-eb80-425b-a5f5-e9d7d73a25bd] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49.742 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:49.742 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:49.742 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:49.742 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:49.742 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:49.742 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:49.742 1 ERROR grpc._server     **params)
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:49.742 1 ERROR grpc._server     **params)
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:49.742 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:49.742 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:49.742 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:49.742 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:49.742 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:49.742 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:49.742 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:49.742 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:49.742 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:49.742 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49.742 1 ERROR grpc._server 
+2019-12-16 17:08:49 default INFO ember_csi.common [req-794aa987-1e70-4e45-b608-66653a226343] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:49 default DEBUG ember_csi.common [req-794aa987-1e70-4e45-b608-66653a226343] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:49 default INFO ember_csi.common [req-794aa987-1e70-4e45-b608-66653a226343] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:49 default DEBUG ember_csi.common [req-794aa987-1e70-4e45-b608-66653a226343] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:49 default INFO ember_csi.common [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] =&gt; GRPC CreateVolume sanity-controller-create-twice-different-44F4D0CD-572615E8
+2019-12-16 17:08:49 default DEBUG ember_csi.common [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] With params:
+	name: "sanity-controller-create-twice-different-44F4D0CD-572615E8"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:49 default DEBUG ember_csi.base [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] Creating volume sanity-controller-create-twice-different-44F4D0CD-572615E8 CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:49Z,deleted=False,deleted_at=None,display_description='',display_name='sanity-controller-create-twice-different-44F4D0CD-572615E8',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=3fd6b583-5cb1-4029-bcae-38ba5bb5c334,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=10,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] CREATE VOLUME (sanity-controller-create-twice-different-44F4D0CD-572615E8: volume-3fd6b583-5cb1-4029-bcae-38ba5bb5c334 osv-P9a1g1yxQCm8rji6W7XDNA on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:49 default DEBUG hpe3parclient.client [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] Parameters passed for create volume {'comment': '{"display_name": "sanity-controller-create-twice-different-44F4D0CD-572615E8", "type": "OpenStack", "name": "volume-3fd6b583-5cb1-4029-bcae-38ba5bb5c334", "volume_id": "3fd6b583-5cb1-4029-bcae-38ba5bb5c334"}', 'sizeMiB': 10240, 'tpvv': True, 'name': u'osv-P9a1g1yxQCm8rji6W7XDNA', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:49 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:49 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] Disconnect from 3PAR REST and SSH bfdf10e9-295e-4d35-b72a-c259f483f883 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:50 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] &lt;== create_volume: exception (258ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:50 default ERROR ember_csi.common [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:50 default ERROR grpc._server [req-98d949c4-df26-4e93-baf3-4b9f0771ff25] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:50.025 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:50.025 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:50.025 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:50.025 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:50.025 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:50.025 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:50.025 1 ERROR grpc._server     **params)
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:50.025 1 ERROR grpc._server     **params)
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:50.025 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:50.025 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:50.025 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:50.025 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:50.025 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:50.025 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:50.025 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:50.025 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:50.025 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:50.025 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:50.025 1 ERROR grpc._server 
+2019-12-16 17:08:50 default INFO ember_csi.common [req-84eb14e2-1df7-4fa0-ad5d-4eaff7dc8adf] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:50 default DEBUG ember_csi.common [req-84eb14e2-1df7-4fa0-ad5d-4eaff7dc8adf] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:50 default INFO ember_csi.common [req-84eb14e2-1df7-4fa0-ad5d-4eaff7dc8adf] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:50 default DEBUG ember_csi.common [req-84eb14e2-1df7-4fa0-ad5d-4eaff7dc8adf] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2019-12-16 17:08:50 default INFO ember_csi.common [req-7dafa075-6f79-4892-8683-f86885725502] =&gt; GRPC CreateVolume aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+2019-12-16 17:08:50 default DEBUG ember_csi.common [req-7dafa075-6f79-4892-8683-f86885725502] With params:
+	name: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+	capacity_range {
+	  required_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:50 default DEBUG ember_csi.base [req-7dafa075-6f79-4892-8683-f86885725502] Creating volume aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa CreateVolume /ember-csi/ember_csi/base.py:397
+2019-12-16 17:08:50 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-7dafa075-6f79-4892-8683-f86885725502] ==&gt; create_volume: call u"{'volume': Volume(_name_id=None,admin_metadata={},attach_status='detached',availability_zone=None,bootable=False,cluster=None,cluster_name=None,consistencygroup=None,consistencygroup_id=None,created_at=2019-12-16T17:08:50Z,deleted=False,deleted_at=None,display_description='',display_name='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',ec2_id=None,encryption_key_id=***'libvirt0@3par#SSD_r5',id=f764a2b5-8e75-4980-b774-09719cd7afaa,launched_at=None,metadata={},migration_status=None,multiattach=False,previous_status=None,project_id='io.ember-csi',provider_auth=None,provider_geometry=None,provider_id=None,provider_location=None,replication_driver_data=None,replication_extended_status=None,replication_status=None,scheduled_at=None,service_uuid=None,shared_targets=True,size=10,snapshot_id=None,snapshots=SnapshotList,source_volid=None,status='creating',terminated_at=None,updated_at=None,user_id='io.ember-csi',volume_attachment=VolumeAttachmentList,volume_type=None,volume_type_id=None), 'self': &lt;cinder.volume.drivers.hpe.hpe_3par_iscsi.HPE3PARISCSIDriver object at 0x7f5f08c2a190&gt;}" trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:794
+2019-12-16 17:08:50 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-7dafa075-6f79-4892-8683-f86885725502] Connecting to 3PAR client_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:410
+2019-12-16 17:08:50 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-7dafa075-6f79-4892-8683-f86885725502] CREATE VOLUME (aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa: volume-f764a2b5-8e75-4980-b774-09719cd7afaa osv-92SitY51SYC3dAlxnNevqg on libvirt0@3par#SSD_r5) create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:2236
+2019-12-16 17:08:50 default DEBUG hpe3parclient.client [req-7dafa075-6f79-4892-8683-f86885725502] Parameters passed for create volume {'comment': '{"display_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "type": "OpenStack", "name": "volume-f764a2b5-8e75-4980-b774-09719cd7afaa", "volume_id": "f764a2b5-8e75-4980-b774-09719cd7afaa"}', 'sizeMiB': 10240, 'tpvv': True, 'name': u'osv-92SitY51SYC3dAlxnNevqg', 'tdvv': False, 'snapCPG': u'SSD_r5', 'cpg': u'SSD_r5'} createVolume /usr/lib/python2.7/site-packages/hpe3parclient/client.py:575
+2019-12-16 17:08:50 default ERROR cinder.volume.drivers.hpe.hpe_3par_common [req-7dafa075-6f79-4892-8683-f86885725502] Exception: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5: HTTPBadRequest: Bad request (HTTP 400) 29 - Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:50 default DEBUG cinder.volume.drivers.hpe.hpe_3par_common [req-7dafa075-6f79-4892-8683-f86885725502] Disconnect from 3PAR REST and SSH 7469d46b-666f-4d27-9a45-642781d35532 client_logout /usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py:434
+2019-12-16 17:08:50 default DEBUG cinder.volume.drivers.hpe.hpe_3par_iscsi [req-7dafa075-6f79-4892-8683-f86885725502] &lt;== create_volume: exception (262ms) Invalid(u'Error: Insufficient SD space in CPG SSD_r5',) trace_logging_wrapper /usr/lib/python2.7/site-packages/cinder/utils.py:804
+2019-12-16 17:08:50 default ERROR ember_csi.common [req-7dafa075-6f79-4892-8683-f86885725502] !! GRPC CreateVolume failed in 0s with Unexpected exception (Unacceptable parameters.)
+	Traceback (most recent call last):
+	  File "/ember-csi/ember_csi/common.py", line 129, in dolog
+	    result = f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 224, in checker
+	    return f(self, request, context)
+	  File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+	    return func(self, request, context)
+	  File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+	    **params)
+	  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+	    **params)
+	  File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+	    vol = self.backend.create_volume(size=vol_size, name=name, **params)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+	    vol.create()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+	    self._raise_with_resource()
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+	    six.reraise(*exc_info)
+	  File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+	    model_update = self.backend.driver.create_volume(self._ovo)
+	  File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+	    result = f(*args, **kwargs)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+	    return common.create_volume(volume)
+	  File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+	    raise exception.Invalid(ex.get_description())
+	Invalid: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:50 default ERROR grpc._server [req-7dafa075-6f79-4892-8683-f86885725502] Exception calling application: Error: Insufficient SD space in CPG SSD_r5: Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:50.312 1 ERROR grpc._server Traceback (most recent call last):
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/usr/lib64/python2.7/site-packages/grpc/_server.py", line 389, in _call_behavior
+2019-12-16 17:08:50.312 1 ERROR grpc._server     return behavior(argument, context), True
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 165, in wrapper
+2019-12-16 17:08:50.312 1 ERROR grpc._server     return f(*args, **kwargs)
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 129, in dolog
+2019-12-16 17:08:50.312 1 ERROR grpc._server     result = f(self, request, context)
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 224, in checker
+2019-12-16 17:08:50.312 1 ERROR grpc._server     return f(self, request, context)
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/ember-csi/ember_csi/common.py", line 76, in wrapper
+2019-12-16 17:08:50.312 1 ERROR grpc._server     return func(self, request, context)
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 401, in CreateVolume
+2019-12-16 17:08:50.312 1 ERROR grpc._server     **params)
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 78, in _create_volume
+2019-12-16 17:08:50.312 1 ERROR grpc._server     **params)
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/ember-csi/ember_csi/base.py", line 365, in _create_volume
+2019-12-16 17:08:50.312 1 ERROR grpc._server     vol = self.backend.create_volume(size=vol_size, name=name, **params)
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 157, in create_volume
+2019-12-16 17:08:50.312 1 ERROR grpc._server     vol.create()
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 457, in create
+2019-12-16 17:08:50.312 1 ERROR grpc._server     self._raise_with_resource()
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 224, in _raise_with_resource
+2019-12-16 17:08:50.312 1 ERROR grpc._server     six.reraise(*exc_info)
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinderlib/objects.py", line 450, in create
+2019-12-16 17:08:50.312 1 ERROR grpc._server     model_update = self.backend.driver.create_volume(self._ovo)
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/utils.py", line 798, in trace_logging_wrapper
+2019-12-16 17:08:50.312 1 ERROR grpc._server     result = f(*args, **kwargs)
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_base.py", line 153, in create_volume
+2019-12-16 17:08:50.312 1 ERROR grpc._server     return common.create_volume(volume)
+2019-12-16 17:08:50.312 1 ERROR grpc._server   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/hpe/hpe_3par_common.py", line 2332, in create_volume
+2019-12-16 17:08:50.312 1 ERROR grpc._server     raise exception.Invalid(ex.get_description())
+2019-12-16 17:08:50.312 1 ERROR grpc._server Invalid: Error: Insufficient SD space in CPG SSD_r5
+2019-12-16 17:08:50.312 1 ERROR grpc._server 
+2019-12-16 17:08:50 default INFO ember_csi.common [req-e022e4dd-9361-41a2-aec0-8d78a3902882] =&gt; GRPC ControllerGetCapabilities
+2019-12-16 17:08:50 default DEBUG ember_csi.common [req-e022e4dd-9361-41a2-aec0-8d78a3902882] Without params dolog /ember-csi/ember_csi/common.py:127
+2019-12-16 17:08:50 default INFO ember_csi.common [req-e022e4dd-9361-41a2-aec0-8d78a3902882] &lt;= GRPC ControllerGetCapabilities served in 0s
+2019-12-16 17:08:50 default DEBUG ember_csi.common [req-e022e4dd-9361-41a2-aec0-8d78a3902882] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+
+</pre>
+</body>
+
+</html>
