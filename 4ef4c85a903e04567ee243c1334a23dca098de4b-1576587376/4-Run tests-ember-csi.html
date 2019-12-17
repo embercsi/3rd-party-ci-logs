@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+Traceback (most recent call last):
+  File "/usr/bin/ember-csi", line 9, in &lt;module&gt;
+    load_entry_point('ember-csi==master-17122019151018531814892', 'console_scripts', 'ember-csi')()
+  File "/ember-csi/ember_csi/ember_csi.py", line 79, in main
+    node_id=node_id)
+  File "/ember-csi/ember_csi/v1_0_0/csi.py", line 55, in __init__
+    ember_config=ember_config)
+  File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 42, in __init__
+    **kwargs)
+  File "/ember-csi/ember_csi/base.py", line 308, in __init__
+    **ember_config)
+  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 371, in global_setup
+    cls._set_cinder_config(host, file_locks_path, cinder_config_params)
+  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 237, in _set_cinder_config
+    cls.__set_parser_kv(cinder_config_params, 'DEFAULT')
+  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 339, in __set_parser_kv
+    string_val = cls.__convert_option_to_string(key, val, opts)
+  File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 302, in __convert_option_to_string
+    opt = opts[key]['opt']
+KeyError: 'default_log_levels'
+Exception AttributeError: "'NoneType' object has no attribute 'getcurrent'" in &lt;function _removeHandlerRef at 0x7f141bbac9b0&gt; ignored
+
+</pre>
+</body>
+
+</html>
