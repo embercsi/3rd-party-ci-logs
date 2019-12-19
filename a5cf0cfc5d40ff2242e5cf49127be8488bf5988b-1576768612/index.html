@@ -1,0 +1,12 @@
+<html><head></head><body>
+<script>
+document.write('<p>pull request: <a href="https://github.com/embercsi/ember-csi/pull/150">https://github.com/embercsi/ember-csi/pull/150</a><br>result: -1<br>started at: 2019-12-19 15:16:52+00:00<br>completed at: 2019-12-19 15:35:33.457996+00:00<br>revision: a5cf0cfc5d40ff2242e5cf49127be8488bf5988b<br>got_revision: 65e3f1b8cceafee153722ff612691853f5f3b04a</p>');var files = ['0-worker_preparation.html', '1-Retrieve code.html', '2-Send driver-cfg.html', '3-Build image.html', '4-Run tests.html', '4-Run tests-ember-csi.html'];
+var sizes = [39, 7433, 39, 280945, 108151, 1279581];
+var body = "";
+var url = window.location.href;
+if (url.endsWith(".html"))
+    url = url.substring(0, url.lastIndexOf("/"));
+for (var i = 0; i < files.length; i++)
+    body += "<a href=\"" + url + "/" + files[i] + "\">"+ files[i] +"<\a> "+ sizes[i] +" bytes<br>";
+document.write(body);
+</script></body></html>
