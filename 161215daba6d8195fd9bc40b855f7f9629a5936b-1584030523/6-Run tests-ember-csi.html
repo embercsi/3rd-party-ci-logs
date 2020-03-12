@@ -1,0 +1,1365 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+2020-03-12 16:40:11 default DEBUG cinder.volume.drivers.rbd [-] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:11 default ERROR cinder.volume.drivers.rbd [-] Error connecting to ceph cluster.: ObjectNotFound: error opening pool 'rbd'
+2020-03-12 16:40:11.896 1 ERROR cinder.volume.drivers.rbd Traceback (most recent call last):
+2020-03-12 16:40:11.896 1 ERROR cinder.volume.drivers.rbd   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py", line 429, in _do_conn
+2020-03-12 16:40:11.896 1 ERROR cinder.volume.drivers.rbd     ioctx = client.open_ioctx(pool)
+2020-03-12 16:40:11.896 1 ERROR cinder.volume.drivers.rbd   File "rados.pyx", line 425, in rados.requires.wrapper.validate_func (rados.c:4106)
+2020-03-12 16:40:11.896 1 ERROR cinder.volume.drivers.rbd   File "rados.pyx", line 1103, in rados.Rados.open_ioctx (rados.c:11807)
+2020-03-12 16:40:11.896 1 ERROR cinder.volume.drivers.rbd ObjectNotFound: error opening pool 'rbd'
+2020-03-12 16:40:11.896 1 ERROR cinder.volume.drivers.rbd 
+2020-03-12 16:40:11 default DEBUG cinder.utils [-] Failed attempt 1 _print_stop /usr/lib/python2.7/site-packages/cinder/utils.py:680
+2020-03-12 16:40:11 default DEBUG cinder.utils [-] Have been at this for 0.095 seconds _print_stop /usr/lib/python2.7/site-packages/cinder/utils.py:682
+2020-03-12 16:40:11 default DEBUG cinder.utils [-] Sleeping for 10.0 seconds _backoff_sleep /usr/lib/python2.7/site-packages/cinder/utils.py:674
+2020-03-12 16:40:21 default DEBUG cinder.volume.drivers.rbd [-] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:21 default DEBUG cinder.volume.drivers.rbd [-] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:21 default DEBUG cinder.volume.drivers.rbd [-] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:22 default DEBUG cinder.volume.drivers.rbd [-] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:22 default INFO cinder.volume.driver [-] Driver hasn't implemented _init_vendor_properties()
+2020-03-12 16:40:22 default DEBUG cinder.volume.driver [-] Initialized capabilities list: {'location_info': u'ceph:/etc/ceph/ceph.conf:3f774c37-9a68-49cb-9981-ceeb3c9d2d81:admin:rbd', 'multiattach': True, 'provisioned_capacity_gb': 0.0, 'volume_backend_name': u'ceph', 'thin_provisioning_support': True, 'free_capacity_gb': 8.5, 'driver_version': '1.2.0', 'total_capacity_gb': 8.5, 'vendor_name': 'Open Source', 'reserved_percentage': 0, 'max_over_subscription_ratio': '20.0', 'replication_enabled': False, 'properties': {'replication_enabled': {'type': 'boolean', 'description': u'Enables replication.', 'title': 'Replication'}, 'qos': {'type': 'boolean', 'description': u'Enables QoS.', 'title': 'QoS'}, 'compression': {'type': 'boolean', 'description': u'Enables compression.', 'title': 'Compression'}, 'thin_provisioning': {'type': 'boolean', 'description': u'Sets thin provisioning.', 'title': 'Thin Provisioning'}}, 'storage_protocol': 'ceph', 'backend_state': 'up'}. init_capabilities /usr/lib/python2.7/site-packages/cinder/volume/driver.py:797
+2020-03-12 16:40:22 default DEBUG os_brick.utils [-] ==&gt; get_connector_properties: call u"{'execute': &lt;function _execute at 0x7f7369910b18&gt;, 'my_ip': '192.168.122.19', 'enforce_multipath': False, 'host': None, 'root_helper': 'sudo', 'multipath': False}" trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:146
+2020-03-12 16:40:22 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): cat /etc/iscsi/initiatorname.iscsi execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-03-12 16:40:22 default DEBUG oslo_concurrency.processutils [-] CMD "cat /etc/iscsi/initiatorname.iscsi" returned: 0 in 0.298s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-03-12 16:40:22 default DEBUG os_brick.initiator.linuxfc [-] No Fibre Channel support detected on system. get_fc_hbas /usr/lib/python2.7/site-packages/os_brick/initiator/linuxfc.py:157
+2020-03-12 16:40:22 default DEBUG os_brick.initiator.linuxfc [-] No Fibre Channel support detected on system. get_fc_hbas /usr/lib/python2.7/site-packages/os_brick/initiator/linuxfc.py:157
+2020-03-12 16:40:22 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): cat /sys/class/dmi/id/product_uuid execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-03-12 16:40:22 default DEBUG oslo_concurrency.processutils [-] CMD "cat /sys/class/dmi/id/product_uuid" returned: 0 in 0.311s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-03-12 16:40:22 default DEBUG os_brick.utils [-] &lt;== get_connector_properties: return (613ms) {'initiator': u'iqn.1994-05.com.redhat:libvirt0', 'ip': u'192.168.122.19', 'system uuid': u'15B637A5-2AD6-4325-823A-17D9510147D8', 'platform': u'x86_64', 'host': u'libvirt0', 'do_local_attach': False, 'os_type': u'linux2', 'multipath': False} trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:170
+2020-03-12 16:40:22 default INFO ember_csi.ember_csi [-] Ember CSI vmaster+12032020163923051253736 with 30 workers (CSI spec: v1.0.0, cinderlib: v1.1.0.dev9, cinder: v15.1.0.dev142)
+2020-03-12 16:40:22 default INFO ember_csi.ember_csi [-] Persistence module: MemoryPersistence
+2020-03-12 16:40:22 default INFO ember_csi.ember_csi [-] Running as all with backend RBDDriver v1.2.0
+2020-03-12 16:40:22 default INFO ember_csi.ember_csi [-] Plugin name: ember-csi.io
+2020-03-12 16:40:22 default INFO ember_csi.ember_csi [-] Debugging feature is ENABLED with ember_csi.rpdb and OFF. Toggle it with SIGUSR1.
+2020-03-12 16:40:22 default INFO ember_csi.ember_csi [-] Supported filesystems: cramfs, minix, btrfs, ext2, ext3, ext4, xfs
+2020-03-12 16:40:22 default INFO ember_csi.ember_csi [-] Now serving on [::]:50051...
+2020-03-12 16:40:29 default INFO ember_csi.common [req-5c58ab9a-3a8c-4afc-8019-4a368b353c20] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:40:29 default DEBUG ember_csi.common [req-5c58ab9a-3a8c-4afc-8019-4a368b353c20] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:29 default INFO ember_csi.common [req-5c58ab9a-3a8c-4afc-8019-4a368b353c20] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:40:29 default DEBUG ember_csi.common [req-5c58ab9a-3a8c-4afc-8019-4a368b353c20] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:29 default INFO ember_csi.common [req-559f008f-7ade-45c2-beb2-3202ff70a3d9] =&gt; GRPC ListSnapshots 
+2020-03-12 16:40:29 default DEBUG ember_csi.common [req-559f008f-7ade-45c2-beb2-3202ff70a3d9] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:29 default INFO ember_csi.common [req-559f008f-7ade-45c2-beb2-3202ff70a3d9] &lt;= GRPC ListSnapshots served in 0s
+2020-03-12 16:40:29 default DEBUG ember_csi.common [req-559f008f-7ade-45c2-beb2-3202ff70a3d9] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:29 default INFO ember_csi.common [req-b1b27aa3-1b02-42a0-802c-8f0a3a9420a9] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:40:29 default DEBUG ember_csi.common [req-b1b27aa3-1b02-42a0-802c-8f0a3a9420a9] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:29 default INFO ember_csi.common [req-b1b27aa3-1b02-42a0-802c-8f0a3a9420a9] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:40:29 default DEBUG ember_csi.common [req-b1b27aa3-1b02-42a0-802c-8f0a3a9420a9] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:29 default INFO ember_csi.common [req-0504b338-2b91-4400-a249-f828e1b0fdd4] =&gt; GRPC CreateVolume listSnapshots-volume-1
+2020-03-12 16:40:29 default DEBUG ember_csi.common [req-0504b338-2b91-4400-a249-f828e1b0fdd4] With params:
+	name: "listSnapshots-volume-1"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:29 default DEBUG ember_csi.base [req-0504b338-2b91-4400-a249-f828e1b0fdd4] Creating volume listSnapshots-volume-1 CreateVolume /ember-csi/ember_csi/base.py:398
+2020-03-12 16:40:29 default DEBUG cinder.volume.drivers.rbd [req-0504b338-2b91-4400-a249-f828e1b0fdd4] creating volume 'volume-f3b22334-28c3-4d9f-ab28-74c86cf9e94e' create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:930
+2020-03-12 16:40:29 default DEBUG cinder.volume.drivers.rbd [req-0504b338-2b91-4400-a249-f828e1b0fdd4] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:30 default INFO ember_csi.common [req-0504b338-2b91-4400-a249-f828e1b0fdd4] &lt;= GRPC CreateVolume (id = f3b22334-28c3-4d9f-ab28-74c86cf9e94e) served in 1s
+2020-03-12 16:40:30 default DEBUG ember_csi.common [req-0504b338-2b91-4400-a249-f828e1b0fdd4] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "f3b22334-28c3-4d9f-ab28-74c86cf9e94e"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:30 default INFO ember_csi.common [req-b070175c-ee23-4b52-87d0-72011c5a6249] =&gt; GRPC CreateSnapshot listSnapshots-snapshot-1
+2020-03-12 16:40:30 default DEBUG ember_csi.common [req-b070175c-ee23-4b52-87d0-72011c5a6249] With params:
+	source_volume_id: "f3b22334-28c3-4d9f-ab28-74c86cf9e94e"
+	name: "listSnapshots-snapshot-1" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:30 default DEBUG cinder.volume.drivers.rbd [req-b070175c-ee23-4b52-87d0-72011c5a6249] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:31 default INFO ember_csi.common [req-b070175c-ee23-4b52-87d0-72011c5a6249] &lt;= GRPC CreateSnapshot (id = 62638ea8-4ea4-463f-9881-fc3211b1e583) served in 1s
+2020-03-12 16:40:31 default DEBUG ember_csi.common [req-b070175c-ee23-4b52-87d0-72011c5a6249] Returns:
+		snapshot {
+		  snapshot_id: "62638ea8-4ea4-463f-9881-fc3211b1e583"
+		  source_volume_id: "f3b22334-28c3-4d9f-ab28-74c86cf9e94e"
+		  creation_time {
+		    seconds: 1584031230
+		    nanos: 536712000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:31 default INFO ember_csi.common [req-665f664d-ee56-4f80-904f-b8351e4197e8] =&gt; GRPC ListSnapshots 62638ea8-4ea4-463f-9881-fc3211b1e583
+2020-03-12 16:40:31 default DEBUG ember_csi.common [req-665f664d-ee56-4f80-904f-b8351e4197e8] With params:
+	snapshot_id: "62638ea8-4ea4-463f-9881-fc3211b1e583" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:31 default INFO ember_csi.common [req-665f664d-ee56-4f80-904f-b8351e4197e8] &lt;= GRPC ListSnapshots served in 0s
+2020-03-12 16:40:31 default DEBUG ember_csi.common [req-665f664d-ee56-4f80-904f-b8351e4197e8] Returns:
+		entries {
+		  snapshot {
+		    snapshot_id: "62638ea8-4ea4-463f-9881-fc3211b1e583"
+		    source_volume_id: "f3b22334-28c3-4d9f-ab28-74c86cf9e94e"
+		    creation_time {
+		      seconds: 1584031230
+		      nanos: 536712000
+		    }
+		    ready_to_use: true
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:31 default INFO ember_csi.common [req-6c2e54c6-abc2-4df5-ae5e-2240a64ad960] =&gt; GRPC DeleteSnapshot 62638ea8-4ea4-463f-9881-fc3211b1e583
+2020-03-12 16:40:31 default DEBUG ember_csi.common [req-6c2e54c6-abc2-4df5-ae5e-2240a64ad960] With params:
+	snapshot_id: "62638ea8-4ea4-463f-9881-fc3211b1e583" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:31 default DEBUG cinder.volume.drivers.rbd [req-6c2e54c6-abc2-4df5-ae5e-2240a64ad960] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:32 default INFO ember_csi.common [req-6c2e54c6-abc2-4df5-ae5e-2240a64ad960] &lt;= GRPC DeleteSnapshot served in 1s
+2020-03-12 16:40:32 default DEBUG ember_csi.common [req-6c2e54c6-abc2-4df5-ae5e-2240a64ad960] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:32 default INFO ember_csi.common [req-6ff1f385-8c8a-4281-91c0-041862a9d930] =&gt; GRPC DeleteVolume f3b22334-28c3-4d9f-ab28-74c86cf9e94e
+2020-03-12 16:40:32 default DEBUG ember_csi.common [req-6ff1f385-8c8a-4281-91c0-041862a9d930] With params:
+	volume_id: "f3b22334-28c3-4d9f-ab28-74c86cf9e94e" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:32 default DEBUG ember_csi.base [req-6ff1f385-8c8a-4281-91c0-041862a9d930] Deleting volume f3b22334-28c3-4d9f-ab28-74c86cf9e94e DeleteVolume /ember-csi/ember_csi/base.py:454
+2020-03-12 16:40:32 default DEBUG cinder.volume.drivers.rbd [req-6ff1f385-8c8a-4281-91c0-041862a9d930] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:32 default DEBUG cinder.volume.drivers.rbd [req-6ff1f385-8c8a-4281-91c0-041862a9d930] volume has no backup snaps _delete_backup_snaps /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1012
+2020-03-12 16:40:32 default DEBUG cinder.volume.drivers.rbd [req-6ff1f385-8c8a-4281-91c0-041862a9d930] Volume volume-f3b22334-28c3-4d9f-ab28-74c86cf9e94e is not a clone. _get_clone_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1035
+2020-03-12 16:40:32 default DEBUG cinder.volume.drivers.rbd [req-6ff1f385-8c8a-4281-91c0-041862a9d930] deleting rbd volume volume-f3b22334-28c3-4d9f-ab28-74c86cf9e94e delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1147
+2020-03-12 16:40:33 default INFO ember_csi.common [req-6ff1f385-8c8a-4281-91c0-041862a9d930] &lt;= GRPC DeleteVolume served in 1s
+2020-03-12 16:40:33 default DEBUG ember_csi.common [req-6ff1f385-8c8a-4281-91c0-041862a9d930] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:33 default INFO ember_csi.common [req-161e40e6-f7d9-4b76-b228-653722c7041f] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:40:33 default DEBUG ember_csi.common [req-161e40e6-f7d9-4b76-b228-653722c7041f] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:33 default INFO ember_csi.common [req-161e40e6-f7d9-4b76-b228-653722c7041f] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:40:33 default DEBUG ember_csi.common [req-161e40e6-f7d9-4b76-b228-653722c7041f] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:33 default INFO ember_csi.common [req-772d62c3-0526-4e65-8903-c23614d00768] =&gt; GRPC ListSnapshots none-exist-id
+2020-03-12 16:40:33 default DEBUG ember_csi.common [req-772d62c3-0526-4e65-8903-c23614d00768] With params:
+	snapshot_id: "none-exist-id" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:33 default INFO ember_csi.common [req-772d62c3-0526-4e65-8903-c23614d00768] &lt;= GRPC ListSnapshots served in 0s
+2020-03-12 16:40:33 default DEBUG ember_csi.common [req-772d62c3-0526-4e65-8903-c23614d00768] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:33 default INFO ember_csi.common [req-5248de75-b220-4513-82a4-66aed3dfdef7] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:40:33 default DEBUG ember_csi.common [req-5248de75-b220-4513-82a4-66aed3dfdef7] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:33 default INFO ember_csi.common [req-5248de75-b220-4513-82a4-66aed3dfdef7] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:40:33 default DEBUG ember_csi.common [req-5248de75-b220-4513-82a4-66aed3dfdef7] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:33 default INFO ember_csi.common [req-83eecabc-70cf-4917-a56f-d1d55a3464a9] =&gt; GRPC CreateVolume listSnapshots-volume-2
+2020-03-12 16:40:33 default DEBUG ember_csi.common [req-83eecabc-70cf-4917-a56f-d1d55a3464a9] With params:
+	name: "listSnapshots-volume-2"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:33 default DEBUG ember_csi.base [req-83eecabc-70cf-4917-a56f-d1d55a3464a9] Creating volume listSnapshots-volume-2 CreateVolume /ember-csi/ember_csi/base.py:398
+2020-03-12 16:40:33 default DEBUG cinder.volume.drivers.rbd [req-83eecabc-70cf-4917-a56f-d1d55a3464a9] creating volume 'volume-469582a3-5aa0-4655-b00e-d499b5294c9f' create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:930
+2020-03-12 16:40:33 default DEBUG cinder.volume.drivers.rbd [req-83eecabc-70cf-4917-a56f-d1d55a3464a9] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:33 default INFO ember_csi.common [req-83eecabc-70cf-4917-a56f-d1d55a3464a9] &lt;= GRPC CreateVolume (id = 469582a3-5aa0-4655-b00e-d499b5294c9f) served in 0s
+2020-03-12 16:40:33 default DEBUG ember_csi.common [req-83eecabc-70cf-4917-a56f-d1d55a3464a9] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "469582a3-5aa0-4655-b00e-d499b5294c9f"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:33 default INFO ember_csi.common [req-e9883186-268b-445b-ae55-d0ea726b489e] =&gt; GRPC CreateSnapshot listSnapshots-snapshot-2
+2020-03-12 16:40:33 default DEBUG ember_csi.common [req-e9883186-268b-445b-ae55-d0ea726b489e] With params:
+	source_volume_id: "469582a3-5aa0-4655-b00e-d499b5294c9f"
+	name: "listSnapshots-snapshot-2" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:33 default DEBUG cinder.volume.drivers.rbd [req-e9883186-268b-445b-ae55-d0ea726b489e] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:34 default INFO ember_csi.common [req-e9883186-268b-445b-ae55-d0ea726b489e] &lt;= GRPC CreateSnapshot (id = 9a8fabad-718b-4e59-8cd9-3d784fdc046b) served in 1s
+2020-03-12 16:40:34 default DEBUG ember_csi.common [req-e9883186-268b-445b-ae55-d0ea726b489e] Returns:
+		snapshot {
+		  snapshot_id: "9a8fabad-718b-4e59-8cd9-3d784fdc046b"
+		  source_volume_id: "469582a3-5aa0-4655-b00e-d499b5294c9f"
+		  creation_time {
+		    seconds: 1584031233
+		    nanos: 918678000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:34 default INFO ember_csi.common [req-f6f8d019-2db1-4254-b604-9292346d0dd3] =&gt; GRPC ListSnapshots 
+2020-03-12 16:40:34 default DEBUG ember_csi.common [req-f6f8d019-2db1-4254-b604-9292346d0dd3] With params:
+	source_volume_id: "469582a3-5aa0-4655-b00e-d499b5294c9f" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:34 default INFO ember_csi.common [req-f6f8d019-2db1-4254-b604-9292346d0dd3] &lt;= GRPC ListSnapshots served in 0s
+2020-03-12 16:40:34 default DEBUG ember_csi.common [req-f6f8d019-2db1-4254-b604-9292346d0dd3] Returns:
+		entries {
+		  snapshot {
+		    snapshot_id: "9a8fabad-718b-4e59-8cd9-3d784fdc046b"
+		    source_volume_id: "469582a3-5aa0-4655-b00e-d499b5294c9f"
+		    creation_time {
+		      seconds: 1584031233
+		      nanos: 918678000
+		    }
+		    ready_to_use: true
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:34 default INFO ember_csi.common [req-f2aeb192-310e-419e-81fe-2590524317c1] =&gt; GRPC DeleteSnapshot 9a8fabad-718b-4e59-8cd9-3d784fdc046b
+2020-03-12 16:40:34 default DEBUG ember_csi.common [req-f2aeb192-310e-419e-81fe-2590524317c1] With params:
+	snapshot_id: "9a8fabad-718b-4e59-8cd9-3d784fdc046b" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:34 default DEBUG cinder.volume.drivers.rbd [req-f2aeb192-310e-419e-81fe-2590524317c1] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:35 default INFO ember_csi.common [req-f2aeb192-310e-419e-81fe-2590524317c1] &lt;= GRPC DeleteSnapshot served in 1s
+2020-03-12 16:40:35 default DEBUG ember_csi.common [req-f2aeb192-310e-419e-81fe-2590524317c1] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:35 default INFO ember_csi.common [req-f05c84ad-91cf-4545-b61d-422ffb797243] =&gt; GRPC DeleteVolume 469582a3-5aa0-4655-b00e-d499b5294c9f
+2020-03-12 16:40:35 default DEBUG ember_csi.common [req-f05c84ad-91cf-4545-b61d-422ffb797243] With params:
+	volume_id: "469582a3-5aa0-4655-b00e-d499b5294c9f" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:35 default DEBUG ember_csi.base [req-f05c84ad-91cf-4545-b61d-422ffb797243] Deleting volume 469582a3-5aa0-4655-b00e-d499b5294c9f DeleteVolume /ember-csi/ember_csi/base.py:454
+2020-03-12 16:40:35 default DEBUG cinder.volume.drivers.rbd [req-f05c84ad-91cf-4545-b61d-422ffb797243] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:35 default DEBUG cinder.volume.drivers.rbd [req-f05c84ad-91cf-4545-b61d-422ffb797243] volume has no backup snaps _delete_backup_snaps /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1012
+2020-03-12 16:40:35 default DEBUG cinder.volume.drivers.rbd [req-f05c84ad-91cf-4545-b61d-422ffb797243] Volume volume-469582a3-5aa0-4655-b00e-d499b5294c9f is not a clone. _get_clone_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1035
+2020-03-12 16:40:35 default DEBUG cinder.volume.drivers.rbd [req-f05c84ad-91cf-4545-b61d-422ffb797243] deleting rbd volume volume-469582a3-5aa0-4655-b00e-d499b5294c9f delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1147
+2020-03-12 16:40:37 default INFO ember_csi.common [req-f05c84ad-91cf-4545-b61d-422ffb797243] &lt;= GRPC DeleteVolume served in 1s
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-f05c84ad-91cf-4545-b61d-422ffb797243] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:37 default INFO ember_csi.common [req-6885ba71-4c85-4fc5-b01c-301ec19a6f24] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-6885ba71-4c85-4fc5-b01c-301ec19a6f24] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:37 default INFO ember_csi.common [req-6885ba71-4c85-4fc5-b01c-301ec19a6f24] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-6885ba71-4c85-4fc5-b01c-301ec19a6f24] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:37 default INFO ember_csi.common [req-3338275e-b74f-48da-999f-d72931f54483] =&gt; GRPC ListSnapshots 
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-3338275e-b74f-48da-999f-d72931f54483] With params:
+	source_volume_id: "none-exist-volume-id" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:37 default INFO ember_csi.common [req-3338275e-b74f-48da-999f-d72931f54483] &lt;= GRPC ListSnapshots served in 0s
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-3338275e-b74f-48da-999f-d72931f54483] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:37 default INFO ember_csi.common [req-8d84b515-82f0-48a6-8164-837a805e61e9] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-8d84b515-82f0-48a6-8164-837a805e61e9] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:37 default INFO ember_csi.common [req-8d84b515-82f0-48a6-8164-837a805e61e9] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-8d84b515-82f0-48a6-8164-837a805e61e9] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:37 default INFO ember_csi.common [req-1a0f6531-6887-4ee6-9888-ad79b53cca39] =&gt; GRPC ListSnapshots 
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-1a0f6531-6887-4ee6-9888-ad79b53cca39] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:37 default INFO ember_csi.common [req-1a0f6531-6887-4ee6-9888-ad79b53cca39] &lt;= GRPC ListSnapshots served in 0s
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-1a0f6531-6887-4ee6-9888-ad79b53cca39] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:37 default INFO ember_csi.common [req-f0a3fde9-3158-46d2-9ece-fdf70be8d3e1] =&gt; GRPC CreateVolume listSnapshots-volume-3
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-f0a3fde9-3158-46d2-9ece-fdf70be8d3e1] With params:
+	name: "listSnapshots-volume-3"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:37 default DEBUG ember_csi.base [req-f0a3fde9-3158-46d2-9ece-fdf70be8d3e1] Creating volume listSnapshots-volume-3 CreateVolume /ember-csi/ember_csi/base.py:398
+2020-03-12 16:40:37 default DEBUG cinder.volume.drivers.rbd [req-f0a3fde9-3158-46d2-9ece-fdf70be8d3e1] creating volume 'volume-5cddcf42-ebd3-42b6-9abb-98987fdfb772' create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:930
+2020-03-12 16:40:37 default DEBUG cinder.volume.drivers.rbd [req-f0a3fde9-3158-46d2-9ece-fdf70be8d3e1] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:37 default INFO ember_csi.common [req-f0a3fde9-3158-46d2-9ece-fdf70be8d3e1] &lt;= GRPC CreateVolume (id = 5cddcf42-ebd3-42b6-9abb-98987fdfb772) served in 0s
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-f0a3fde9-3158-46d2-9ece-fdf70be8d3e1] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "5cddcf42-ebd3-42b6-9abb-98987fdfb772"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:37 default INFO ember_csi.common [req-ab8a16b2-4b10-4827-ae0b-64cba719539a] =&gt; GRPC CreateSnapshot listSnapshots-snapshot-3
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-ab8a16b2-4b10-4827-ae0b-64cba719539a] With params:
+	source_volume_id: "5cddcf42-ebd3-42b6-9abb-98987fdfb772"
+	name: "listSnapshots-snapshot-3" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:37 default DEBUG cinder.volume.drivers.rbd [req-ab8a16b2-4b10-4827-ae0b-64cba719539a] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:37 default INFO ember_csi.common [req-ab8a16b2-4b10-4827-ae0b-64cba719539a] &lt;= GRPC CreateSnapshot (id = a8d16998-7ba5-4cb5-8fea-23e4f095e18d) served in 1s
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-ab8a16b2-4b10-4827-ae0b-64cba719539a] Returns:
+		snapshot {
+		  snapshot_id: "a8d16998-7ba5-4cb5-8fea-23e4f095e18d"
+		  source_volume_id: "5cddcf42-ebd3-42b6-9abb-98987fdfb772"
+		  creation_time {
+		    seconds: 1584031237
+		    nanos: 264589000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:37 default INFO ember_csi.common [req-2376f653-1ff7-4c8a-9dc3-a032a24c54dd] =&gt; GRPC ListSnapshots 
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-2376f653-1ff7-4c8a-9dc3-a032a24c54dd] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:37 default INFO ember_csi.common [req-2376f653-1ff7-4c8a-9dc3-a032a24c54dd] &lt;= GRPC ListSnapshots served in 0s
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-2376f653-1ff7-4c8a-9dc3-a032a24c54dd] Returns:
+		entries {
+		  snapshot {
+		    snapshot_id: "a8d16998-7ba5-4cb5-8fea-23e4f095e18d"
+		    source_volume_id: "5cddcf42-ebd3-42b6-9abb-98987fdfb772"
+		    creation_time {
+		      seconds: 1584031237
+		      nanos: 264589000
+		    }
+		    ready_to_use: true
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:37 default INFO ember_csi.common [req-42a098a1-97cd-4a71-ae27-061fc75ebf8c] =&gt; GRPC DeleteSnapshot a8d16998-7ba5-4cb5-8fea-23e4f095e18d
+2020-03-12 16:40:37 default DEBUG ember_csi.common [req-42a098a1-97cd-4a71-ae27-061fc75ebf8c] With params:
+	snapshot_id: "a8d16998-7ba5-4cb5-8fea-23e4f095e18d" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:37 default DEBUG cinder.volume.drivers.rbd [req-42a098a1-97cd-4a71-ae27-061fc75ebf8c] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:38 default INFO ember_csi.common [req-42a098a1-97cd-4a71-ae27-061fc75ebf8c] &lt;= GRPC DeleteSnapshot served in 1s
+2020-03-12 16:40:38 default DEBUG ember_csi.common [req-42a098a1-97cd-4a71-ae27-061fc75ebf8c] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:38 default INFO ember_csi.common [req-a1883562-2851-4849-968e-03d042c8e79d] =&gt; GRPC DeleteVolume 5cddcf42-ebd3-42b6-9abb-98987fdfb772
+2020-03-12 16:40:38 default DEBUG ember_csi.common [req-a1883562-2851-4849-968e-03d042c8e79d] With params:
+	volume_id: "5cddcf42-ebd3-42b6-9abb-98987fdfb772" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:38 default DEBUG ember_csi.base [req-a1883562-2851-4849-968e-03d042c8e79d] Deleting volume 5cddcf42-ebd3-42b6-9abb-98987fdfb772 DeleteVolume /ember-csi/ember_csi/base.py:454
+2020-03-12 16:40:38 default DEBUG cinder.volume.drivers.rbd [req-a1883562-2851-4849-968e-03d042c8e79d] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:38 default DEBUG cinder.volume.drivers.rbd [req-a1883562-2851-4849-968e-03d042c8e79d] volume has no backup snaps _delete_backup_snaps /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1012
+2020-03-12 16:40:38 default DEBUG cinder.volume.drivers.rbd [req-a1883562-2851-4849-968e-03d042c8e79d] Volume volume-5cddcf42-ebd3-42b6-9abb-98987fdfb772 is not a clone. _get_clone_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1035
+2020-03-12 16:40:38 default DEBUG cinder.volume.drivers.rbd [req-a1883562-2851-4849-968e-03d042c8e79d] deleting rbd volume volume-5cddcf42-ebd3-42b6-9abb-98987fdfb772 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1147
+2020-03-12 16:40:39 default INFO ember_csi.common [req-a1883562-2851-4849-968e-03d042c8e79d] &lt;= GRPC DeleteVolume served in 1s
+2020-03-12 16:40:39 default DEBUG ember_csi.common [req-a1883562-2851-4849-968e-03d042c8e79d] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:39 default INFO ember_csi.common [req-ae5ac081-bd9d-49ee-942e-4d7e062de53e] =&gt; GRPC ListSnapshots 
+2020-03-12 16:40:39 default DEBUG ember_csi.common [req-ae5ac081-bd9d-49ee-942e-4d7e062de53e] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:39 default INFO ember_csi.common [req-ae5ac081-bd9d-49ee-942e-4d7e062de53e] &lt;= GRPC ListSnapshots served in 0s
+2020-03-12 16:40:39 default DEBUG ember_csi.common [req-ae5ac081-bd9d-49ee-942e-4d7e062de53e] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:39 default INFO ember_csi.common [req-745d0551-d96d-4852-8797-4f40a5ba9a4f] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:40:39 default DEBUG ember_csi.common [req-745d0551-d96d-4852-8797-4f40a5ba9a4f] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:39 default INFO ember_csi.common [req-745d0551-d96d-4852-8797-4f40a5ba9a4f] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:40:39 default DEBUG ember_csi.common [req-745d0551-d96d-4852-8797-4f40a5ba9a4f] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:39 default INFO ember_csi.common [req-aad1f14b-e853-411a-85d2-4bd92833b92b] =&gt; GRPC ListSnapshots 
+2020-03-12 16:40:39 default DEBUG ember_csi.common [req-aad1f14b-e853-411a-85d2-4bd92833b92b] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:39 default INFO ember_csi.common [req-aad1f14b-e853-411a-85d2-4bd92833b92b] &lt;= GRPC ListSnapshots served in 0s
+2020-03-12 16:40:39 default DEBUG ember_csi.common [req-aad1f14b-e853-411a-85d2-4bd92833b92b] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:39 default INFO ember_csi.common [req-3cd87a5d-92bb-4407-a876-22c9dc25477e] =&gt; GRPC CreateVolume volume1
+2020-03-12 16:40:39 default DEBUG ember_csi.common [req-3cd87a5d-92bb-4407-a876-22c9dc25477e] With params:
+	name: "volume1"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:39 default DEBUG ember_csi.base [req-3cd87a5d-92bb-4407-a876-22c9dc25477e] Creating volume volume1 CreateVolume /ember-csi/ember_csi/base.py:398
+2020-03-12 16:40:39 default DEBUG cinder.volume.drivers.rbd [req-3cd87a5d-92bb-4407-a876-22c9dc25477e] creating volume 'volume-d846e688-b8a8-4e86-87bc-39b8e53762cd' create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:930
+2020-03-12 16:40:39 default DEBUG cinder.volume.drivers.rbd [req-3cd87a5d-92bb-4407-a876-22c9dc25477e] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:39 default INFO ember_csi.common [req-3cd87a5d-92bb-4407-a876-22c9dc25477e] &lt;= GRPC CreateVolume (id = d846e688-b8a8-4e86-87bc-39b8e53762cd) served in 0s
+2020-03-12 16:40:39 default DEBUG ember_csi.common [req-3cd87a5d-92bb-4407-a876-22c9dc25477e] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "d846e688-b8a8-4e86-87bc-39b8e53762cd"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:39 default INFO ember_csi.common [req-1151b732-544b-4356-89d0-e1ac12959d51] =&gt; GRPC CreateSnapshot snapshot1
+2020-03-12 16:40:39 default DEBUG ember_csi.common [req-1151b732-544b-4356-89d0-e1ac12959d51] With params:
+	source_volume_id: "d846e688-b8a8-4e86-87bc-39b8e53762cd"
+	name: "snapshot1" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:39 default DEBUG cinder.volume.drivers.rbd [req-1151b732-544b-4356-89d0-e1ac12959d51] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:40 default INFO ember_csi.common [req-1151b732-544b-4356-89d0-e1ac12959d51] &lt;= GRPC CreateSnapshot (id = 4954be87-c10e-464e-b1ae-8457f1d2cd07) served in 1s
+2020-03-12 16:40:40 default DEBUG ember_csi.common [req-1151b732-544b-4356-89d0-e1ac12959d51] Returns:
+		snapshot {
+		  snapshot_id: "4954be87-c10e-464e-b1ae-8457f1d2cd07"
+		  source_volume_id: "d846e688-b8a8-4e86-87bc-39b8e53762cd"
+		  creation_time {
+		    seconds: 1584031239
+		    nanos: 983346000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:40 default INFO ember_csi.common [req-119265d9-4a11-4cb0-bc83-be04bb105a00] =&gt; GRPC CreateVolume volume2
+2020-03-12 16:40:40 default DEBUG ember_csi.common [req-119265d9-4a11-4cb0-bc83-be04bb105a00] With params:
+	name: "volume2"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:40 default DEBUG ember_csi.base [req-119265d9-4a11-4cb0-bc83-be04bb105a00] Creating volume volume2 CreateVolume /ember-csi/ember_csi/base.py:398
+2020-03-12 16:40:40 default DEBUG cinder.volume.drivers.rbd [req-119265d9-4a11-4cb0-bc83-be04bb105a00] creating volume 'volume-0f28321c-7498-4ad7-a4a9-59f7f433db9e' create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:930
+2020-03-12 16:40:40 default DEBUG cinder.volume.drivers.rbd [req-119265d9-4a11-4cb0-bc83-be04bb105a00] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:41 default INFO ember_csi.common [req-119265d9-4a11-4cb0-bc83-be04bb105a00] &lt;= GRPC CreateVolume (id = 0f28321c-7498-4ad7-a4a9-59f7f433db9e) served in 0s
+2020-03-12 16:40:41 default DEBUG ember_csi.common [req-119265d9-4a11-4cb0-bc83-be04bb105a00] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "0f28321c-7498-4ad7-a4a9-59f7f433db9e"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:41 default INFO ember_csi.common [req-e0e710c1-53d0-4801-93ce-98f3d9777d88] =&gt; GRPC CreateSnapshot snapshot2
+2020-03-12 16:40:41 default DEBUG ember_csi.common [req-e0e710c1-53d0-4801-93ce-98f3d9777d88] With params:
+	source_volume_id: "0f28321c-7498-4ad7-a4a9-59f7f433db9e"
+	name: "snapshot2" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:41 default DEBUG cinder.volume.drivers.rbd [req-e0e710c1-53d0-4801-93ce-98f3d9777d88] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:42 default INFO ember_csi.common [req-e0e710c1-53d0-4801-93ce-98f3d9777d88] &lt;= GRPC CreateSnapshot (id = 55ff54a9-a7b5-4c3b-8c7c-37298fe871dd) served in 1s
+2020-03-12 16:40:42 default DEBUG ember_csi.common [req-e0e710c1-53d0-4801-93ce-98f3d9777d88] Returns:
+		snapshot {
+		  snapshot_id: "55ff54a9-a7b5-4c3b-8c7c-37298fe871dd"
+		  source_volume_id: "0f28321c-7498-4ad7-a4a9-59f7f433db9e"
+		  creation_time {
+		    seconds: 1584031241
+		    nanos: 99280000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:42 default INFO ember_csi.common [req-c515297e-6cc5-44f1-8807-362eff09ed61] =&gt; GRPC CreateVolume volume3
+2020-03-12 16:40:42 default DEBUG ember_csi.common [req-c515297e-6cc5-44f1-8807-362eff09ed61] With params:
+	name: "volume3"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:42 default DEBUG ember_csi.base [req-c515297e-6cc5-44f1-8807-362eff09ed61] Creating volume volume3 CreateVolume /ember-csi/ember_csi/base.py:398
+2020-03-12 16:40:42 default DEBUG cinder.volume.drivers.rbd [req-c515297e-6cc5-44f1-8807-362eff09ed61] creating volume 'volume-18370321-1105-4ee3-aaa0-8b868a99d146' create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:930
+2020-03-12 16:40:42 default DEBUG cinder.volume.drivers.rbd [req-c515297e-6cc5-44f1-8807-362eff09ed61] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:42 default INFO ember_csi.common [req-c515297e-6cc5-44f1-8807-362eff09ed61] &lt;= GRPC CreateVolume (id = 18370321-1105-4ee3-aaa0-8b868a99d146) served in 0s
+2020-03-12 16:40:42 default DEBUG ember_csi.common [req-c515297e-6cc5-44f1-8807-362eff09ed61] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "18370321-1105-4ee3-aaa0-8b868a99d146"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:42 default INFO ember_csi.common [req-9c1ba427-1a19-4355-a54a-3311ce66e112] =&gt; GRPC CreateSnapshot snapshot3
+2020-03-12 16:40:42 default DEBUG ember_csi.common [req-9c1ba427-1a19-4355-a54a-3311ce66e112] With params:
+	source_volume_id: "18370321-1105-4ee3-aaa0-8b868a99d146"
+	name: "snapshot3" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:42 default DEBUG cinder.volume.drivers.rbd [req-9c1ba427-1a19-4355-a54a-3311ce66e112] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:43 default INFO ember_csi.common [req-9c1ba427-1a19-4355-a54a-3311ce66e112] &lt;= GRPC CreateSnapshot (id = caec6c41-d6e7-43d7-93fc-ac851c55beab) served in 1s
+2020-03-12 16:40:43 default DEBUG ember_csi.common [req-9c1ba427-1a19-4355-a54a-3311ce66e112] Returns:
+		snapshot {
+		  snapshot_id: "caec6c41-d6e7-43d7-93fc-ac851c55beab"
+		  source_volume_id: "18370321-1105-4ee3-aaa0-8b868a99d146"
+		  creation_time {
+		    seconds: 1584031242
+		    nanos: 172164000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:43 default INFO ember_csi.common [req-42972f31-222e-435e-90d2-bc77efe32815] =&gt; GRPC CreateVolume volume4
+2020-03-12 16:40:43 default DEBUG ember_csi.common [req-42972f31-222e-435e-90d2-bc77efe32815] With params:
+	name: "volume4"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:43 default DEBUG ember_csi.base [req-42972f31-222e-435e-90d2-bc77efe32815] Creating volume volume4 CreateVolume /ember-csi/ember_csi/base.py:398
+2020-03-12 16:40:43 default DEBUG cinder.volume.drivers.rbd [req-42972f31-222e-435e-90d2-bc77efe32815] creating volume 'volume-3598df15-5fbc-4351-b8c2-f19ab126d708' create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:930
+2020-03-12 16:40:43 default DEBUG cinder.volume.drivers.rbd [req-42972f31-222e-435e-90d2-bc77efe32815] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:43 default INFO ember_csi.common [req-42972f31-222e-435e-90d2-bc77efe32815] &lt;= GRPC CreateVolume (id = 3598df15-5fbc-4351-b8c2-f19ab126d708) served in 0s
+2020-03-12 16:40:43 default DEBUG ember_csi.common [req-42972f31-222e-435e-90d2-bc77efe32815] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "3598df15-5fbc-4351-b8c2-f19ab126d708"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:43 default INFO ember_csi.common [req-7bcfb7ec-5c96-4fb8-8630-40725daf78b2] =&gt; GRPC CreateSnapshot snapshot4
+2020-03-12 16:40:43 default DEBUG ember_csi.common [req-7bcfb7ec-5c96-4fb8-8630-40725daf78b2] With params:
+	source_volume_id: "3598df15-5fbc-4351-b8c2-f19ab126d708"
+	name: "snapshot4" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:43 default DEBUG cinder.volume.drivers.rbd [req-7bcfb7ec-5c96-4fb8-8630-40725daf78b2] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:44 default INFO ember_csi.common [req-7bcfb7ec-5c96-4fb8-8630-40725daf78b2] &lt;= GRPC CreateSnapshot (id = 6eb8a040-e2a1-4346-83d1-80e39081b2c1) served in 1s
+2020-03-12 16:40:44 default DEBUG ember_csi.common [req-7bcfb7ec-5c96-4fb8-8630-40725daf78b2] Returns:
+		snapshot {
+		  snapshot_id: "6eb8a040-e2a1-4346-83d1-80e39081b2c1"
+		  source_volume_id: "3598df15-5fbc-4351-b8c2-f19ab126d708"
+		  creation_time {
+		    seconds: 1584031243
+		    nanos: 268851000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:44 default INFO ember_csi.common [req-48674079-769f-44f3-906f-6ba176ca2bef] =&gt; GRPC CreateVolume volume5
+2020-03-12 16:40:44 default DEBUG ember_csi.common [req-48674079-769f-44f3-906f-6ba176ca2bef] With params:
+	name: "volume5"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:44 default DEBUG ember_csi.base [req-48674079-769f-44f3-906f-6ba176ca2bef] Creating volume volume5 CreateVolume /ember-csi/ember_csi/base.py:398
+2020-03-12 16:40:44 default DEBUG cinder.volume.drivers.rbd [req-48674079-769f-44f3-906f-6ba176ca2bef] creating volume 'volume-39f0446c-b258-4bfa-9cf6-d401f6d5f2d3' create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:930
+2020-03-12 16:40:44 default DEBUG cinder.volume.drivers.rbd [req-48674079-769f-44f3-906f-6ba176ca2bef] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:44 default INFO ember_csi.common [req-48674079-769f-44f3-906f-6ba176ca2bef] &lt;= GRPC CreateVolume (id = 39f0446c-b258-4bfa-9cf6-d401f6d5f2d3) served in 0s
+2020-03-12 16:40:44 default DEBUG ember_csi.common [req-48674079-769f-44f3-906f-6ba176ca2bef] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "39f0446c-b258-4bfa-9cf6-d401f6d5f2d3"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:44 default INFO ember_csi.common [req-f7963284-21fc-47ae-9acd-7e55395bd3c2] =&gt; GRPC CreateSnapshot snapshot5
+2020-03-12 16:40:44 default DEBUG ember_csi.common [req-f7963284-21fc-47ae-9acd-7e55395bd3c2] With params:
+	source_volume_id: "39f0446c-b258-4bfa-9cf6-d401f6d5f2d3"
+	name: "snapshot5" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:44 default DEBUG cinder.volume.drivers.rbd [req-f7963284-21fc-47ae-9acd-7e55395bd3c2] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:45 default INFO ember_csi.common [req-f7963284-21fc-47ae-9acd-7e55395bd3c2] &lt;= GRPC CreateSnapshot (id = 85d913d0-0a9f-4495-ab9b-45e3c825f41f) served in 1s
+2020-03-12 16:40:45 default DEBUG ember_csi.common [req-f7963284-21fc-47ae-9acd-7e55395bd3c2] Returns:
+		snapshot {
+		  snapshot_id: "85d913d0-0a9f-4495-ab9b-45e3c825f41f"
+		  source_volume_id: "39f0446c-b258-4bfa-9cf6-d401f6d5f2d3"
+		  creation_time {
+		    seconds: 1584031244
+		    nanos: 656716000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:45 default INFO ember_csi.common [req-675d72e7-a177-41b9-bd10-53ba0e2c27e5] =&gt; GRPC ListSnapshots 
+2020-03-12 16:40:45 default DEBUG ember_csi.common [req-675d72e7-a177-41b9-bd10-53ba0e2c27e5] With params:
+	max_entries: 2 dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:45 default INFO ember_csi.common [req-675d72e7-a177-41b9-bd10-53ba0e2c27e5] &lt;= GRPC ListSnapshots served in 0s
+2020-03-12 16:40:45 default DEBUG ember_csi.common [req-675d72e7-a177-41b9-bd10-53ba0e2c27e5] Returns:
+		entries {
+		  snapshot {
+		    snapshot_id: "4954be87-c10e-464e-b1ae-8457f1d2cd07"
+		    source_volume_id: "d846e688-b8a8-4e86-87bc-39b8e53762cd"
+		    creation_time {
+		      seconds: 1584031239
+		      nanos: 983346000
+		    }
+		    ready_to_use: true
+		  }
+		}
+		entries {
+		  snapshot {
+		    snapshot_id: "55ff54a9-a7b5-4c3b-8c7c-37298fe871dd"
+		    source_volume_id: "0f28321c-7498-4ad7-a4a9-59f7f433db9e"
+		    creation_time {
+		      seconds: 1584031241
+		      nanos: 99280000
+		    }
+		    ready_to_use: true
+		  }
+		}
+		next_token: "1584031241099280128" dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:45 default INFO ember_csi.common [req-63bd775e-373a-4395-b36c-d4f621a21a47] =&gt; GRPC ListSnapshots 
+2020-03-12 16:40:45 default DEBUG ember_csi.common [req-63bd775e-373a-4395-b36c-d4f621a21a47] With params:
+	starting_token: "1584031241099280128" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:45 default INFO ember_csi.common [req-63bd775e-373a-4395-b36c-d4f621a21a47] &lt;= GRPC ListSnapshots served in 0s
+2020-03-12 16:40:45 default DEBUG ember_csi.common [req-63bd775e-373a-4395-b36c-d4f621a21a47] Returns:
+		entries {
+		  snapshot {
+		    snapshot_id: "caec6c41-d6e7-43d7-93fc-ac851c55beab"
+		    source_volume_id: "18370321-1105-4ee3-aaa0-8b868a99d146"
+		    creation_time {
+		      seconds: 1584031242
+		      nanos: 172164000
+		    }
+		    ready_to_use: true
+		  }
+		}
+		entries {
+		  snapshot {
+		    snapshot_id: "6eb8a040-e2a1-4346-83d1-80e39081b2c1"
+		    source_volume_id: "3598df15-5fbc-4351-b8c2-f19ab126d708"
+		    creation_time {
+		      seconds: 1584031243
+		      nanos: 268851000
+		    }
+		    ready_to_use: true
+		  }
+		}
+		entries {
+		  snapshot {
+		    snapshot_id: "85d913d0-0a9f-4495-ab9b-45e3c825f41f"
+		    source_volume_id: "39f0446c-b258-4bfa-9cf6-d401f6d5f2d3"
+		    creation_time {
+		      seconds: 1584031244
+		      nanos: 656716000
+		    }
+		    ready_to_use: true
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:45 default INFO ember_csi.common [req-659155c5-b1f9-4c60-84b8-b2f904823789] =&gt; GRPC DeleteSnapshot 4954be87-c10e-464e-b1ae-8457f1d2cd07
+2020-03-12 16:40:45 default DEBUG ember_csi.common [req-659155c5-b1f9-4c60-84b8-b2f904823789] With params:
+	snapshot_id: "4954be87-c10e-464e-b1ae-8457f1d2cd07" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:45 default DEBUG cinder.volume.drivers.rbd [req-659155c5-b1f9-4c60-84b8-b2f904823789] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:46 default INFO ember_csi.common [req-659155c5-b1f9-4c60-84b8-b2f904823789] &lt;= GRPC DeleteSnapshot served in 1s
+2020-03-12 16:40:46 default DEBUG ember_csi.common [req-659155c5-b1f9-4c60-84b8-b2f904823789] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:46 default INFO ember_csi.common [req-a165e951-dfe5-439f-9ac6-8e6485cd7868] =&gt; GRPC DeleteSnapshot 55ff54a9-a7b5-4c3b-8c7c-37298fe871dd
+2020-03-12 16:40:46 default DEBUG ember_csi.common [req-a165e951-dfe5-439f-9ac6-8e6485cd7868] With params:
+	snapshot_id: "55ff54a9-a7b5-4c3b-8c7c-37298fe871dd" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:46 default DEBUG cinder.volume.drivers.rbd [req-a165e951-dfe5-439f-9ac6-8e6485cd7868] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:47 default INFO ember_csi.common [req-a165e951-dfe5-439f-9ac6-8e6485cd7868] &lt;= GRPC DeleteSnapshot served in 1s
+2020-03-12 16:40:47 default DEBUG ember_csi.common [req-a165e951-dfe5-439f-9ac6-8e6485cd7868] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:47 default INFO ember_csi.common [req-b5f873bf-72c0-490a-aced-6877b4966066] =&gt; GRPC DeleteSnapshot caec6c41-d6e7-43d7-93fc-ac851c55beab
+2020-03-12 16:40:47 default DEBUG ember_csi.common [req-b5f873bf-72c0-490a-aced-6877b4966066] With params:
+	snapshot_id: "caec6c41-d6e7-43d7-93fc-ac851c55beab" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:47 default DEBUG cinder.volume.drivers.rbd [req-b5f873bf-72c0-490a-aced-6877b4966066] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:48 default INFO ember_csi.common [req-b5f873bf-72c0-490a-aced-6877b4966066] &lt;= GRPC DeleteSnapshot served in 1s
+2020-03-12 16:40:48 default DEBUG ember_csi.common [req-b5f873bf-72c0-490a-aced-6877b4966066] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:48 default INFO ember_csi.common [req-ee9feb7d-1f86-443f-becf-c1d0dd05ccb9] =&gt; GRPC DeleteSnapshot 6eb8a040-e2a1-4346-83d1-80e39081b2c1
+2020-03-12 16:40:48 default DEBUG ember_csi.common [req-ee9feb7d-1f86-443f-becf-c1d0dd05ccb9] With params:
+	snapshot_id: "6eb8a040-e2a1-4346-83d1-80e39081b2c1" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:48 default DEBUG cinder.volume.drivers.rbd [req-ee9feb7d-1f86-443f-becf-c1d0dd05ccb9] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:49 default INFO ember_csi.common [req-ee9feb7d-1f86-443f-becf-c1d0dd05ccb9] &lt;= GRPC DeleteSnapshot served in 1s
+2020-03-12 16:40:49 default DEBUG ember_csi.common [req-ee9feb7d-1f86-443f-becf-c1d0dd05ccb9] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:49 default INFO ember_csi.common [req-8c704aa7-96ee-4abb-b6db-8a831353826c] =&gt; GRPC DeleteSnapshot 85d913d0-0a9f-4495-ab9b-45e3c825f41f
+2020-03-12 16:40:49 default DEBUG ember_csi.common [req-8c704aa7-96ee-4abb-b6db-8a831353826c] With params:
+	snapshot_id: "85d913d0-0a9f-4495-ab9b-45e3c825f41f" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:49 default DEBUG cinder.volume.drivers.rbd [req-8c704aa7-96ee-4abb-b6db-8a831353826c] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:50 default INFO ember_csi.common [req-8c704aa7-96ee-4abb-b6db-8a831353826c] &lt;= GRPC DeleteSnapshot served in 1s
+2020-03-12 16:40:50 default DEBUG ember_csi.common [req-8c704aa7-96ee-4abb-b6db-8a831353826c] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:50 default INFO ember_csi.common [req-e5dc53d3-db6e-4959-9f17-a906d0baf729] =&gt; GRPC DeleteVolume d846e688-b8a8-4e86-87bc-39b8e53762cd
+2020-03-12 16:40:50 default DEBUG ember_csi.common [req-e5dc53d3-db6e-4959-9f17-a906d0baf729] With params:
+	volume_id: "d846e688-b8a8-4e86-87bc-39b8e53762cd" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:50 default DEBUG ember_csi.base [req-e5dc53d3-db6e-4959-9f17-a906d0baf729] Deleting volume d846e688-b8a8-4e86-87bc-39b8e53762cd DeleteVolume /ember-csi/ember_csi/base.py:454
+2020-03-12 16:40:50 default DEBUG cinder.volume.drivers.rbd [req-e5dc53d3-db6e-4959-9f17-a906d0baf729] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:50 default DEBUG cinder.volume.drivers.rbd [req-e5dc53d3-db6e-4959-9f17-a906d0baf729] volume has no backup snaps _delete_backup_snaps /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1012
+2020-03-12 16:40:50 default DEBUG cinder.volume.drivers.rbd [req-e5dc53d3-db6e-4959-9f17-a906d0baf729] Volume volume-d846e688-b8a8-4e86-87bc-39b8e53762cd is not a clone. _get_clone_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1035
+2020-03-12 16:40:50 default DEBUG cinder.volume.drivers.rbd [req-e5dc53d3-db6e-4959-9f17-a906d0baf729] deleting rbd volume volume-d846e688-b8a8-4e86-87bc-39b8e53762cd delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1147
+2020-03-12 16:40:52 default INFO ember_csi.common [req-e5dc53d3-db6e-4959-9f17-a906d0baf729] &lt;= GRPC DeleteVolume served in 1s
+2020-03-12 16:40:52 default DEBUG ember_csi.common [req-e5dc53d3-db6e-4959-9f17-a906d0baf729] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:52 default INFO ember_csi.common [req-15f2dd94-66a1-4d24-a93c-0756fc73ac77] =&gt; GRPC DeleteVolume 0f28321c-7498-4ad7-a4a9-59f7f433db9e
+2020-03-12 16:40:52 default DEBUG ember_csi.common [req-15f2dd94-66a1-4d24-a93c-0756fc73ac77] With params:
+	volume_id: "0f28321c-7498-4ad7-a4a9-59f7f433db9e" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:52 default DEBUG ember_csi.base [req-15f2dd94-66a1-4d24-a93c-0756fc73ac77] Deleting volume 0f28321c-7498-4ad7-a4a9-59f7f433db9e DeleteVolume /ember-csi/ember_csi/base.py:454
+2020-03-12 16:40:52 default DEBUG cinder.volume.drivers.rbd [req-15f2dd94-66a1-4d24-a93c-0756fc73ac77] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:52 default DEBUG cinder.volume.drivers.rbd [req-15f2dd94-66a1-4d24-a93c-0756fc73ac77] volume has no backup snaps _delete_backup_snaps /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1012
+2020-03-12 16:40:52 default DEBUG cinder.volume.drivers.rbd [req-15f2dd94-66a1-4d24-a93c-0756fc73ac77] Volume volume-0f28321c-7498-4ad7-a4a9-59f7f433db9e is not a clone. _get_clone_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1035
+2020-03-12 16:40:52 default DEBUG cinder.volume.drivers.rbd [req-15f2dd94-66a1-4d24-a93c-0756fc73ac77] deleting rbd volume volume-0f28321c-7498-4ad7-a4a9-59f7f433db9e delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1147
+2020-03-12 16:40:53 default INFO ember_csi.common [req-15f2dd94-66a1-4d24-a93c-0756fc73ac77] &lt;= GRPC DeleteVolume served in 1s
+2020-03-12 16:40:53 default DEBUG ember_csi.common [req-15f2dd94-66a1-4d24-a93c-0756fc73ac77] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:53 default INFO ember_csi.common [req-e3b0c91e-390d-48b4-91db-e86012fd940a] =&gt; GRPC DeleteVolume 18370321-1105-4ee3-aaa0-8b868a99d146
+2020-03-12 16:40:53 default DEBUG ember_csi.common [req-e3b0c91e-390d-48b4-91db-e86012fd940a] With params:
+	volume_id: "18370321-1105-4ee3-aaa0-8b868a99d146" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:53 default DEBUG ember_csi.base [req-e3b0c91e-390d-48b4-91db-e86012fd940a] Deleting volume 18370321-1105-4ee3-aaa0-8b868a99d146 DeleteVolume /ember-csi/ember_csi/base.py:454
+2020-03-12 16:40:53 default DEBUG cinder.volume.drivers.rbd [req-e3b0c91e-390d-48b4-91db-e86012fd940a] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:53 default DEBUG cinder.volume.drivers.rbd [req-e3b0c91e-390d-48b4-91db-e86012fd940a] volume has no backup snaps _delete_backup_snaps /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1012
+2020-03-12 16:40:53 default DEBUG cinder.volume.drivers.rbd [req-e3b0c91e-390d-48b4-91db-e86012fd940a] Volume volume-18370321-1105-4ee3-aaa0-8b868a99d146 is not a clone. _get_clone_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1035
+2020-03-12 16:40:53 default DEBUG cinder.volume.drivers.rbd [req-e3b0c91e-390d-48b4-91db-e86012fd940a] deleting rbd volume volume-18370321-1105-4ee3-aaa0-8b868a99d146 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1147
+2020-03-12 16:40:54 default INFO ember_csi.common [req-e3b0c91e-390d-48b4-91db-e86012fd940a] &lt;= GRPC DeleteVolume served in 1s
+2020-03-12 16:40:54 default DEBUG ember_csi.common [req-e3b0c91e-390d-48b4-91db-e86012fd940a] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:54 default INFO ember_csi.common [req-ccd09518-7bf8-4387-87f8-1aeca1befa14] =&gt; GRPC DeleteVolume 3598df15-5fbc-4351-b8c2-f19ab126d708
+2020-03-12 16:40:54 default DEBUG ember_csi.common [req-ccd09518-7bf8-4387-87f8-1aeca1befa14] With params:
+	volume_id: "3598df15-5fbc-4351-b8c2-f19ab126d708" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:54 default DEBUG ember_csi.base [req-ccd09518-7bf8-4387-87f8-1aeca1befa14] Deleting volume 3598df15-5fbc-4351-b8c2-f19ab126d708 DeleteVolume /ember-csi/ember_csi/base.py:454
+2020-03-12 16:40:54 default DEBUG cinder.volume.drivers.rbd [req-ccd09518-7bf8-4387-87f8-1aeca1befa14] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:54 default DEBUG cinder.volume.drivers.rbd [req-ccd09518-7bf8-4387-87f8-1aeca1befa14] volume has no backup snaps _delete_backup_snaps /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1012
+2020-03-12 16:40:54 default DEBUG cinder.volume.drivers.rbd [req-ccd09518-7bf8-4387-87f8-1aeca1befa14] Volume volume-3598df15-5fbc-4351-b8c2-f19ab126d708 is not a clone. _get_clone_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1035
+2020-03-12 16:40:54 default DEBUG cinder.volume.drivers.rbd [req-ccd09518-7bf8-4387-87f8-1aeca1befa14] deleting rbd volume volume-3598df15-5fbc-4351-b8c2-f19ab126d708 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1147
+2020-03-12 16:40:56 default INFO ember_csi.common [req-ccd09518-7bf8-4387-87f8-1aeca1befa14] &lt;= GRPC DeleteVolume served in 1s
+2020-03-12 16:40:56 default DEBUG ember_csi.common [req-ccd09518-7bf8-4387-87f8-1aeca1befa14] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:56 default INFO ember_csi.common [req-f21bcb30-8370-46df-9137-8844c367685e] =&gt; GRPC DeleteVolume 39f0446c-b258-4bfa-9cf6-d401f6d5f2d3
+2020-03-12 16:40:56 default DEBUG ember_csi.common [req-f21bcb30-8370-46df-9137-8844c367685e] With params:
+	volume_id: "39f0446c-b258-4bfa-9cf6-d401f6d5f2d3" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:56 default DEBUG ember_csi.base [req-f21bcb30-8370-46df-9137-8844c367685e] Deleting volume 39f0446c-b258-4bfa-9cf6-d401f6d5f2d3 DeleteVolume /ember-csi/ember_csi/base.py:454
+2020-03-12 16:40:56 default DEBUG cinder.volume.drivers.rbd [req-f21bcb30-8370-46df-9137-8844c367685e] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:56 default DEBUG cinder.volume.drivers.rbd [req-f21bcb30-8370-46df-9137-8844c367685e] volume has no backup snaps _delete_backup_snaps /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1012
+2020-03-12 16:40:56 default DEBUG cinder.volume.drivers.rbd [req-f21bcb30-8370-46df-9137-8844c367685e] Volume volume-39f0446c-b258-4bfa-9cf6-d401f6d5f2d3 is not a clone. _get_clone_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1035
+2020-03-12 16:40:56 default DEBUG cinder.volume.drivers.rbd [req-f21bcb30-8370-46df-9137-8844c367685e] deleting rbd volume volume-39f0446c-b258-4bfa-9cf6-d401f6d5f2d3 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1147
+2020-03-12 16:40:57 default INFO ember_csi.common [req-f21bcb30-8370-46df-9137-8844c367685e] &lt;= GRPC DeleteVolume served in 1s
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-f21bcb30-8370-46df-9137-8844c367685e] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:57 default INFO ember_csi.common [req-e08db10f-be5a-4fc6-8f48-7ec25e4f777e] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-e08db10f-be5a-4fc6-8f48-7ec25e4f777e] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:57 default INFO ember_csi.common [req-e08db10f-be5a-4fc6-8f48-7ec25e4f777e] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-e08db10f-be5a-4fc6-8f48-7ec25e4f777e] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:57 default INFO ember_csi.common [req-c43ca800-fada-4648-9c98-bf863c66cea5] =&gt; GRPC CreateSnapshot 
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-c43ca800-fada-4648-9c98-bf863c66cea5] With params:
+	source_volume_id: "testId" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:57 default ERROR ember_csi.common [req-c43ca800-fada-4648-9c98-bf863c66cea5] !! GRPC CreateSnapshot failed in 0s with INVALID_ARGUMENT (Missing required fields: name): Exception
+2020-03-12 16:40:57 default INFO ember_csi.common [req-084cce67-db69-4ca6-94e9-0f514fb31cc5] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-084cce67-db69-4ca6-94e9-0f514fb31cc5] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:57 default INFO ember_csi.common [req-084cce67-db69-4ca6-94e9-0f514fb31cc5] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-084cce67-db69-4ca6-94e9-0f514fb31cc5] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:57 default INFO ember_csi.common [req-267d94b8-7737-402b-a04f-9a5537e4169f] =&gt; GRPC CreateSnapshot name
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-267d94b8-7737-402b-a04f-9a5537e4169f] With params:
+	name: "name" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:57 default ERROR ember_csi.common [req-267d94b8-7737-402b-a04f-9a5537e4169f] !! GRPC CreateSnapshot failed in 0s with INVALID_ARGUMENT (Missing required fields: source_volume_id): Exception
+2020-03-12 16:40:57 default INFO ember_csi.common [req-e02b2420-65a1-42e0-813e-4cc78fadbd3d] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-e02b2420-65a1-42e0-813e-4cc78fadbd3d] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:57 default INFO ember_csi.common [req-e02b2420-65a1-42e0-813e-4cc78fadbd3d] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-e02b2420-65a1-42e0-813e-4cc78fadbd3d] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:57 default INFO ember_csi.common [req-0a3dbeab-99fd-452d-aee9-206cb8598764] =&gt; GRPC CreateVolume CreateSnapshot-volume-1
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-0a3dbeab-99fd-452d-aee9-206cb8598764] With params:
+	name: "CreateSnapshot-volume-1"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:57 default DEBUG ember_csi.base [req-0a3dbeab-99fd-452d-aee9-206cb8598764] Creating volume CreateSnapshot-volume-1 CreateVolume /ember-csi/ember_csi/base.py:398
+2020-03-12 16:40:57 default DEBUG cinder.volume.drivers.rbd [req-0a3dbeab-99fd-452d-aee9-206cb8598764] creating volume 'volume-583df140-05b5-44d7-aaae-77ecb1d9de5e' create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:930
+2020-03-12 16:40:57 default DEBUG cinder.volume.drivers.rbd [req-0a3dbeab-99fd-452d-aee9-206cb8598764] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:57 default INFO ember_csi.common [req-0a3dbeab-99fd-452d-aee9-206cb8598764] &lt;= GRPC CreateVolume (id = 583df140-05b5-44d7-aaae-77ecb1d9de5e) served in 0s
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-0a3dbeab-99fd-452d-aee9-206cb8598764] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "583df140-05b5-44d7-aaae-77ecb1d9de5e"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:57 default INFO ember_csi.common [req-e7263d4f-c074-4683-b7ee-286fcb8592e4] =&gt; GRPC CreateSnapshot CreateSnapshot-snapshot-1
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-e7263d4f-c074-4683-b7ee-286fcb8592e4] With params:
+	source_volume_id: "583df140-05b5-44d7-aaae-77ecb1d9de5e"
+	name: "CreateSnapshot-snapshot-1" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:57 default DEBUG cinder.volume.drivers.rbd [req-e7263d4f-c074-4683-b7ee-286fcb8592e4] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:57 default INFO ember_csi.common [req-e7263d4f-c074-4683-b7ee-286fcb8592e4] &lt;= GRPC CreateSnapshot (id = 679bbbb0-f021-4ff6-ab25-81b445976deb) served in 0s
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-e7263d4f-c074-4683-b7ee-286fcb8592e4] Returns:
+		snapshot {
+		  snapshot_id: "679bbbb0-f021-4ff6-ab25-81b445976deb"
+		  source_volume_id: "583df140-05b5-44d7-aaae-77ecb1d9de5e"
+		  creation_time {
+		    seconds: 1584031257
+		    nanos: 432902000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:57 default INFO ember_csi.common [req-b0d016c7-7265-481a-8692-019a54136c6c] =&gt; GRPC CreateSnapshot CreateSnapshot-snapshot-1
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-b0d016c7-7265-481a-8692-019a54136c6c] With params:
+	source_volume_id: "583df140-05b5-44d7-aaae-77ecb1d9de5e"
+	name: "CreateSnapshot-snapshot-1" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:57 default DEBUG ember_csi.base [req-b0d016c7-7265-481a-8692-019a54136c6c] Snapshot CreateSnapshot-snapshot-1 exists with id 679bbbb0-f021-4ff6-ab25-81b445976deb CreateSnapshot /ember-csi/ember_csi/base.py:1106
+2020-03-12 16:40:57 default INFO ember_csi.common [req-b0d016c7-7265-481a-8692-019a54136c6c] &lt;= GRPC CreateSnapshot (id = 679bbbb0-f021-4ff6-ab25-81b445976deb) served in 0s
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-b0d016c7-7265-481a-8692-019a54136c6c] Returns:
+		snapshot {
+		  snapshot_id: "679bbbb0-f021-4ff6-ab25-81b445976deb"
+		  source_volume_id: "583df140-05b5-44d7-aaae-77ecb1d9de5e"
+		  creation_time {
+		    seconds: 1584031257
+		    nanos: 432902000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:57 default INFO ember_csi.common [req-24f60111-2e98-476e-bc4e-ef61a9ce1242] =&gt; GRPC DeleteSnapshot 679bbbb0-f021-4ff6-ab25-81b445976deb
+2020-03-12 16:40:57 default DEBUG ember_csi.common [req-24f60111-2e98-476e-bc4e-ef61a9ce1242] With params:
+	snapshot_id: "679bbbb0-f021-4ff6-ab25-81b445976deb" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:57 default DEBUG cinder.volume.drivers.rbd [req-24f60111-2e98-476e-bc4e-ef61a9ce1242] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:58 default INFO ember_csi.common [req-24f60111-2e98-476e-bc4e-ef61a9ce1242] &lt;= GRPC DeleteSnapshot served in 1s
+2020-03-12 16:40:58 default DEBUG ember_csi.common [req-24f60111-2e98-476e-bc4e-ef61a9ce1242] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:58 default INFO ember_csi.common [req-fdb5de45-115b-4437-b4a7-c6523b1b2d99] =&gt; GRPC DeleteVolume 583df140-05b5-44d7-aaae-77ecb1d9de5e
+2020-03-12 16:40:58 default DEBUG ember_csi.common [req-fdb5de45-115b-4437-b4a7-c6523b1b2d99] With params:
+	volume_id: "583df140-05b5-44d7-aaae-77ecb1d9de5e" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:58 default DEBUG ember_csi.base [req-fdb5de45-115b-4437-b4a7-c6523b1b2d99] Deleting volume 583df140-05b5-44d7-aaae-77ecb1d9de5e DeleteVolume /ember-csi/ember_csi/base.py:454
+2020-03-12 16:40:58 default DEBUG cinder.volume.drivers.rbd [req-fdb5de45-115b-4437-b4a7-c6523b1b2d99] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:58 default DEBUG cinder.volume.drivers.rbd [req-fdb5de45-115b-4437-b4a7-c6523b1b2d99] volume has no backup snaps _delete_backup_snaps /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1012
+2020-03-12 16:40:58 default DEBUG cinder.volume.drivers.rbd [req-fdb5de45-115b-4437-b4a7-c6523b1b2d99] Volume volume-583df140-05b5-44d7-aaae-77ecb1d9de5e is not a clone. _get_clone_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1035
+2020-03-12 16:40:58 default DEBUG cinder.volume.drivers.rbd [req-fdb5de45-115b-4437-b4a7-c6523b1b2d99] deleting rbd volume volume-583df140-05b5-44d7-aaae-77ecb1d9de5e delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1147
+2020-03-12 16:40:59 default INFO ember_csi.common [req-fdb5de45-115b-4437-b4a7-c6523b1b2d99] &lt;= GRPC DeleteVolume served in 1s
+2020-03-12 16:40:59 default DEBUG ember_csi.common [req-fdb5de45-115b-4437-b4a7-c6523b1b2d99] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:59 default INFO ember_csi.common [req-e2f0b697-e6b4-4c4a-9dd2-f37e015fc014] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:40:59 default DEBUG ember_csi.common [req-e2f0b697-e6b4-4c4a-9dd2-f37e015fc014] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:59 default INFO ember_csi.common [req-e2f0b697-e6b4-4c4a-9dd2-f37e015fc014] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:40:59 default DEBUG ember_csi.common [req-e2f0b697-e6b4-4c4a-9dd2-f37e015fc014] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:59 default INFO ember_csi.common [req-160696ab-2f5d-4405-9802-9e218c9794b1] =&gt; GRPC CreateVolume CreateSnapshot-volume-2
+2020-03-12 16:40:59 default DEBUG ember_csi.common [req-160696ab-2f5d-4405-9802-9e218c9794b1] With params:
+	name: "CreateSnapshot-volume-2"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:59 default DEBUG ember_csi.base [req-160696ab-2f5d-4405-9802-9e218c9794b1] Creating volume CreateSnapshot-volume-2 CreateVolume /ember-csi/ember_csi/base.py:398
+2020-03-12 16:40:59 default DEBUG cinder.volume.drivers.rbd [req-160696ab-2f5d-4405-9802-9e218c9794b1] creating volume 'volume-7b1746f2-4621-4a35-b2b5-479bb5173087' create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:930
+2020-03-12 16:40:59 default DEBUG cinder.volume.drivers.rbd [req-160696ab-2f5d-4405-9802-9e218c9794b1] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:40:59 default INFO ember_csi.common [req-160696ab-2f5d-4405-9802-9e218c9794b1] &lt;= GRPC CreateVolume (id = 7b1746f2-4621-4a35-b2b5-479bb5173087) served in 0s
+2020-03-12 16:40:59 default DEBUG ember_csi.common [req-160696ab-2f5d-4405-9802-9e218c9794b1] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "7b1746f2-4621-4a35-b2b5-479bb5173087"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:40:59 default INFO ember_csi.common [req-dfe4102f-1fbe-4527-9dc2-87c4531968bf] =&gt; GRPC CreateSnapshot CreateSnapshot-snapshot-2
+2020-03-12 16:40:59 default DEBUG ember_csi.common [req-dfe4102f-1fbe-4527-9dc2-87c4531968bf] With params:
+	source_volume_id: "7b1746f2-4621-4a35-b2b5-479bb5173087"
+	name: "CreateSnapshot-snapshot-2" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:40:59 default DEBUG cinder.volume.drivers.rbd [req-dfe4102f-1fbe-4527-9dc2-87c4531968bf] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:41:00 default INFO ember_csi.common [req-dfe4102f-1fbe-4527-9dc2-87c4531968bf] &lt;= GRPC CreateSnapshot (id = cd9783ac-0e6e-49a0-8b4d-38805144d319) served in 1s
+2020-03-12 16:41:00 default DEBUG ember_csi.common [req-dfe4102f-1fbe-4527-9dc2-87c4531968bf] Returns:
+		snapshot {
+		  snapshot_id: "cd9783ac-0e6e-49a0-8b4d-38805144d319"
+		  source_volume_id: "7b1746f2-4621-4a35-b2b5-479bb5173087"
+		  creation_time {
+		    seconds: 1584031259
+		    nanos: 894227000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:41:00 default INFO ember_csi.common [req-3a83606c-cf90-411e-80e7-81ef262d4a0c] =&gt; GRPC CreateVolume CreateSnapshot-volume-3
+2020-03-12 16:41:00 default DEBUG ember_csi.common [req-3a83606c-cf90-411e-80e7-81ef262d4a0c] With params:
+	name: "CreateSnapshot-volume-3"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:41:00 default DEBUG ember_csi.base [req-3a83606c-cf90-411e-80e7-81ef262d4a0c] Creating volume CreateSnapshot-volume-3 CreateVolume /ember-csi/ember_csi/base.py:398
+2020-03-12 16:41:00 default DEBUG cinder.volume.drivers.rbd [req-3a83606c-cf90-411e-80e7-81ef262d4a0c] creating volume 'volume-a70ac934-e343-4fe1-b94d-f6cf1221efdd' create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:930
+2020-03-12 16:41:00 default DEBUG cinder.volume.drivers.rbd [req-3a83606c-cf90-411e-80e7-81ef262d4a0c] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:41:00 default INFO ember_csi.common [req-3a83606c-cf90-411e-80e7-81ef262d4a0c] &lt;= GRPC CreateVolume (id = a70ac934-e343-4fe1-b94d-f6cf1221efdd) served in 0s
+2020-03-12 16:41:00 default DEBUG ember_csi.common [req-3a83606c-cf90-411e-80e7-81ef262d4a0c] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "a70ac934-e343-4fe1-b94d-f6cf1221efdd"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:41:00 default INFO ember_csi.common [req-b2befc3a-ad4b-4b2c-b990-590d905a1b85] =&gt; GRPC CreateSnapshot CreateSnapshot-snapshot-2
+2020-03-12 16:41:00 default DEBUG ember_csi.common [req-b2befc3a-ad4b-4b2c-b990-590d905a1b85] With params:
+	source_volume_id: "a70ac934-e343-4fe1-b94d-f6cf1221efdd"
+	name: "CreateSnapshot-snapshot-2" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:41:00 default ERROR ember_csi.common [req-b2befc3a-ad4b-4b2c-b990-590d905a1b85] !! GRPC CreateSnapshot failed in 0s with ALREADY_EXISTS (Snapshot CreateSnapshot-snapshot-2 from a70ac934-e343-4fe1-b94d-f6cf1221efdd exists for volume 7b1746f2-4621-4a35-b2b5-479bb5173087): Exception
+2020-03-12 16:41:00 default INFO ember_csi.common [req-da314d4e-4868-40d9-9940-53172bebd0ed] =&gt; GRPC DeleteSnapshot cd9783ac-0e6e-49a0-8b4d-38805144d319
+2020-03-12 16:41:00 default DEBUG ember_csi.common [req-da314d4e-4868-40d9-9940-53172bebd0ed] With params:
+	snapshot_id: "cd9783ac-0e6e-49a0-8b4d-38805144d319" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:41:00 default DEBUG cinder.volume.drivers.rbd [req-da314d4e-4868-40d9-9940-53172bebd0ed] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:41:01 default INFO ember_csi.common [req-da314d4e-4868-40d9-9940-53172bebd0ed] &lt;= GRPC DeleteSnapshot served in 1s
+2020-03-12 16:41:01 default DEBUG ember_csi.common [req-da314d4e-4868-40d9-9940-53172bebd0ed] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:41:01 default INFO ember_csi.common [req-92ab2b6f-d35f-48bf-bb1e-f90f68bdb4a6] =&gt; GRPC DeleteVolume 7b1746f2-4621-4a35-b2b5-479bb5173087
+2020-03-12 16:41:01 default DEBUG ember_csi.common [req-92ab2b6f-d35f-48bf-bb1e-f90f68bdb4a6] With params:
+	volume_id: "7b1746f2-4621-4a35-b2b5-479bb5173087" dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:41:01 default DEBUG ember_csi.base [req-92ab2b6f-d35f-48bf-bb1e-f90f68bdb4a6] Deleting volume 7b1746f2-4621-4a35-b2b5-479bb5173087 DeleteVolume /ember-csi/ember_csi/base.py:454
+2020-03-12 16:41:01 default DEBUG cinder.volume.drivers.rbd [req-92ab2b6f-d35f-48bf-bb1e-f90f68bdb4a6] connecting to admin@ceph (conf=/etc/ceph/ceph.conf, timeout=-1). _do_conn /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:415
+2020-03-12 16:41:01 default DEBUG cinder.volume.drivers.rbd [req-92ab2b6f-d35f-48bf-bb1e-f90f68bdb4a6] volume has no backup snaps _delete_backup_snaps /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1012
+2020-03-12 16:41:01 default DEBUG cinder.volume.drivers.rbd [req-92ab2b6f-d35f-48bf-bb1e-f90f68bdb4a6] Volume volume-7b1746f2-4621-4a35-b2b5-479bb5173087 is not a clone. _get_clone_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1035
+2020-03-12 16:41:01 default DEBUG cinder.volume.drivers.rbd [req-92ab2b6f-d35f-48bf-bb1e-f90f68bdb4a6] deleting rbd volume volume-7b1746f2-4621-4a35-b2b5-479bb5173087 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/rbd.py:1147
+2020-03-12 16:41:03 default INFO ember_csi.common [req-92ab2b6f-d35f-48bf-bb1e-f90f68bdb4a6] &lt;= GRPC DeleteVolume served in 1s
+2020-03-12 16:41:03 default DEBUG ember_csi.common [req-92ab2b6f-d35f-48bf-bb1e-f90f68bdb4a6] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:41:03 default INFO ember_csi.common [req-ee3c5f4c-9b62-40fa-b60b-7efc4b3cbb9e] =&gt; GRPC ControllerGetCapabilities
+2020-03-12 16:41:03 default DEBUG ember_csi.common [req-ee3c5f4c-9b62-40fa-b60b-7efc4b3cbb9e] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:41:03 default INFO ember_csi.common [req-ee3c5f4c-9b62-40fa-b60b-7efc4b3cbb9e] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-03-12 16:41:03 default DEBUG ember_csi.common [req-ee3c5f4c-9b62-40fa-b60b-7efc4b3cbb9e] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-03-12 16:41:03 default INFO ember_csi.common [req-266b6775-bd80-4d25-bc21-09714209c538] =&gt; GRPC CreateVolume CreateSnapshot-volume-3
+2020-03-12 16:41:03 default DEBUG ember_csi.common [req-266b6775-bd80-4d25-bc21-09714209c538] With params:
+	name: "CreateSnapshot-volume-3"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-03-12 16:41:03 default DEBUG ember_csi.base [req-266b6775-bd80-4d25-bc21-09714209c538] Volume CreateSnapshot-volume-3 exists with id a70ac934-e343-4fe1-b94d-f6cf1221efdd CreateVolume /ember-csi/ember_csi/base.py:387
+2020-03-12 16:41:03 default ERROR ember_csi.common [req-266b6775-bd80-4d25-bc21-09714209c538] !! GRPC CreateVolume failed in 0s with ALREADY_EXISTS (Volume already exists but is incompatible): Exception
+
+</pre>
+</body>
+
+</html>
