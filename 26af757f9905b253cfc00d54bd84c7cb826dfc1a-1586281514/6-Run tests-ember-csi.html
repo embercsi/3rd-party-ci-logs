@@ -1,0 +1,2081 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+2020-04-07 17:54:54 default DEBUG cinder.volume.drivers.lvm [-] Attempting to initialize LVM driver with the following target_driver: cinder.volume.targets.lio.LioAdm __init__ /usr/lib/python2.7/site-packages/cinder/volume/drivers/lvm.py:105
+2020-04-07 17:54:54 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): cinder-rtstool verify execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:54 default DEBUG oslo_concurrency.processutils [-] CMD "cinder-rtstool verify" returned: 0 in 0.446s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:54 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C vgs --version execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:54 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C vgs --version" returned: 0 in 0.284s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:54 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C vgs --noheadings -o name ember-volumes execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:55 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C vgs --noheadings -o name ember-volumes" returned: 0 in 0.270s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:55 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:55 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/ember-volumes-pool" returned: 5 in 0.272s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:55 default DEBUG oslo_concurrency.processutils [-] u'env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/ember-volumes-pool' failed. Not Retrying. execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:457
+2020-04-07 17:54:55 default INFO cinder.brick.local_dev.lvm [-] Logical Volume not found when querying LVM info. (vg_name=ember-volumes, lv_name=ember-volumes-pool
+2020-04-07 17:54:55 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C vgs --version execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:55 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C vgs --version" returned: 0 in 0.269s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:55 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C vgs --noheadings --unit=g -o name,size,free,lv_count,uuid --separator : --nosuffix ember-volumes execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:56 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C vgs --noheadings --unit=g -o name,size,free,lv_count,uuid --separator : --nosuffix ember-volumes" returned: 0 in 0.260s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:56 default DEBUG cinder.brick.local_dev.lvm [-] Creating thin pool 'ember-volumes/ember-volumes-pool' with size 9.5g of total 10.0g create_thin_pool /usr/lib/python2.7/site-packages/cinder/brick/local_dev/lvm.py:524
+2020-04-07 17:54:56 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C lvcreate -T -L 9.5g ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:56 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C lvcreate -T -L 9.5g ember-volumes/ember-volumes-pool" returned: 0 in 0.745s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:56 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C vgs --version execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:57 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C vgs --version" returned: 0 in 0.258s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:57 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): lvchange -a y --yes -K ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:57 default DEBUG oslo_concurrency.processutils [-] CMD "lvchange -a y --yes -K ember-volumes/ember-volumes-pool" returned: 0 in 0.269s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:57 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C vgs --version execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:57 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C vgs --version" returned: 0 in 0.263s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:57 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C pvs --noheadings --unit=g -o vg_name,name,size,free --separator | --nosuffix --ignoreskippedcluster execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:57 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C pvs --noheadings --unit=g -o vg_name,name,size,free --separator | --nosuffix --ignoreskippedcluster" returned: 0 in 0.264s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:57 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C vgs --noheadings --unit=g -o name,size,free,lv_count,uuid --separator : --nosuffix ember-volumes execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:58 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C vgs --noheadings --unit=g -o name,size,free,lv_count,uuid --separator : --nosuffix ember-volumes" returned: 0 in 0.263s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:58 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C vgs --noheadings --unit=g -o name,size,free,lv_count,uuid --separator : --nosuffix ember-volumes execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:58 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C vgs --noheadings --unit=g -o name,size,free,lv_count,uuid --separator : --nosuffix ember-volumes" returned: 0 in 0.266s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:58 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:58 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes" returned: 0 in 0.263s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:58 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o size,data_percent --separator : --nosuffix /dev/ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:58 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C lvs --noheadings --unit=g -o size,data_percent --separator : --nosuffix /dev/ember-volumes/ember-volumes-pool" returned: 0 in 0.264s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:58 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C vgs --version execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:59 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C vgs --version" returned: 0 in 0.261s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:59 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:59 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/ember-volumes-pool" returned: 0 in 0.274s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:59 default INFO cinder.volume.drivers.lvm [-] Enabling LVM thin provisioning by default because a thin pool exists.
+2020-04-07 17:54:59 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C vgs --version execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:59 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C vgs --version" returned: 0 in 0.260s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:59 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:54:59 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/ember-volumes-pool" returned: 0 in 0.265s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:54:59 default DEBUG cinder.volume.drivers.lvm [-] Updating volume stats _update_volume_stats /usr/lib/python2.7/site-packages/cinder/volume/drivers/lvm.py:198
+2020-04-07 17:54:59 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C vgs --noheadings --unit=g -o name,size,free,lv_count,uuid --separator : --nosuffix ember-volumes execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:00 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C vgs --noheadings --unit=g -o name,size,free,lv_count,uuid --separator : --nosuffix ember-volumes" returned: 0 in 0.268s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:00 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:00 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes" returned: 0 in 0.268s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:00 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o size,data_percent --separator : --nosuffix /dev/ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:00 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C lvs --noheadings --unit=g -o size,data_percent --separator : --nosuffix /dev/ember-volumes/ember-volumes-pool" returned: 0 in 0.266s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:00 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:01 default DEBUG oslo_concurrency.processutils [-] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes" returned: 0 in 0.266s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:01 default INFO cinder.volume.driver [-] Driver hasn't implemented _init_vendor_properties()
+2020-04-07 17:55:01 default DEBUG cinder.volume.driver [-] Initialized capabilities list: {'driver_version': '3.0.0', 'sparse_copy_volume': True, 'pools': [{'pool_name': u'lvm', 'filter_function': None, 'goodness_function': None, 'total_volumes': 1, 'provisioned_capacity_gb': 0.0, 'multiattach': True, 'thin_provisioning_support': True, 'free_capacity_gb': 9.5, 'location_info': u'LVMVolumeDriver:libvirt0:ember-volumes:thin:0', 'total_capacity_gb': 9.5, 'thick_provisioning_support': False, 'reserved_percentage': 0, 'QoS_support': False, 'max_over_subscription_ratio': '20.0', 'backend_state': 'up'}], 'shared_targets': False, 'vendor_name': 'Open Source', 'volume_backend_name': u'lvm', 'properties': {'replication_enabled': {'type': 'boolean', 'description': u'Enables replication.', 'title': 'Replication'}, 'qos': {'type': 'boolean', 'description': u'Enables QoS.', 'title': 'QoS'}, 'compression': {'type': 'boolean', 'description': u'Enables compression.', 'title': 'Compression'}, 'thin_provisioning': {'type': 'boolean', 'description': u'Sets thin provisioning.', 'title': 'Thin Provisioning'}}, 'storage_protocol': 'iSCSI'}. init_capabilities /usr/lib/python2.7/site-packages/cinder/volume/driver.py:797
+2020-04-07 17:55:01 default DEBUG os_brick.utils [-] ==&gt; get_connector_properties: call u"{'execute': &lt;function _execute at 0x7f68d9619320&gt;, 'my_ip': '192.168.122.19', 'enforce_multipath': False, 'host': None, 'root_helper': 'sudo', 'multipath': False}" trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:146
+2020-04-07 17:55:01 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): cat /etc/iscsi/initiatorname.iscsi execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:01 default DEBUG oslo_concurrency.processutils [-] CMD "cat /etc/iscsi/initiatorname.iscsi" returned: 0 in 0.257s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:01 default DEBUG os_brick.initiator.linuxfc [-] No Fibre Channel support detected on system. get_fc_hbas /usr/lib/python2.7/site-packages/os_brick/initiator/linuxfc.py:157
+2020-04-07 17:55:01 default DEBUG os_brick.initiator.linuxfc [-] No Fibre Channel support detected on system. get_fc_hbas /usr/lib/python2.7/site-packages/os_brick/initiator/linuxfc.py:157
+2020-04-07 17:55:01 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): cat /sys/class/dmi/id/product_uuid execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:01 default DEBUG oslo_concurrency.processutils [-] CMD "cat /sys/class/dmi/id/product_uuid" returned: 0 in 0.259s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:01 default DEBUG os_brick.utils [-] &lt;== get_connector_properties: return (518ms) {'initiator': u'iqn.1994-05.com.redhat:libvirt0', 'ip': u'192.168.122.19', 'system uuid': u'15B637A5-2AD6-4325-823A-17D9510147D8', 'platform': u'x86_64', 'host': u'libvirt0', 'do_local_attach': False, 'os_type': u'linux2', 'multipath': False} trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:170
+2020-04-07 17:55:01 default INFO ember_csi.ember_csi [-] Ember CSI vmaster+07042020175443712830650 with 30 workers (CSI spec: v1.0.0, cinderlib: v1.1.0.dev12, cinder: v15.1.0.dev142)
+2020-04-07 17:55:01 default INFO ember_csi.ember_csi [-] Persistence module: MemoryPersistence
+2020-04-07 17:55:01 default INFO ember_csi.ember_csi [-] Running as all with backend LVMVolumeDriver v3.0.0
+2020-04-07 17:55:01 default INFO ember_csi.ember_csi [-] Plugin name: ember-csi.io
+2020-04-07 17:55:01 default INFO ember_csi.ember_csi [-] Debugging feature is ENABLED with ember_csi.rpdb and OFF. Toggle it with SIGUSR1.
+2020-04-07 17:55:01 default INFO ember_csi.ember_csi [-] Supported filesystems: cramfs, minix, btrfs, ext2, ext3, ext4, xfs
+2020-04-07 17:55:01 default INFO ember_csi.ember_csi [-] Now serving on [::]:50051...
+2020-04-07 17:55:06 default INFO ember_csi.common [req-67489761-3378-451c-9530-3f99f8a38bff] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:06 default DEBUG ember_csi.common [req-67489761-3378-451c-9530-3f99f8a38bff] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:06 default INFO ember_csi.common [req-67489761-3378-451c-9530-3f99f8a38bff] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:06 default DEBUG ember_csi.common [req-67489761-3378-451c-9530-3f99f8a38bff] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:06 default INFO ember_csi.common [req-5eeae02e-13e0-4120-8ee7-458b4362fa93] =&gt; GRPC ListSnapshots 
+2020-04-07 17:55:06 default DEBUG ember_csi.common [req-5eeae02e-13e0-4120-8ee7-458b4362fa93] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:06 default INFO ember_csi.common [req-5eeae02e-13e0-4120-8ee7-458b4362fa93] &lt;= GRPC ListSnapshots served in 0s
+2020-04-07 17:55:06 default DEBUG ember_csi.common [req-5eeae02e-13e0-4120-8ee7-458b4362fa93] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:06 default INFO ember_csi.common [req-1db905d7-6afe-44ce-b610-fb8d717dbf7a] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:06 default DEBUG ember_csi.common [req-1db905d7-6afe-44ce-b610-fb8d717dbf7a] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:06 default INFO ember_csi.common [req-1db905d7-6afe-44ce-b610-fb8d717dbf7a] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:06 default DEBUG ember_csi.common [req-1db905d7-6afe-44ce-b610-fb8d717dbf7a] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:06 default INFO ember_csi.common [req-09b4a88a-b71f-4d73-a89b-00626133cb1a] =&gt; GRPC CreateVolume listSnapshots-volume-1
+2020-04-07 17:55:06 default DEBUG ember_csi.common [req-09b4a88a-b71f-4d73-a89b-00626133cb1a] With params:
+	name: "listSnapshots-volume-1"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:06 default DEBUG ember_csi.base [req-09b4a88a-b71f-4d73-a89b-00626133cb1a] Creating volume listSnapshots-volume-1 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:06 default DEBUG oslo_concurrency.processutils [req-09b4a88a-b71f-4d73-a89b-00626133cb1a] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0 ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:06 default DEBUG oslo_concurrency.processutils [req-09b4a88a-b71f-4d73-a89b-00626133cb1a] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0 ember-volumes/ember-volumes-pool" returned: 0 in 0.492s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:06 default INFO ember_csi.common [req-09b4a88a-b71f-4d73-a89b-00626133cb1a] &lt;= GRPC CreateVolume (id = 9f995342-df0b-4f7a-8dcf-169937c9f9b0) served in 0s
+2020-04-07 17:55:06 default DEBUG ember_csi.common [req-09b4a88a-b71f-4d73-a89b-00626133cb1a] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "9f995342-df0b-4f7a-8dcf-169937c9f9b0"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:06 default INFO ember_csi.common [req-a4ae51e8-956c-4486-ac05-513a70edb306] =&gt; GRPC CreateSnapshot listSnapshots-snapshot-1
+2020-04-07 17:55:06 default DEBUG ember_csi.common [req-a4ae51e8-956c-4486-ac05-513a70edb306] With params:
+	source_volume_id: "9f995342-df0b-4f7a-8dcf-169937c9f9b0"
+	name: "listSnapshots-snapshot-1" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:06 default DEBUG oslo_concurrency.processutils [req-a4ae51e8-956c-4486-ac05-513a70edb306] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:07 default DEBUG oslo_concurrency.processutils [req-a4ae51e8-956c-4486-ac05-513a70edb306] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0" returned: 0 in 0.269s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:07 default DEBUG oslo_concurrency.processutils [req-a4ae51e8-956c-4486-ac05-513a70edb306] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-4cca72e5-3e52-4af5-aadf-4857a19d8ae4 --snapshot ember-volumes/volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:07 default DEBUG oslo_concurrency.processutils [req-a4ae51e8-956c-4486-ac05-513a70edb306] CMD "env LC_ALL=C lvcreate --name _snapshot-4cca72e5-3e52-4af5-aadf-4857a19d8ae4 --snapshot ember-volumes/volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0" returned: 0 in 0.374s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:07 default INFO ember_csi.common [req-a4ae51e8-956c-4486-ac05-513a70edb306] &lt;= GRPC CreateSnapshot (id = 4cca72e5-3e52-4af5-aadf-4857a19d8ae4) served in 1s
+2020-04-07 17:55:07 default DEBUG ember_csi.common [req-a4ae51e8-956c-4486-ac05-513a70edb306] Returns:
+		snapshot {
+		  snapshot_id: "4cca72e5-3e52-4af5-aadf-4857a19d8ae4"
+		  source_volume_id: "9f995342-df0b-4f7a-8dcf-169937c9f9b0"
+		  creation_time {
+		    seconds: 1586282106
+		    nanos: 768806000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:07 default INFO ember_csi.common [req-d797288d-96c5-4d3c-a976-636442703af8] =&gt; GRPC ListSnapshots 4cca72e5-3e52-4af5-aadf-4857a19d8ae4
+2020-04-07 17:55:07 default DEBUG ember_csi.common [req-d797288d-96c5-4d3c-a976-636442703af8] With params:
+	snapshot_id: "4cca72e5-3e52-4af5-aadf-4857a19d8ae4" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:07 default INFO ember_csi.common [req-d797288d-96c5-4d3c-a976-636442703af8] &lt;= GRPC ListSnapshots served in 0s
+2020-04-07 17:55:07 default DEBUG ember_csi.common [req-d797288d-96c5-4d3c-a976-636442703af8] Returns:
+		entries {
+		  snapshot {
+		    snapshot_id: "4cca72e5-3e52-4af5-aadf-4857a19d8ae4"
+		    source_volume_id: "9f995342-df0b-4f7a-8dcf-169937c9f9b0"
+		    creation_time {
+		      seconds: 1586282106
+		      nanos: 768806000
+		    }
+		    ready_to_use: true
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:07 default INFO ember_csi.common [req-dfe9dd15-90a6-4cf4-a0c7-71e9b7d51094] =&gt; GRPC DeleteSnapshot 4cca72e5-3e52-4af5-aadf-4857a19d8ae4
+2020-04-07 17:55:07 default DEBUG ember_csi.common [req-dfe9dd15-90a6-4cf4-a0c7-71e9b7d51094] With params:
+	snapshot_id: "4cca72e5-3e52-4af5-aadf-4857a19d8ae4" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:07 default DEBUG oslo_concurrency.processutils [req-dfe9dd15-90a6-4cf4-a0c7-71e9b7d51094] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-4cca72e5-3e52-4af5-aadf-4857a19d8ae4 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:07 default DEBUG oslo_concurrency.processutils [req-dfe9dd15-90a6-4cf4-a0c7-71e9b7d51094] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-4cca72e5-3e52-4af5-aadf-4857a19d8ae4" returned: 0 in 0.273s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:07 default DEBUG oslo_concurrency.processutils [req-dfe9dd15-90a6-4cf4-a0c7-71e9b7d51094] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-4cca72e5-3e52-4af5-aadf-4857a19d8ae4 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:08 default DEBUG oslo_concurrency.processutils [req-dfe9dd15-90a6-4cf4-a0c7-71e9b7d51094] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-4cca72e5-3e52-4af5-aadf-4857a19d8ae4" returned: 0 in 0.322s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:08 default INFO ember_csi.common [req-dfe9dd15-90a6-4cf4-a0c7-71e9b7d51094] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:08 default DEBUG ember_csi.common [req-dfe9dd15-90a6-4cf4-a0c7-71e9b7d51094] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:08 default INFO ember_csi.common [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] =&gt; GRPC DeleteVolume 9f995342-df0b-4f7a-8dcf-169937c9f9b0
+2020-04-07 17:55:08 default DEBUG ember_csi.common [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] With params:
+	volume_id: "9f995342-df0b-4f7a-8dcf-169937c9f9b0" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:08 default DEBUG ember_csi.base [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] Deleting volume 9f995342-df0b-4f7a-8dcf-169937c9f9b0 DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:08 default DEBUG oslo_concurrency.processutils [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:08 default DEBUG oslo_concurrency.processutils [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0" returned: 0 in 0.266s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:08 default DEBUG oslo_concurrency.processutils [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:08 default DEBUG oslo_concurrency.processutils [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0" returned: 0 in 0.268s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:08 default DEBUG oslo_concurrency.processutils [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:08 default DEBUG oslo_concurrency.processutils [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-9f995342-df0b-4f7a-8dcf-169937c9f9b0" returned: 0 in 0.338s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:08 default INFO cinder.volume.drivers.lvm [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] Successfully deleted volume: 9f995342-df0b-4f7a-8dcf-169937c9f9b0
+2020-04-07 17:55:08 default INFO ember_csi.common [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:08 default DEBUG ember_csi.common [req-6c5bfd28-c59d-4ff2-819c-1359546e213b] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:08 default INFO ember_csi.common [req-ebeed9cd-b3e3-4d33-8bb5-336d93c20ec6] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:08 default DEBUG ember_csi.common [req-ebeed9cd-b3e3-4d33-8bb5-336d93c20ec6] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:08 default INFO ember_csi.common [req-ebeed9cd-b3e3-4d33-8bb5-336d93c20ec6] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:08 default DEBUG ember_csi.common [req-ebeed9cd-b3e3-4d33-8bb5-336d93c20ec6] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:08 default INFO ember_csi.common [req-6447b716-23d1-4f05-bc12-e8e01c0a4fbf] =&gt; GRPC ListSnapshots none-exist-id
+2020-04-07 17:55:08 default DEBUG ember_csi.common [req-6447b716-23d1-4f05-bc12-e8e01c0a4fbf] With params:
+	snapshot_id: "none-exist-id" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:08 default INFO ember_csi.common [req-6447b716-23d1-4f05-bc12-e8e01c0a4fbf] &lt;= GRPC ListSnapshots served in 0s
+2020-04-07 17:55:08 default DEBUG ember_csi.common [req-6447b716-23d1-4f05-bc12-e8e01c0a4fbf] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:08 default INFO ember_csi.common [req-524460e6-52c3-475c-b984-6b54a6d6633d] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:08 default DEBUG ember_csi.common [req-524460e6-52c3-475c-b984-6b54a6d6633d] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:08 default INFO ember_csi.common [req-524460e6-52c3-475c-b984-6b54a6d6633d] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:08 default DEBUG ember_csi.common [req-524460e6-52c3-475c-b984-6b54a6d6633d] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:08 default INFO ember_csi.common [req-7b6f33b0-7cf0-40d8-a490-4d06a3870ef2] =&gt; GRPC CreateVolume listSnapshots-volume-2
+2020-04-07 17:55:08 default DEBUG ember_csi.common [req-7b6f33b0-7cf0-40d8-a490-4d06a3870ef2] With params:
+	name: "listSnapshots-volume-2"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:08 default DEBUG ember_csi.base [req-7b6f33b0-7cf0-40d8-a490-4d06a3870ef2] Creating volume listSnapshots-volume-2 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:08 default DEBUG oslo_concurrency.processutils [req-7b6f33b0-7cf0-40d8-a490-4d06a3870ef2] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-f9801d9c-047c-4da1-aa77-08a0256de2a0 ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:09 default DEBUG oslo_concurrency.processutils [req-7b6f33b0-7cf0-40d8-a490-4d06a3870ef2] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-f9801d9c-047c-4da1-aa77-08a0256de2a0 ember-volumes/ember-volumes-pool" returned: 0 in 0.343s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:09 default INFO ember_csi.common [req-7b6f33b0-7cf0-40d8-a490-4d06a3870ef2] &lt;= GRPC CreateVolume (id = f9801d9c-047c-4da1-aa77-08a0256de2a0) served in 0s
+2020-04-07 17:55:09 default DEBUG ember_csi.common [req-7b6f33b0-7cf0-40d8-a490-4d06a3870ef2] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "f9801d9c-047c-4da1-aa77-08a0256de2a0"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:09 default INFO ember_csi.common [req-ca340a6c-3c39-4988-9f56-c7c32b8f7e7c] =&gt; GRPC CreateSnapshot listSnapshots-snapshot-2
+2020-04-07 17:55:09 default DEBUG ember_csi.common [req-ca340a6c-3c39-4988-9f56-c7c32b8f7e7c] With params:
+	source_volume_id: "f9801d9c-047c-4da1-aa77-08a0256de2a0"
+	name: "listSnapshots-snapshot-2" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:09 default DEBUG oslo_concurrency.processutils [req-ca340a6c-3c39-4988-9f56-c7c32b8f7e7c] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-f9801d9c-047c-4da1-aa77-08a0256de2a0 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:09 default DEBUG oslo_concurrency.processutils [req-ca340a6c-3c39-4988-9f56-c7c32b8f7e7c] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-f9801d9c-047c-4da1-aa77-08a0256de2a0" returned: 0 in 0.273s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:09 default DEBUG oslo_concurrency.processutils [req-ca340a6c-3c39-4988-9f56-c7c32b8f7e7c] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-01ad9a8c-db18-49d6-880f-c8ea49f23d4a --snapshot ember-volumes/volume-f9801d9c-047c-4da1-aa77-08a0256de2a0 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:09 default DEBUG oslo_concurrency.processutils [req-ca340a6c-3c39-4988-9f56-c7c32b8f7e7c] CMD "env LC_ALL=C lvcreate --name _snapshot-01ad9a8c-db18-49d6-880f-c8ea49f23d4a --snapshot ember-volumes/volume-f9801d9c-047c-4da1-aa77-08a0256de2a0" returned: 0 in 0.386s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:09 default INFO ember_csi.common [req-ca340a6c-3c39-4988-9f56-c7c32b8f7e7c] &lt;= GRPC CreateSnapshot (id = 01ad9a8c-db18-49d6-880f-c8ea49f23d4a) served in 1s
+2020-04-07 17:55:09 default DEBUG ember_csi.common [req-ca340a6c-3c39-4988-9f56-c7c32b8f7e7c] Returns:
+		snapshot {
+		  snapshot_id: "01ad9a8c-db18-49d6-880f-c8ea49f23d4a"
+		  source_volume_id: "f9801d9c-047c-4da1-aa77-08a0256de2a0"
+		  creation_time {
+		    seconds: 1586282109
+		    nanos: 283292000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:09 default INFO ember_csi.common [req-1626e991-edde-4971-9a8f-653cd1258516] =&gt; GRPC ListSnapshots 
+2020-04-07 17:55:09 default DEBUG ember_csi.common [req-1626e991-edde-4971-9a8f-653cd1258516] With params:
+	source_volume_id: "f9801d9c-047c-4da1-aa77-08a0256de2a0" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:09 default INFO ember_csi.common [req-1626e991-edde-4971-9a8f-653cd1258516] &lt;= GRPC ListSnapshots served in 0s
+2020-04-07 17:55:09 default DEBUG ember_csi.common [req-1626e991-edde-4971-9a8f-653cd1258516] Returns:
+		entries {
+		  snapshot {
+		    snapshot_id: "01ad9a8c-db18-49d6-880f-c8ea49f23d4a"
+		    source_volume_id: "f9801d9c-047c-4da1-aa77-08a0256de2a0"
+		    creation_time {
+		      seconds: 1586282109
+		      nanos: 283292000
+		    }
+		    ready_to_use: true
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:09 default INFO ember_csi.common [req-a1cc6cf9-c27f-4439-9a59-da99d7ab8711] =&gt; GRPC DeleteSnapshot 01ad9a8c-db18-49d6-880f-c8ea49f23d4a
+2020-04-07 17:55:09 default DEBUG ember_csi.common [req-a1cc6cf9-c27f-4439-9a59-da99d7ab8711] With params:
+	snapshot_id: "01ad9a8c-db18-49d6-880f-c8ea49f23d4a" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:09 default DEBUG oslo_concurrency.processutils [req-a1cc6cf9-c27f-4439-9a59-da99d7ab8711] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-01ad9a8c-db18-49d6-880f-c8ea49f23d4a execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:10 default DEBUG oslo_concurrency.processutils [req-a1cc6cf9-c27f-4439-9a59-da99d7ab8711] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-01ad9a8c-db18-49d6-880f-c8ea49f23d4a" returned: 0 in 0.265s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:10 default DEBUG oslo_concurrency.processutils [req-a1cc6cf9-c27f-4439-9a59-da99d7ab8711] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-01ad9a8c-db18-49d6-880f-c8ea49f23d4a execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:10 default DEBUG oslo_concurrency.processutils [req-a1cc6cf9-c27f-4439-9a59-da99d7ab8711] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-01ad9a8c-db18-49d6-880f-c8ea49f23d4a" returned: 0 in 0.323s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:10 default INFO ember_csi.common [req-a1cc6cf9-c27f-4439-9a59-da99d7ab8711] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:10 default DEBUG ember_csi.common [req-a1cc6cf9-c27f-4439-9a59-da99d7ab8711] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:10 default INFO ember_csi.common [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] =&gt; GRPC DeleteVolume f9801d9c-047c-4da1-aa77-08a0256de2a0
+2020-04-07 17:55:10 default DEBUG ember_csi.common [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] With params:
+	volume_id: "f9801d9c-047c-4da1-aa77-08a0256de2a0" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:10 default DEBUG ember_csi.base [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] Deleting volume f9801d9c-047c-4da1-aa77-08a0256de2a0 DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:10 default DEBUG oslo_concurrency.processutils [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-f9801d9c-047c-4da1-aa77-08a0256de2a0 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:10 default DEBUG oslo_concurrency.processutils [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-f9801d9c-047c-4da1-aa77-08a0256de2a0" returned: 0 in 0.263s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:10 default DEBUG oslo_concurrency.processutils [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-f9801d9c-047c-4da1-aa77-08a0256de2a0 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:11 default DEBUG oslo_concurrency.processutils [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-f9801d9c-047c-4da1-aa77-08a0256de2a0" returned: 0 in 0.263s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:11 default DEBUG oslo_concurrency.processutils [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-f9801d9c-047c-4da1-aa77-08a0256de2a0 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:11 default DEBUG oslo_concurrency.processutils [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-f9801d9c-047c-4da1-aa77-08a0256de2a0" returned: 0 in 0.331s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:11 default INFO cinder.volume.drivers.lvm [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] Successfully deleted volume: f9801d9c-047c-4da1-aa77-08a0256de2a0
+2020-04-07 17:55:11 default INFO ember_csi.common [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-33690d9d-e4d9-4bcc-b499-3c48753a7644] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:11 default INFO ember_csi.common [req-c0e2d31e-4233-4359-a53a-fbf762faf2fa] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-c0e2d31e-4233-4359-a53a-fbf762faf2fa] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:11 default INFO ember_csi.common [req-c0e2d31e-4233-4359-a53a-fbf762faf2fa] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-c0e2d31e-4233-4359-a53a-fbf762faf2fa] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:11 default INFO ember_csi.common [req-56e7af65-5486-4765-9c4a-381e6a964337] =&gt; GRPC ListSnapshots 
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-56e7af65-5486-4765-9c4a-381e6a964337] With params:
+	source_volume_id: "none-exist-volume-id" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:11 default INFO ember_csi.common [req-56e7af65-5486-4765-9c4a-381e6a964337] &lt;= GRPC ListSnapshots served in 0s
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-56e7af65-5486-4765-9c4a-381e6a964337] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:11 default INFO ember_csi.common [req-510f2d1c-f2a7-4461-b791-5f5a09b771f6] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-510f2d1c-f2a7-4461-b791-5f5a09b771f6] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:11 default INFO ember_csi.common [req-510f2d1c-f2a7-4461-b791-5f5a09b771f6] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-510f2d1c-f2a7-4461-b791-5f5a09b771f6] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:11 default INFO ember_csi.common [req-705daad4-8777-4daa-91d5-46ef8683626e] =&gt; GRPC ListSnapshots 
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-705daad4-8777-4daa-91d5-46ef8683626e] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:11 default INFO ember_csi.common [req-705daad4-8777-4daa-91d5-46ef8683626e] &lt;= GRPC ListSnapshots served in 0s
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-705daad4-8777-4daa-91d5-46ef8683626e] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:11 default INFO ember_csi.common [req-8bf10a32-e347-404a-961c-56cbee2db6f3] =&gt; GRPC CreateVolume listSnapshots-volume-3
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-8bf10a32-e347-404a-961c-56cbee2db6f3] With params:
+	name: "listSnapshots-volume-3"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:11 default DEBUG ember_csi.base [req-8bf10a32-e347-404a-961c-56cbee2db6f3] Creating volume listSnapshots-volume-3 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:11 default DEBUG oslo_concurrency.processutils [req-8bf10a32-e347-404a-961c-56cbee2db6f3] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:11 default DEBUG oslo_concurrency.processutils [req-8bf10a32-e347-404a-961c-56cbee2db6f3] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e ember-volumes/ember-volumes-pool" returned: 0 in 0.351s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:11 default INFO ember_csi.common [req-8bf10a32-e347-404a-961c-56cbee2db6f3] &lt;= GRPC CreateVolume (id = 51b495a3-9c2e-4416-9f2b-7b63813a2e1e) served in 0s
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-8bf10a32-e347-404a-961c-56cbee2db6f3] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "51b495a3-9c2e-4416-9f2b-7b63813a2e1e"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:11 default INFO ember_csi.common [req-6f71066b-8d6d-466b-8cb7-543da2633426] =&gt; GRPC CreateSnapshot listSnapshots-snapshot-3
+2020-04-07 17:55:11 default DEBUG ember_csi.common [req-6f71066b-8d6d-466b-8cb7-543da2633426] With params:
+	source_volume_id: "51b495a3-9c2e-4416-9f2b-7b63813a2e1e"
+	name: "listSnapshots-snapshot-3" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:11 default DEBUG oslo_concurrency.processutils [req-6f71066b-8d6d-466b-8cb7-543da2633426] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:12 default DEBUG oslo_concurrency.processutils [req-6f71066b-8d6d-466b-8cb7-543da2633426] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e" returned: 0 in 0.267s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:12 default DEBUG oslo_concurrency.processutils [req-6f71066b-8d6d-466b-8cb7-543da2633426] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-1b7679cb-c733-4ecf-abb6-c85f8bdeae22 --snapshot ember-volumes/volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:12 default DEBUG oslo_concurrency.processutils [req-6f71066b-8d6d-466b-8cb7-543da2633426] CMD "env LC_ALL=C lvcreate --name _snapshot-1b7679cb-c733-4ecf-abb6-c85f8bdeae22 --snapshot ember-volumes/volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e" returned: 0 in 0.363s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:12 default INFO ember_csi.common [req-6f71066b-8d6d-466b-8cb7-543da2633426] &lt;= GRPC CreateSnapshot (id = 1b7679cb-c733-4ecf-abb6-c85f8bdeae22) served in 1s
+2020-04-07 17:55:12 default DEBUG ember_csi.common [req-6f71066b-8d6d-466b-8cb7-543da2633426] Returns:
+		snapshot {
+		  snapshot_id: "1b7679cb-c733-4ecf-abb6-c85f8bdeae22"
+		  source_volume_id: "51b495a3-9c2e-4416-9f2b-7b63813a2e1e"
+		  creation_time {
+		    seconds: 1586282111
+		    nanos: 794956000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:12 default INFO ember_csi.common [req-5871043b-9c61-4261-b497-3a71b0a5a70e] =&gt; GRPC ListSnapshots 
+2020-04-07 17:55:12 default DEBUG ember_csi.common [req-5871043b-9c61-4261-b497-3a71b0a5a70e] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:12 default INFO ember_csi.common [req-5871043b-9c61-4261-b497-3a71b0a5a70e] &lt;= GRPC ListSnapshots served in 0s
+2020-04-07 17:55:12 default DEBUG ember_csi.common [req-5871043b-9c61-4261-b497-3a71b0a5a70e] Returns:
+		entries {
+		  snapshot {
+		    snapshot_id: "1b7679cb-c733-4ecf-abb6-c85f8bdeae22"
+		    source_volume_id: "51b495a3-9c2e-4416-9f2b-7b63813a2e1e"
+		    creation_time {
+		      seconds: 1586282111
+		      nanos: 794956000
+		    }
+		    ready_to_use: true
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:12 default INFO ember_csi.common [req-8298c5b6-bf20-4d4b-ac54-e57673188706] =&gt; GRPC DeleteSnapshot 1b7679cb-c733-4ecf-abb6-c85f8bdeae22
+2020-04-07 17:55:12 default DEBUG ember_csi.common [req-8298c5b6-bf20-4d4b-ac54-e57673188706] With params:
+	snapshot_id: "1b7679cb-c733-4ecf-abb6-c85f8bdeae22" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:12 default DEBUG oslo_concurrency.processutils [req-8298c5b6-bf20-4d4b-ac54-e57673188706] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-1b7679cb-c733-4ecf-abb6-c85f8bdeae22 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:12 default DEBUG oslo_concurrency.processutils [req-8298c5b6-bf20-4d4b-ac54-e57673188706] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-1b7679cb-c733-4ecf-abb6-c85f8bdeae22" returned: 0 in 0.267s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:12 default DEBUG oslo_concurrency.processutils [req-8298c5b6-bf20-4d4b-ac54-e57673188706] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-1b7679cb-c733-4ecf-abb6-c85f8bdeae22 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:13 default DEBUG oslo_concurrency.processutils [req-8298c5b6-bf20-4d4b-ac54-e57673188706] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-1b7679cb-c733-4ecf-abb6-c85f8bdeae22" returned: 0 in 0.328s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:13 default INFO ember_csi.common [req-8298c5b6-bf20-4d4b-ac54-e57673188706] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:13 default DEBUG ember_csi.common [req-8298c5b6-bf20-4d4b-ac54-e57673188706] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:13 default INFO ember_csi.common [req-17447639-c8e2-4429-a987-be6705489245] =&gt; GRPC DeleteVolume 51b495a3-9c2e-4416-9f2b-7b63813a2e1e
+2020-04-07 17:55:13 default DEBUG ember_csi.common [req-17447639-c8e2-4429-a987-be6705489245] With params:
+	volume_id: "51b495a3-9c2e-4416-9f2b-7b63813a2e1e" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:13 default DEBUG ember_csi.base [req-17447639-c8e2-4429-a987-be6705489245] Deleting volume 51b495a3-9c2e-4416-9f2b-7b63813a2e1e DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:13 default DEBUG oslo_concurrency.processutils [req-17447639-c8e2-4429-a987-be6705489245] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:13 default DEBUG oslo_concurrency.processutils [req-17447639-c8e2-4429-a987-be6705489245] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e" returned: 0 in 0.262s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:13 default DEBUG oslo_concurrency.processutils [req-17447639-c8e2-4429-a987-be6705489245] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:13 default DEBUG oslo_concurrency.processutils [req-17447639-c8e2-4429-a987-be6705489245] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e" returned: 0 in 0.267s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:13 default DEBUG oslo_concurrency.processutils [req-17447639-c8e2-4429-a987-be6705489245] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:13 default DEBUG oslo_concurrency.processutils [req-17447639-c8e2-4429-a987-be6705489245] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-51b495a3-9c2e-4416-9f2b-7b63813a2e1e" returned: 0 in 0.329s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:13 default INFO cinder.volume.drivers.lvm [req-17447639-c8e2-4429-a987-be6705489245] Successfully deleted volume: 51b495a3-9c2e-4416-9f2b-7b63813a2e1e
+2020-04-07 17:55:13 default INFO ember_csi.common [req-17447639-c8e2-4429-a987-be6705489245] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:13 default DEBUG ember_csi.common [req-17447639-c8e2-4429-a987-be6705489245] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:13 default INFO ember_csi.common [req-63bc1ef9-1d58-4c64-aeb2-05fadf847a6f] =&gt; GRPC ListSnapshots 
+2020-04-07 17:55:13 default DEBUG ember_csi.common [req-63bc1ef9-1d58-4c64-aeb2-05fadf847a6f] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:13 default INFO ember_csi.common [req-63bc1ef9-1d58-4c64-aeb2-05fadf847a6f] &lt;= GRPC ListSnapshots served in 0s
+2020-04-07 17:55:13 default DEBUG ember_csi.common [req-63bc1ef9-1d58-4c64-aeb2-05fadf847a6f] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:13 default INFO ember_csi.common [req-04e534e5-8333-415c-be5e-b1933e829aea] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:13 default DEBUG ember_csi.common [req-04e534e5-8333-415c-be5e-b1933e829aea] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:13 default INFO ember_csi.common [req-04e534e5-8333-415c-be5e-b1933e829aea] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:13 default DEBUG ember_csi.common [req-04e534e5-8333-415c-be5e-b1933e829aea] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:13 default INFO ember_csi.common [req-3169c60f-7b9a-428d-872c-47e751e96180] =&gt; GRPC ListSnapshots 
+2020-04-07 17:55:13 default DEBUG ember_csi.common [req-3169c60f-7b9a-428d-872c-47e751e96180] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:13 default INFO ember_csi.common [req-3169c60f-7b9a-428d-872c-47e751e96180] &lt;= GRPC ListSnapshots served in 0s
+2020-04-07 17:55:13 default DEBUG ember_csi.common [req-3169c60f-7b9a-428d-872c-47e751e96180] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:13 default INFO ember_csi.common [req-68ee4d0f-bcc2-41e4-8920-ef36ad7181a6] =&gt; GRPC CreateVolume volume1
+2020-04-07 17:55:13 default DEBUG ember_csi.common [req-68ee4d0f-bcc2-41e4-8920-ef36ad7181a6] With params:
+	name: "volume1"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:13 default DEBUG ember_csi.base [req-68ee4d0f-bcc2-41e4-8920-ef36ad7181a6] Creating volume volume1 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:13 default DEBUG oslo_concurrency.processutils [req-68ee4d0f-bcc2-41e4-8920-ef36ad7181a6] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-13525e7c-7913-4183-b921-4bd5f3c8db62 ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:14 default DEBUG oslo_concurrency.processutils [req-68ee4d0f-bcc2-41e4-8920-ef36ad7181a6] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-13525e7c-7913-4183-b921-4bd5f3c8db62 ember-volumes/ember-volumes-pool" returned: 0 in 0.341s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:14 default INFO ember_csi.common [req-68ee4d0f-bcc2-41e4-8920-ef36ad7181a6] &lt;= GRPC CreateVolume (id = 13525e7c-7913-4183-b921-4bd5f3c8db62) served in 0s
+2020-04-07 17:55:14 default DEBUG ember_csi.common [req-68ee4d0f-bcc2-41e4-8920-ef36ad7181a6] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "13525e7c-7913-4183-b921-4bd5f3c8db62"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:14 default INFO ember_csi.common [req-c62364dc-c920-4324-bef7-c0204601ea2d] =&gt; GRPC CreateSnapshot snapshot1
+2020-04-07 17:55:14 default DEBUG ember_csi.common [req-c62364dc-c920-4324-bef7-c0204601ea2d] With params:
+	source_volume_id: "13525e7c-7913-4183-b921-4bd5f3c8db62"
+	name: "snapshot1" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:14 default DEBUG oslo_concurrency.processutils [req-c62364dc-c920-4324-bef7-c0204601ea2d] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-13525e7c-7913-4183-b921-4bd5f3c8db62 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:14 default DEBUG oslo_concurrency.processutils [req-c62364dc-c920-4324-bef7-c0204601ea2d] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-13525e7c-7913-4183-b921-4bd5f3c8db62" returned: 0 in 0.269s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:14 default DEBUG oslo_concurrency.processutils [req-c62364dc-c920-4324-bef7-c0204601ea2d] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-61bafe6b-2685-44c1-8e06-496d6b56dc43 --snapshot ember-volumes/volume-13525e7c-7913-4183-b921-4bd5f3c8db62 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:14 default DEBUG oslo_concurrency.processutils [req-c62364dc-c920-4324-bef7-c0204601ea2d] CMD "env LC_ALL=C lvcreate --name _snapshot-61bafe6b-2685-44c1-8e06-496d6b56dc43 --snapshot ember-volumes/volume-13525e7c-7913-4183-b921-4bd5f3c8db62" returned: 0 in 0.363s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:14 default INFO ember_csi.common [req-c62364dc-c920-4324-bef7-c0204601ea2d] &lt;= GRPC CreateSnapshot (id = 61bafe6b-2685-44c1-8e06-496d6b56dc43) served in 1s
+2020-04-07 17:55:14 default DEBUG ember_csi.common [req-c62364dc-c920-4324-bef7-c0204601ea2d] Returns:
+		snapshot {
+		  snapshot_id: "61bafe6b-2685-44c1-8e06-496d6b56dc43"
+		  source_volume_id: "13525e7c-7913-4183-b921-4bd5f3c8db62"
+		  creation_time {
+		    seconds: 1586282114
+		    nanos: 284373000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:14 default INFO ember_csi.common [req-fbaf7d68-36af-495a-82a6-403326ea17aa] =&gt; GRPC CreateVolume volume2
+2020-04-07 17:55:14 default DEBUG ember_csi.common [req-fbaf7d68-36af-495a-82a6-403326ea17aa] With params:
+	name: "volume2"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:14 default DEBUG ember_csi.base [req-fbaf7d68-36af-495a-82a6-403326ea17aa] Creating volume volume2 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:14 default DEBUG oslo_concurrency.processutils [req-fbaf7d68-36af-495a-82a6-403326ea17aa] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-26af7717-a69e-4176-ab18-8bfc1665a87b ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:15 default DEBUG oslo_concurrency.processutils [req-fbaf7d68-36af-495a-82a6-403326ea17aa] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-26af7717-a69e-4176-ab18-8bfc1665a87b ember-volumes/ember-volumes-pool" returned: 0 in 0.373s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:15 default INFO ember_csi.common [req-fbaf7d68-36af-495a-82a6-403326ea17aa] &lt;= GRPC CreateVolume (id = 26af7717-a69e-4176-ab18-8bfc1665a87b) served in 0s
+2020-04-07 17:55:15 default DEBUG ember_csi.common [req-fbaf7d68-36af-495a-82a6-403326ea17aa] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "26af7717-a69e-4176-ab18-8bfc1665a87b"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:15 default INFO ember_csi.common [req-b763f14d-7eff-450a-8a2f-907a912c5bb1] =&gt; GRPC CreateSnapshot snapshot2
+2020-04-07 17:55:15 default DEBUG ember_csi.common [req-b763f14d-7eff-450a-8a2f-907a912c5bb1] With params:
+	source_volume_id: "26af7717-a69e-4176-ab18-8bfc1665a87b"
+	name: "snapshot2" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:15 default DEBUG oslo_concurrency.processutils [req-b763f14d-7eff-450a-8a2f-907a912c5bb1] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-26af7717-a69e-4176-ab18-8bfc1665a87b execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:15 default DEBUG oslo_concurrency.processutils [req-b763f14d-7eff-450a-8a2f-907a912c5bb1] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-26af7717-a69e-4176-ab18-8bfc1665a87b" returned: 0 in 0.278s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:15 default DEBUG oslo_concurrency.processutils [req-b763f14d-7eff-450a-8a2f-907a912c5bb1] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-0e7e631d-25e6-4867-b523-bff27ea28ab9 --snapshot ember-volumes/volume-26af7717-a69e-4176-ab18-8bfc1665a87b execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:15 default DEBUG oslo_concurrency.processutils [req-b763f14d-7eff-450a-8a2f-907a912c5bb1] CMD "env LC_ALL=C lvcreate --name _snapshot-0e7e631d-25e6-4867-b523-bff27ea28ab9 --snapshot ember-volumes/volume-26af7717-a69e-4176-ab18-8bfc1665a87b" returned: 0 in 0.365s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:15 default INFO ember_csi.common [req-b763f14d-7eff-450a-8a2f-907a912c5bb1] &lt;= GRPC CreateSnapshot (id = 0e7e631d-25e6-4867-b523-bff27ea28ab9) served in 1s
+2020-04-07 17:55:15 default DEBUG ember_csi.common [req-b763f14d-7eff-450a-8a2f-907a912c5bb1] Returns:
+		snapshot {
+		  snapshot_id: "0e7e631d-25e6-4867-b523-bff27ea28ab9"
+		  source_volume_id: "26af7717-a69e-4176-ab18-8bfc1665a87b"
+		  creation_time {
+		    seconds: 1586282115
+		    nanos: 307588000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:15 default INFO ember_csi.common [req-c93f6aed-7fe6-4c0f-887f-4a5407996c8f] =&gt; GRPC CreateVolume volume3
+2020-04-07 17:55:15 default DEBUG ember_csi.common [req-c93f6aed-7fe6-4c0f-887f-4a5407996c8f] With params:
+	name: "volume3"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:15 default DEBUG ember_csi.base [req-c93f6aed-7fe6-4c0f-887f-4a5407996c8f] Creating volume volume3 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:15 default DEBUG oslo_concurrency.processutils [req-c93f6aed-7fe6-4c0f-887f-4a5407996c8f] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-894caa18-7321-471a-a4b3-2f0021ae60f9 ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:16 default DEBUG oslo_concurrency.processutils [req-c93f6aed-7fe6-4c0f-887f-4a5407996c8f] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-894caa18-7321-471a-a4b3-2f0021ae60f9 ember-volumes/ember-volumes-pool" returned: 0 in 0.359s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:16 default INFO ember_csi.common [req-c93f6aed-7fe6-4c0f-887f-4a5407996c8f] &lt;= GRPC CreateVolume (id = 894caa18-7321-471a-a4b3-2f0021ae60f9) served in 0s
+2020-04-07 17:55:16 default DEBUG ember_csi.common [req-c93f6aed-7fe6-4c0f-887f-4a5407996c8f] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "894caa18-7321-471a-a4b3-2f0021ae60f9"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:16 default INFO ember_csi.common [req-2cab613a-d585-4072-a86e-8e6120e1a83f] =&gt; GRPC CreateSnapshot snapshot3
+2020-04-07 17:55:16 default DEBUG ember_csi.common [req-2cab613a-d585-4072-a86e-8e6120e1a83f] With params:
+	source_volume_id: "894caa18-7321-471a-a4b3-2f0021ae60f9"
+	name: "snapshot3" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:16 default DEBUG oslo_concurrency.processutils [req-2cab613a-d585-4072-a86e-8e6120e1a83f] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-894caa18-7321-471a-a4b3-2f0021ae60f9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:16 default DEBUG oslo_concurrency.processutils [req-2cab613a-d585-4072-a86e-8e6120e1a83f] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-894caa18-7321-471a-a4b3-2f0021ae60f9" returned: 0 in 0.268s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:16 default DEBUG oslo_concurrency.processutils [req-2cab613a-d585-4072-a86e-8e6120e1a83f] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-c59f8dc7-1190-4343-9fe1-0fe9be402e6d --snapshot ember-volumes/volume-894caa18-7321-471a-a4b3-2f0021ae60f9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:16 default DEBUG oslo_concurrency.processutils [req-2cab613a-d585-4072-a86e-8e6120e1a83f] CMD "env LC_ALL=C lvcreate --name _snapshot-c59f8dc7-1190-4343-9fe1-0fe9be402e6d --snapshot ember-volumes/volume-894caa18-7321-471a-a4b3-2f0021ae60f9" returned: 0 in 0.365s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:16 default INFO ember_csi.common [req-2cab613a-d585-4072-a86e-8e6120e1a83f] &lt;= GRPC CreateSnapshot (id = c59f8dc7-1190-4343-9fe1-0fe9be402e6d) served in 1s
+2020-04-07 17:55:16 default DEBUG ember_csi.common [req-2cab613a-d585-4072-a86e-8e6120e1a83f] Returns:
+		snapshot {
+		  snapshot_id: "c59f8dc7-1190-4343-9fe1-0fe9be402e6d"
+		  source_volume_id: "894caa18-7321-471a-a4b3-2f0021ae60f9"
+		  creation_time {
+		    seconds: 1586282116
+		    nanos: 327792000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:16 default INFO ember_csi.common [req-cec7f098-456e-468a-a2d1-27da68063992] =&gt; GRPC CreateVolume volume4
+2020-04-07 17:55:16 default DEBUG ember_csi.common [req-cec7f098-456e-468a-a2d1-27da68063992] With params:
+	name: "volume4"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:16 default DEBUG ember_csi.base [req-cec7f098-456e-468a-a2d1-27da68063992] Creating volume volume4 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:16 default DEBUG oslo_concurrency.processutils [req-cec7f098-456e-468a-a2d1-27da68063992] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-494e9529-77b4-42d3-b30e-619a18b9c8b4 ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:17 default DEBUG oslo_concurrency.processutils [req-cec7f098-456e-468a-a2d1-27da68063992] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-494e9529-77b4-42d3-b30e-619a18b9c8b4 ember-volumes/ember-volumes-pool" returned: 0 in 0.358s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:17 default INFO ember_csi.common [req-cec7f098-456e-468a-a2d1-27da68063992] &lt;= GRPC CreateVolume (id = 494e9529-77b4-42d3-b30e-619a18b9c8b4) served in 0s
+2020-04-07 17:55:17 default DEBUG ember_csi.common [req-cec7f098-456e-468a-a2d1-27da68063992] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "494e9529-77b4-42d3-b30e-619a18b9c8b4"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:17 default INFO ember_csi.common [req-2547bca8-3bdf-46fd-aaae-f711420e569e] =&gt; GRPC CreateSnapshot snapshot4
+2020-04-07 17:55:17 default DEBUG ember_csi.common [req-2547bca8-3bdf-46fd-aaae-f711420e569e] With params:
+	source_volume_id: "494e9529-77b4-42d3-b30e-619a18b9c8b4"
+	name: "snapshot4" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:17 default DEBUG oslo_concurrency.processutils [req-2547bca8-3bdf-46fd-aaae-f711420e569e] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-494e9529-77b4-42d3-b30e-619a18b9c8b4 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:17 default DEBUG oslo_concurrency.processutils [req-2547bca8-3bdf-46fd-aaae-f711420e569e] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-494e9529-77b4-42d3-b30e-619a18b9c8b4" returned: 0 in 0.272s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:17 default DEBUG oslo_concurrency.processutils [req-2547bca8-3bdf-46fd-aaae-f711420e569e] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-e24996fb-642f-4796-8d83-66f9ac1af18a --snapshot ember-volumes/volume-494e9529-77b4-42d3-b30e-619a18b9c8b4 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:18 default DEBUG oslo_concurrency.processutils [req-2547bca8-3bdf-46fd-aaae-f711420e569e] CMD "env LC_ALL=C lvcreate --name _snapshot-e24996fb-642f-4796-8d83-66f9ac1af18a --snapshot ember-volumes/volume-494e9529-77b4-42d3-b30e-619a18b9c8b4" returned: 0 in 0.391s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:18 default INFO ember_csi.common [req-2547bca8-3bdf-46fd-aaae-f711420e569e] &lt;= GRPC CreateSnapshot (id = e24996fb-642f-4796-8d83-66f9ac1af18a) served in 1s
+2020-04-07 17:55:18 default DEBUG ember_csi.common [req-2547bca8-3bdf-46fd-aaae-f711420e569e] Returns:
+		snapshot {
+		  snapshot_id: "e24996fb-642f-4796-8d83-66f9ac1af18a"
+		  source_volume_id: "494e9529-77b4-42d3-b30e-619a18b9c8b4"
+		  creation_time {
+		    seconds: 1586282117
+		    nanos: 341700000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:18 default INFO ember_csi.common [req-f8e25d77-b132-43ca-964c-2d9a2d8e5342] =&gt; GRPC CreateVolume volume5
+2020-04-07 17:55:18 default DEBUG ember_csi.common [req-f8e25d77-b132-43ca-964c-2d9a2d8e5342] With params:
+	name: "volume5"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:18 default DEBUG ember_csi.base [req-f8e25d77-b132-43ca-964c-2d9a2d8e5342] Creating volume volume5 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:18 default DEBUG oslo_concurrency.processutils [req-f8e25d77-b132-43ca-964c-2d9a2d8e5342] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-66e5b489-a04a-4070-af83-f3636d31b2c6 ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:18 default DEBUG oslo_concurrency.processutils [req-f8e25d77-b132-43ca-964c-2d9a2d8e5342] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-66e5b489-a04a-4070-af83-f3636d31b2c6 ember-volumes/ember-volumes-pool" returned: 0 in 0.363s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:18 default INFO ember_csi.common [req-f8e25d77-b132-43ca-964c-2d9a2d8e5342] &lt;= GRPC CreateVolume (id = 66e5b489-a04a-4070-af83-f3636d31b2c6) served in 0s
+2020-04-07 17:55:18 default DEBUG ember_csi.common [req-f8e25d77-b132-43ca-964c-2d9a2d8e5342] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "66e5b489-a04a-4070-af83-f3636d31b2c6"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:18 default INFO ember_csi.common [req-bbf2634d-d91e-45de-a5e5-1c738a8189af] =&gt; GRPC CreateSnapshot snapshot5
+2020-04-07 17:55:18 default DEBUG ember_csi.common [req-bbf2634d-d91e-45de-a5e5-1c738a8189af] With params:
+	source_volume_id: "66e5b489-a04a-4070-af83-f3636d31b2c6"
+	name: "snapshot5" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:18 default DEBUG oslo_concurrency.processutils [req-bbf2634d-d91e-45de-a5e5-1c738a8189af] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-66e5b489-a04a-4070-af83-f3636d31b2c6 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:18 default DEBUG oslo_concurrency.processutils [req-bbf2634d-d91e-45de-a5e5-1c738a8189af] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-66e5b489-a04a-4070-af83-f3636d31b2c6" returned: 0 in 0.272s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:18 default DEBUG oslo_concurrency.processutils [req-bbf2634d-d91e-45de-a5e5-1c738a8189af] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-f579bf77-3d65-4f8d-add1-300d6a0f946d --snapshot ember-volumes/volume-66e5b489-a04a-4070-af83-f3636d31b2c6 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:19 default DEBUG oslo_concurrency.processutils [req-bbf2634d-d91e-45de-a5e5-1c738a8189af] CMD "env LC_ALL=C lvcreate --name _snapshot-f579bf77-3d65-4f8d-add1-300d6a0f946d --snapshot ember-volumes/volume-66e5b489-a04a-4070-af83-f3636d31b2c6" returned: 0 in 0.373s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:19 default INFO ember_csi.common [req-bbf2634d-d91e-45de-a5e5-1c738a8189af] &lt;= GRPC CreateSnapshot (id = f579bf77-3d65-4f8d-add1-300d6a0f946d) served in 1s
+2020-04-07 17:55:19 default DEBUG ember_csi.common [req-bbf2634d-d91e-45de-a5e5-1c738a8189af] Returns:
+		snapshot {
+		  snapshot_id: "f579bf77-3d65-4f8d-add1-300d6a0f946d"
+		  source_volume_id: "66e5b489-a04a-4070-af83-f3636d31b2c6"
+		  creation_time {
+		    seconds: 1586282118
+		    nanos: 387607000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:19 default INFO ember_csi.common [req-c308211a-51bc-4215-a002-447cfceba8e5] =&gt; GRPC ListSnapshots 
+2020-04-07 17:55:19 default DEBUG ember_csi.common [req-c308211a-51bc-4215-a002-447cfceba8e5] With params:
+	max_entries: 2 dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:19 default INFO ember_csi.common [req-c308211a-51bc-4215-a002-447cfceba8e5] &lt;= GRPC ListSnapshots served in 0s
+2020-04-07 17:55:19 default DEBUG ember_csi.common [req-c308211a-51bc-4215-a002-447cfceba8e5] Returns:
+		entries {
+		  snapshot {
+		    snapshot_id: "61bafe6b-2685-44c1-8e06-496d6b56dc43"
+		    source_volume_id: "13525e7c-7913-4183-b921-4bd5f3c8db62"
+		    creation_time {
+		      seconds: 1586282114
+		      nanos: 284373000
+		    }
+		    ready_to_use: true
+		  }
+		}
+		entries {
+		  snapshot {
+		    snapshot_id: "0e7e631d-25e6-4867-b523-bff27ea28ab9"
+		    source_volume_id: "26af7717-a69e-4176-ab18-8bfc1665a87b"
+		    creation_time {
+		      seconds: 1586282115
+		      nanos: 307588000
+		    }
+		    ready_to_use: true
+		  }
+		}
+		next_token: "1586282115307588096" dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:19 default INFO ember_csi.common [req-dcce004e-6071-447d-816b-2eb7b9cd5ea3] =&gt; GRPC ListSnapshots 
+2020-04-07 17:55:19 default DEBUG ember_csi.common [req-dcce004e-6071-447d-816b-2eb7b9cd5ea3] With params:
+	starting_token: "1586282115307588096" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:19 default INFO ember_csi.common [req-dcce004e-6071-447d-816b-2eb7b9cd5ea3] &lt;= GRPC ListSnapshots served in 0s
+2020-04-07 17:55:19 default DEBUG ember_csi.common [req-dcce004e-6071-447d-816b-2eb7b9cd5ea3] Returns:
+		entries {
+		  snapshot {
+		    snapshot_id: "c59f8dc7-1190-4343-9fe1-0fe9be402e6d"
+		    source_volume_id: "894caa18-7321-471a-a4b3-2f0021ae60f9"
+		    creation_time {
+		      seconds: 1586282116
+		      nanos: 327792000
+		    }
+		    ready_to_use: true
+		  }
+		}
+		entries {
+		  snapshot {
+		    snapshot_id: "e24996fb-642f-4796-8d83-66f9ac1af18a"
+		    source_volume_id: "494e9529-77b4-42d3-b30e-619a18b9c8b4"
+		    creation_time {
+		      seconds: 1586282117
+		      nanos: 341700000
+		    }
+		    ready_to_use: true
+		  }
+		}
+		entries {
+		  snapshot {
+		    snapshot_id: "f579bf77-3d65-4f8d-add1-300d6a0f946d"
+		    source_volume_id: "66e5b489-a04a-4070-af83-f3636d31b2c6"
+		    creation_time {
+		      seconds: 1586282118
+		      nanos: 387607000
+		    }
+		    ready_to_use: true
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:19 default INFO ember_csi.common [req-49076a1b-c3fa-4e39-bba4-46a1813a4cc3] =&gt; GRPC DeleteSnapshot 61bafe6b-2685-44c1-8e06-496d6b56dc43
+2020-04-07 17:55:19 default DEBUG ember_csi.common [req-49076a1b-c3fa-4e39-bba4-46a1813a4cc3] With params:
+	snapshot_id: "61bafe6b-2685-44c1-8e06-496d6b56dc43" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:19 default DEBUG oslo_concurrency.processutils [req-49076a1b-c3fa-4e39-bba4-46a1813a4cc3] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-61bafe6b-2685-44c1-8e06-496d6b56dc43 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:19 default DEBUG oslo_concurrency.processutils [req-49076a1b-c3fa-4e39-bba4-46a1813a4cc3] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-61bafe6b-2685-44c1-8e06-496d6b56dc43" returned: 0 in 0.276s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:19 default DEBUG oslo_concurrency.processutils [req-49076a1b-c3fa-4e39-bba4-46a1813a4cc3] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-61bafe6b-2685-44c1-8e06-496d6b56dc43 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:19 default DEBUG oslo_concurrency.processutils [req-49076a1b-c3fa-4e39-bba4-46a1813a4cc3] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-61bafe6b-2685-44c1-8e06-496d6b56dc43" returned: 0 in 0.343s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:19 default INFO ember_csi.common [req-49076a1b-c3fa-4e39-bba4-46a1813a4cc3] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:19 default DEBUG ember_csi.common [req-49076a1b-c3fa-4e39-bba4-46a1813a4cc3] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:19 default INFO ember_csi.common [req-da9bd34e-d1cb-4555-a54e-901d32c43c75] =&gt; GRPC DeleteSnapshot 0e7e631d-25e6-4867-b523-bff27ea28ab9
+2020-04-07 17:55:19 default DEBUG ember_csi.common [req-da9bd34e-d1cb-4555-a54e-901d32c43c75] With params:
+	snapshot_id: "0e7e631d-25e6-4867-b523-bff27ea28ab9" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:19 default DEBUG oslo_concurrency.processutils [req-da9bd34e-d1cb-4555-a54e-901d32c43c75] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-0e7e631d-25e6-4867-b523-bff27ea28ab9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:19 default DEBUG oslo_concurrency.processutils [req-da9bd34e-d1cb-4555-a54e-901d32c43c75] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-0e7e631d-25e6-4867-b523-bff27ea28ab9" returned: 0 in 0.268s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:19 default DEBUG oslo_concurrency.processutils [req-da9bd34e-d1cb-4555-a54e-901d32c43c75] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-0e7e631d-25e6-4867-b523-bff27ea28ab9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:20 default DEBUG oslo_concurrency.processutils [req-da9bd34e-d1cb-4555-a54e-901d32c43c75] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-0e7e631d-25e6-4867-b523-bff27ea28ab9" returned: 0 in 0.322s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:20 default INFO ember_csi.common [req-da9bd34e-d1cb-4555-a54e-901d32c43c75] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:20 default DEBUG ember_csi.common [req-da9bd34e-d1cb-4555-a54e-901d32c43c75] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:20 default INFO ember_csi.common [req-8ec6cbcb-47dc-4e4f-917c-2385821a9d37] =&gt; GRPC DeleteSnapshot c59f8dc7-1190-4343-9fe1-0fe9be402e6d
+2020-04-07 17:55:20 default DEBUG ember_csi.common [req-8ec6cbcb-47dc-4e4f-917c-2385821a9d37] With params:
+	snapshot_id: "c59f8dc7-1190-4343-9fe1-0fe9be402e6d" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:20 default DEBUG oslo_concurrency.processutils [req-8ec6cbcb-47dc-4e4f-917c-2385821a9d37] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-c59f8dc7-1190-4343-9fe1-0fe9be402e6d execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:20 default DEBUG oslo_concurrency.processutils [req-8ec6cbcb-47dc-4e4f-917c-2385821a9d37] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-c59f8dc7-1190-4343-9fe1-0fe9be402e6d" returned: 0 in 0.272s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:20 default DEBUG oslo_concurrency.processutils [req-8ec6cbcb-47dc-4e4f-917c-2385821a9d37] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-c59f8dc7-1190-4343-9fe1-0fe9be402e6d execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:20 default DEBUG oslo_concurrency.processutils [req-8ec6cbcb-47dc-4e4f-917c-2385821a9d37] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-c59f8dc7-1190-4343-9fe1-0fe9be402e6d" returned: 0 in 0.343s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:20 default INFO ember_csi.common [req-8ec6cbcb-47dc-4e4f-917c-2385821a9d37] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:20 default DEBUG ember_csi.common [req-8ec6cbcb-47dc-4e4f-917c-2385821a9d37] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:20 default INFO ember_csi.common [req-ab698ecf-aec4-4d1e-85ae-afa1afba065b] =&gt; GRPC DeleteSnapshot e24996fb-642f-4796-8d83-66f9ac1af18a
+2020-04-07 17:55:20 default DEBUG ember_csi.common [req-ab698ecf-aec4-4d1e-85ae-afa1afba065b] With params:
+	snapshot_id: "e24996fb-642f-4796-8d83-66f9ac1af18a" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:20 default DEBUG oslo_concurrency.processutils [req-ab698ecf-aec4-4d1e-85ae-afa1afba065b] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-e24996fb-642f-4796-8d83-66f9ac1af18a execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:21 default DEBUG oslo_concurrency.processutils [req-ab698ecf-aec4-4d1e-85ae-afa1afba065b] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-e24996fb-642f-4796-8d83-66f9ac1af18a" returned: 0 in 0.265s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:21 default DEBUG oslo_concurrency.processutils [req-ab698ecf-aec4-4d1e-85ae-afa1afba065b] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-e24996fb-642f-4796-8d83-66f9ac1af18a execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:21 default DEBUG oslo_concurrency.processutils [req-ab698ecf-aec4-4d1e-85ae-afa1afba065b] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-e24996fb-642f-4796-8d83-66f9ac1af18a" returned: 0 in 0.328s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:21 default INFO ember_csi.common [req-ab698ecf-aec4-4d1e-85ae-afa1afba065b] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:21 default DEBUG ember_csi.common [req-ab698ecf-aec4-4d1e-85ae-afa1afba065b] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:21 default INFO ember_csi.common [req-be8934e6-9f06-4647-b2a8-6df1d41d56ab] =&gt; GRPC DeleteSnapshot f579bf77-3d65-4f8d-add1-300d6a0f946d
+2020-04-07 17:55:21 default DEBUG ember_csi.common [req-be8934e6-9f06-4647-b2a8-6df1d41d56ab] With params:
+	snapshot_id: "f579bf77-3d65-4f8d-add1-300d6a0f946d" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:21 default DEBUG oslo_concurrency.processutils [req-be8934e6-9f06-4647-b2a8-6df1d41d56ab] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-f579bf77-3d65-4f8d-add1-300d6a0f946d execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:21 default DEBUG oslo_concurrency.processutils [req-be8934e6-9f06-4647-b2a8-6df1d41d56ab] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-f579bf77-3d65-4f8d-add1-300d6a0f946d" returned: 0 in 0.277s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:21 default DEBUG oslo_concurrency.processutils [req-be8934e6-9f06-4647-b2a8-6df1d41d56ab] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-f579bf77-3d65-4f8d-add1-300d6a0f946d execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:22 default DEBUG oslo_concurrency.processutils [req-be8934e6-9f06-4647-b2a8-6df1d41d56ab] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-f579bf77-3d65-4f8d-add1-300d6a0f946d" returned: 0 in 0.500s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:22 default INFO ember_csi.common [req-be8934e6-9f06-4647-b2a8-6df1d41d56ab] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:22 default DEBUG ember_csi.common [req-be8934e6-9f06-4647-b2a8-6df1d41d56ab] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:22 default INFO ember_csi.common [req-5afcabc4-71f6-4179-a892-5c98afe5e649] =&gt; GRPC DeleteVolume 13525e7c-7913-4183-b921-4bd5f3c8db62
+2020-04-07 17:55:22 default DEBUG ember_csi.common [req-5afcabc4-71f6-4179-a892-5c98afe5e649] With params:
+	volume_id: "13525e7c-7913-4183-b921-4bd5f3c8db62" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:22 default DEBUG ember_csi.base [req-5afcabc4-71f6-4179-a892-5c98afe5e649] Deleting volume 13525e7c-7913-4183-b921-4bd5f3c8db62 DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:22 default DEBUG oslo_concurrency.processutils [req-5afcabc4-71f6-4179-a892-5c98afe5e649] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-13525e7c-7913-4183-b921-4bd5f3c8db62 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:22 default DEBUG oslo_concurrency.processutils [req-5afcabc4-71f6-4179-a892-5c98afe5e649] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-13525e7c-7913-4183-b921-4bd5f3c8db62" returned: 0 in 0.278s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:22 default DEBUG oslo_concurrency.processutils [req-5afcabc4-71f6-4179-a892-5c98afe5e649] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-13525e7c-7913-4183-b921-4bd5f3c8db62 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:22 default DEBUG oslo_concurrency.processutils [req-5afcabc4-71f6-4179-a892-5c98afe5e649] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-13525e7c-7913-4183-b921-4bd5f3c8db62" returned: 0 in 0.284s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:22 default DEBUG oslo_concurrency.processutils [req-5afcabc4-71f6-4179-a892-5c98afe5e649] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-13525e7c-7913-4183-b921-4bd5f3c8db62 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:23 default DEBUG oslo_concurrency.processutils [req-5afcabc4-71f6-4179-a892-5c98afe5e649] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-13525e7c-7913-4183-b921-4bd5f3c8db62" returned: 0 in 0.360s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:23 default INFO cinder.volume.drivers.lvm [req-5afcabc4-71f6-4179-a892-5c98afe5e649] Successfully deleted volume: 13525e7c-7913-4183-b921-4bd5f3c8db62
+2020-04-07 17:55:23 default INFO ember_csi.common [req-5afcabc4-71f6-4179-a892-5c98afe5e649] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:23 default DEBUG ember_csi.common [req-5afcabc4-71f6-4179-a892-5c98afe5e649] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:23 default INFO ember_csi.common [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] =&gt; GRPC DeleteVolume 26af7717-a69e-4176-ab18-8bfc1665a87b
+2020-04-07 17:55:23 default DEBUG ember_csi.common [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] With params:
+	volume_id: "26af7717-a69e-4176-ab18-8bfc1665a87b" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:23 default DEBUG ember_csi.base [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] Deleting volume 26af7717-a69e-4176-ab18-8bfc1665a87b DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:23 default DEBUG oslo_concurrency.processutils [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-26af7717-a69e-4176-ab18-8bfc1665a87b execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:23 default DEBUG oslo_concurrency.processutils [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-26af7717-a69e-4176-ab18-8bfc1665a87b" returned: 0 in 0.276s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:23 default DEBUG oslo_concurrency.processutils [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-26af7717-a69e-4176-ab18-8bfc1665a87b execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:23 default DEBUG oslo_concurrency.processutils [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-26af7717-a69e-4176-ab18-8bfc1665a87b" returned: 0 in 0.267s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:23 default DEBUG oslo_concurrency.processutils [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-26af7717-a69e-4176-ab18-8bfc1665a87b execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:24 default DEBUG oslo_concurrency.processutils [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-26af7717-a69e-4176-ab18-8bfc1665a87b" returned: 0 in 0.375s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:24 default INFO cinder.volume.drivers.lvm [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] Successfully deleted volume: 26af7717-a69e-4176-ab18-8bfc1665a87b
+2020-04-07 17:55:24 default INFO ember_csi.common [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:24 default DEBUG ember_csi.common [req-b21bbf2b-29a2-4041-bbd6-3a722f6ad810] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:24 default INFO ember_csi.common [req-b18528ea-888d-488d-89cd-7a860596814d] =&gt; GRPC DeleteVolume 894caa18-7321-471a-a4b3-2f0021ae60f9
+2020-04-07 17:55:24 default DEBUG ember_csi.common [req-b18528ea-888d-488d-89cd-7a860596814d] With params:
+	volume_id: "894caa18-7321-471a-a4b3-2f0021ae60f9" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:24 default DEBUG ember_csi.base [req-b18528ea-888d-488d-89cd-7a860596814d] Deleting volume 894caa18-7321-471a-a4b3-2f0021ae60f9 DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:24 default DEBUG oslo_concurrency.processutils [req-b18528ea-888d-488d-89cd-7a860596814d] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-894caa18-7321-471a-a4b3-2f0021ae60f9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:24 default DEBUG oslo_concurrency.processutils [req-b18528ea-888d-488d-89cd-7a860596814d] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-894caa18-7321-471a-a4b3-2f0021ae60f9" returned: 0 in 0.277s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:24 default DEBUG oslo_concurrency.processutils [req-b18528ea-888d-488d-89cd-7a860596814d] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-894caa18-7321-471a-a4b3-2f0021ae60f9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:24 default DEBUG oslo_concurrency.processutils [req-b18528ea-888d-488d-89cd-7a860596814d] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-894caa18-7321-471a-a4b3-2f0021ae60f9" returned: 0 in 0.276s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:24 default DEBUG oslo_concurrency.processutils [req-b18528ea-888d-488d-89cd-7a860596814d] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-894caa18-7321-471a-a4b3-2f0021ae60f9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:25 default DEBUG oslo_concurrency.processutils [req-b18528ea-888d-488d-89cd-7a860596814d] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-894caa18-7321-471a-a4b3-2f0021ae60f9" returned: 0 in 0.340s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:25 default INFO cinder.volume.drivers.lvm [req-b18528ea-888d-488d-89cd-7a860596814d] Successfully deleted volume: 894caa18-7321-471a-a4b3-2f0021ae60f9
+2020-04-07 17:55:25 default INFO ember_csi.common [req-b18528ea-888d-488d-89cd-7a860596814d] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:25 default DEBUG ember_csi.common [req-b18528ea-888d-488d-89cd-7a860596814d] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:25 default INFO ember_csi.common [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] =&gt; GRPC DeleteVolume 494e9529-77b4-42d3-b30e-619a18b9c8b4
+2020-04-07 17:55:25 default DEBUG ember_csi.common [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] With params:
+	volume_id: "494e9529-77b4-42d3-b30e-619a18b9c8b4" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:25 default DEBUG ember_csi.base [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] Deleting volume 494e9529-77b4-42d3-b30e-619a18b9c8b4 DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:25 default DEBUG oslo_concurrency.processutils [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-494e9529-77b4-42d3-b30e-619a18b9c8b4 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:25 default DEBUG oslo_concurrency.processutils [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-494e9529-77b4-42d3-b30e-619a18b9c8b4" returned: 0 in 0.273s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:25 default DEBUG oslo_concurrency.processutils [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-494e9529-77b4-42d3-b30e-619a18b9c8b4 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:25 default DEBUG oslo_concurrency.processutils [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-494e9529-77b4-42d3-b30e-619a18b9c8b4" returned: 0 in 0.275s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:25 default DEBUG oslo_concurrency.processutils [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-494e9529-77b4-42d3-b30e-619a18b9c8b4 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:25 default DEBUG oslo_concurrency.processutils [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-494e9529-77b4-42d3-b30e-619a18b9c8b4" returned: 0 in 0.344s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:25 default INFO cinder.volume.drivers.lvm [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] Successfully deleted volume: 494e9529-77b4-42d3-b30e-619a18b9c8b4
+2020-04-07 17:55:25 default INFO ember_csi.common [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:25 default DEBUG ember_csi.common [req-9d3d5a11-e3a8-4864-8f69-e89eaa9c4dc8] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:25 default INFO ember_csi.common [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] =&gt; GRPC DeleteVolume 66e5b489-a04a-4070-af83-f3636d31b2c6
+2020-04-07 17:55:25 default DEBUG ember_csi.common [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] With params:
+	volume_id: "66e5b489-a04a-4070-af83-f3636d31b2c6" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:25 default DEBUG ember_csi.base [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] Deleting volume 66e5b489-a04a-4070-af83-f3636d31b2c6 DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:25 default DEBUG oslo_concurrency.processutils [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-66e5b489-a04a-4070-af83-f3636d31b2c6 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:26 default DEBUG oslo_concurrency.processutils [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-66e5b489-a04a-4070-af83-f3636d31b2c6" returned: 0 in 0.268s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:26 default DEBUG oslo_concurrency.processutils [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-66e5b489-a04a-4070-af83-f3636d31b2c6 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:26 default DEBUG oslo_concurrency.processutils [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-66e5b489-a04a-4070-af83-f3636d31b2c6" returned: 0 in 0.273s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:26 default DEBUG oslo_concurrency.processutils [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-66e5b489-a04a-4070-af83-f3636d31b2c6 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:26 default DEBUG oslo_concurrency.processutils [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-66e5b489-a04a-4070-af83-f3636d31b2c6" returned: 0 in 0.345s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:26 default INFO cinder.volume.drivers.lvm [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] Successfully deleted volume: 66e5b489-a04a-4070-af83-f3636d31b2c6
+2020-04-07 17:55:26 default INFO ember_csi.common [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-63961444-ed93-4c8d-b70d-bb8a5a0a80a2] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:26 default INFO ember_csi.common [req-03506a93-1eb9-473c-8693-54df8fb794d0] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-03506a93-1eb9-473c-8693-54df8fb794d0] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:26 default INFO ember_csi.common [req-03506a93-1eb9-473c-8693-54df8fb794d0] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-03506a93-1eb9-473c-8693-54df8fb794d0] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:26 default INFO ember_csi.common [req-ba1dd180-5c0b-42c9-83d5-ba5d3eccd74b] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-ba1dd180-5c0b-42c9-83d5-ba5d3eccd74b] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:26 default INFO ember_csi.common [req-ba1dd180-5c0b-42c9-83d5-ba5d3eccd74b] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-ba1dd180-5c0b-42c9-83d5-ba5d3eccd74b] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:26 default INFO ember_csi.common [req-aa23861d-0b70-4f9d-8355-3057ae953461] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-aa23861d-0b70-4f9d-8355-3057ae953461] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:26 default INFO ember_csi.common [req-aa23861d-0b70-4f9d-8355-3057ae953461] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-aa23861d-0b70-4f9d-8355-3057ae953461] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:26 default INFO ember_csi.common [req-c33de6c4-aaac-4b0b-9da0-546aa4aa8424] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-c33de6c4-aaac-4b0b-9da0-546aa4aa8424] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:26 default INFO ember_csi.common [req-c33de6c4-aaac-4b0b-9da0-546aa4aa8424] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-c33de6c4-aaac-4b0b-9da0-546aa4aa8424] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:26 default INFO ember_csi.common [req-bbb1eeef-0f3d-4fee-9aaf-28a1fceefb83] =&gt; GRPC CreateSnapshot 
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-bbb1eeef-0f3d-4fee-9aaf-28a1fceefb83] With params:
+	source_volume_id: "testId" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:26 default ERROR ember_csi.common [req-bbb1eeef-0f3d-4fee-9aaf-28a1fceefb83] !! GRPC CreateSnapshot failed in 0s with INVALID_ARGUMENT (Missing required fields: name): Exception
+2020-04-07 17:55:26 default INFO ember_csi.common [req-aec2eaca-d93b-4610-8886-91c57cbb8151] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-aec2eaca-d93b-4610-8886-91c57cbb8151] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:26 default INFO ember_csi.common [req-aec2eaca-d93b-4610-8886-91c57cbb8151] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-aec2eaca-d93b-4610-8886-91c57cbb8151] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:26 default INFO ember_csi.common [req-42a38c57-fc95-4389-9e9f-512bf4dbe337] =&gt; GRPC CreateSnapshot name
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-42a38c57-fc95-4389-9e9f-512bf4dbe337] With params:
+	name: "name" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:26 default ERROR ember_csi.common [req-42a38c57-fc95-4389-9e9f-512bf4dbe337] !! GRPC CreateSnapshot failed in 0s with INVALID_ARGUMENT (Missing required fields: source_volume_id): Exception
+2020-04-07 17:55:26 default INFO ember_csi.common [req-34cd854a-6c95-49c3-9ffa-22b27fc09867] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-34cd854a-6c95-49c3-9ffa-22b27fc09867] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:26 default INFO ember_csi.common [req-34cd854a-6c95-49c3-9ffa-22b27fc09867] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-34cd854a-6c95-49c3-9ffa-22b27fc09867] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:26 default INFO ember_csi.common [req-21bcd02f-b055-4a5b-90c8-b5d061491fd9] =&gt; GRPC CreateVolume CreateSnapshot-volume-1
+2020-04-07 17:55:26 default DEBUG ember_csi.common [req-21bcd02f-b055-4a5b-90c8-b5d061491fd9] With params:
+	name: "CreateSnapshot-volume-1"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:26 default DEBUG ember_csi.base [req-21bcd02f-b055-4a5b-90c8-b5d061491fd9] Creating volume CreateSnapshot-volume-1 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:26 default DEBUG oslo_concurrency.processutils [req-21bcd02f-b055-4a5b-90c8-b5d061491fd9] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-a9693008-e2a1-4725-be2c-5b84b13989ea ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:27 default DEBUG oslo_concurrency.processutils [req-21bcd02f-b055-4a5b-90c8-b5d061491fd9] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-a9693008-e2a1-4725-be2c-5b84b13989ea ember-volumes/ember-volumes-pool" returned: 0 in 0.341s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:27 default INFO ember_csi.common [req-21bcd02f-b055-4a5b-90c8-b5d061491fd9] &lt;= GRPC CreateVolume (id = a9693008-e2a1-4725-be2c-5b84b13989ea) served in 0s
+2020-04-07 17:55:27 default DEBUG ember_csi.common [req-21bcd02f-b055-4a5b-90c8-b5d061491fd9] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "a9693008-e2a1-4725-be2c-5b84b13989ea"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:27 default INFO ember_csi.common [req-30ce4306-bbbf-4e78-ab58-4f34dff501ec] =&gt; GRPC CreateSnapshot CreateSnapshot-snapshot-1
+2020-04-07 17:55:27 default DEBUG ember_csi.common [req-30ce4306-bbbf-4e78-ab58-4f34dff501ec] With params:
+	source_volume_id: "a9693008-e2a1-4725-be2c-5b84b13989ea"
+	name: "CreateSnapshot-snapshot-1" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:27 default DEBUG oslo_concurrency.processutils [req-30ce4306-bbbf-4e78-ab58-4f34dff501ec] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-a9693008-e2a1-4725-be2c-5b84b13989ea execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:27 default DEBUG oslo_concurrency.processutils [req-30ce4306-bbbf-4e78-ab58-4f34dff501ec] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-a9693008-e2a1-4725-be2c-5b84b13989ea" returned: 0 in 0.270s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:27 default DEBUG oslo_concurrency.processutils [req-30ce4306-bbbf-4e78-ab58-4f34dff501ec] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-4713f34d-abe6-4553-96b3-2efafce63925 --snapshot ember-volumes/volume-a9693008-e2a1-4725-be2c-5b84b13989ea execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:27 default DEBUG oslo_concurrency.processutils [req-30ce4306-bbbf-4e78-ab58-4f34dff501ec] CMD "env LC_ALL=C lvcreate --name _snapshot-4713f34d-abe6-4553-96b3-2efafce63925 --snapshot ember-volumes/volume-a9693008-e2a1-4725-be2c-5b84b13989ea" returned: 0 in 0.364s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:27 default INFO ember_csi.common [req-30ce4306-bbbf-4e78-ab58-4f34dff501ec] &lt;= GRPC CreateSnapshot (id = 4713f34d-abe6-4553-96b3-2efafce63925) served in 1s
+2020-04-07 17:55:27 default DEBUG ember_csi.common [req-30ce4306-bbbf-4e78-ab58-4f34dff501ec] Returns:
+		snapshot {
+		  snapshot_id: "4713f34d-abe6-4553-96b3-2efafce63925"
+		  source_volume_id: "a9693008-e2a1-4725-be2c-5b84b13989ea"
+		  creation_time {
+		    seconds: 1586282127
+		    nanos: 264534000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:27 default INFO ember_csi.common [req-ee31f61f-b503-4cb8-8066-8e3f7790c6b3] =&gt; GRPC CreateSnapshot CreateSnapshot-snapshot-1
+2020-04-07 17:55:27 default DEBUG ember_csi.common [req-ee31f61f-b503-4cb8-8066-8e3f7790c6b3] With params:
+	source_volume_id: "a9693008-e2a1-4725-be2c-5b84b13989ea"
+	name: "CreateSnapshot-snapshot-1" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:27 default DEBUG ember_csi.base [req-ee31f61f-b503-4cb8-8066-8e3f7790c6b3] Snapshot CreateSnapshot-snapshot-1 exists with id 4713f34d-abe6-4553-96b3-2efafce63925 CreateSnapshot /ember-csi/ember_csi/base.py:1305
+2020-04-07 17:55:27 default INFO ember_csi.common [req-ee31f61f-b503-4cb8-8066-8e3f7790c6b3] &lt;= GRPC CreateSnapshot (id = 4713f34d-abe6-4553-96b3-2efafce63925) served in 0s
+2020-04-07 17:55:27 default DEBUG ember_csi.common [req-ee31f61f-b503-4cb8-8066-8e3f7790c6b3] Returns:
+		snapshot {
+		  snapshot_id: "4713f34d-abe6-4553-96b3-2efafce63925"
+		  source_volume_id: "a9693008-e2a1-4725-be2c-5b84b13989ea"
+		  creation_time {
+		    seconds: 1586282127
+		    nanos: 264534000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:27 default INFO ember_csi.common [req-75376d79-b837-49d2-891a-bd6745509522] =&gt; GRPC DeleteSnapshot 4713f34d-abe6-4553-96b3-2efafce63925
+2020-04-07 17:55:27 default DEBUG ember_csi.common [req-75376d79-b837-49d2-891a-bd6745509522] With params:
+	snapshot_id: "4713f34d-abe6-4553-96b3-2efafce63925" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:27 default DEBUG oslo_concurrency.processutils [req-75376d79-b837-49d2-891a-bd6745509522] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-4713f34d-abe6-4553-96b3-2efafce63925 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:28 default DEBUG oslo_concurrency.processutils [req-75376d79-b837-49d2-891a-bd6745509522] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-4713f34d-abe6-4553-96b3-2efafce63925" returned: 0 in 0.261s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:28 default DEBUG oslo_concurrency.processutils [req-75376d79-b837-49d2-891a-bd6745509522] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-4713f34d-abe6-4553-96b3-2efafce63925 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:28 default DEBUG oslo_concurrency.processutils [req-75376d79-b837-49d2-891a-bd6745509522] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-4713f34d-abe6-4553-96b3-2efafce63925" returned: 0 in 0.321s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:28 default INFO ember_csi.common [req-75376d79-b837-49d2-891a-bd6745509522] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:28 default DEBUG ember_csi.common [req-75376d79-b837-49d2-891a-bd6745509522] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:28 default INFO ember_csi.common [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] =&gt; GRPC DeleteVolume a9693008-e2a1-4725-be2c-5b84b13989ea
+2020-04-07 17:55:28 default DEBUG ember_csi.common [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] With params:
+	volume_id: "a9693008-e2a1-4725-be2c-5b84b13989ea" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:28 default DEBUG ember_csi.base [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] Deleting volume a9693008-e2a1-4725-be2c-5b84b13989ea DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:28 default DEBUG oslo_concurrency.processutils [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-a9693008-e2a1-4725-be2c-5b84b13989ea execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:28 default DEBUG oslo_concurrency.processutils [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-a9693008-e2a1-4725-be2c-5b84b13989ea" returned: 0 in 0.263s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:28 default DEBUG oslo_concurrency.processutils [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-a9693008-e2a1-4725-be2c-5b84b13989ea execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:29 default DEBUG oslo_concurrency.processutils [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-a9693008-e2a1-4725-be2c-5b84b13989ea" returned: 0 in 0.263s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:29 default DEBUG oslo_concurrency.processutils [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-a9693008-e2a1-4725-be2c-5b84b13989ea execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:29 default DEBUG oslo_concurrency.processutils [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-a9693008-e2a1-4725-be2c-5b84b13989ea" returned: 0 in 0.334s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:29 default INFO cinder.volume.drivers.lvm [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] Successfully deleted volume: a9693008-e2a1-4725-be2c-5b84b13989ea
+2020-04-07 17:55:29 default INFO ember_csi.common [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:29 default DEBUG ember_csi.common [req-9cdbde3e-bf22-404f-8b27-acb140d51ec3] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:29 default INFO ember_csi.common [req-ca4bad26-1c28-4184-a031-87c061391ce4] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:29 default DEBUG ember_csi.common [req-ca4bad26-1c28-4184-a031-87c061391ce4] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:29 default INFO ember_csi.common [req-ca4bad26-1c28-4184-a031-87c061391ce4] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:29 default DEBUG ember_csi.common [req-ca4bad26-1c28-4184-a031-87c061391ce4] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:29 default INFO ember_csi.common [req-a6f5af02-a084-4ad8-b61b-82847741cfad] =&gt; GRPC CreateVolume CreateSnapshot-volume-2
+2020-04-07 17:55:29 default DEBUG ember_csi.common [req-a6f5af02-a084-4ad8-b61b-82847741cfad] With params:
+	name: "CreateSnapshot-volume-2"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:29 default DEBUG ember_csi.base [req-a6f5af02-a084-4ad8-b61b-82847741cfad] Creating volume CreateSnapshot-volume-2 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:29 default DEBUG oslo_concurrency.processutils [req-a6f5af02-a084-4ad8-b61b-82847741cfad] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-49f8744a-365f-4be0-8bf0-417b3112c4a6 ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:29 default DEBUG oslo_concurrency.processutils [req-a6f5af02-a084-4ad8-b61b-82847741cfad] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-49f8744a-365f-4be0-8bf0-417b3112c4a6 ember-volumes/ember-volumes-pool" returned: 0 in 0.379s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:29 default INFO ember_csi.common [req-a6f5af02-a084-4ad8-b61b-82847741cfad] &lt;= GRPC CreateVolume (id = 49f8744a-365f-4be0-8bf0-417b3112c4a6) served in 0s
+2020-04-07 17:55:29 default DEBUG ember_csi.common [req-a6f5af02-a084-4ad8-b61b-82847741cfad] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "49f8744a-365f-4be0-8bf0-417b3112c4a6"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:29 default INFO ember_csi.common [req-165bc7a0-7e7e-400d-994e-66266cbd5cd2] =&gt; GRPC CreateSnapshot CreateSnapshot-snapshot-2
+2020-04-07 17:55:29 default DEBUG ember_csi.common [req-165bc7a0-7e7e-400d-994e-66266cbd5cd2] With params:
+	source_volume_id: "49f8744a-365f-4be0-8bf0-417b3112c4a6"
+	name: "CreateSnapshot-snapshot-2" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:29 default DEBUG oslo_concurrency.processutils [req-165bc7a0-7e7e-400d-994e-66266cbd5cd2] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-49f8744a-365f-4be0-8bf0-417b3112c4a6 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:30 default DEBUG oslo_concurrency.processutils [req-165bc7a0-7e7e-400d-994e-66266cbd5cd2] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-49f8744a-365f-4be0-8bf0-417b3112c4a6" returned: 0 in 0.264s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:30 default DEBUG oslo_concurrency.processutils [req-165bc7a0-7e7e-400d-994e-66266cbd5cd2] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-c96f9dc9-e4e0-49a0-8589-1fe02c953d36 --snapshot ember-volumes/volume-49f8744a-365f-4be0-8bf0-417b3112c4a6 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:30 default DEBUG oslo_concurrency.processutils [req-165bc7a0-7e7e-400d-994e-66266cbd5cd2] CMD "env LC_ALL=C lvcreate --name _snapshot-c96f9dc9-e4e0-49a0-8589-1fe02c953d36 --snapshot ember-volumes/volume-49f8744a-365f-4be0-8bf0-417b3112c4a6" returned: 0 in 0.360s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:30 default INFO ember_csi.common [req-165bc7a0-7e7e-400d-994e-66266cbd5cd2] &lt;= GRPC CreateSnapshot (id = c96f9dc9-e4e0-49a0-8589-1fe02c953d36) served in 1s
+2020-04-07 17:55:30 default DEBUG ember_csi.common [req-165bc7a0-7e7e-400d-994e-66266cbd5cd2] Returns:
+		snapshot {
+		  snapshot_id: "c96f9dc9-e4e0-49a0-8589-1fe02c953d36"
+		  source_volume_id: "49f8744a-365f-4be0-8bf0-417b3112c4a6"
+		  creation_time {
+		    seconds: 1586282129
+		    nanos: 770266000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:30 default INFO ember_csi.common [req-712038e5-c3cc-4397-8f59-91d463449f7d] =&gt; GRPC CreateVolume CreateSnapshot-volume-3
+2020-04-07 17:55:30 default DEBUG ember_csi.common [req-712038e5-c3cc-4397-8f59-91d463449f7d] With params:
+	name: "CreateSnapshot-volume-3"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:30 default DEBUG ember_csi.base [req-712038e5-c3cc-4397-8f59-91d463449f7d] Creating volume CreateSnapshot-volume-3 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:30 default DEBUG oslo_concurrency.processutils [req-712038e5-c3cc-4397-8f59-91d463449f7d] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-2cae8458-319b-450c-aa0e-18b1416474e9 ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:30 default DEBUG oslo_concurrency.processutils [req-712038e5-c3cc-4397-8f59-91d463449f7d] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-2cae8458-319b-450c-aa0e-18b1416474e9 ember-volumes/ember-volumes-pool" returned: 0 in 0.348s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:30 default INFO ember_csi.common [req-712038e5-c3cc-4397-8f59-91d463449f7d] &lt;= GRPC CreateVolume (id = 2cae8458-319b-450c-aa0e-18b1416474e9) served in 0s
+2020-04-07 17:55:30 default DEBUG ember_csi.common [req-712038e5-c3cc-4397-8f59-91d463449f7d] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "2cae8458-319b-450c-aa0e-18b1416474e9"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:30 default INFO ember_csi.common [req-3402d88f-b66e-4b26-a71e-9b346a59b9dd] =&gt; GRPC CreateSnapshot CreateSnapshot-snapshot-2
+2020-04-07 17:55:30 default DEBUG ember_csi.common [req-3402d88f-b66e-4b26-a71e-9b346a59b9dd] With params:
+	source_volume_id: "2cae8458-319b-450c-aa0e-18b1416474e9"
+	name: "CreateSnapshot-snapshot-2" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:30 default ERROR ember_csi.common [req-3402d88f-b66e-4b26-a71e-9b346a59b9dd] !! GRPC CreateSnapshot failed in 0s with ALREADY_EXISTS (Snapshot CreateSnapshot-snapshot-2 from 2cae8458-319b-450c-aa0e-18b1416474e9 exists for volume 49f8744a-365f-4be0-8bf0-417b3112c4a6): Exception
+2020-04-07 17:55:30 default INFO ember_csi.common [req-fbea4c51-7bd7-4f93-a7dc-7dccf836afad] =&gt; GRPC DeleteSnapshot c96f9dc9-e4e0-49a0-8589-1fe02c953d36
+2020-04-07 17:55:30 default DEBUG ember_csi.common [req-fbea4c51-7bd7-4f93-a7dc-7dccf836afad] With params:
+	snapshot_id: "c96f9dc9-e4e0-49a0-8589-1fe02c953d36" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:30 default DEBUG oslo_concurrency.processutils [req-fbea4c51-7bd7-4f93-a7dc-7dccf836afad] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-c96f9dc9-e4e0-49a0-8589-1fe02c953d36 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:31 default DEBUG oslo_concurrency.processutils [req-fbea4c51-7bd7-4f93-a7dc-7dccf836afad] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-c96f9dc9-e4e0-49a0-8589-1fe02c953d36" returned: 0 in 0.267s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:31 default DEBUG oslo_concurrency.processutils [req-fbea4c51-7bd7-4f93-a7dc-7dccf836afad] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-c96f9dc9-e4e0-49a0-8589-1fe02c953d36 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:31 default DEBUG oslo_concurrency.processutils [req-fbea4c51-7bd7-4f93-a7dc-7dccf836afad] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-c96f9dc9-e4e0-49a0-8589-1fe02c953d36" returned: 0 in 0.325s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:31 default INFO ember_csi.common [req-fbea4c51-7bd7-4f93-a7dc-7dccf836afad] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:31 default DEBUG ember_csi.common [req-fbea4c51-7bd7-4f93-a7dc-7dccf836afad] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:31 default INFO ember_csi.common [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] =&gt; GRPC DeleteVolume 49f8744a-365f-4be0-8bf0-417b3112c4a6
+2020-04-07 17:55:31 default DEBUG ember_csi.common [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] With params:
+	volume_id: "49f8744a-365f-4be0-8bf0-417b3112c4a6" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:31 default DEBUG ember_csi.base [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] Deleting volume 49f8744a-365f-4be0-8bf0-417b3112c4a6 DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:31 default DEBUG oslo_concurrency.processutils [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-49f8744a-365f-4be0-8bf0-417b3112c4a6 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:31 default DEBUG oslo_concurrency.processutils [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-49f8744a-365f-4be0-8bf0-417b3112c4a6" returned: 0 in 0.273s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:31 default DEBUG oslo_concurrency.processutils [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-49f8744a-365f-4be0-8bf0-417b3112c4a6 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:31 default DEBUG oslo_concurrency.processutils [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-49f8744a-365f-4be0-8bf0-417b3112c4a6" returned: 0 in 0.275s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:31 default DEBUG oslo_concurrency.processutils [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-49f8744a-365f-4be0-8bf0-417b3112c4a6 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:32 default DEBUG oslo_concurrency.processutils [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-49f8744a-365f-4be0-8bf0-417b3112c4a6" returned: 0 in 0.335s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:32 default INFO cinder.volume.drivers.lvm [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] Successfully deleted volume: 49f8744a-365f-4be0-8bf0-417b3112c4a6
+2020-04-07 17:55:32 default INFO ember_csi.common [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:32 default DEBUG ember_csi.common [req-c2edfe10-6ceb-45fc-a056-1a67fb0eee38] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:32 default INFO ember_csi.common [req-bd330372-1d3b-4b84-8c1f-f94c7b99017c] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:32 default DEBUG ember_csi.common [req-bd330372-1d3b-4b84-8c1f-f94c7b99017c] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:32 default INFO ember_csi.common [req-bd330372-1d3b-4b84-8c1f-f94c7b99017c] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:32 default DEBUG ember_csi.common [req-bd330372-1d3b-4b84-8c1f-f94c7b99017c] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:32 default INFO ember_csi.common [req-04077345-0c02-4ccb-89e6-99c385b70eff] =&gt; GRPC CreateVolume CreateSnapshot-volume-3
+2020-04-07 17:55:32 default DEBUG ember_csi.common [req-04077345-0c02-4ccb-89e6-99c385b70eff] With params:
+	name: "CreateSnapshot-volume-3"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:32 default DEBUG ember_csi.base [req-04077345-0c02-4ccb-89e6-99c385b70eff] Volume CreateSnapshot-volume-3 exists with id 2cae8458-319b-450c-aa0e-18b1416474e9 CreateVolume /ember-csi/ember_csi/base.py:468
+2020-04-07 17:55:32 default INFO ember_csi.common [req-04077345-0c02-4ccb-89e6-99c385b70eff] &lt;= GRPC CreateVolume (id = 2cae8458-319b-450c-aa0e-18b1416474e9) served in 0s
+2020-04-07 17:55:32 default DEBUG ember_csi.common [req-04077345-0c02-4ccb-89e6-99c385b70eff] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "2cae8458-319b-450c-aa0e-18b1416474e9"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:32 default INFO ember_csi.common [req-e23349f8-1b01-4923-a0b3-8d6f8c6410b2] =&gt; GRPC CreateSnapshot aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+2020-04-07 17:55:32 default DEBUG ember_csi.common [req-e23349f8-1b01-4923-a0b3-8d6f8c6410b2] With params:
+	source_volume_id: "2cae8458-319b-450c-aa0e-18b1416474e9"
+	name: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:32 default DEBUG oslo_concurrency.processutils [req-e23349f8-1b01-4923-a0b3-8d6f8c6410b2] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-2cae8458-319b-450c-aa0e-18b1416474e9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:32 default DEBUG oslo_concurrency.processutils [req-e23349f8-1b01-4923-a0b3-8d6f8c6410b2] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-2cae8458-319b-450c-aa0e-18b1416474e9" returned: 0 in 0.264s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:32 default DEBUG oslo_concurrency.processutils [req-e23349f8-1b01-4923-a0b3-8d6f8c6410b2] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-830c0949-7e86-4a20-94ce-4671a2db428e --snapshot ember-volumes/volume-2cae8458-319b-450c-aa0e-18b1416474e9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:32 default DEBUG oslo_concurrency.processutils [req-e23349f8-1b01-4923-a0b3-8d6f8c6410b2] CMD "env LC_ALL=C lvcreate --name _snapshot-830c0949-7e86-4a20-94ce-4671a2db428e --snapshot ember-volumes/volume-2cae8458-319b-450c-aa0e-18b1416474e9" returned: 0 in 0.370s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:32 default INFO ember_csi.common [req-e23349f8-1b01-4923-a0b3-8d6f8c6410b2] &lt;= GRPC CreateSnapshot (id = 830c0949-7e86-4a20-94ce-4671a2db428e) served in 1s
+2020-04-07 17:55:32 default DEBUG ember_csi.common [req-e23349f8-1b01-4923-a0b3-8d6f8c6410b2] Returns:
+		snapshot {
+		  snapshot_id: "830c0949-7e86-4a20-94ce-4671a2db428e"
+		  source_volume_id: "2cae8458-319b-450c-aa0e-18b1416474e9"
+		  creation_time {
+		    seconds: 1586282132
+		    nanos: 265920000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:32 default INFO ember_csi.common [req-636d47a0-5731-49c3-b37a-75c9b8e3ee09] =&gt; GRPC CreateSnapshot aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+2020-04-07 17:55:32 default DEBUG ember_csi.common [req-636d47a0-5731-49c3-b37a-75c9b8e3ee09] With params:
+	source_volume_id: "2cae8458-319b-450c-aa0e-18b1416474e9"
+	name: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:32 default DEBUG ember_csi.base [req-636d47a0-5731-49c3-b37a-75c9b8e3ee09] Snapshot aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa exists with id 830c0949-7e86-4a20-94ce-4671a2db428e CreateSnapshot /ember-csi/ember_csi/base.py:1305
+2020-04-07 17:55:32 default INFO ember_csi.common [req-636d47a0-5731-49c3-b37a-75c9b8e3ee09] &lt;= GRPC CreateSnapshot (id = 830c0949-7e86-4a20-94ce-4671a2db428e) served in 0s
+2020-04-07 17:55:32 default DEBUG ember_csi.common [req-636d47a0-5731-49c3-b37a-75c9b8e3ee09] Returns:
+		snapshot {
+		  snapshot_id: "830c0949-7e86-4a20-94ce-4671a2db428e"
+		  source_volume_id: "2cae8458-319b-450c-aa0e-18b1416474e9"
+		  creation_time {
+		    seconds: 1586282132
+		    nanos: 265920000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:32 default INFO ember_csi.common [req-dc6d8673-1f35-40dd-b541-68306df3a8d0] =&gt; GRPC DeleteSnapshot 830c0949-7e86-4a20-94ce-4671a2db428e
+2020-04-07 17:55:32 default DEBUG ember_csi.common [req-dc6d8673-1f35-40dd-b541-68306df3a8d0] With params:
+	snapshot_id: "830c0949-7e86-4a20-94ce-4671a2db428e" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:32 default DEBUG oslo_concurrency.processutils [req-dc6d8673-1f35-40dd-b541-68306df3a8d0] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-830c0949-7e86-4a20-94ce-4671a2db428e execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:33 default DEBUG oslo_concurrency.processutils [req-dc6d8673-1f35-40dd-b541-68306df3a8d0] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-830c0949-7e86-4a20-94ce-4671a2db428e" returned: 0 in 0.273s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:33 default DEBUG oslo_concurrency.processutils [req-dc6d8673-1f35-40dd-b541-68306df3a8d0] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-830c0949-7e86-4a20-94ce-4671a2db428e execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:33 default DEBUG oslo_concurrency.processutils [req-dc6d8673-1f35-40dd-b541-68306df3a8d0] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-830c0949-7e86-4a20-94ce-4671a2db428e" returned: 0 in 0.356s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:33 default INFO ember_csi.common [req-dc6d8673-1f35-40dd-b541-68306df3a8d0] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:33 default DEBUG ember_csi.common [req-dc6d8673-1f35-40dd-b541-68306df3a8d0] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:33 default INFO ember_csi.common [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] =&gt; GRPC DeleteVolume 2cae8458-319b-450c-aa0e-18b1416474e9
+2020-04-07 17:55:33 default DEBUG ember_csi.common [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] With params:
+	volume_id: "2cae8458-319b-450c-aa0e-18b1416474e9" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:33 default DEBUG ember_csi.base [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] Deleting volume 2cae8458-319b-450c-aa0e-18b1416474e9 DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:33 default DEBUG oslo_concurrency.processutils [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-2cae8458-319b-450c-aa0e-18b1416474e9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:33 default DEBUG oslo_concurrency.processutils [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-2cae8458-319b-450c-aa0e-18b1416474e9" returned: 0 in 0.271s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:33 default DEBUG oslo_concurrency.processutils [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-2cae8458-319b-450c-aa0e-18b1416474e9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:34 default DEBUG oslo_concurrency.processutils [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-2cae8458-319b-450c-aa0e-18b1416474e9" returned: 0 in 0.291s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:34 default DEBUG oslo_concurrency.processutils [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-2cae8458-319b-450c-aa0e-18b1416474e9 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:34 default DEBUG oslo_concurrency.processutils [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-2cae8458-319b-450c-aa0e-18b1416474e9" returned: 0 in 0.359s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:34 default INFO cinder.volume.drivers.lvm [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] Successfully deleted volume: 2cae8458-319b-450c-aa0e-18b1416474e9
+2020-04-07 17:55:34 default INFO ember_csi.common [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-6f323cea-f618-41d5-b63f-27c3b2c021d4] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:34 default INFO ember_csi.common [req-68875896-014e-4ebc-862a-cc62ea5e5604] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-68875896-014e-4ebc-862a-cc62ea5e5604] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:34 default INFO ember_csi.common [req-68875896-014e-4ebc-862a-cc62ea5e5604] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-68875896-014e-4ebc-862a-cc62ea5e5604] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:34 default INFO ember_csi.common [req-08940188-b6e4-47d0-b102-a5043a6404a2] =&gt; GRPC DeleteSnapshot 
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-08940188-b6e4-47d0-b102-a5043a6404a2] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:34 default ERROR ember_csi.common [req-08940188-b6e4-47d0-b102-a5043a6404a2] !! GRPC DeleteSnapshot failed in 0s with INVALID_ARGUMENT (Missing required fields: snapshot_id): Exception
+2020-04-07 17:55:34 default INFO ember_csi.common [req-31beca13-2558-4424-a33c-593da0828edb] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-31beca13-2558-4424-a33c-593da0828edb] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:34 default INFO ember_csi.common [req-31beca13-2558-4424-a33c-593da0828edb] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-31beca13-2558-4424-a33c-593da0828edb] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:34 default INFO ember_csi.common [req-de20a211-bc2c-48f2-9e97-28553dd5e061] =&gt; GRPC DeleteSnapshot reallyfakesnapshotid
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-de20a211-bc2c-48f2-9e97-28553dd5e061] With params:
+	snapshot_id: "reallyfakesnapshotid" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:34 default INFO ember_csi.common [req-de20a211-bc2c-48f2-9e97-28553dd5e061] &lt;= GRPC DeleteSnapshot served in 0s
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-de20a211-bc2c-48f2-9e97-28553dd5e061] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:34 default INFO ember_csi.common [req-a8a0943b-8d88-4326-9769-aad146a23afb] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-a8a0943b-8d88-4326-9769-aad146a23afb] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:34 default INFO ember_csi.common [req-a8a0943b-8d88-4326-9769-aad146a23afb] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-a8a0943b-8d88-4326-9769-aad146a23afb] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:34 default INFO ember_csi.common [req-fb1e8ffa-51e7-4941-adb8-b844a2f407e7] =&gt; GRPC CreateVolume DeleteSnapshot-volume-1
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-fb1e8ffa-51e7-4941-adb8-b844a2f407e7] With params:
+	name: "DeleteSnapshot-volume-1"
+	capacity_range {
+	  required_bytes: 10737418240
+	  limit_bytes: 10737418240
+	}
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:34 default DEBUG ember_csi.base [req-fb1e8ffa-51e7-4941-adb8-b844a2f407e7] Creating volume DeleteSnapshot-volume-1 CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-07 17:55:34 default DEBUG oslo_concurrency.processutils [req-fb1e8ffa-51e7-4941-adb8-b844a2f407e7] Running cmd (subprocess): env LC_ALL=C lvcreate -T -V 10g -n volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf ember-volumes/ember-volumes-pool execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:34 default DEBUG oslo_concurrency.processutils [req-fb1e8ffa-51e7-4941-adb8-b844a2f407e7] CMD "env LC_ALL=C lvcreate -T -V 10g -n volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf ember-volumes/ember-volumes-pool" returned: 0 in 0.370s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:34 default INFO ember_csi.common [req-fb1e8ffa-51e7-4941-adb8-b844a2f407e7] &lt;= GRPC CreateVolume (id = 0900ba6c-1ca4-4549-b4f7-55ef2f6762cf) served in 0s
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-fb1e8ffa-51e7-4941-adb8-b844a2f407e7] Returns:
+		volume {
+		  capacity_bytes: 10737418240
+		  volume_id: "0900ba6c-1ca4-4549-b4f7-55ef2f6762cf"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:34 default INFO ember_csi.common [req-6e86dd5c-6255-4e70-beeb-2d2452bd0f49] =&gt; GRPC CreateSnapshot DeleteSnapshot-snapshot-1
+2020-04-07 17:55:34 default DEBUG ember_csi.common [req-6e86dd5c-6255-4e70-beeb-2d2452bd0f49] With params:
+	source_volume_id: "0900ba6c-1ca4-4549-b4f7-55ef2f6762cf"
+	name: "DeleteSnapshot-snapshot-1" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:34 default DEBUG oslo_concurrency.processutils [req-6e86dd5c-6255-4e70-beeb-2d2452bd0f49] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:35 default DEBUG oslo_concurrency.processutils [req-6e86dd5c-6255-4e70-beeb-2d2452bd0f49] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf" returned: 0 in 0.266s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:35 default DEBUG oslo_concurrency.processutils [req-6e86dd5c-6255-4e70-beeb-2d2452bd0f49] Running cmd (subprocess): env LC_ALL=C lvcreate --name _snapshot-922f27e2-1e11-4d65-8e3d-19c643dd1715 --snapshot ember-volumes/volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:35 default DEBUG oslo_concurrency.processutils [req-6e86dd5c-6255-4e70-beeb-2d2452bd0f49] CMD "env LC_ALL=C lvcreate --name _snapshot-922f27e2-1e11-4d65-8e3d-19c643dd1715 --snapshot ember-volumes/volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf" returned: 0 in 0.372s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:35 default INFO ember_csi.common [req-6e86dd5c-6255-4e70-beeb-2d2452bd0f49] &lt;= GRPC CreateSnapshot (id = 922f27e2-1e11-4d65-8e3d-19c643dd1715) served in 1s
+2020-04-07 17:55:35 default DEBUG ember_csi.common [req-6e86dd5c-6255-4e70-beeb-2d2452bd0f49] Returns:
+		snapshot {
+		  snapshot_id: "922f27e2-1e11-4d65-8e3d-19c643dd1715"
+		  source_volume_id: "0900ba6c-1ca4-4549-b4f7-55ef2f6762cf"
+		  creation_time {
+		    seconds: 1586282134
+		    nanos: 895293000
+		  }
+		  ready_to_use: true
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:35 default INFO ember_csi.common [req-2926143a-9aa6-4556-8535-fc0d6cff2ed4] =&gt; GRPC DeleteSnapshot 922f27e2-1e11-4d65-8e3d-19c643dd1715
+2020-04-07 17:55:35 default DEBUG ember_csi.common [req-2926143a-9aa6-4556-8535-fc0d6cff2ed4] With params:
+	snapshot_id: "922f27e2-1e11-4d65-8e3d-19c643dd1715" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:35 default DEBUG oslo_concurrency.processutils [req-2926143a-9aa6-4556-8535-fc0d6cff2ed4] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-922f27e2-1e11-4d65-8e3d-19c643dd1715 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:35 default DEBUG oslo_concurrency.processutils [req-2926143a-9aa6-4556-8535-fc0d6cff2ed4] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/_snapshot-922f27e2-1e11-4d65-8e3d-19c643dd1715" returned: 0 in 0.270s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:35 default DEBUG oslo_concurrency.processutils [req-2926143a-9aa6-4556-8535-fc0d6cff2ed4] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-922f27e2-1e11-4d65-8e3d-19c643dd1715 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:36 default DEBUG oslo_concurrency.processutils [req-2926143a-9aa6-4556-8535-fc0d6cff2ed4] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/_snapshot-922f27e2-1e11-4d65-8e3d-19c643dd1715" returned: 0 in 0.327s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:36 default INFO ember_csi.common [req-2926143a-9aa6-4556-8535-fc0d6cff2ed4] &lt;= GRPC DeleteSnapshot served in 1s
+2020-04-07 17:55:36 default DEBUG ember_csi.common [req-2926143a-9aa6-4556-8535-fc0d6cff2ed4] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:36 default INFO ember_csi.common [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] =&gt; GRPC DeleteVolume 0900ba6c-1ca4-4549-b4f7-55ef2f6762cf
+2020-04-07 17:55:36 default DEBUG ember_csi.common [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] With params:
+	volume_id: "0900ba6c-1ca4-4549-b4f7-55ef2f6762cf" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:36 default DEBUG ember_csi.base [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] Deleting volume 0900ba6c-1ca4-4549-b4f7-55ef2f6762cf DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:36 default DEBUG oslo_concurrency.processutils [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:36 default DEBUG oslo_concurrency.processutils [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf" returned: 0 in 0.267s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:36 default DEBUG oslo_concurrency.processutils [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:36 default DEBUG oslo_concurrency.processutils [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf" returned: 0 in 0.272s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:36 default DEBUG oslo_concurrency.processutils [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:37 default DEBUG oslo_concurrency.processutils [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-0900ba6c-1ca4-4549-b4f7-55ef2f6762cf" returned: 0 in 0.346s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:37 default INFO cinder.volume.drivers.lvm [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] Successfully deleted volume: 0900ba6c-1ca4-4549-b4f7-55ef2f6762cf
+2020-04-07 17:55:37 default INFO ember_csi.common [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:37 default DEBUG ember_csi.common [req-26dcb822-e3af-4e0c-89af-e2613bfba1af] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:37 default INFO ember_csi.common [req-ed1351db-fd06-44c0-9d18-b4868358d58c] =&gt; GRPC ControllerGetCapabilities
+2020-04-07 17:55:37 default DEBUG ember_csi.common [req-ed1351db-fd06-44c0-9d18-b4868358d58c] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:37 default INFO ember_csi.common [req-ed1351db-fd06-44c0-9d18-b4868358d58c] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-07 17:55:37 default DEBUG ember_csi.common [req-ed1351db-fd06-44c0-9d18-b4868358d58c] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:37 default INFO ember_csi.common [req-f9d335b2-99a5-4cc9-b5fb-f74bb060423d] =&gt; GRPC NodeGetCapabilities
+2020-04-07 17:55:37 default DEBUG ember_csi.common [req-f9d335b2-99a5-4cc9-b5fb-f74bb060423d] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:37 default INFO ember_csi.common [req-f9d335b2-99a5-4cc9-b5fb-f74bb060423d] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-07 17:55:37 default DEBUG ember_csi.common [req-f9d335b2-99a5-4cc9-b5fb-f74bb060423d] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:37 default INFO ember_csi.common [req-4a009630-d37d-4b14-88f6-21fe4f8dd379] =&gt; GRPC NodeGetCapabilities
+2020-04-07 17:55:37 default DEBUG ember_csi.common [req-4a009630-d37d-4b14-88f6-21fe4f8dd379] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:45 default DEBUG os_brick.initiator.linuxscsi [req-f5027e8c-65f2-403b-baff-8715cad20714] Searching for a device in session 1 and hctl [u'2', '*', '*', 0] yield: sda device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2020-04-07 17:55:45 default DEBUG os_brick.initiator.connectors.iscsi [req-f5027e8c-65f2-403b-baff-8715cad20714] Connected to sda using {'auth_password': u'***', 'target_discovered': False, 'encrypted': False, 'target_iqn': u'iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57', 'target_portal': u'127.0.0.1:3260', 'volume_id': 'e80df4cf-5e9b-4a5f-8414-be07d68fcb57', 'target_lun': 0, 'access_mode': u'rw', 'auth_username': u'jHGAPxf7nEEu34xrPGht', 'auth_method': u'CHAP'} _connect_vol /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:668
+2020-04-07 17:55:45 default DEBUG oslo_concurrency.lockutils [req-f5027e8c-65f2-403b-baff-8715cad20714] Lock "connect_volume" released by "os_brick.initiator.connectors.iscsi.connect_volume" :: held 3.945s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-07 17:55:45 default DEBUG os_brick.initiator.connectors.iscsi [req-f5027e8c-65f2-403b-baff-8715cad20714] &lt;== connect_volume: return (3945ms) {'path': u'/dev/sda', 'scsi_wwn': u'36001405668e9d272c444c47a5cbf0049', 'type': u'block'} trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:170
+2020-04-07 17:55:45 default DEBUG oslo_concurrency.processutils [req-f5027e8c-65f2-403b-baff-8715cad20714] Running cmd (subprocess): dd if=/dev/sda of=/dev/null count=1 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:45 default DEBUG oslo_concurrency.processutils [req-f5027e8c-65f2-403b-baff-8715cad20714] CMD "dd if=/dev/sda of=/dev/null count=1" returned: 0 in 0.255s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:45 default DEBUG oslo_concurrency.processutils [req-f5027e8c-65f2-403b-baff-8715cad20714] Running cmd (subprocess): mount --bind /dev/sda /var/lib/ember-csi/vols/e80df4cf-5e9b-4a5f-8414-be07d68fcb57 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:45 default DEBUG oslo_concurrency.processutils [req-f5027e8c-65f2-403b-baff-8715cad20714] CMD "mount --bind /dev/sda /var/lib/ember-csi/vols/e80df4cf-5e9b-4a5f-8414-be07d68fcb57" returned: 0 in 0.254s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:45 default DEBUG oslo_concurrency.processutils [req-f5027e8c-65f2-403b-baff-8715cad20714] Running cmd (subprocess): lsblk -nlfoFSTYPE /var/lib/ember-csi/vols/e80df4cf-5e9b-4a5f-8414-be07d68fcb57 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:46 default DEBUG oslo_concurrency.processutils [req-f5027e8c-65f2-403b-baff-8715cad20714] CMD "lsblk -nlfoFSTYPE /var/lib/ember-csi/vols/e80df4cf-5e9b-4a5f-8414-be07d68fcb57" returned: 0 in 0.257s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:46 default DEBUG oslo_concurrency.processutils [req-f5027e8c-65f2-403b-baff-8715cad20714] Running cmd (subprocess): /sbin/mkfs.ext4 -F /var/lib/ember-csi/vols/e80df4cf-5e9b-4a5f-8414-be07d68fcb57 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:46 default DEBUG oslo_concurrency.processutils [req-f5027e8c-65f2-403b-baff-8715cad20714] CMD "/sbin/mkfs.ext4 -F /var/lib/ember-csi/vols/e80df4cf-5e9b-4a5f-8414-be07d68fcb57" returned: 0 in 0.762s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:46 default DEBUG oslo_concurrency.processutils [req-f5027e8c-65f2-403b-baff-8715cad20714] Running cmd (subprocess): mount -t ext4 /var/lib/ember-csi/vols/e80df4cf-5e9b-4a5f-8414-be07d68fcb57 /tmp/csi-staging/stage execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:47 default DEBUG oslo_concurrency.processutils [req-f5027e8c-65f2-403b-baff-8715cad20714] CMD "mount -t ext4 /var/lib/ember-csi/vols/e80df4cf-5e9b-4a5f-8414-be07d68fcb57 /tmp/csi-staging/stage" returned: 0 in 0.346s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:47 default INFO ember_csi.common [req-f5027e8c-65f2-403b-baff-8715cad20714] &lt;= GRPC NodeStageVolume served in 6s
+2020-04-07 17:55:47 default DEBUG ember_csi.common [req-f5027e8c-65f2-403b-baff-8715cad20714] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:47 default INFO ember_csi.common [req-2f8be79b-f260-4471-9e77-bde99444d63d] =&gt; GRPC NodePublishVolume e80df4cf-5e9b-4a5f-8414-be07d68fcb57
+2020-04-07 17:55:47 default DEBUG ember_csi.common [req-2f8be79b-f260-4471-9e77-bde99444d63d] With params:
+	volume_id: "e80df4cf-5e9b-4a5f-8414-be07d68fcb57"
+	staging_target_path: "/tmp/csi-staging"
+	target_path: "/tmp/csi-mount/target"
+	volume_capability {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:47 default DEBUG ember_csi.base [req-2f8be79b-f260-4471-9e77-bde99444d63d] Created connection cdc1695e-fce9-4e0f-9247-c4b738276a2d duplicate of 8f8fea41-ebb5-4c99-95dd-338fb5556712 _duplicate_connection /ember-csi/ember_csi/base.py:338
+2020-04-07 17:55:47 default ERROR ember_csi.common [req-2f8be79b-f260-4471-9e77-bde99444d63d] !! GRPC NodePublishVolume failed in 0s with FAILED_PRECONDITION (Staging was not been successfully called): Exception
+2020-04-07 17:55:47 default INFO ember_csi.common [req-87101cd8-4615-46dc-a88f-56bcfe0ed35c] =&gt; GRPC NodeUnpublishVolume e80df4cf-5e9b-4a5f-8414-be07d68fcb57
+2020-04-07 17:55:47 default DEBUG ember_csi.common [req-87101cd8-4615-46dc-a88f-56bcfe0ed35c] With params:
+	volume_id: "e80df4cf-5e9b-4a5f-8414-be07d68fcb57"
+	target_path: "/tmp/csi-mount" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:47 default INFO ember_csi.common [req-87101cd8-4615-46dc-a88f-56bcfe0ed35c] &lt;= GRPC NodeUnpublishVolume served in 0s
+2020-04-07 17:55:47 default DEBUG ember_csi.common [req-87101cd8-4615-46dc-a88f-56bcfe0ed35c] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:47 default INFO ember_csi.common [req-0d253006-5cde-4cbe-923b-6f278562f956] =&gt; GRPC NodeUnstageVolume e80df4cf-5e9b-4a5f-8414-be07d68fcb57
+2020-04-07 17:55:47 default DEBUG ember_csi.common [req-0d253006-5cde-4cbe-923b-6f278562f956] With params:
+	volume_id: "e80df4cf-5e9b-4a5f-8414-be07d68fcb57"
+	staging_target_path: "/tmp/csi-staging" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:47 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] Running cmd (subprocess): umount /tmp/csi-staging/stage execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:47 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] CMD "umount /tmp/csi-staging/stage" returned: 0 in 0.315s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:47 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] Running cmd (subprocess): umount /var/lib/ember-csi/vols/e80df4cf-5e9b-4a5f-8414-be07d68fcb57 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:47 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] CMD "umount /var/lib/ember-csi/vols/e80df4cf-5e9b-4a5f-8414-be07d68fcb57" returned: 0 in 0.266s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:47 default DEBUG os_brick.initiator.connectors.iscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] ==&gt; disconnect_volume: call u"{'args': (&lt;os_brick.initiator.connectors.iscsi.ISCSIConnector object at 0x7f68d72f4490&gt;, {'access_mode': u'rw', 'target_discovered': False, 'encrypted': False, 'target_iqn': u'iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57', 'target_portal': u'127.0.0.1:3260', 'volume_id': 'e80df4cf-5e9b-4a5f-8414-be07d68fcb57', 'target_lun': 0, 'auth_password': u'***', 'auth_username': u'jHGAPxf7nEEu34xrPGht', 'auth_method': u'CHAP'}, {'path': u'/dev/sda', 'scsi_wwn': '36001405668e9d272c444c47a5cbf0049', 'type': 'block'}), 'kwargs': {'ignore_errors': False, 'force': False}}" trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:146
+2020-04-07 17:55:47 default DEBUG oslo_concurrency.lockutils [req-0d253006-5cde-4cbe-923b-6f278562f956] Lock "connect_volume" acquired by "os_brick.initiator.connectors.iscsi.disconnect_volume" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-07 17:55:47 default DEBUG os_brick.initiator.connectors.iscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] Getting connected devices for (ips,iqns,luns)=[(u'127.0.0.1:3260', u'iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57', 0)] _get_connection_devices /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:814
+2020-04-07 17:55:47 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] Running cmd (subprocess): iscsiadm -m node execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:48 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] CMD "iscsiadm -m node" returned: 0 in 0.254s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:48 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] Running cmd (subprocess): iscsiadm -m session execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:48 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] CMD "iscsiadm -m session" returned: 0 in 0.252s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:48 default DEBUG os_brick.initiator.connectors.iscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] iscsiadm ('-m', 'session'): stdout=tcp: [1] 127.0.0.1:3260,1 iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 (non-flash)
+ stderr= _run_iscsiadm_bare /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1124
+2020-04-07 17:55:48 default DEBUG os_brick.initiator.connectors.iscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] iscsi session list stdout=tcp: [1] 127.0.0.1:3260,1 iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 (non-flash)
+ stderr= _run_iscsi_session /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1113
+2020-04-07 17:55:48 default DEBUG os_brick.initiator.connectors.iscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] Resulting device map defaultdict(&lt;function &lt;lambda&gt; at 0x7f68d7341938&gt;, {(u'127.0.0.1:3260', u'iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57'): (set([u'sda']), set([]))}) _get_connection_devices /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:846
+2020-04-07 17:55:48 default DEBUG os_brick.initiator.linuxscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] Removing single pathed devices sda remove_connection /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:264
+2020-04-07 17:55:48 default DEBUG os_brick.initiator.linuxscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] Flushing IO for device /dev/sda flush_device_io /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:313
+2020-04-07 17:55:48 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] Running cmd (subprocess): blockdev --flushbufs /dev/sda execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:48 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] CMD "blockdev --flushbufs /dev/sda" returned: 0 in 0.254s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:48 default DEBUG os_brick.initiator.linuxscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] Remove SCSI device /dev/sda with /sys/block/sda/device/delete remove_scsi_device /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:76
+2020-04-07 17:55:48 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] Running cmd (subprocess): tee -a /sys/block/sda/device/delete execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:48 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] CMD "tee -a /sys/block/sda/device/delete" returned: 0 in 0.279s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:48 default DEBUG os_brick.initiator.linuxscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] Checking to see if SCSI volumes sda have been removed. wait_for_volumes_removal /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:84
+2020-04-07 17:55:48 default DEBUG os_brick.initiator.linuxscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] SCSI volumes sda have been removed. wait_for_volumes_removal /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:93
+2020-04-07 17:55:48 default DEBUG os_brick.initiator.connectors.iscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] Disconnecting from: [(u'127.0.0.1:3260', u'iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57')] _disconnect_connection /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1101
+2020-04-07 17:55:48 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] Running cmd (subprocess): iscsiadm -m node -T iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 -p 127.0.0.1:3260 --op update -n node.startup -v manual execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:49 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] CMD "iscsiadm -m node -T iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 -p 127.0.0.1:3260 --op update -n node.startup -v manual" returned: 0 in 0.256s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:49 default DEBUG os_brick.initiator.connectors.iscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] iscsiadm ('--op', 'update', '-n', 'node.startup', '-v', 'manual'): stdout= stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:997
+2020-04-07 17:55:49 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] Running cmd (subprocess): iscsiadm -m node -T iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 -p 127.0.0.1:3260 --logout execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:49 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] CMD "iscsiadm -m node -T iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 -p 127.0.0.1:3260 --logout" returned: 0 in 0.256s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:49 default DEBUG os_brick.initiator.connectors.iscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] iscsiadm ('--logout',): stdout=Logging out of session [sid: 1, target: iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57, portal: 127.0.0.1,3260]
+Logout of [sid: 1, target: iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57, portal: 127.0.0.1,3260] successful.
+ stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:997
+2020-04-07 17:55:49 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] Running cmd (subprocess): iscsiadm -m node -T iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 -p 127.0.0.1:3260 --op delete execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:49 default DEBUG oslo_concurrency.processutils [req-0d253006-5cde-4cbe-923b-6f278562f956] CMD "iscsiadm -m node -T iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 -p 127.0.0.1:3260 --op delete" returned: 0 in 0.258s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:49 default DEBUG os_brick.initiator.connectors.iscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] iscsiadm ('--op', 'delete'): stdout= stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:997
+2020-04-07 17:55:49 default DEBUG oslo_concurrency.lockutils [req-0d253006-5cde-4cbe-923b-6f278562f956] Lock "connect_volume" released by "os_brick.initiator.connectors.iscsi.disconnect_volume" :: held 1.823s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-07 17:55:49 default DEBUG os_brick.initiator.connectors.iscsi [req-0d253006-5cde-4cbe-923b-6f278562f956] &lt;== disconnect_volume: return (1823ms) None trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:170
+2020-04-07 17:55:49 default INFO ember_csi.common [req-0d253006-5cde-4cbe-923b-6f278562f956] &lt;= GRPC NodeUnstageVolume served in 2s
+2020-04-07 17:55:49 default DEBUG ember_csi.common [req-0d253006-5cde-4cbe-923b-6f278562f956] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:49 default INFO ember_csi.common [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] =&gt; GRPC ControllerUnpublishVolume e80df4cf-5e9b-4a5f-8414-be07d68fcb57
+2020-04-07 17:55:49 default DEBUG ember_csi.common [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] With params:
+	volume_id: "e80df4cf-5e9b-4a5f-8414-be07d68fcb57"
+	node_id: "ember-csi.io.libvirt0" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:49 default WARNING ember_csi.base [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] The volume was still attached to instances: 
+2020-04-07 17:55:49 default DEBUG oslo_concurrency.lockutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Lock "lioadm" acquired by "cinder.volume.targets.lio._execute" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-07 17:55:49 default DEBUG oslo_concurrency.processutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Running cmd (subprocess): cinder-rtstool delete-initiator iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 iqn.1994-05.com.redhat:libvirt0 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.processutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] CMD "cinder-rtstool delete-initiator iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 iqn.1994-05.com.redhat:libvirt0" returned: 0 in 0.391s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.lockutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Lock "lioadm" released by "cinder.volume.targets.lio._execute" :: held 0.392s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.lockutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Lock "lioadm" acquired by "cinder.volume.targets.lio._execute" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.processutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Running cmd (subprocess): cinder-rtstool save execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.processutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] CMD "cinder-rtstool save" returned: 0 in 0.405s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.lockutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Lock "lioadm" released by "cinder.volume.targets.lio._execute" :: held 0.406s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.lockutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Lock "lioadm" acquired by "cinder.volume.targets.lio._execute" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.processutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Running cmd (subprocess): cinder-rtstool get-targets execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.processutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] CMD "cinder-rtstool get-targets" returned: 0 in 0.388s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.lockutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Lock "lioadm" released by "cinder.volume.targets.lio._execute" :: held 0.389s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-07 17:55:50 default INFO cinder.volume.targets.lio [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Removing iscsi_target: e80df4cf-5e9b-4a5f-8414-be07d68fcb57
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.lockutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Lock "lioadm" acquired by "cinder.volume.targets.lio._execute" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-07 17:55:50 default DEBUG oslo_concurrency.processutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Running cmd (subprocess): cinder-rtstool delete iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:51 default DEBUG oslo_concurrency.processutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] CMD "cinder-rtstool delete iqn.2010-10.org.openstack:volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57" returned: 0 in 0.398s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:51 default DEBUG oslo_concurrency.lockutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Lock "lioadm" released by "cinder.volume.targets.lio._execute" :: held 0.399s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-07 17:55:51 default DEBUG oslo_concurrency.lockutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Lock "lioadm" acquired by "cinder.volume.targets.lio._execute" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-07 17:55:51 default DEBUG oslo_concurrency.processutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Running cmd (subprocess): cinder-rtstool save execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:51 default DEBUG oslo_concurrency.processutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] CMD "cinder-rtstool save" returned: 0 in 0.408s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:51 default DEBUG oslo_concurrency.lockutils [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Lock "lioadm" released by "cinder.volume.targets.lio._execute" :: held 0.409s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-07 17:55:51 default INFO ember_csi.common [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] &lt;= GRPC ControllerUnpublishVolume served in 2s
+2020-04-07 17:55:51 default DEBUG ember_csi.common [req-4016e3ee-ac2a-420b-a6ef-033e51cb10c4] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-07 17:55:51 default INFO ember_csi.common [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] =&gt; GRPC DeleteVolume e80df4cf-5e9b-4a5f-8414-be07d68fcb57
+2020-04-07 17:55:51 default DEBUG ember_csi.common [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] With params:
+	volume_id: "e80df4cf-5e9b-4a5f-8414-be07d68fcb57" dolog /ember-csi/ember_csi/common.py:127
+2020-04-07 17:55:51 default DEBUG ember_csi.base [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] Deleting volume e80df4cf-5e9b-4a5f-8414-be07d68fcb57 DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-07 17:55:51 default DEBUG oslo_concurrency.processutils [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] Running cmd (subprocess): env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:51 default DEBUG oslo_concurrency.processutils [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] CMD "env LC_ALL=C lvs --noheadings --unit=g -o vg_name,name,size --nosuffix ember-volumes/volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57" returned: 0 in 0.270s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:51 default DEBUG oslo_concurrency.processutils [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] Running cmd (subprocess): env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:52 default DEBUG oslo_concurrency.processutils [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] CMD "env LC_ALL=C lvdisplay --noheading -C -o Attr ember-volumes/volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57" returned: 0 in 0.265s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:52 default DEBUG oslo_concurrency.processutils [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] Running cmd (subprocess): lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-07 17:55:52 default DEBUG oslo_concurrency.processutils [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] CMD "lvremove --config activation { retry_deactivation = 1}  -f ember-volumes/volume-e80df4cf-5e9b-4a5f-8414-be07d68fcb57" returned: 0 in 0.353s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-07 17:55:52 default INFO cinder.volume.drivers.lvm [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] Successfully deleted volume: e80df4cf-5e9b-4a5f-8414-be07d68fcb57
+2020-04-07 17:55:52 default INFO ember_csi.common [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] &lt;= GRPC DeleteVolume served in 1s
+2020-04-07 17:55:52 default DEBUG ember_csi.common [req-9c488eb0-5309-42f0-8df0-cf2f85a14d93] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+
+</pre>
+</body>
+
+</html>
