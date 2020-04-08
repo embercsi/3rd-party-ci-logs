@@ -1,0 +1,1573 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] in _check_config _check_config /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:115
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] context: &lt;cinder.context.RequestContext object at 0x7ff30a7d44d0&gt; do_setup /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:147
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] _execute_and_get_response_details url: /cgi-bin/authLogin.cgi? _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] _execute_and_get_response_details post_parm: pwd=dG9vbWFueXNlY3JldHMh&amp;serviceKey=1&amp;user=ember _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] request elapsed_time: 0.102418899536 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] execute_login data: &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;QDocRoot version="1.0"&gt;
+&lt;doQuick&gt;&lt;![CDATA[]]&gt;&lt;/doQuick&gt;&lt;is_booting&gt;&lt;![CDATA[0]]&gt;&lt;/is_booting&gt;&lt;mediaReady&gt;&lt;![CDATA[1]]&gt;&lt;/mediaReady&gt;&lt;shutdown_info&gt;&lt;type&gt;&lt;![CDATA[-1]]&gt;&lt;/type&gt;&lt;timestamp&gt;&lt;![CDATA[0]]&gt;&lt;/timestamp&gt;&lt;duration&gt;&lt;![CDATA[0]]&gt;&lt;/duration&gt;&lt;/shutdown_info&gt;
+&lt;SMBFW&gt;&lt;![CDATA[0]]&gt;&lt;/SMBFW&gt;&lt;authPassed&gt;&lt;![CDATA[1]]&gt;&lt;/authPassed&gt;&lt;authSid&gt;&lt;![CDATA[ncxtfgj2]]&gt;&lt;/authSid&gt;&lt;pw_status&gt;&lt;![CDATA[0]]&gt;&lt;/pw_status&gt;&lt;isAdmin&gt;&lt;![CDATA[1]]&gt;&lt;/isAdmin&gt;&lt;username&gt;&lt;![CDATA[ember]]&gt;&lt;/username&gt;&lt;groupname&gt;&lt;![CDATA[everyone]]&gt;&lt;/groupname&gt;&lt;ts&gt;&lt;![CDATA[8085566]]&gt;&lt;/ts&gt;&lt;fwNotice&gt;&lt;![CDATA[0]]&gt;&lt;/fwNotice&gt;&lt;SUID&gt;&lt;![CDATA[d41f017e2dbfd886e3a7f3f797ba348c]]&gt;&lt;/SUID&gt;&lt;title&gt;&lt;![CDATA[]]&gt;&lt;/title&gt;&lt;content&gt;&lt;![CDATA[]]&gt;&lt;/content&gt;&lt;psType&gt;&lt;![CDATA[1]]&gt;&lt;/psType&gt;&lt;standard_massage&gt;&lt;![CDATA[]]&gt;&lt;/standard_massage&gt;&lt;standard_color&gt;&lt;![CDATA[#FFFFFF]]&gt;&lt;/standard_color&gt;&lt;standard_size&gt;&lt;![CDATA[12 px]]&gt;&lt;/standard_size&gt;&lt;standard_bg_style&gt;&lt;![CDATA[fill]]&gt;&lt;/standard_bg_style&gt;&lt;showVersion&gt;&lt;![CDATA[0]]&gt;&lt;/showVersion&gt;&lt;show_link&gt;&lt;![CDATA[1]]&gt;&lt;/show_link&gt;&lt;cuid&gt;&lt;![CDATA[6b78c04374a7a2718d9cd0f523e36dd6]]&gt;&lt;/cuid&gt;&lt;/QDocRoot&gt;
+ execute_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1252
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] execute_login session_id: ncxtfgj2 execute_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1254
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] fw_version: 4.4.1 create_api_executor /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:195
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] Create TS API Executor create_api_executor /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:198
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] _execute_and_get_response_details url: /cgi-bin/authLogin.cgi? _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] _execute_and_get_response_details post_parm: pwd=dG9vbWFueXNlY3JldHMh&amp;serviceKey=1&amp;user=ember _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] request elapsed_time: 0.0806250572205 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] execute_login data: &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;QDocRoot version="1.0"&gt;
+&lt;doQuick&gt;&lt;![CDATA[]]&gt;&lt;/doQuick&gt;&lt;is_booting&gt;&lt;![CDATA[0]]&gt;&lt;/is_booting&gt;&lt;mediaReady&gt;&lt;![CDATA[1]]&gt;&lt;/mediaReady&gt;&lt;shutdown_info&gt;&lt;type&gt;&lt;![CDATA[-1]]&gt;&lt;/type&gt;&lt;timestamp&gt;&lt;![CDATA[0]]&gt;&lt;/timestamp&gt;&lt;duration&gt;&lt;![CDATA[0]]&gt;&lt;/duration&gt;&lt;/shutdown_info&gt;
+&lt;SMBFW&gt;&lt;![CDATA[0]]&gt;&lt;/SMBFW&gt;&lt;authPassed&gt;&lt;![CDATA[1]]&gt;&lt;/authPassed&gt;&lt;authSid&gt;&lt;![CDATA[kvv08i01]]&gt;&lt;/authSid&gt;&lt;pw_status&gt;&lt;![CDATA[0]]&gt;&lt;/pw_status&gt;&lt;isAdmin&gt;&lt;![CDATA[1]]&gt;&lt;/isAdmin&gt;&lt;username&gt;&lt;![CDATA[ember]]&gt;&lt;/username&gt;&lt;groupname&gt;&lt;![CDATA[everyone]]&gt;&lt;/groupname&gt;&lt;ts&gt;&lt;![CDATA[8085566]]&gt;&lt;/ts&gt;&lt;fwNotice&gt;&lt;![CDATA[0]]&gt;&lt;/fwNotice&gt;&lt;SUID&gt;&lt;![CDATA[d41f017e2dbfd886e3a7f3f797ba348c]]&gt;&lt;/SUID&gt;&lt;title&gt;&lt;![CDATA[]]&gt;&lt;/title&gt;&lt;content&gt;&lt;![CDATA[]]&gt;&lt;/content&gt;&lt;psType&gt;&lt;![CDATA[1]]&gt;&lt;/psType&gt;&lt;standard_massage&gt;&lt;![CDATA[]]&gt;&lt;/standard_massage&gt;&lt;standard_color&gt;&lt;![CDATA[#FFFFFF]]&gt;&lt;/standard_color&gt;&lt;standard_size&gt;&lt;![CDATA[12 px]]&gt;&lt;/standard_size&gt;&lt;standard_bg_style&gt;&lt;![CDATA[fill]]&gt;&lt;/standard_bg_style&gt;&lt;showVersion&gt;&lt;![CDATA[0]]&gt;&lt;/showVersion&gt;&lt;show_link&gt;&lt;![CDATA[1]]&gt;&lt;/show_link&gt;&lt;cuid&gt;&lt;![CDATA[6b78c04374a7a2718d9cd0f523e36dd6]]&gt;&lt;/cuid&gt;&lt;/QDocRoot&gt;
+ execute_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1252
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] execute_login session_id: kvv08i01 execute_login /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1254
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] in get_volume_stats refresh: True get_volume_stats /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:660
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] backend_name=qnap get_volume_stats /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:667
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] _execute_and_get_response_details url: /cgi-bin/disk/disk_manage.cgi?Pool_Info=1&amp;func=extra_get&amp;poolID=1&amp;sid=kvv08i01&amp;store=poolInfo _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:16:47 default DEBUG cinder.volume.drivers.qnap [-] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:16:50 default DEBUG cinder.volume.drivers.qnap [-] request elapsed_time: 2.265376091 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:16:50 default DEBUG cinder.volume.drivers.qnap [-] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:16:50 default DEBUG cinder.volume.drivers.qnap [-] capacity_bytes: 5570 GB get_volume_stats /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:672
+2020-04-08 13:16:50 default DEBUG cinder.volume.drivers.qnap [-] freesize_bytes: 4041 GB get_volume_stats /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:674
+2020-04-08 13:16:50 default DEBUG cinder.volume.drivers.qnap [-] provisioned_bytes: 1528 GB get_volume_stats /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:678
+2020-04-08 13:16:50 default INFO cinder.volume.driver [-] Driver hasn't implemented _init_vendor_properties()
+2020-04-08 13:16:50 default DEBUG cinder.volume.driver [-] Initialized capabilities list: {'volume_backend_name': u'qnap', 'driver_version': '1.2.005', 'pools': [{'pool_name': u'1', 'QoS_support': False, 'provisioned_capacity_gb': 1528, 'qnap_compression': ['True', 'False'], 'qnap_thin_provision': ['True', 'False'], 'qnap_ssd_cache': ['True', 'False'], 'total_capacity_gb': 5570, 'reserved_percentage': 0, 'qnap_deduplication': ['True', 'False'], 'free_capacity_gb': 4041}], 'vendor_name': 'QNAP', 'properties': {'replication_enabled': {'type': 'boolean', 'description': u'Enables replication.', 'title': 'Replication'}, 'qos': {'type': 'boolean', 'description': u'Enables QoS.', 'title': 'QoS'}, 'compression': {'type': 'boolean', 'description': u'Enables compression.', 'title': 'Compression'}, 'thin_provisioning': {'type': 'boolean', 'description': u'Sets thin provisioning.', 'title': 'Thin Provisioning'}}, 'storage_protocol': u'iscsi'}. init_capabilities /usr/lib/python2.7/site-packages/cinder/volume/driver.py:797
+2020-04-08 13:16:50 default DEBUG os_brick.utils [-] ==&gt; get_connector_properties: call u"{'execute': &lt;function _execute at 0x7ff30a7c9320&gt;, 'my_ip': '192.168.122.19', 'enforce_multipath': False, 'host': None, 'root_helper': 'sudo', 'multipath': False}" trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:146
+2020-04-08 13:16:50 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): cat /etc/iscsi/initiatorname.iscsi execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:16:50 default DEBUG oslo_concurrency.processutils [-] CMD "cat /etc/iscsi/initiatorname.iscsi" returned: 0 in 0.252s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:16:50 default DEBUG os_brick.initiator.linuxfc [-] No Fibre Channel support detected on system. get_fc_hbas /usr/lib/python2.7/site-packages/os_brick/initiator/linuxfc.py:157
+2020-04-08 13:16:50 default DEBUG os_brick.initiator.linuxfc [-] No Fibre Channel support detected on system. get_fc_hbas /usr/lib/python2.7/site-packages/os_brick/initiator/linuxfc.py:157
+2020-04-08 13:16:50 default DEBUG oslo_concurrency.processutils [-] Running cmd (subprocess): cat /sys/class/dmi/id/product_uuid execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:16:50 default DEBUG oslo_concurrency.processutils [-] CMD "cat /sys/class/dmi/id/product_uuid" returned: 0 in 0.257s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:16:50 default DEBUG os_brick.utils [-] &lt;== get_connector_properties: return (511ms) {'initiator': u'iqn.1994-05.com.redhat:libvirt0', 'ip': u'192.168.122.19', 'system uuid': u'15B637A5-2AD6-4325-823A-17D9510147D8', 'platform': u'x86_64', 'host': u'libvirt0', 'do_local_attach': False, 'os_type': u'linux2', 'multipath': False} trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:170
+2020-04-08 13:16:50 default INFO ember_csi.ember_csi [-] Ember CSI vmaster+08042020131637497626556 with 30 workers (CSI spec: v1.0.0, cinderlib: v1.1.0.dev12, cinder: v15.1.0.dev142)
+2020-04-08 13:16:50 default INFO ember_csi.ember_csi [-] Persistence module: MemoryPersistence
+2020-04-08 13:16:50 default INFO ember_csi.ember_csi [-] Running as all with backend QnapISCSIDriver v1.2.005
+2020-04-08 13:16:50 default INFO ember_csi.ember_csi [-] Plugin name: ember-csi.io
+2020-04-08 13:16:50 default INFO ember_csi.ember_csi [-] Debugging feature is ENABLED with ember_csi.rpdb and OFF. Toggle it with SIGUSR1.
+2020-04-08 13:16:50 default INFO ember_csi.ember_csi [-] Supported filesystems: cramfs, minix, btrfs, ext2, ext3, ext4, xfs
+2020-04-08 13:16:50 default INFO ember_csi.ember_csi [-] Now serving on [::]:50051...
+2020-04-08 13:16:54 default INFO ember_csi.common [req-92c8a220-02f8-4b45-b181-f417bb7c0daf] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-92c8a220-02f8-4b45-b181-f417bb7c0daf] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-92c8a220-02f8-4b45-b181-f417bb7c0daf] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-92c8a220-02f8-4b45-b181-f417bb7c0daf] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-514856ff-b79c-4080-bf36-0730811bd653] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-514856ff-b79c-4080-bf36-0730811bd653] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-514856ff-b79c-4080-bf36-0730811bd653] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-514856ff-b79c-4080-bf36-0730811bd653] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-284a3c8e-e716-4561-9848-3e98d9468f18] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-284a3c8e-e716-4561-9848-3e98d9468f18] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-284a3c8e-e716-4561-9848-3e98d9468f18] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-284a3c8e-e716-4561-9848-3e98d9468f18] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-153040f3-b37c-4800-ba26-5c8fabefeb34] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-153040f3-b37c-4800-ba26-5c8fabefeb34] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-153040f3-b37c-4800-ba26-5c8fabefeb34] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-153040f3-b37c-4800-ba26-5c8fabefeb34] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-56fa9763-1a09-406b-9401-e707919f50f3] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-56fa9763-1a09-406b-9401-e707919f50f3] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-56fa9763-1a09-406b-9401-e707919f50f3] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-56fa9763-1a09-406b-9401-e707919f50f3] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-908e0c48-9400-48d5-9068-d23256546e30] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-908e0c48-9400-48d5-9068-d23256546e30] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-908e0c48-9400-48d5-9068-d23256546e30] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-908e0c48-9400-48d5-9068-d23256546e30] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-322786e6-3257-4917-97f2-a1c2b2e690c9] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-322786e6-3257-4917-97f2-a1c2b2e690c9] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-322786e6-3257-4917-97f2-a1c2b2e690c9] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-322786e6-3257-4917-97f2-a1c2b2e690c9] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-fdfbca8d-95f7-40db-bd61-02ecfae98648] =&gt; GRPC GetPluginCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-fdfbca8d-95f7-40db-bd61-02ecfae98648] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-fdfbca8d-95f7-40db-bd61-02ecfae98648] &lt;= GRPC GetPluginCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-fdfbca8d-95f7-40db-bd61-02ecfae98648] Returns:
+		capabilities {
+		  service {
+		    type: CONTROLLER_SERVICE
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-df8f0473-4c7b-4e6e-a158-ff5c58a99f55] =&gt; GRPC NodeGetInfo
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-df8f0473-4c7b-4e6e-a158-ff5c58a99f55] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-df8f0473-4c7b-4e6e-a158-ff5c58a99f55] &lt;= GRPC NodeGetInfo served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-df8f0473-4c7b-4e6e-a158-ff5c58a99f55] Returns:
+		node_id: "ember-csi.io.libvirt0" dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-be29c0b6-7d27-472c-b53e-c3b85e1d9383] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-be29c0b6-7d27-472c-b53e-c3b85e1d9383] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-be29c0b6-7d27-472c-b53e-c3b85e1d9383] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-be29c0b6-7d27-472c-b53e-c3b85e1d9383] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-66558832-bb21-4155-825a-0e456eb94c29] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-66558832-bb21-4155-825a-0e456eb94c29] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-66558832-bb21-4155-825a-0e456eb94c29] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-66558832-bb21-4155-825a-0e456eb94c29] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-ca7a70b0-a4f9-4c1b-8d08-680c68c3fbe6] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-ca7a70b0-a4f9-4c1b-8d08-680c68c3fbe6] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-ca7a70b0-a4f9-4c1b-8d08-680c68c3fbe6] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-ca7a70b0-a4f9-4c1b-8d08-680c68c3fbe6] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-97aa9571-ac07-4c8d-9214-71ecfc1e6ee2] =&gt; GRPC NodePublishVolume 
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-97aa9571-ac07-4c8d-9214-71ecfc1e6ee2] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default ERROR ember_csi.common [req-97aa9571-ac07-4c8d-9214-71ecfc1e6ee2] !! GRPC NodePublishVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: target_path, staging_target_path, volume_capability, volume_id): Exception
+2020-04-08 13:16:54 default INFO ember_csi.common [req-e7ab4539-1cb6-4ac3-944d-3b1b32fb257d] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-e7ab4539-1cb6-4ac3-944d-3b1b32fb257d] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-e7ab4539-1cb6-4ac3-944d-3b1b32fb257d] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-e7ab4539-1cb6-4ac3-944d-3b1b32fb257d] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-bb196682-4f1b-40e7-9b8f-81a99ad7c48f] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-bb196682-4f1b-40e7-9b8f-81a99ad7c48f] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-bb196682-4f1b-40e7-9b8f-81a99ad7c48f] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-bb196682-4f1b-40e7-9b8f-81a99ad7c48f] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-c7908969-9b54-491d-abe2-8cee234027c7] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-c7908969-9b54-491d-abe2-8cee234027c7] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-c7908969-9b54-491d-abe2-8cee234027c7] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-c7908969-9b54-491d-abe2-8cee234027c7] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-90725665-11fe-4a15-94a6-94cd308a95ed] =&gt; GRPC NodePublishVolume id
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-90725665-11fe-4a15-94a6-94cd308a95ed] With params:
+	volume_id: "id" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default ERROR ember_csi.common [req-90725665-11fe-4a15-94a6-94cd308a95ed] !! GRPC NodePublishVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: target_path, staging_target_path, volume_capability): Exception
+2020-04-08 13:16:54 default INFO ember_csi.common [req-fcaf8f47-585f-45ce-b8cc-837a2158fd93] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-fcaf8f47-585f-45ce-b8cc-837a2158fd93] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-fcaf8f47-585f-45ce-b8cc-837a2158fd93] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-fcaf8f47-585f-45ce-b8cc-837a2158fd93] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-129f5c50-9a9b-4438-971b-1d39a4ccae6e] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-129f5c50-9a9b-4438-971b-1d39a4ccae6e] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-129f5c50-9a9b-4438-971b-1d39a4ccae6e] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-129f5c50-9a9b-4438-971b-1d39a4ccae6e] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-48505f2b-be7a-4e05-b504-1b4ac3e2cea9] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-48505f2b-be7a-4e05-b504-1b4ac3e2cea9] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-48505f2b-be7a-4e05-b504-1b4ac3e2cea9] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-48505f2b-be7a-4e05-b504-1b4ac3e2cea9] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-543799bd-a806-420d-8142-0303b5ffa5e3] =&gt; GRPC NodePublishVolume id
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-543799bd-a806-420d-8142-0303b5ffa5e3] With params:
+	volume_id: "id"
+	target_path: "/tmp/csi-mount/target" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default ERROR ember_csi.common [req-543799bd-a806-420d-8142-0303b5ffa5e3] !! GRPC NodePublishVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: staging_target_path, volume_capability): Exception
+2020-04-08 13:16:54 default INFO ember_csi.common [req-c1b41ec2-78fa-407a-bc5a-423cfa04da1f] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-c1b41ec2-78fa-407a-bc5a-423cfa04da1f] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-c1b41ec2-78fa-407a-bc5a-423cfa04da1f] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-c1b41ec2-78fa-407a-bc5a-423cfa04da1f] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-51ca55c9-368d-4336-9472-c35bc6f87501] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-51ca55c9-368d-4336-9472-c35bc6f87501] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-51ca55c9-368d-4336-9472-c35bc6f87501] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-51ca55c9-368d-4336-9472-c35bc6f87501] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-63a4c8f3-1f7c-4e90-9752-37a2ba07cea8] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-63a4c8f3-1f7c-4e90-9752-37a2ba07cea8] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-63a4c8f3-1f7c-4e90-9752-37a2ba07cea8] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-63a4c8f3-1f7c-4e90-9752-37a2ba07cea8] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-3920d48c-659d-4041-b06d-6f82ac2e3625] =&gt; GRPC NodeUnpublishVolume 
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-3920d48c-659d-4041-b06d-6f82ac2e3625] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default ERROR ember_csi.common [req-3920d48c-659d-4041-b06d-6f82ac2e3625] !! GRPC NodeUnpublishVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: target_path, volume_id): Exception
+2020-04-08 13:16:54 default INFO ember_csi.common [req-095f0926-d332-4697-8c05-724f020b8bbc] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-095f0926-d332-4697-8c05-724f020b8bbc] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-095f0926-d332-4697-8c05-724f020b8bbc] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-095f0926-d332-4697-8c05-724f020b8bbc] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-117c8985-1b0f-4776-9b4d-9467e4640143] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-117c8985-1b0f-4776-9b4d-9467e4640143] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-117c8985-1b0f-4776-9b4d-9467e4640143] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-117c8985-1b0f-4776-9b4d-9467e4640143] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-e0079294-70b4-4fee-847c-bb163d97abc9] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-e0079294-70b4-4fee-847c-bb163d97abc9] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-e0079294-70b4-4fee-847c-bb163d97abc9] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-e0079294-70b4-4fee-847c-bb163d97abc9] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-2bc24d1b-45ba-4d0a-8856-17e0487247a6] =&gt; GRPC NodeUnpublishVolume id
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-2bc24d1b-45ba-4d0a-8856-17e0487247a6] With params:
+	volume_id: "id" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default ERROR ember_csi.common [req-2bc24d1b-45ba-4d0a-8856-17e0487247a6] !! GRPC NodeUnpublishVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: target_path): Exception
+2020-04-08 13:16:54 default INFO ember_csi.common [req-d085c5d9-b4e7-4058-ab36-6654706c17d4] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-d085c5d9-b4e7-4058-ab36-6654706c17d4] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-d085c5d9-b4e7-4058-ab36-6654706c17d4] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-d085c5d9-b4e7-4058-ab36-6654706c17d4] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-94bf1b80-c6cc-42ec-9540-95ed5b71c0f3] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-94bf1b80-c6cc-42ec-9540-95ed5b71c0f3] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-94bf1b80-c6cc-42ec-9540-95ed5b71c0f3] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-94bf1b80-c6cc-42ec-9540-95ed5b71c0f3] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-8e007186-7553-435c-9446-ecd89945169d] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-8e007186-7553-435c-9446-ecd89945169d] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-8e007186-7553-435c-9446-ecd89945169d] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-8e007186-7553-435c-9446-ecd89945169d] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-936902f9-457e-451e-9032-001d147c81f3] =&gt; GRPC NodeStageVolume 
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-936902f9-457e-451e-9032-001d147c81f3] With params:
+	publish_context {
+	  key: "device"
+	  value: "/dev/mock"
+	}
+	staging_target_path: "/tmp/csi-staging"
+	volume_capability {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default ERROR ember_csi.common [req-936902f9-457e-451e-9032-001d147c81f3] !! GRPC NodeStageVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: volume_id): Exception
+2020-04-08 13:16:54 default INFO ember_csi.common [req-b170fa3d-874a-480d-befa-c4fa9c580ce2] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-b170fa3d-874a-480d-befa-c4fa9c580ce2] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-b170fa3d-874a-480d-befa-c4fa9c580ce2] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-b170fa3d-874a-480d-befa-c4fa9c580ce2] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-70edf178-1a59-4ffc-874f-c58f502dabdb] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-70edf178-1a59-4ffc-874f-c58f502dabdb] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-70edf178-1a59-4ffc-874f-c58f502dabdb] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-70edf178-1a59-4ffc-874f-c58f502dabdb] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-bb89b53d-44cf-4671-9e0a-ecef389c4277] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-bb89b53d-44cf-4671-9e0a-ecef389c4277] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-bb89b53d-44cf-4671-9e0a-ecef389c4277] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-bb89b53d-44cf-4671-9e0a-ecef389c4277] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-17578963-0686-4343-9469-72d9df604a40] =&gt; GRPC NodeStageVolume id
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-17578963-0686-4343-9469-72d9df604a40] With params:
+	volume_id: "id"
+	publish_context {
+	  key: "device"
+	  value: "/dev/mock"
+	}
+	volume_capability {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default ERROR ember_csi.common [req-17578963-0686-4343-9469-72d9df604a40] !! GRPC NodeStageVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: staging_target_path): Exception
+2020-04-08 13:16:54 default INFO ember_csi.common [req-215b770f-ac6c-4f79-8624-3de1f03232ed] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-215b770f-ac6c-4f79-8624-3de1f03232ed] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-215b770f-ac6c-4f79-8624-3de1f03232ed] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-215b770f-ac6c-4f79-8624-3de1f03232ed] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-e7441230-0744-4c26-897c-b96d15ee9cff] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-e7441230-0744-4c26-897c-b96d15ee9cff] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-e7441230-0744-4c26-897c-b96d15ee9cff] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-e7441230-0744-4c26-897c-b96d15ee9cff] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-dc0961bf-d625-4c49-9433-6f4060f6c1b5] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-dc0961bf-d625-4c49-9433-6f4060f6c1b5] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default INFO ember_csi.common [req-dc0961bf-d625-4c49-9433-6f4060f6c1b5] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-dc0961bf-d625-4c49-9433-6f4060f6c1b5] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:16:54 default INFO ember_csi.common [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] =&gt; GRPC CreateVolume sanity-node-stage-nocaps-9B546EE1-FD5F7CBD
+2020-04-08 13:16:54 default DEBUG ember_csi.common [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] With params:
+	name: "sanity-node-stage-nocaps-9B546EE1-FD5F7CBD"
+	volume_capabilities {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:16:54 default DEBUG ember_csi.base [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] Creating volume sanity-node-stage-nocaps-9B546EE1-FD5F7CBD CreateVolume /ember-csi/ember_csi/base.py:479
+2020-04-08 13:16:54 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] in create_volume create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:294
+2020-04-08 13:16:54 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] volume: {'_obj_display_name': u'sanity-node-stage-nocaps-9B546EE1-FD5F7CBD', '_context': &lt;cinder.context.RequestContext object at 0x7ff30a7d44d0&gt;, '_obj_updated_at': None, '_obj_consistencygroup_id': None, '_obj_replication_status': None, '_obj_status': u'creating', '_obj_cluster': None, '_obj_snapshots': SnapshotList(objects=[]), '_changed_fields': set(['migration_status', 'provider_id', 'availability_zone', 'terminated_at', 'updated_at', 'snapshots', 'provider_geometry', 'cluster', 'replication_status', 'snapshot_id', 'ec2_id', 'deleted_at', 'id', 'size', 'user_id', 'volume_attachment', 'display_description', 'cluster_name', 'project_id', 'launched_at', 'metadata', 'status', 'volume_type_id', 'replication_extended_status', 'multiattach', 'deleted', 'service_uuid', 'provider_location', 'admin_metadata', 'host', 'glance_metadata', 'consistencygroup_id', 'source_volid', 'provider_auth', 'previous_status', 'group', 'display_name', 'group_id', 'bootable', 'shared_targets', 'attach_status', 'volume_type', 'consistencygroup', '_name_id', 'encryption_key_id', 'replication_driver_data', 'scheduled_at', 'created_at']), '_obj_service_uuid': None, '_orig_metadata': {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]'}, '_obj_deleted_at': None, '_orig_glance_metadata': {}, '_obj_metadata': {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]'}, '_obj_shared_targets': True, '_obj_provider_geometry': None, '_obj_volume_attachment': VolumeAttachmentList(objects=[]), '_obj_ec2_id': None, '_obj_consistencygroup': None, '_obj_user_id': u'io.ember-csi', '_obj_migration_status': None, '_obj_project_id': u'io.ember-csi', '_obj_attach_status': u'detached', '_obj_availability_zone': None, '_obj_deleted': False, '_obj_replication_driver_data': None, '_obj_provider_auth': None, '_obj_display_description': u'', '_cl_obj_': &lt;cinderlib.Volume object 0085e56c-d58a-4d50-b3e1-68e01de0300b on backend qnap&gt;, '_obj_group': None, '_obj_provider_id': None, '_obj_size': 1, '_obj_volume_type_id': None, '_obj_previous_status': None, '_obj_cluster_name': None, '_obj_encryption_key_id': None, '_obj_created_at': datetime.datetime(2020, 4, 8, 13, 16, 54, 773071, tzinfo=&lt;iso8601.Utc&gt;), '_obj_admin_metadata': {}, '_obj_launched_at': None, '_obj_volume_type': None, '_obj_snapshot_id': None, '_obj_bootable': False, '_obj_provider_location': None, '_obj_glance_metadata': {}, '_obj_terminated_at': None, '_obj__name_id': None, '_obj_source_volid': None, '_obj_multiattach': False, '_orig_admin_metadata': {}, '_obj_scheduled_at': None, '_obj_host': u'libvirt0@qnap#1', '_obj_replication_extended_status': None, '_obj_id': '0085e56c-d58a-4d50-b3e1-68e01de0300b', '_obj_group_id': None} create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:295
+2020-04-08 13:16:54 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] Unable to retrieve extra specs info. Use default extra spec. create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:308
+2020-04-08 13:16:54 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] qnap_thin_provision: True qnap_compression: True qnap_deduplication: False qnap_ssd_cache: False create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:322
+2020-04-08 13:16:54 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:16:54 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunList=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:16:54 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:16:55 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] request elapsed_time: 0.632102966309 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:16:55 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:16:55 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:16:55 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_lun_setting.cgi?FileIO=no&amp;LUNCapacity=1&amp;LUNName=cinder-20200408131654774889&amp;LUNPath=cinder-20200408131654774889&amp;LUNSectorSize=512&amp;LUNThinAllocate=1&amp;func=add_lun&amp;lv_ifssd=no&amp;lv_threshold=80&amp;poolID=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:16:55 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:16:57 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] request elapsed_time: 1.7195649147 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:16:57 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:16:57 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:16:57 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunList=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:16:57 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:16:57 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] request elapsed_time: 0.782738924026 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:16:57 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:00 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:00 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunList=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:00 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:01 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] request elapsed_time: 0.782161951065 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:01 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:04 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:04 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunList=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:04 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] request elapsed_time: 0.871651887894 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] LUNNAA: 6e843b652603cd8dd13ed418ddaee2d9 create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:357
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] create_volume elapsed_time: 10.8161978722 create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:365
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] create_volume volid: 0085e56c-d58a-4d50-b3e1-68e01de0300b, metadata: {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]', 'LUNNAA': '6e843b652603cd8dd13ed418ddaee2d9', 'LunName': 'cinder-20200408131654774889', 'LUNIndex': '0'} create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:368
+2020-04-08 13:17:05 default INFO ember_csi.common [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] &lt;= GRPC CreateVolume (id = 0085e56c-d58a-4d50-b3e1-68e01de0300b) served in 11s
+2020-04-08 13:17:05 default DEBUG ember_csi.common [req-227c38ed-bfe2-4c62-bca5-a432d241c07b] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "0085e56c-d58a-4d50-b3e1-68e01de0300b"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:05 default INFO ember_csi.common [req-d553efb4-f8d5-4c65-b59d-d1aea2ce3557] =&gt; GRPC NodeStageVolume 0085e56c-d58a-4d50-b3e1-68e01de0300b
+2020-04-08 13:17:05 default DEBUG ember_csi.common [req-d553efb4-f8d5-4c65-b59d-d1aea2ce3557] With params:
+	volume_id: "0085e56c-d58a-4d50-b3e1-68e01de0300b"
+	publish_context {
+	  key: "device"
+	  value: "/dev/mock"
+	}
+	staging_target_path: "/tmp/csi-staging" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:05 default ERROR ember_csi.common [req-d553efb4-f8d5-4c65-b59d-d1aea2ce3557] !! GRPC NodeStageVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: volume_capability): Exception
+2020-04-08 13:17:05 default INFO ember_csi.common [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] =&gt; GRPC DeleteVolume 0085e56c-d58a-4d50-b3e1-68e01de0300b
+2020-04-08 13:17:05 default DEBUG ember_csi.common [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] With params:
+	volume_id: "0085e56c-d58a-4d50-b3e1-68e01de0300b" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:05 default DEBUG ember_csi.base [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] Deleting volume 0085e56c-d58a-4d50-b3e1-68e01de0300b DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-08 13:17:05 default DEBUG oslo_concurrency.lockutils [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] Lock "delete_volume" acquired by "cinder.volume.drivers.qnap.delete_volume" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] volume: {'_obj_display_name': u'sanity-node-stage-nocaps-9B546EE1-FD5F7CBD', '_context': &lt;cinder.context.RequestContext object at 0x7ff30a7d44d0&gt;, '_obj_updated_at': None, '_obj_consistencygroup_id': None, '_obj_replication_status': None, '_obj_status': u'available', '_obj_cluster': None, '_obj_snapshots': SnapshotList(objects=[]), '_changed_fields': set([]), '_obj_service_uuid': None, '_orig_metadata': {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]', 'LUNNAA': u'6e843b652603cd8dd13ed418ddaee2d9', 'LunName': u'cinder-20200408131654774889', 'LUNIndex': u'0'}, '_obj_deleted_at': None, '_orig_glance_metadata': {}, '_obj_metadata': {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]', 'LUNNAA': u'6e843b652603cd8dd13ed418ddaee2d9', 'LunName': u'cinder-20200408131654774889', 'LUNIndex': u'0'}, '_obj_shared_targets': True, '_obj_provider_geometry': None, '_obj_volume_attachment': VolumeAttachmentList(objects=[]), '_obj_ec2_id': None, '_obj_consistencygroup': None, '_obj_user_id': u'io.ember-csi', '_obj_migration_status': None, '_obj_project_id': u'io.ember-csi', '_obj_attach_status': u'detached', '_obj_availability_zone': None, '_obj_deleted': False, '_obj_replication_driver_data': None, '_obj_provider_auth': None, '_obj_display_description': u'', '_cl_obj_': &lt;cinderlib.Volume object 0085e56c-d58a-4d50-b3e1-68e01de0300b on backend qnap&gt;, '_obj_group': None, '_obj_provider_id': None, '_obj_size': 1, '_obj_volume_type_id': None, '_obj_previous_status': None, '_obj_cluster_name': None, '_obj_encryption_key_id': None, '_obj_created_at': datetime.datetime(2020, 4, 8, 13, 16, 54, 773071, tzinfo=&lt;iso8601.Utc&gt;), '_obj_admin_metadata': {}, '_obj_launched_at': None, '_obj_volume_type': None, '_obj_snapshot_id': None, '_obj_bootable': False, '_obj_provider_location': None, '_obj_glance_metadata': {}, '_obj_terminated_at': None, '_obj__name_id': None, '_obj_source_volid': None, '_obj_multiattach': False, '_orig_admin_metadata': {}, '_obj_scheduled_at': None, '_obj_host': u'libvirt0@qnap#1', '_obj_replication_extended_status': None, '_obj_id': '0085e56c-d58a-4d50-b3e1-68e01de0300b', '_obj_group_id': None} delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:376
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] LUNIndex: 0 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:387
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] internal_model_name: TS-X41 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:391
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] fw_version: 4.4.1 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:394
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] in TS FW: get_one_lun_info delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:397
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunID=0&amp;lun_info=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] request elapsed_time: 0.340842008591 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_lun_setting.cgi?LUNIndex=0&amp;func=remove_lun&amp;ha_sync=1&amp;run_background=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:05 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:06 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] request elapsed_time: 0.140477895737 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:06 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:06 default DEBUG cinder.volume.drivers.qnap [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] delete_volume elapsed_time: 0.492972135544 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:430
+2020-04-08 13:17:06 default DEBUG oslo_concurrency.lockutils [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] Lock "delete_volume" released by "cinder.volume.drivers.qnap.delete_volume" :: held 0.494s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-08 13:17:06 default INFO ember_csi.common [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] &lt;= GRPC DeleteVolume served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-ff5e05ec-2dd8-4f41-a478-96fea306ab6f] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:06 default INFO ember_csi.common [req-dd802a4e-b862-49e4-be78-2094f4cdd436] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-dd802a4e-b862-49e4-be78-2094f4cdd436] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default INFO ember_csi.common [req-dd802a4e-b862-49e4-be78-2094f4cdd436] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-dd802a4e-b862-49e4-be78-2094f4cdd436] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:06 default INFO ember_csi.common [req-9396c8b3-9d7a-48b2-b327-928febc6ff6e] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-9396c8b3-9d7a-48b2-b327-928febc6ff6e] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default INFO ember_csi.common [req-9396c8b3-9d7a-48b2-b327-928febc6ff6e] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-9396c8b3-9d7a-48b2-b327-928febc6ff6e] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:06 default INFO ember_csi.common [req-7a7267eb-cbfe-41fd-9684-a264142c0a21] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-7a7267eb-cbfe-41fd-9684-a264142c0a21] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default INFO ember_csi.common [req-7a7267eb-cbfe-41fd-9684-a264142c0a21] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-7a7267eb-cbfe-41fd-9684-a264142c0a21] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:06 default INFO ember_csi.common [req-0e4dfd35-d756-426d-a5c3-03709038d095] =&gt; GRPC NodeUnstageVolume 
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-0e4dfd35-d756-426d-a5c3-03709038d095] With params:
+	staging_target_path: "/tmp/csi-staging" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default ERROR ember_csi.common [req-0e4dfd35-d756-426d-a5c3-03709038d095] !! GRPC NodeUnstageVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: volume_id): Exception
+2020-04-08 13:17:06 default INFO ember_csi.common [req-a13335b6-39ce-45ed-ae46-fd9fa96e8128] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-a13335b6-39ce-45ed-ae46-fd9fa96e8128] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default INFO ember_csi.common [req-a13335b6-39ce-45ed-ae46-fd9fa96e8128] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-a13335b6-39ce-45ed-ae46-fd9fa96e8128] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:06 default INFO ember_csi.common [req-ecc7bb6e-cd00-43c3-a3de-40456dab2812] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-ecc7bb6e-cd00-43c3-a3de-40456dab2812] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default INFO ember_csi.common [req-ecc7bb6e-cd00-43c3-a3de-40456dab2812] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-ecc7bb6e-cd00-43c3-a3de-40456dab2812] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:06 default INFO ember_csi.common [req-165bfabd-ed09-4599-8a16-60c0e68d5661] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-165bfabd-ed09-4599-8a16-60c0e68d5661] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default INFO ember_csi.common [req-165bfabd-ed09-4599-8a16-60c0e68d5661] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-165bfabd-ed09-4599-8a16-60c0e68d5661] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:06 default INFO ember_csi.common [req-431731b7-e80b-4bf6-89aa-17fef4abb062] =&gt; GRPC NodeUnstageVolume id
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-431731b7-e80b-4bf6-89aa-17fef4abb062] With params:
+	volume_id: "id" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default ERROR ember_csi.common [req-431731b7-e80b-4bf6-89aa-17fef4abb062] !! GRPC NodeUnstageVolume failed in 0s with INVALID_ARGUMENT (Missing required fields: staging_target_path): Exception
+2020-04-08 13:17:06 default INFO ember_csi.common [req-59a67299-45e0-4638-ba8a-5c94639905fc] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-59a67299-45e0-4638-ba8a-5c94639905fc] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default INFO ember_csi.common [req-59a67299-45e0-4638-ba8a-5c94639905fc] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-59a67299-45e0-4638-ba8a-5c94639905fc] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:06 default INFO ember_csi.common [req-21bb863c-d9be-477a-8f9a-eeeadfa39575] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-21bb863c-d9be-477a-8f9a-eeeadfa39575] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default INFO ember_csi.common [req-21bb863c-d9be-477a-8f9a-eeeadfa39575] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-21bb863c-d9be-477a-8f9a-eeeadfa39575] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:06 default INFO ember_csi.common [req-db59e5d2-ff4e-4912-a331-84e6f445823b] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-db59e5d2-ff4e-4912-a331-84e6f445823b] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default INFO ember_csi.common [req-db59e5d2-ff4e-4912-a331-84e6f445823b] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-db59e5d2-ff4e-4912-a331-84e6f445823b] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:06 default INFO ember_csi.common [req-14a90b66-fb1e-4210-b5a1-cda9378d7108] =&gt; GRPC NodeGetVolumeStats 
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-14a90b66-fb1e-4210-b5a1-cda9378d7108] With params:
+	volume_path: "some/path" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default ERROR ember_csi.common [req-14a90b66-fb1e-4210-b5a1-cda9378d7108] !! GRPC NodeGetVolumeStats failed in 0s with INVALID_ARGUMENT (Missing required fields: volume_id): Exception
+2020-04-08 13:17:06 default INFO ember_csi.common [req-aea97414-16c1-4dca-b696-fc03f09c4c90] =&gt; GRPC ControllerGetCapabilities
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-aea97414-16c1-4dca-b696-fc03f09c4c90] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default INFO ember_csi.common [req-aea97414-16c1-4dca-b696-fc03f09c4c90] &lt;= GRPC ControllerGetCapabilities served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-aea97414-16c1-4dca-b696-fc03f09c4c90] Returns:
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_UNPUBLISH_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_VOLUMES
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_CAPACITY
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CREATE_DELETE_SNAPSHOT
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: LIST_SNAPSHOTS
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: CLONE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: PUBLISH_READONLY
+		  }
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:06 default INFO ember_csi.common [req-6df89387-e372-4172-aa6a-af7f579aa636] =&gt; GRPC NodeGetCapabilities
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-6df89387-e372-4172-aa6a-af7f579aa636] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:06 default INFO ember_csi.common [req-6df89387-e372-4172-aa6a-af7f579aa636] &lt;= GRPC NodeGetCapabilities served in 0s
+2020-04-08 13:17:06 default DEBUG ember_csi.common [req-6df89387-e372-4172-aa6a-af7f579aa636] Returns:
+		capabilities {
+		  rpc {
+		    type: STAGE_UNSTAGE_VOLUME
+		  }
+		}
+		capabilities {
+		  rpc {
+		    type: GET_VOLUME_STATS
+2020-04-08 13:17:08 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] request elapsed_time: 1.82584095001 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:08 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:08 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:08 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunList=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:08 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:10 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] request elapsed_time: 1.14237093925 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:10 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:13 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:13 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunList=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:13 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:13 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] request elapsed_time: 0.773363828659 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:13 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:16 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:16 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunList=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:16 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] request elapsed_time: 0.859302997589 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] LUNNAA: 6e843b65b5569f5d287fd4517dbbc0dc create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:357
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] create_volume elapsed_time: 11.465487957 create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:365
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] create_volume volid: 9e4279f5-c774-4d43-8741-007386b0c473, metadata: {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]', 'LUNNAA': '6e843b65b5569f5d287fd4517dbbc0dc', 'LunName': 'cinder-20200408131706229040', 'LUNIndex': '1'} create_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:368
+2020-04-08 13:17:17 default INFO ember_csi.common [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] &lt;= GRPC CreateVolume (id = 9e4279f5-c774-4d43-8741-007386b0c473) served in 11s
+2020-04-08 13:17:17 default DEBUG ember_csi.common [req-196daaa2-9a93-48ed-b8df-d70ef223a98d] Returns:
+		volume {
+		  capacity_bytes: 1073741824
+		  volume_id: "9e4279f5-c774-4d43-8741-007386b0c473"
+		} dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:17 default INFO ember_csi.common [req-16ceb68c-4889-4a1d-91d5-e5d3c8497331] =&gt; GRPC NodeGetInfo
+2020-04-08 13:17:17 default DEBUG ember_csi.common [req-16ceb68c-4889-4a1d-91d5-e5d3c8497331] Without params dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:17 default INFO ember_csi.common [req-16ceb68c-4889-4a1d-91d5-e5d3c8497331] &lt;= GRPC NodeGetInfo served in 0s
+2020-04-08 13:17:17 default DEBUG ember_csi.common [req-16ceb68c-4889-4a1d-91d5-e5d3c8497331] Returns:
+		node_id: "ember-csi.io.libvirt0" dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:17 default INFO ember_csi.common [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] =&gt; GRPC ControllerPublishVolume 9e4279f5-c774-4d43-8741-007386b0c473
+2020-04-08 13:17:17 default DEBUG ember_csi.common [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] With params:
+	volume_id: "9e4279f5-c774-4d43-8741-007386b0c473"
+	node_id: "ember-csi.io.libvirt0"
+	volume_capability {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:17 default DEBUG oslo_concurrency.lockutils [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] Lock "create_export" acquired by "cinder.volume.drivers.qnap.create_export" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in create_export create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:808
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] volume: {'_obj_display_name': u'sanity-node-get-volume-stats-9B546EE1-FD5F7CBD', '_context': &lt;cinder.context.RequestContext object at 0x7ff30a7d44d0&gt;, '_obj_updated_at': None, '_obj_consistencygroup_id': None, '_obj_replication_status': None, '_obj_status': u'available', '_obj_cluster': None, '_obj_snapshots': SnapshotList(objects=[]), '_changed_fields': set([]), '_obj_service_uuid': None, '_orig_metadata': {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]', 'LUNNAA': u'6e843b65b5569f5d287fd4517dbbc0dc', 'LunName': u'cinder-20200408131706229040', 'LUNIndex': u'1'}, '_obj_deleted_at': None, '_orig_glance_metadata': {}, '_obj_metadata': {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]', 'LUNNAA': u'6e843b65b5569f5d287fd4517dbbc0dc', 'LunName': u'cinder-20200408131706229040', 'LUNIndex': u'1'}, '_obj_shared_targets': True, '_obj_provider_geometry': None, '_obj_volume_attachment': VolumeAttachmentList(objects=[]), '_obj_ec2_id': None, '_obj_consistencygroup': None, '_obj_user_id': u'io.ember-csi', '_obj_migration_status': None, '_obj_project_id': u'io.ember-csi', '_obj_attach_status': u'detached', '_obj_availability_zone': None, '_obj_deleted': False, '_obj_replication_driver_data': None, '_obj_provider_auth': None, '_obj_display_description': u'', '_cl_obj_': &lt;cinderlib.Volume object 9e4279f5-c774-4d43-8741-007386b0c473 on backend qnap&gt;, '_obj_group': None, '_obj_provider_id': None, '_obj_size': 1, '_obj_volume_type_id': None, '_obj_previous_status': None, '_obj_cluster_name': None, '_obj_encryption_key_id': None, '_obj_created_at': datetime.datetime(2020, 4, 8, 13, 17, 6, 227574, tzinfo=&lt;iso8601.Utc&gt;), '_obj_admin_metadata': {}, '_obj_launched_at': None, '_obj_volume_type': None, '_obj_snapshot_id': None, '_obj_bootable': False, '_obj_provider_location': None, '_obj_glance_metadata': {}, '_obj_terminated_at': None, '_obj__name_id': None, '_obj_source_volid': None, '_obj_multiattach': False, '_orig_admin_metadata': {}, '_obj_scheduled_at': None, '_obj_host': u'libvirt0@qnap#1', '_obj_replication_extended_status': None, '_obj_id': '9e4279f5-c774-4d43-8741-007386b0c473', '_obj_group_id': None} create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:809
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] connector: {u'initiator': u'iqn.1994-05.com.redhat:libvirt0', u'ip': u'192.168.122.19', u'system uuid': u'15B637A5-2AD6-4325-823A-17D9510147D8', '_capability': {'mount_flags': [], 'ro_forced': False, 'access_mode': 1, 'fs_type': 'ext4', 'is_block': False}, u'platform': u'x86_64', u'host': u'libvirt0', u'do_local_attach': False, u'os_type': u'linux2', u'multipath': False} create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:810
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] volume[name]: volume-9e4279f5-c774-4d43-8741-007386b0c473 create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:818
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] volume[display_name]: sanity-node-get-volume-stats-9B546EE1-FD5F7CBD create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:819
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] LUNIndex: 1 create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:826
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] internal_model_name: TS-X41 create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:829
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] fw_version: 4.4.1 create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:832
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in TS FW: get_one_lun_info create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:834
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunID=1&amp;lun_info=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:17 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:18 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] request elapsed_time: 0.354982852936 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:18 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:18 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] connector: iqn.1994-05.com.redhat:libvirt0 create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:858
+2020-04-08 13:17:18 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] get into _get_portal_info _get_portal_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:712
+2020-04-08 13:17:18 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:18 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;iSCSI_portal=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:18 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:19 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] request elapsed_time: 1.30550599098 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:19 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:19 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] iscsiPort: 3260 _get_portal_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:717
+2020-04-08 13:17:19 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] targetIQNPrefix: iqn.2004-04.com.qnap:ts-831x:iscsi. _get_portal_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:720
+2020-04-08 13:17:19 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] internal_model_name: TS-X41 _get_portal_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:724
+2020-04-08 13:17:19 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] fw_version: 4.4.1 _get_portal_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:727
+2020-04-08 13:17:19 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] exist target_index:  _get_portal_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:733
+2020-04-08 13:17:19 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] target_name: cinder-20200408131719375077 _get_portal_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:736
+2020-04-08 13:17:19 default DEBUG oslo_concurrency.lockutils [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] Lock "create_target_ts" acquired by "cinder.volume.drivers.qnap.create_target" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-08 13:17:19 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:19 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_target_setting.cgi?bTargetClusterEnable=1&amp;bTargetDataDigest=0&amp;bTargetHeaderDigest=0&amp;func=add_target&amp;sid=kvv08i01&amp;targetAlias=cinder-20200408131719375077&amp;targetName=cinder-20200408131719375077 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:19 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] request elapsed_time: 0.958661079407 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:20 default DEBUG oslo_concurrency.lockutils [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] Lock "create_target_ts" released by "cinder.volume.drivers.qnap.create_target" :: held 0.961s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] targetIndex: 0 _get_portal_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:739
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;ha_sync=1&amp;sid=kvv08i01&amp;targetIndex=0&amp;targetInfo=1 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] request elapsed_time: 0.19367313385 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] TS get_target_info.authPassed: (1) get_target_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1981
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] target_iqn: iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 _get_portal_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:752
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] default_acl: iqn.2004-04.com.qnap:all:iscsi.default.ffffff _get_portal_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:758
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_target_setting.cgi?func=remove_init&amp;ha_sync=1&amp;initiatorIQN=iqn.2004-04.com.qnap%3Aall%3Aiscsi.default.ffffff&amp;sid=kvv08i01&amp;targetIQN=iqn.2004-04.com.qnap%3Ats-831x%3Aiscsi.cinder-20200408131719375077.0383e2 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] request elapsed_time: 0.215474843979 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_target_setting.cgi?CHAPPasswd=&amp;CHAPUserName=&amp;bCHAPEnable=0&amp;bMutualCHAPEnable=0&amp;func=add_init&amp;ha_sync=1&amp;initiatorAlias=iqn.1994-05.com.redhat%3Alibvirt0&amp;initiatorIQN=iqn.1994-05.com.redhat%3Alibvirt0&amp;mutualCHAPPasswd=&amp;mutualCHAPUserName=&amp;sid=kvv08i01&amp;targetIQN=iqn.2004-04.com.qnap%3Ats-831x%3Aiscsi.cinder-20200408131719375077.0383e2 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] request elapsed_time: 0.224167108536 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details url: /cgi-bin/sys/sysRequest.cgi?sid=kvv08i01&amp;subfunc=net_setting _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:20 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:23 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] request elapsed_time: 2.79237699509 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:23 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:23 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] slotid_list: None _get_portal_info /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:775
+2020-04-08 13:17:23 default DEBUG oslo_concurrency.lockutils [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] Lock "map_unmap_lun_ts" acquired by "cinder.volume.drivers.qnap.map_lun" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-08 13:17:23 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:23 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_target_setting.cgi?LUNIndex=1&amp;func=add_lun&amp;sid=kvv08i01&amp;targetIndex=0 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:23 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] request elapsed_time: 0.539669036865 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:24 default DEBUG oslo_concurrency.lockutils [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] Lock "map_unmap_lun_ts" released by "cinder.volume.drivers.qnap.map_lun" :: held 0.543s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in TS FW: get_one_lun_info create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:871
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunID=1&amp;lun_info=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] request elapsed_time: 0.321478128433 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] properties[target_iqn]: iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:918
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] target_lun_id: 0 create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:920
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] create_export elapsed_time: 6.94231510162 create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:947
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] create_export volid: 9e4279f5-c774-4d43-8741-007386b0c473, provider_location: 192.168.1.2:3260,1 iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 0 create_export /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:950
+2020-04-08 13:17:24 default DEBUG oslo_concurrency.lockutils [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] Lock "create_export" released by "cinder.volume.drivers.qnap.create_export" :: held 6.943s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] in initialize_connection initialize_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:958
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] iqn: iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 initialize_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:973
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] target_lun_id: 0 initialize_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:975
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] initialize_connection elapsed_time: 0.000663995742798 initialize_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:991
+2020-04-08 13:17:24 default DEBUG cinder.volume.drivers.qnap [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] initialize_connection volid: 9e4279f5-c774-4d43-8741-007386b0c473, properties: {'target_lun': 0, 'volume_id': '9e4279f5-c774-4d43-8741-007386b0c473', 'target_iqn': u'iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2', 'target_discovered': False, 'target_portal': u'192.168.1.2:3260'} initialize_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:995
+2020-04-08 13:17:24 default INFO ember_csi.common [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] &lt;= GRPC ControllerPublishVolume served in 7s
+2020-04-08 13:17:24 default DEBUG ember_csi.common [req-cc2bb4d9-af12-42e8-9d26-bfde0ed01526] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:24 default INFO ember_csi.common [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] =&gt; GRPC NodeStageVolume 9e4279f5-c774-4d43-8741-007386b0c473
+2020-04-08 13:17:24 default DEBUG ember_csi.common [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] With params:
+	volume_id: "9e4279f5-c774-4d43-8741-007386b0c473"
+	staging_target_path: "/tmp/csi-staging"
+	volume_capability {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:24 default DEBUG ember_csi.base [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Could not find /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473 as dest in [&lt;root: /, dest: /, src: overlay&gt;, &lt;root: /, dest: /proc, src: proc&gt;, &lt;root: /, dest: /sys, src: sysfs&gt;, &lt;root: /, dest: /sys/fs/cgroup, src: tmpfs&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/systemd, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/hugetlb, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/cpuacct,cpu, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/devices, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/pids, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/blkio, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/net_prio,net_cls, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/freezer, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/perf_event, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/memory, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/cpuset, src: cgroup&gt;, &lt;root: /tmp, dest: /tmp, src: /dev/vda1&gt;, &lt;root: /, dest: /dev, src: devtmpfs&gt;, &lt;root: /, dest: /dev/shm, src: tmpfs&gt;, &lt;root: /, dest: /dev/pts, src: devpts&gt;, &lt;root: /, dest: /dev/hugepages, src: hugetlbfs&gt;, &lt;root: /, dest: /dev/mqueue, src: mqueue&gt;, &lt;root: /usr/share/zoneinfo/UTC, dest: /usr/share/zoneinfo/UTC, src: /dev/vda1&gt;, &lt;root: /usr/lib/modules, dest: /usr/lib/modules, src: /dev/vda1&gt;, &lt;root: /udev, dest: /run/udev, src: tmpfs&gt;, &lt;root: /etc/iscsi, dest: /etc/iscsi, src: /dev/vda1&gt;, &lt;root: /etc/multipath, dest: /etc/multipath, src: /dev/vda1&gt;, &lt;root: /etc/lvm, dest: /etc/lvm, src: /dev/vda1&gt;, &lt;root: /etc/multipath.conf, dest: /etc/multipath.conf, src: /dev/vda1&gt;, &lt;root: /, dest: /dev/shm, src: tmpfs&gt;, &lt;root: /var/lib/docker/containers/092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769/hosts, dest: /etc/hosts, src: /dev/vda1&gt;, &lt;root: /var/lib/docker/containers/092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769/resolv.conf, dest: /etc/resolv.conf, src: /dev/vda1&gt;, &lt;root: /var/lib/docker/containers/092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769/hostname, dest: /etc/hostname, src: /dev/vda1&gt;, &lt;root: /var/lib/docker/containers/092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769/secrets, dest: /run/secrets, src: /dev/vda1&gt;, &lt;root: /lock/lvm, dest: /run/lock/lvm, src: tmpfs&gt;, &lt;root: /var/lib/iscsi, dest: /var/lib/iscsi, src: /dev/vda1&gt;] _get_device /ember-csi/ember_csi/base.py:824
+2020-04-08 13:17:24 default DEBUG os_brick.initiator.connector [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Factory for iscsi on None factory /usr/lib/python2.7/site-packages/os_brick/initiator/connector.py:301
+2020-04-08 13:17:24 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] ==&gt; connect_volume: call u"{'args': (&lt;os_brick.initiator.connectors.iscsi.ISCSIConnector object at 0x7ff304319650&gt;, {'target_discovered': False, 'target_iqn': u'iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2', 'target_portal': u'192.168.1.2:3260', 'volume_id': '9e4279f5-c774-4d43-8741-007386b0c473', 'target_lun': 0, 'access_mode': u'rw'}), 'kwargs': {}}" trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:146
+2020-04-08 13:17:24 default DEBUG oslo_concurrency.lockutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Lock "connect_volume" acquired by "os_brick.initiator.connectors.iscsi.connect_volume" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-08 13:17:24 default INFO os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Trying to connect to iSCSI portal 192.168.1.2:3260
+2020-04-08 13:17:24 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:24 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260" returned: 21 in 0.261s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:24 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] iscsiadm (): stdout= stderr=iscsiadm: No records found
+ _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:997
+2020-04-08 13:17:24 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --interface default --op new execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:25 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --interface default --op new" returned: 0 in 0.257s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:25 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] iscsiadm ('--interface', 'default', '--op', 'new'): stdout=New iSCSI node [tcp:[hw=,ip=,net_if=,iscsi_if=default] 192.168.1.2,3260,-1 iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2] added
+ stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:997
+2020-04-08 13:17:25 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --op update -n node.session.scan -v manual execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:25 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --op update -n node.session.scan -v manual" returned: 0 in 0.254s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:25 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] iscsiadm ('--op', 'update', '-n', 'node.session.scan', '-v', 'manual'): stdout= stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:997
+2020-04-08 13:17:25 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): iscsiadm -m session execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:25 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "iscsiadm -m session" returned: 21 in 0.258s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:25 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] iscsiadm ('-m', 'session'): stdout= stderr=iscsiadm: No active sessions.
+ _run_iscsiadm_bare /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1124
+2020-04-08 13:17:25 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] iscsi session list stdout= stderr=iscsiadm: No active sessions.
+ _run_iscsi_session /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1113
+2020-04-08 13:17:25 default WARNING os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] iscsiadm stderr output when getting sessions: iscsiadm: No active sessions.
+
+2020-04-08 13:17:25 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --login execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:26 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --login" returned: 0 in 0.313s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:26 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] iscsiadm ('--login',): stdout=Logging in to [iface: default, target: iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2, portal: 192.168.1.2,3260] (multiple)
+Login to [iface: default, target: iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2, portal: 192.168.1.2,3260] successful.
+ stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:997
+2020-04-08 13:17:26 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --op update -n node.startup -v automatic execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:26 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --op update -n node.startup -v automatic" returned: 0 in 0.252s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:26 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] iscsiadm ('--op', 'update', '-n', 'node.startup', '-v', 'automatic'): stdout= stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:997
+2020-04-08 13:17:26 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): iscsiadm -m session execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:26 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "iscsiadm -m session" returned: 0 in 0.257s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:26 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] iscsiadm ('-m', 'session'): stdout=tcp: [1] 192.168.1.2:3260,1 iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 (non-flash)
+ stderr= _run_iscsiadm_bare /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1124
+2020-04-08 13:17:26 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] iscsi session list stdout=tcp: [1] 192.168.1.2:3260,1 iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 (non-flash)
+ stderr= _run_iscsi_session /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1113
+2020-04-08 13:17:26 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Connected to 192.168.1.2:3260 _connect_vol /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:639
+2020-04-08 13:17:26 default DEBUG os_brick.initiator.linuxscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] HCTL (u'2', '-', '-', 0) found on session 1 with lun 0 get_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:624
+2020-04-08 13:17:26 default DEBUG os_brick.initiator.linuxscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Scanning host 2 c: -, t: -, l: 0) scan_iscsi /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:652
+2020-04-08 13:17:26 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): tee -a /sys/class/scsi_host/host2/scan execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:26 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "tee -a /sys/class/scsi_host/host2/scan" returned: 0 in 0.303s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:26 default DEBUG os_brick.initiator.linuxscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Searching for a device in session 1 and hctl [u'2', '*', '*', 0] yield: None device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2020-04-08 13:17:27 default DEBUG os_brick.initiator.linuxscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Searching for a device in session 1 and hctl [u'2', '*', '*', 0] yield: sda device_name_by_hctl /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:644
+2020-04-08 13:17:27 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Connected to sda using {'target_discovered': False, 'target_iqn': u'iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2', 'target_portal': u'192.168.1.2:3260', 'volume_id': '9e4279f5-c774-4d43-8741-007386b0c473', 'target_lun': 0, 'access_mode': u'rw'} _connect_vol /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:668
+2020-04-08 13:17:27 default DEBUG oslo_concurrency.lockutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Lock "connect_volume" released by "os_brick.initiator.connectors.iscsi.connect_volume" :: held 3.171s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-08 13:17:27 default DEBUG os_brick.initiator.connectors.iscsi [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] &lt;== connect_volume: return (3172ms) {'path': u'/dev/sda', 'scsi_wwn': u'36e843b65b5569f5d287fd4517dbbc0dc', 'type': u'block'} trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:170
+2020-04-08 13:17:27 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): dd if=/dev/sda of=/dev/null count=1 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:28 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "dd if=/dev/sda of=/dev/null count=1" returned: 0 in 0.257s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:28 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): mount --bind /dev/sda /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:28 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "mount --bind /dev/sda /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473" returned: 0 in 0.254s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:28 default DEBUG ember_csi.base [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Private bind /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473 not found in [['rootfs', '/', 'rootfs', 'rw', '0', '0'], ['overlay', '/', 'overlay', 'rw,seclabel,relatime,lowerdir=/var/lib/docker/overlay2/l/XQDS447NIKMPZMDCOIUVB2XEL3:/var/lib/docker/overlay2/l/EHMJDCMS3ESNTCFGOO2QDSHZLV:/var/lib/docker/overlay2/l/C5P777Q2SDZ24NZNGOFH2I7T5Y:/var/lib/docker/overlay2/l/NCAPVCIALWQULOPPW4DDOIYXT3:/var/lib/docker/overlay2/l/HRXBLVUDREXGDTCEWH7AIYRERO,upperdir=/var/lib/docker/overlay2/3f954901c398cea91dce0a636bc68f75c2c7bcc10ab7b7d99691029626086bcc/diff,workdir=/var/lib/docker/overlay2/3f954901c398cea91dce0a636bc68f75c2c7bcc10ab7b7d99691029626086bcc/work', '0', '0'], ['proc', '/proc', 'proc', 'rw,nosuid,nodev,noexec,relatime', '0', '0'], ['sysfs', '/sys', 'sysfs', 'rw,seclabel,nosuid,nodev,noexec,relatime', '0', '0'], ['tmpfs', '/sys/fs/cgroup', 'tmpfs', 'rw,seclabel,nosuid,nodev,noexec,relatime,mode=755', '0', '0'], ['cgroup', '/sys/fs/cgroup/systemd', 'cgroup', 'rw,seclabel,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd', '0', '0'], ['cgroup', '/sys/fs/cgroup/hugetlb', 'cgroup', 'rw,seclabel,nosuid,nodev,noexec,relatime,hugetlb', '0', '0'], ['cgroup', '/sys/fs/cgroup/cpuacct,cpu', 'cgroup', 'rw,seclabel,nosuid,nodev,noexec,relatime,cpuacct,cpu', '0', '0'], ['cgroup', '/sys/fs/cgroup/devices', 'cgroup', 'rw,seclabel,nosuid,nodev,noexec,relatime,devices', '0', '0'], ['cgroup', '/sys/fs/cgroup/pids', 'cgroup', 'rw,seclabel,nosuid,nodev,noexec,relatime,pids', '0', '0'], ['cgroup', '/sys/fs/cgroup/blkio', 'cgroup', 'rw,seclabel,nosuid,nodev,noexec,relatime,blkio', '0', '0'], ['cgroup', '/sys/fs/cgroup/net_prio,net_cls', 'cgroup', 'rw,seclabel,nosuid,nodev,noexec,relatime,net_prio,net_cls', '0', '0'], ['cgroup', '/sys/fs/cgroup/freezer', 'cgroup', 'rw,seclabel,nosuid,nodev,noexec,relatime,freezer', '0', '0'], ['cgroup', '/sys/fs/cgroup/perf_event', 'cgroup', 'rw,seclabel,nosuid,nodev,noexec,relatime,perf_event', '0', '0'], ['cgroup', '/sys/fs/cgroup/memory', 'cgroup', 'rw,seclabel,nosuid,nodev,noexec,relatime,memory', '0', '0'], ['cgroup', '/sys/fs/cgroup/cpuset', 'cgroup', 'rw,seclabel,nosuid,nodev,noexec,relatime,cpuset', '0', '0'], ['/dev/vda1', '/tmp', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['devtmpfs', '/dev', 'devtmpfs', 'rw,seclabel,nosuid,size=484220k,nr_inodes=121055,mode=755', '0', '0'], ['tmpfs', '/dev/shm', 'tmpfs', 'rw,seclabel,nosuid,nodev', '0', '0'], ['devpts', '/dev/pts', 'devpts', 'rw,seclabel,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000', '0', '0'], ['hugetlbfs', '/dev/hugepages', 'hugetlbfs', 'rw,seclabel,relatime', '0', '0'], ['mqueue', '/dev/mqueue', 'mqueue', 'rw,seclabel,relatime', '0', '0'], ['/dev/vda1', '/usr/share/zoneinfo/UTC', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['/dev/vda1', '/usr/lib/modules', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['tmpfs', '/run/udev', 'tmpfs', 'rw,seclabel,nosuid,nodev,mode=755', '0', '0'], ['/dev/vda1', '/etc/iscsi', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['/dev/vda1', '/etc/multipath', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['/dev/vda1', '/etc/lvm', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['/dev/vda1', '/etc/multipath.conf', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['tmpfs', '/dev/shm', 'tmpfs', 'rw,seclabel,nosuid,nodev', '0', '0'], ['/dev/vda1', '/etc/hosts', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['/dev/vda1', '/etc/resolv.conf', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['/dev/vda1', '/etc/hostname', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['/dev/vda1', '/run/secrets', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['tmpfs', '/run/lock/lvm', 'tmpfs', 'rw,seclabel,nosuid,nodev,mode=755', '0', '0'], ['/dev/vda1', '/var/lib/iscsi', 'xfs', 'rw,seclabel,relatime,attr2,inode64,noquota', '0', '0'], ['devtmpfs', '/var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473', 'devtmpfs', 'rw,seclabel,nosuid,size=484220k,nr_inodes=121055,mode=755', '0', '0']] _get_mount /ember-csi/ember_csi/base.py:811
+2020-04-08 13:17:28 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): lsblk -nlfoFSTYPE /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:28 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "lsblk -nlfoFSTYPE /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473" returned: 0 in 0.260s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:28 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): /sbin/mkfs.ext4 -F /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:29 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "/sbin/mkfs.ext4 -F /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473" returned: 0 in 0.791s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:29 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Running cmd (subprocess): mount -t ext4 /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473 /tmp/csi-staging/stage execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:29 default DEBUG oslo_concurrency.processutils [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] CMD "mount -t ext4 /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473 /tmp/csi-staging/stage" returned: 0 in 0.378s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:29 default INFO ember_csi.common [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] &lt;= GRPC NodeStageVolume served in 5s
+2020-04-08 13:17:29 default DEBUG ember_csi.common [req-af49b2d2-aaa8-40c3-882e-bba4f5fc2c7e] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:29 default INFO ember_csi.common [req-84172c02-1085-49ae-a851-b299f356a090] =&gt; GRPC NodePublishVolume 9e4279f5-c774-4d43-8741-007386b0c473
+2020-04-08 13:17:29 default DEBUG ember_csi.common [req-84172c02-1085-49ae-a851-b299f356a090] With params:
+	volume_id: "9e4279f5-c774-4d43-8741-007386b0c473"
+	staging_target_path: "/tmp/csi-staging"
+	target_path: "/tmp/csi-mount/target"
+	volume_capability {
+	  mount {
+	  }
+	  access_mode {
+	    mode: SINGLE_NODE_WRITER
+	  }
+	} dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:29 default DEBUG ember_csi.base [req-84172c02-1085-49ae-a851-b299f356a090] Created connection a1fd3482-ac28-4847-8929-d64907c81406 duplicate of a0127b6d-ff12-40d5-a96c-21370175e6bc _duplicate_connection /ember-csi/ember_csi/base.py:338
+2020-04-08 13:17:29 default DEBUG ember_csi.base [req-84172c02-1085-49ae-a851-b299f356a090] Failing because error=False and conn=None NodePublishVolume /ember-csi/ember_csi/base.py:1144
+2020-04-08 13:17:29 default ERROR ember_csi.common [req-84172c02-1085-49ae-a851-b299f356a090] !! GRPC NodePublishVolume failed in 0s with FAILED_PRECONDITION (Staging was not been successfully called): Exception
+2020-04-08 13:17:29 default INFO ember_csi.common [req-5b71df7a-d62c-4325-8015-0d7dcac2bf4d] =&gt; GRPC NodeUnpublishVolume 9e4279f5-c774-4d43-8741-007386b0c473
+2020-04-08 13:17:29 default DEBUG ember_csi.common [req-5b71df7a-d62c-4325-8015-0d7dcac2bf4d] With params:
+	volume_id: "9e4279f5-c774-4d43-8741-007386b0c473"
+	target_path: "/tmp/csi-mount" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:29 default DEBUG ember_csi.base [req-5b71df7a-d62c-4325-8015-0d7dcac2bf4d] Could not find /tmp/csi-mount as dest in [&lt;root: /, dest: /, src: overlay&gt;, &lt;root: /, dest: /proc, src: proc&gt;, &lt;root: /, dest: /sys, src: sysfs&gt;, &lt;root: /, dest: /sys/fs/cgroup, src: tmpfs&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/systemd, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/hugetlb, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/cpuacct,cpu, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/devices, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/pids, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/blkio, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/net_prio,net_cls, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/freezer, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/perf_event, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/memory, src: cgroup&gt;, &lt;root: /system.slice/docker-092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769.scope, dest: /sys/fs/cgroup/cpuset, src: cgroup&gt;, &lt;root: /tmp, dest: /tmp, src: /dev/vda1&gt;, &lt;root: /, dest: /dev, src: devtmpfs&gt;, &lt;root: /, dest: /dev/shm, src: tmpfs&gt;, &lt;root: /, dest: /dev/pts, src: devpts&gt;, &lt;root: /, dest: /dev/hugepages, src: hugetlbfs&gt;, &lt;root: /, dest: /dev/mqueue, src: mqueue&gt;, &lt;root: /usr/share/zoneinfo/UTC, dest: /usr/share/zoneinfo/UTC, src: /dev/vda1&gt;, &lt;root: /usr/lib/modules, dest: /usr/lib/modules, src: /dev/vda1&gt;, &lt;root: /udev, dest: /run/udev, src: tmpfs&gt;, &lt;root: /etc/iscsi, dest: /etc/iscsi, src: /dev/vda1&gt;, &lt;root: /etc/multipath, dest: /etc/multipath, src: /dev/vda1&gt;, &lt;root: /etc/lvm, dest: /etc/lvm, src: /dev/vda1&gt;, &lt;root: /etc/multipath.conf, dest: /etc/multipath.conf, src: /dev/vda1&gt;, &lt;root: /, dest: /dev/shm, src: tmpfs&gt;, &lt;root: /var/lib/docker/containers/092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769/hosts, dest: /etc/hosts, src: /dev/vda1&gt;, &lt;root: /var/lib/docker/containers/092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769/resolv.conf, dest: /etc/resolv.conf, src: /dev/vda1&gt;, &lt;root: /var/lib/docker/containers/092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769/hostname, dest: /etc/hostname, src: /dev/vda1&gt;, &lt;root: /var/lib/docker/containers/092f92f3dd73cf0bbdf39faea21ce53cfe3f1ae9a6b1ca62af6c298b2ad52769/secrets, dest: /run/secrets, src: /dev/vda1&gt;, &lt;root: /lock/lvm, dest: /run/lock/lvm, src: tmpfs&gt;, &lt;root: /var/lib/iscsi, dest: /var/lib/iscsi, src: /dev/vda1&gt;, &lt;root: /sda, dest: /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473, src: devtmpfs&gt;, &lt;root: /, dest: /tmp/csi-staging/stage, src: /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473&gt;] _get_device /ember-csi/ember_csi/base.py:824
+2020-04-08 13:17:29 default INFO ember_csi.common [req-5b71df7a-d62c-4325-8015-0d7dcac2bf4d] &lt;= GRPC NodeUnpublishVolume served in 0s
+2020-04-08 13:17:29 default DEBUG ember_csi.common [req-5b71df7a-d62c-4325-8015-0d7dcac2bf4d] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:29 default INFO ember_csi.common [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] =&gt; GRPC NodeUnstageVolume 9e4279f5-c774-4d43-8741-007386b0c473
+2020-04-08 13:17:29 default DEBUG ember_csi.common [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] With params:
+	volume_id: "9e4279f5-c774-4d43-8741-007386b0c473"
+	staging_target_path: "/tmp/csi-staging" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:29 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Running cmd (subprocess): umount /tmp/csi-staging/stage execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:30 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] CMD "umount /tmp/csi-staging/stage" returned: 0 in 0.259s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:30 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Running cmd (subprocess): umount /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473 execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:30 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] CMD "umount /var/lib/ember-csi/vols/9e4279f5-c774-4d43-8741-007386b0c473" returned: 0 in 0.255s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:30 default DEBUG os_brick.initiator.connectors.iscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] ==&gt; disconnect_volume: call u"{'args': (&lt;os_brick.initiator.connectors.iscsi.ISCSIConnector object at 0x7ff304319650&gt;, {'target_discovered': False, 'target_iqn': u'iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2', 'target_portal': u'192.168.1.2:3260', 'volume_id': '9e4279f5-c774-4d43-8741-007386b0c473', 'target_lun': 0, 'access_mode': u'rw'}, {'path': u'/dev/sda', 'scsi_wwn': '36e843b65b5569f5d287fd4517dbbc0dc', 'type': 'block'}), 'kwargs': {'ignore_errors': False, 'force': False}}" trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:146
+2020-04-08 13:17:30 default DEBUG oslo_concurrency.lockutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Lock "connect_volume" acquired by "os_brick.initiator.connectors.iscsi.disconnect_volume" :: waited 0.000s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-08 13:17:30 default DEBUG os_brick.initiator.connectors.iscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Getting connected devices for (ips,iqns,luns)=[(u'192.168.1.2:3260', u'iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2', 0)] _get_connection_devices /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:814
+2020-04-08 13:17:30 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Running cmd (subprocess): iscsiadm -m node execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:30 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] CMD "iscsiadm -m node" returned: 0 in 0.257s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:30 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Running cmd (subprocess): iscsiadm -m session execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:30 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] CMD "iscsiadm -m session" returned: 0 in 0.259s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:30 default DEBUG os_brick.initiator.connectors.iscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] iscsiadm ('-m', 'session'): stdout=tcp: [1] 192.168.1.2:3260,1 iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 (non-flash)
+ stderr= _run_iscsiadm_bare /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1124
+2020-04-08 13:17:30 default DEBUG os_brick.initiator.connectors.iscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] iscsi session list stdout=tcp: [1] 192.168.1.2:3260,1 iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 (non-flash)
+ stderr= _run_iscsi_session /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1113
+2020-04-08 13:17:30 default DEBUG os_brick.initiator.connectors.iscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Resulting device map defaultdict(&lt;function &lt;lambda&gt; at 0x7ff307e29aa0&gt;, {(u'192.168.1.2:3260', u'iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2'): (set([u'sda']), set([]))}) _get_connection_devices /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:846
+2020-04-08 13:17:30 default DEBUG os_brick.initiator.linuxscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Removing single pathed devices sda remove_connection /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:264
+2020-04-08 13:17:30 default DEBUG os_brick.initiator.linuxscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Flushing IO for device /dev/sda flush_device_io /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:313
+2020-04-08 13:17:30 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Running cmd (subprocess): blockdev --flushbufs /dev/sda execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:31 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] CMD "blockdev --flushbufs /dev/sda" returned: 0 in 0.261s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:31 default DEBUG os_brick.initiator.linuxscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Remove SCSI device /dev/sda with /sys/block/sda/device/delete remove_scsi_device /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:76
+2020-04-08 13:17:31 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Running cmd (subprocess): tee -a /sys/block/sda/device/delete execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:31 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] CMD "tee -a /sys/block/sda/device/delete" returned: 0 in 0.268s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:31 default DEBUG os_brick.initiator.linuxscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Checking to see if SCSI volumes sda have been removed. wait_for_volumes_removal /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:84
+2020-04-08 13:17:31 default DEBUG os_brick.initiator.linuxscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] SCSI volumes sda have been removed. wait_for_volumes_removal /usr/lib/python2.7/site-packages/os_brick/initiator/linuxscsi.py:93
+2020-04-08 13:17:31 default DEBUG os_brick.initiator.connectors.iscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Disconnecting from: [(u'192.168.1.2:3260', u'iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2')] _disconnect_connection /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:1101
+2020-04-08 13:17:31 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Running cmd (subprocess): iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --op update -n node.startup -v manual execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:31 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] CMD "iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --op update -n node.startup -v manual" returned: 0 in 0.264s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:31 default DEBUG os_brick.initiator.connectors.iscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] iscsiadm ('--op', 'update', '-n', 'node.startup', '-v', 'manual'): stdout= stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:997
+2020-04-08 13:17:31 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Running cmd (subprocess): iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --logout execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:31 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] CMD "iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --logout" returned: 0 in 0.257s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:31 default DEBUG os_brick.initiator.connectors.iscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] iscsiadm ('--logout',): stdout=Logging out of session [sid: 1, target: iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2, portal: 192.168.1.2,3260]
+Logout of [sid: 1, target: iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2, portal: 192.168.1.2,3260] successful.
+ stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:997
+2020-04-08 13:17:31 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Running cmd (subprocess): iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --op delete execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:372
+2020-04-08 13:17:32 default DEBUG oslo_concurrency.processutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] CMD "iscsiadm -m node -T iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 -p 192.168.1.2:3260 --op delete" returned: 0 in 0.255s execute /usr/lib/python2.7/site-packages/oslo_concurrency/processutils.py:409
+2020-04-08 13:17:32 default DEBUG os_brick.initiator.connectors.iscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] iscsiadm ('--op', 'delete'): stdout= stderr= _run_iscsiadm /usr/lib/python2.7/site-packages/os_brick/initiator/connectors/iscsi.py:997
+2020-04-08 13:17:32 default DEBUG oslo_concurrency.lockutils [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Lock "connect_volume" released by "os_brick.initiator.connectors.iscsi.disconnect_volume" :: held 1.834s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-08 13:17:32 default DEBUG os_brick.initiator.connectors.iscsi [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] &lt;== disconnect_volume: return (1834ms) None trace_logging_wrapper /usr/lib/python2.7/site-packages/os_brick/utils.py:170
+2020-04-08 13:17:32 default INFO ember_csi.common [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] &lt;= GRPC NodeUnstageVolume served in 2s
+2020-04-08 13:17:32 default DEBUG ember_csi.common [req-afe93578-b930-40e3-b88d-a3bd6ede0db2] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:32 default INFO ember_csi.common [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] =&gt; GRPC ControllerUnpublishVolume 9e4279f5-c774-4d43-8741-007386b0c473
+2020-04-08 13:17:32 default DEBUG ember_csi.common [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] With params:
+	volume_id: "9e4279f5-c774-4d43-8741-007386b0c473"
+	node_id: "ember-csi.io.libvirt0" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:32 default WARNING ember_csi.base [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] The volume was still attached to instances: 
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] in terminate_connection terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1011
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] volume: {'_obj_display_name': u'sanity-node-get-volume-stats-9B546EE1-FD5F7CBD', '_context': &lt;cinder.context.RequestContext object at 0x7ff30a7d44d0&gt;, '_obj_updated_at': None, '_obj_consistencygroup_id': None, '_obj_replication_status': None, '_obj_status': u'in-use', '_obj_cluster': None, '_obj_snapshots': SnapshotList(objects=[]), '_changed_fields': set([]), '_obj_service_uuid': None, '_orig_metadata': {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]', 'LUNNAA': u'6e843b65b5569f5d287fd4517dbbc0dc', 'LunName': u'cinder-20200408131706229040', 'LUNIndex': u'1'}, '_obj_deleted_at': None, '_orig_glance_metadata': {}, '_obj_metadata': {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]', 'LUNNAA': u'6e843b65b5569f5d287fd4517dbbc0dc', 'LunName': u'cinder-20200408131706229040', 'LUNIndex': u'1'}, '_obj_shared_targets': True, '_obj_provider_geometry': None, '_obj_volume_attachment': VolumeAttachmentList(objects=[VolumeAttachment(a0127b6d-ff12-40d5-a96c-21370175e6bc)]), '_obj_ec2_id': None, '_obj_consistencygroup': None, '_obj_user_id': u'io.ember-csi', '_obj_migration_status': None, '_obj_project_id': u'io.ember-csi', '_obj_attach_status': u'detached', '_obj_availability_zone': None, '_obj_deleted': False, '_obj_replication_driver_data': None, '_obj_provider_auth': None, '_obj_display_description': u'', '_cl_obj_': &lt;cinderlib.Volume object 9e4279f5-c774-4d43-8741-007386b0c473 on backend qnap&gt;, '_obj_group': None, '_obj_provider_id': None, '_obj_size': 1, '_obj_volume_type_id': None, '_obj_previous_status': None, '_obj_cluster_name': None, '_obj_encryption_key_id': None, '_obj_created_at': datetime.datetime(2020, 4, 8, 13, 17, 6, 227574, tzinfo=&lt;iso8601.Utc&gt;), '_obj_admin_metadata': {'fs_type': u'ext4'}, '_obj_launched_at': None, '_obj_volume_type': None, '_obj_snapshot_id': None, '_obj_bootable': False, '_obj_provider_location': u'192.168.1.2:3260,1 iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 0', '_obj_glance_metadata': {}, '_obj_terminated_at': None, '_obj__name_id': None, '_obj_source_volid': None, '_obj_multiattach': False, '_orig_admin_metadata': {'fs_type': u'ext4'}, '_obj_scheduled_at': None, '_obj_host': u'libvirt0@qnap#1', '_obj_replication_extended_status': None, '_obj_id': '9e4279f5-c774-4d43-8741-007386b0c473', '_obj_group_id': None} terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1012
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] connector: {u'initiator': u'iqn.1994-05.com.redhat:libvirt0', u'ip': u'192.168.122.19', u'system uuid': u'15B637A5-2AD6-4325-823A-17D9510147D8', '_capability': {'mount_flags': [], 'ro_forced': False, 'access_mode': 1, 'fs_type': 'ext4', 'is_block': False}, u'platform': u'x86_64', u'host': u'libvirt0', u'do_local_attach': False, u'os_type': u'linux2', u'multipath': False} terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1013
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] lun_naa: 6e843b65b5569f5d287fd4517dbbc0dc terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1017
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] LUNIndex: 1 terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1023
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] internal_model_name: TS-X41 terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1027
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] fw_version: 4.4.1 terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1030
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] in TS FW: get_one_lun_info terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1033
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunID=1&amp;lun_info=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] request elapsed_time: 0.325016021729 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] LUNStatus: 2 terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1050
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] lun_status.mapped: 2 terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1051
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] target_index: 0 terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1059
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_target_setting.cgi?LUNEnable=0&amp;LUNIndex=1&amp;func=edit_lun&amp;sid=kvv08i01&amp;targetIndex=0 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:32 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] request elapsed_time: 0.811173200607 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] terminate_connection disable_lun elapsed_time : 0.816637992859 terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1065
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_target_setting.cgi?LUNIndex=1&amp;func=remove_lun&amp;sid=kvv08i01&amp;targetIndex=0 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] request elapsed_time: 0.538089990616 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] terminate_connection unmap_lun elapsed_time : 0.540714025497 terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1071
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] terminate_connection elapsed_time : 1.69263291359 terminate_connection /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1075
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_target_setting.cgi?func=remove_target&amp;sid=kvv08i01&amp;targetIndex=0 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:33 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:34 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] request elapsed_time: 0.927728891373 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:34 default DEBUG cinder.volume.drivers.qnap [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:34 default INFO ember_csi.common [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] &lt;= GRPC ControllerUnpublishVolume served in 3s
+2020-04-08 13:17:34 default DEBUG ember_csi.common [req-7fcdf2de-93c1-43c1-954c-1beac8ecb3c9] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+2020-04-08 13:17:34 default INFO ember_csi.common [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] =&gt; GRPC DeleteVolume 9e4279f5-c774-4d43-8741-007386b0c473
+2020-04-08 13:17:34 default DEBUG ember_csi.common [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] With params:
+	volume_id: "9e4279f5-c774-4d43-8741-007386b0c473" dolog /ember-csi/ember_csi/common.py:127
+2020-04-08 13:17:34 default DEBUG ember_csi.base [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] Deleting volume 9e4279f5-c774-4d43-8741-007386b0c473 DeleteVolume /ember-csi/ember_csi/base.py:539
+2020-04-08 13:17:34 default DEBUG oslo_concurrency.lockutils [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] Lock "delete_volume" acquired by "cinder.volume.drivers.qnap.delete_volume" :: waited 0.001s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:358
+2020-04-08 13:17:34 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] volume: {'_obj_display_name': u'sanity-node-get-volume-stats-9B546EE1-FD5F7CBD', '_context': &lt;cinder.context.RequestContext object at 0x7ff30a7d44d0&gt;, '_obj_updated_at': None, '_obj_consistencygroup_id': None, '_obj_replication_status': None, '_obj_status': u'available', '_obj_cluster': None, '_obj_snapshots': SnapshotList(objects=[]), '_changed_fields': set([]), '_obj_service_uuid': None, '_orig_metadata': {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]', 'LUNNAA': u'6e843b65b5569f5d287fd4517dbbc0dc', 'LunName': u'cinder-20200408131706229040', 'LUNIndex': u'1'}, '_obj_deleted_at': None, '_orig_glance_metadata': {}, '_obj_metadata': {'_capabilities': u'[{"mount_flags":[],"ro_forced":false,"access_mode":1,"fs_type":"ext4","is_block":false}]', 'LUNNAA': u'6e843b65b5569f5d287fd4517dbbc0dc', 'LunName': u'cinder-20200408131706229040', 'LUNIndex': u'1'}, '_obj_shared_targets': True, '_obj_provider_geometry': None, '_obj_volume_attachment': VolumeAttachmentList(objects=[]), '_obj_ec2_id': None, '_obj_consistencygroup': None, '_obj_user_id': u'io.ember-csi', '_obj_migration_status': None, '_obj_project_id': u'io.ember-csi', '_obj_attach_status': u'detached', '_obj_availability_zone': None, '_obj_deleted': False, '_obj_replication_driver_data': None, '_obj_provider_auth': None, '_obj_display_description': u'', '_cl_obj_': &lt;cinderlib.Volume object 9e4279f5-c774-4d43-8741-007386b0c473 on backend qnap&gt;, '_obj_group': None, '_obj_provider_id': None, '_obj_size': 1, '_obj_volume_type_id': None, '_obj_previous_status': None, '_obj_cluster_name': None, '_obj_encryption_key_id': None, '_obj_created_at': datetime.datetime(2020, 4, 8, 13, 17, 6, 227574, tzinfo=&lt;iso8601.Utc&gt;), '_obj_admin_metadata': {'fs_type': u'ext4'}, '_obj_launched_at': None, '_obj_volume_type': None, '_obj_snapshot_id': None, '_obj_bootable': False, '_obj_provider_location': u'192.168.1.2:3260,1 iqn.2004-04.com.qnap:ts-831x:iscsi.cinder-20200408131719375077.0383e2 0', '_obj_glance_metadata': {}, '_obj_terminated_at': None, '_obj__name_id': None, '_obj_source_volid': None, '_obj_multiattach': False, '_orig_admin_metadata': {'fs_type': u'ext4'}, '_obj_scheduled_at': None, '_obj_host': u'libvirt0@qnap#1', '_obj_replication_extended_status': None, '_obj_id': '9e4279f5-c774-4d43-8741-007386b0c473', '_obj_group_id': None} delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:376
+2020-04-08 13:17:34 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] LUNIndex: 1 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:387
+2020-04-08 13:17:34 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] internal_model_name: TS-X41 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:391
+2020-04-08 13:17:34 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] fw_version: 4.4.1 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:394
+2020-04-08 13:17:34 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] in TS FW: get_one_lun_info delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:397
+2020-04-08 13:17:34 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:34 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_portal_setting.cgi?func=extra_get&amp;lunID=1&amp;lun_info=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:34 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:35 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] request elapsed_time: 0.345211029053 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:35 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:35 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] in _connection_checker inner_connection_checker /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1114
+2020-04-08 13:17:35 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] _execute_and_get_response_details url: /cgi-bin/disk/iscsi_lun_setting.cgi?LUNIndex=1&amp;func=remove_lun&amp;ha_sync=1&amp;run_background=1&amp;sid=kvv08i01 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-08 13:17:35 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] _execute_and_get_response_details post_parm: None _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-08 13:17:35 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] request elapsed_time: 0.141183853149 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1218
+2020-04-08 13:17:35 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] response status: 200 _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1222
+2020-04-08 13:17:35 default DEBUG cinder.volume.drivers.qnap [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] delete_volume elapsed_time: 0.494961977005 delete_volume /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:430
+2020-04-08 13:17:35 default DEBUG oslo_concurrency.lockutils [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] Lock "delete_volume" released by "cinder.volume.drivers.qnap.delete_volume" :: held 0.496s inner /usr/lib/python2.7/site-packages/oslo_concurrency/lockutils.py:370
+2020-04-08 13:17:35 default INFO ember_csi.common [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] &lt;= GRPC DeleteVolume served in 1s
+2020-04-08 13:17:35 default DEBUG ember_csi.common [req-fefdc615-42ff-4e59-9df5-0ad0dc5eab87] Returns:
+	nothing dolog /ember-csi/ember_csi/common.py:150
+
+</pre>
+</body>
+
+</html>
