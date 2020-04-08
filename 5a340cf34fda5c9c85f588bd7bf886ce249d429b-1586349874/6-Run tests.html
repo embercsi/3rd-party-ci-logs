@@ -1,0 +1,477 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+.ansi36 { color: #00aaaa; }
+.ansi37 { color: #F5F1DE; }
+.ansi90 { color: #404356; }
+.ansi91 { color: #ea4040; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi36">/root/test-ember</span>
+<span class="ansi36"> in dir /root/buildbot/LVM/build</span>
+<span class="ansi36"> watching logfiles {'ember-csi': '/var/log/ember-csi.log'}</span>
+<span class="ansi36"> argv: b'/root/test-ember'</span>
+<span class="ansi36"> environment:</span>
+<span class="ansi36">  HOME=/root</span>
+<span class="ansi36">  LANG=en_US.UTF-8</span>
+<span class="ansi36">  LOGNAME=root</span>
+<span class="ansi36">  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin</span>
+<span class="ansi36">  PWD=/root/buildbot/LVM/build</span>
+<span class="ansi36">  SHELL=/bin/sh</span>
+<span class="ansi36">  USER=root</span>
+<span class="ansi36"> using PTY: False</span>
+3ee9e9c66242286db00a8c5922557244880ca9584ac6bd3ee3b107249675432d
+=== RUN   TestSanity
+Running Suite: CSI Driver Test Suite
+====================================
+Random Seed: <span class="ansi1">1586350439</span>
+Will run <span class="ansi1">72</span> of <span class="ansi1">72</span> specs
+
+CreateSnapshot [Controller Server] 
+  <span class="ansi1">should fail when no name is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1938</span>
+[BeforeEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: connecting to CSI driver
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1930
+[It] should fail when no name is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1938
+[AfterEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+
+<span class="ansi32">• [SLOW TEST:15.763 seconds]</span>
+CreateSnapshot [Controller Server]
+<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
+  should fail when no name is provided
+  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1938</span>
+<span class="ansi90">------------------------------</span>
+CreateSnapshot [Controller Server] 
+  <span class="ansi1">should fail when no source volume id is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1955</span>
+[BeforeEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1930
+[It] should fail when no source volume id is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1955
+[AfterEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+CreateSnapshot [Controller Server] 
+  <span class="ansi1">should not fail when requesting to create a snapshot with already existing name and same SourceVolumeId.</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1972</span>
+[BeforeEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1930
+[It] should not fail when requesting to create a snapshot with already existing name and same SourceVolumeId.
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1972
+<span class="ansi1">STEP</span>: creating a volume
+<span class="ansi1">STEP</span>: creating a snapshot
+<span class="ansi1">STEP</span>: cleaning up deleting the snapshot
+<span class="ansi1">STEP</span>: cleaning up deleting the volume
+[AfterEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+CreateSnapshot [Controller Server] 
+  <span class="ansi1">should fail when requesting to create a snapshot with already existing name and different SourceVolumeId.</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2002</span>
+[BeforeEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1930
+[It] should fail when requesting to create a snapshot with already existing name and different SourceVolumeId.
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2002
+<span class="ansi1">STEP</span>: creating a volume
+<span class="ansi1">STEP</span>: creating a snapshot with the created volume source id
+<span class="ansi1">STEP</span>: creating a snapshot with the same name but different volume source id
+<span class="ansi1">STEP</span>: cleaning up deleting the snapshot
+<span class="ansi1">STEP</span>: cleaning up deleting the volume
+[AfterEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+CreateSnapshot [Controller Server] 
+  <span class="ansi1">should not fail when creating snapshot with maximum-length name</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2037</span>
+[BeforeEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1930
+[It] should not fail when creating snapshot with maximum-length name
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:2037
+<span class="ansi1">STEP</span>: creating a volume
+<span class="ansi1">STEP</span>: creating a snapshot
+<span class="ansi1">STEP</span>: cleaning up deleting the snapshot
+<span class="ansi1">STEP</span>: cleaning up deleting the volume
+[AfterEach] CreateSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeGetCapabilities</span> 
+  <span class="ansi1">should return appropriate capabilities</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:104</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[It] should return appropriate capabilities
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:104
+<span class="ansi1">STEP</span>: checking successful response
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeGetInfo</span> 
+  <span class="ansi1">should return appropriate values</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:139</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[BeforeEach] NodeGetInfo
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:134
+[It] should return appropriate values
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:139
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodePublishVolume</span> 
+  <span class="ansi1">should fail when no volume id is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:156</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[It] should fail when no volume id is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:156
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodePublishVolume</span> 
+  <span class="ansi1">should fail when no target path is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:170</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[It] should fail when no target path is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:170
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodePublishVolume</span> 
+  <span class="ansi1">should fail when no volume capability is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:185</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[It] should fail when no volume capability is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:185
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeUnpublishVolume</span> 
+  <span class="ansi1">should fail when no volume id is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:203</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[It] should fail when no volume id is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:203
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeUnpublishVolume</span> 
+  <span class="ansi1">should fail when no target path is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:215</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[It] should fail when no target path is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:215
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeStageVolume</span> 
+  <span class="ansi1">should fail when no volume id is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:243</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[BeforeEach] NodeStageVolume
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:235
+[It] should fail when no volume id is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:243
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeStageVolume</span> 
+  <span class="ansi1">should fail when no staging target path is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:269</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[BeforeEach] NodeStageVolume
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:235
+[It] should fail when no staging target path is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:269
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeStageVolume</span> 
+  <span class="ansi1">should fail when no volume capability is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:295</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[BeforeEach] NodeStageVolume
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:235
+[It] should fail when no volume capability is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:295
+<span class="ansi1">STEP</span>: creating a single node writer volume
+<span class="ansi1">STEP</span>: cleaning up deleting the volume
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeUnstageVolume</span> 
+  <span class="ansi1">should fail when no volume id is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:363</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[BeforeEach] NodeUnstageVolume
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:357
+[It] should fail when no volume id is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:363
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeUnstageVolume</span> 
+  <span class="ansi1">should fail when no staging target path is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:377</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[BeforeEach] NodeUnstageVolume
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:357
+[It] should fail when no staging target path is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:377
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeGetVolumeStats</span> 
+  <span class="ansi1">should fail when no volume id is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:399</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[BeforeEach] NodeGetVolumeStats
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:393
+[It] should fail when no volume id is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:399
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeGetVolumeStats</span> 
+  <span class="ansi1">should fail when no volume path is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:413</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[BeforeEach] NodeGetVolumeStats
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:393
+[It] should fail when no volume path is provided
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:413
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeGetVolumeStats</span> 
+  <span class="ansi1">should fail when volume is not found</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:427</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[BeforeEach] NodeGetVolumeStats
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:393
+[It] should fail when volume is not found
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:427
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+<span class="ansi32">•</span>
+<span class="ansi90">------------------------------</span>
+Node Service <span class="ansi90">NodeGetVolumeStats</span> 
+  <span class="ansi1">should fail when volume does not exist on the specified path</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:442</span>
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: reusing connection to CSI driver at 127.0.0.1:50051
+<span class="ansi1">STEP</span>: creating mount and staging directories
+[BeforeEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:81
+[BeforeEach] NodeGetVolumeStats
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:393
+[It] should fail when volume does not exist on the specified path
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:442
+<span class="ansi1">STEP</span>: creating a single node writer volume
+<span class="ansi1">STEP</span>: getting a node id
+<span class="ansi1">STEP</span>: controller publishing volume
+<span class="ansi1">STEP</span>: node staging volume
+<span class="ansi1">STEP</span>: publishing the volume on a node
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:99
+cleanup: deleting sanity-node-get-volume-stats-2C2AD276-FC6E97BD = 5d523750-6e50-435d-8b45-8cd400301aea
+[AfterEach] Node Service
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+
+<span class="ansi91"></span><span class="ansi1 ansi91">• Failure [14.282 seconds]</span>
+Node Service
+<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
+  NodeGetVolumeStats
+  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:392</span>
+    <span class="ansi91"></span><span class="ansi1 ansi91">should fail when volume does not exist on the specified path [It]</span>
+    <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:442</span>
+
+    <span class="ansi91">Unexpected error:
+        &lt;*status.statusError | 0xc4204f7c20&gt;: {
+            Code: 9,
+            Message: "Staging was not been successfully called",
+            Details: nil,
+            XXX_NoUnkeyedLiteral: {},
+            XXX_unrecognized: nil,
+            XXX_sizecache: 0,
+        }
+        rpc error: code = FailedPrecondition desc = Staging was not been successfully called
+    occurred</span>
+
+    /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:553
+<span class="ansi90">------------------------------</span>
+<span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span>
+
+<span class="ansi91"></span><span class="ansi1 ansi91">Summarizing 1 Failure:</span>
+
+<span class="ansi91"></span><span class="ansi1 ansi91">[Fail] </span><span class="ansi90">Node Service </span>NodeGetVolumeStats <span class="ansi91"></span><span class="ansi1 ansi91">[It] should fail when volume does not exist on the specified path </span>
+<span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/node.go:553</span>
+
+<span class="ansi1"></span><span class="ansi1 ansi91">Ran 21 of 72 Specs in 39.219 seconds</span>
+<span class="ansi1"></span><span class="ansi1 ansi91">FAIL!</span> -- <span class="ansi32"></span><span class="ansi1 ansi32">20 Passed</span> | <span class="ansi91"></span><span class="ansi1 ansi91">1 Failed</span> | <span class="ansi33"></span><span class="ansi1 ansi33">0 Pending</span> | <span class="ansi36"></span><span class="ansi1 ansi36">51 Skipped</span>
+--- FAIL: TestSanity (39.23s)
+FAIL
+ember-csi
+<span class="ansi36">program finished with exit code 1</span>
+<span class="ansi36">elapsedTime=39.945252</span>
+
+</pre>
+</body>
+
+</html>
