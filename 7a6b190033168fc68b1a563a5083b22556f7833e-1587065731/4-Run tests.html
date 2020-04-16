@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+.ansi36 { color: #00aaaa; }
+.ansi37 { color: #F5F1DE; }
+.ansi90 { color: #404356; }
+.ansi91 { color: #ea4040; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi36">/root/test-ember</span>
+<span class="ansi36"> in dir /root/buildbot/QNAP/build</span>
+<span class="ansi36"> watching logfiles {'ember-csi': '/var/log/ember-csi.log'}</span>
+<span class="ansi36"> argv: b'/root/test-ember'</span>
+<span class="ansi36"> environment:</span>
+<span class="ansi36">  HOME=/root</span>
+<span class="ansi36">  LANG=en_US.UTF-8</span>
+<span class="ansi36">  LOGNAME=root</span>
+<span class="ansi36">  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin</span>
+<span class="ansi36">  PWD=/root/buildbot/QNAP/build</span>
+<span class="ansi36">  SHELL=/bin/sh</span>
+<span class="ansi36">  USER=root</span>
+<span class="ansi36"> using PTY: False</span>
+ee857a7122d5336ed1d6dd638e801c46f1d1082b651505431f7b153ef4350b07
+=== RUN   TestSanity
+Running Suite: CSI Driver Test Suite
+====================================
+Random Seed: <span class="ansi1">1587066300</span>
+Will run <span class="ansi1">72</span> of <span class="ansi1">72</span> specs
+
+DeleteSnapshot [Controller Server] 
+  <span class="ansi1">should fail when no snapshot id is provided</span>
+  <span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1875</span>
+[BeforeEach] DeleteSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:45
+<span class="ansi1">STEP</span>: connecting to CSI driver
+[AfterEach] DeleteSnapshot [Controller Server]
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:51
+
+<span class="ansi91"></span><span class="ansi1 ansi91">• Failure in Spec Setup (BeforeEach) [60.014 seconds]</span>
+DeleteSnapshot [Controller Server]
+<span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/tests.go:44</span>
+  <span class="ansi91"></span><span class="ansi1 ansi91">should fail when no snapshot id is provided [BeforeEach]</span>
+  <span class="ansi90">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/controller.go:1875</span>
+
+  <span class="ansi91">Unexpected error:
+      &lt;*errors.errorString | 0xc42046c670&gt;: {
+          s: "Connection timed out",
+      }
+      Connection timed out
+  occurred</span>
+
+  /home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/sanity.go:201
+<span class="ansi90">------------------------------</span>
+<span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span><span class="ansi36">S</span>
+
+<span class="ansi91"></span><span class="ansi1 ansi91">Summarizing 1 Failure:</span>
+
+<span class="ansi91"></span><span class="ansi1 ansi91">[Fail] </span><span class="ansi90">DeleteSnapshot [Controller Server] </span><span class="ansi91"></span><span class="ansi1 ansi91">[BeforeEach] should fail when no snapshot id is provided </span>
+<span class="ansi37">/home/geguileo/go/src/github.com/kubernetes-csi/csi-test/pkg/sanity/sanity.go:201</span>
+
+<span class="ansi1"></span><span class="ansi1 ansi91">Ran 1 of 72 Specs in 60.015 seconds</span>
+<span class="ansi1"></span><span class="ansi1 ansi91">FAIL!</span> -- <span class="ansi32"></span><span class="ansi1 ansi32">0 Passed</span> | <span class="ansi91"></span><span class="ansi1 ansi91">1 Failed</span> | <span class="ansi33"></span><span class="ansi1 ansi33">0 Pending</span> | <span class="ansi36"></span><span class="ansi1 ansi36">71 Skipped</span>
+--- FAIL: TestSanity (60.03s)
+FAIL
+ember-csi
+<span class="ansi36">program finished with exit code 1</span>
+<span class="ansi36">elapsedTime=60.905889</span>
+
+</pre>
+</body>
+
+</html>

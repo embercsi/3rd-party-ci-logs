@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.body_foreground > .bold,.bold > .body_foreground, body.body_foreground > pre > .bold { color: #FFFFFF; font-weight: normal; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+2020-04-16 19:45:02 default DEBUG cinder.volume.drivers.qnap [-] in _check_config _check_config /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:115
+2020-04-16 19:45:02 default DEBUG cinder.volume.drivers.qnap [-] context: &lt;cinder.context.RequestContext object at 0x7f33d1b8a4d0&gt; do_setup /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:147
+2020-04-16 19:45:02 default DEBUG cinder.volume.drivers.qnap [-] _execute_and_get_response_details url: /cgi-bin/authLogin.cgi? _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1208
+2020-04-16 19:45:02 default DEBUG cinder.volume.drivers.qnap [-] _execute_and_get_response_details post_parm: pwd=dG9vbWFueXNlY3JldHMh&amp;serviceKey=1&amp;user=ember _execute_and_get_response_details /usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py:1209
+2020-04-16 19:45:06 default ERROR cinder.volume.drivers.qnap [-] Failed to create HTTP client. Check ip, port, username, password and make sure the array version is compatible: ConnectionError: HTTPSConnectionPool(host='192.168.1.2', port=443): Max retries exceeded with url: /cgi-bin/authLogin.cgi (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f33cf233ad0&gt;: Failed to establish a new connection: [Errno 113] EHOSTUNREACH',))
+2020-04-16 19:45:06 default CRITICAL cinder [-] Unhandled error: VolumeDriverException: Volume driver reported an error: Failed to create HTTP client.
+2020-04-16 19:45:06.011 1 ERROR cinder Traceback (most recent call last):
+2020-04-16 19:45:06.011 1 ERROR cinder   File "/usr/bin/ember-csi", line 9, in &lt;module&gt;
+2020-04-16 19:45:06.011 1 ERROR cinder     load_entry_point('ember-csi==master-16042020194453060379917', 'console_scripts', 'ember-csi')()
+2020-04-16 19:45:06.011 1 ERROR cinder   File "/ember-csi/ember_csi/ember_csi.py", line 79, in main
+2020-04-16 19:45:06.011 1 ERROR cinder     node_id=node_id)
+2020-04-16 19:45:06.011 1 ERROR cinder   File "/ember-csi/ember_csi/v1_0_0/csi.py", line 55, in __init__
+2020-04-16 19:45:06.011 1 ERROR cinder     ember_config=ember_config)
+2020-04-16 19:45:06.011 1 ERROR cinder   File "/ember-csi/ember_csi/v1_0_0/csi_base.py", line 41, in __init__
+2020-04-16 19:45:06.011 1 ERROR cinder     **kwargs)
+2020-04-16 19:45:06.011 1 ERROR cinder   File "/ember-csi/ember_csi/base.py", line 393, in __init__
+2020-04-16 19:45:06.011 1 ERROR cinder     self.backend = cinderlib.Backend(**backend_config)
+2020-04-16 19:45:06.011 1 ERROR cinder   File "/usr/lib/python2.7/site-packages/cinderlib/cinderlib.py", line 87, in __init__
+2020-04-16 19:45:06.011 1 ERROR cinder     self.driver.do_setup(objects.CONTEXT)
+2020-04-16 19:45:06.011 1 ERROR cinder   File "/usr/lib/python2.7/site-packages/cinder/volume/drivers/qnap.py", line 157, in do_setup
+2020-04-16 19:45:06.011 1 ERROR cinder     raise exception.VolumeDriverException(message=msg)
+2020-04-16 19:45:06.011 1 ERROR cinder VolumeDriverException: Volume driver reported an error: Failed to create HTTP client.
+2020-04-16 19:45:06.011 1 ERROR cinder 
+Exception AttributeError: "'NoneType' object has no attribute 'getcurrent'" in &lt;function _removeHandlerRef at 0x7f33f928e9b0&gt; ignored
+
+</pre>
+</body>
+
+</html>
